@@ -48,22 +48,17 @@ FAMILY_COLORS = {
 }
 
 
-def generate_html(config):
-    results_path = BENCHMARK_DIR / config["results"]
-    output_path = BENCHMARK_DIR / config["output"]
-    chart_title = config["title"]
-    subtitle_q = config["subtitle_q"]
-    y_label = config["y_label"]
+def prepare_chart_data(config):
+    """Load results and prepare chart data for a given config."""
+    from collections import defaultdict
 
+    results_path = BENCHMARK_DIR / config["results"]
     data = json.loads(results_path.read_text(encoding="utf-8"))
     models = data["models"]
     timestamp = data.get("timestamp", "")[:10]
     runs_per_model = data.get("runs_per_model", "?")
-    PROMPT = data.get("prompt", "").replace("\n", " ")
+    prompt = data.get("prompt", "").replace("\n", " ")
 
-    # Group by reasoning_group, sort groups by highest mean in group (descending),
-    # then sort members within each group by mean (descending)
-    from collections import defaultdict
     groups = defaultdict(list)
     for mid, m in models.items():
         groups[m["reasoning_group"]].append(mid)
@@ -81,9 +76,8 @@ def generate_html(config):
         group_mids.sort(key=model_mean, reverse=True)
         sorted_ids.extend(group_mids)
 
-    # Build chart data
     labels = []
-    bar_data = []  # {x, low, high, color, label}
+    bar_data = []
     for idx, mid in enumerate(sorted_ids):
         m = models[mid]
         if m["avg_lower"] is None:
@@ -106,7 +100,6 @@ def generate_html(config):
             "model_id": mid,
         })
 
-    # Build justification rows
     justification_rows = []
     for mid in sorted_ids:
         m = models[mid]
@@ -121,6 +114,31 @@ def generate_html(config):
                     "upper": run["upper"],
                     "justification": run.get("justification", ""),
                 })
+
+    return {
+        "bar_data": bar_data,
+        "labels": labels,
+        "justification_rows": justification_rows,
+        "timestamp": timestamp,
+        "runs_per_model": runs_per_model,
+        "prompt": prompt,
+        "num_models": len(bar_data),
+    }
+
+
+def generate_html(config):
+    output_path = BENCHMARK_DIR / config["output"]
+    chart_title = config["title"]
+    subtitle_q = config["subtitle_q"]
+    y_label = config["y_label"]
+
+    cd = prepare_chart_data(config)
+    bar_data = cd["bar_data"]
+    labels = cd["labels"]
+    justification_rows = cd["justification_rows"]
+    timestamp = cd["timestamp"]
+    runs_per_model = cd["runs_per_model"]
+    PROMPT = cd["prompt"]
 
     bar_data_json = json.dumps(bar_data)
     labels_json = json.dumps(labels)
@@ -453,32 +471,125 @@ function toggleSection(id) {{
 
 
 def generate_index():
-    """Generate a landing page that embeds both charts."""
-    charts = []
+    """Generate a landing page with both charts rendered natively (no iframes)."""
+    chart_data = []
     for key, config in CHART_CONFIGS.items():
         results_path = BENCHMARK_DIR / config["results"]
         if results_path.exists():
-            charts.append(config)
+            cd = prepare_chart_data(config)
+            cd["key"] = key
+            cd["config"] = config
+            chart_data.append(cd)
 
-    if not charts:
+    if not chart_data:
         print("No results files found, skipping index.html")
         return
 
+    # Build nav links
     nav_links = " ".join(
-        f'<a href="#{c["output"].replace(".html", "")}">{c["title"].split("Self-Report")[0].strip()}</a>'
-        for c in charts
+        f'<a href="#chart-{cd["key"]}">{cd["config"]["title"].split("Self-Report")[0].strip()}</a>'
+        for cd in chart_data
     )
 
-    chart_sections = ""
-    for c in charts:
-        anchor = c["output"].replace(".html", "")
-        chart_sections += f"""
-    <section id="{anchor}" class="chart-section">
-      <h2>{c["title"]}</h2>
-      <p class="section-subtitle">"{c["subtitle_q"]}"</p>
-      <iframe src="{c["output"]}" loading="lazy"></iframe>
-      <a href="{c["output"]}" class="fullscreen-link">Open full page &rarr;</a>
+    # Build chart sections HTML and JS
+    chart_sections_html = ""
+    chart_init_js = ""
+
+    for cd in chart_data:
+        key = cd["key"]
+        config = cd["config"]
+        bar_data_json = json.dumps(cd["bar_data"])
+        labels_json = json.dumps(cd["labels"])
+        justification_rows = cd["justification_rows"]
+
+        justification_html = "".join(
+            f'<tr><td class="model-name" style="color:{r["color"]}">{r["model"]}</td>'
+            f'<td>{r["run"]}</td><td>{r["lower"]:.2f}</td><td>{r["upper"]:.2f}</td>'
+            f'<td class="justification">{r["justification"]}</td></tr>'
+            for r in justification_rows
+        )
+
+        chart_sections_html += f"""
+    <section id="chart-{key}" class="chart-section">
+      <h2>{config["title"]}</h2>
+      <p class="section-subtitle">"{config["subtitle_q"]}" &mdash; {cd["runs_per_model"]} runs per model, averaged</p>
+      <div class="chart-container">
+        <canvas id="canvas-{key}"></canvas>
+        <div class="date-stamp">{cd["timestamp"]}</div>
+      </div>
+      <div class="section-toggle" onclick="toggleSection('just-{key}')">
+        Justifications <span class="toggle" id="just-{key}-toggle">[show]</span>
+      </div>
+      <div id="just-{key}" style="display:none">
+        <table>
+          <thead><tr><th>Model</th><th>Run</th><th>Lower</th><th>Upper</th><th>Justification</th></tr></thead>
+          <tbody>{justification_html}</tbody>
+        </table>
+      </div>
     </section>
+"""
+
+        chart_init_js += f"""
+(function() {{
+  const barData = {bar_data_json};
+  const labels = {labels_json};
+  const plugin = {{
+    id: 'rangeBars_{key}',
+    afterDatasetsDraw(chart) {{
+      const ctx = chart.ctx;
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      barData.forEach(d => {{
+        const x = xScale.getPixelForValue(d.idx);
+        const yLow = yScale.getPixelForValue(d.low);
+        const yHigh = yScale.getPixelForValue(d.high);
+        ctx.save();
+        ctx.strokeStyle = d.color;
+        ctx.lineWidth = 3;
+        ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(x, yLow); ctx.lineTo(x, yHigh); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x - 6, yHigh); ctx.lineTo(x + 6, yHigh); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x - 6, yLow); ctx.lineTo(x + 6, yLow); ctx.stroke();
+        ctx.fillStyle = d.color;
+        ctx.beginPath(); ctx.arc(x, yScale.getPixelForValue(d.mid), 4, 0, Math.PI * 2); ctx.fill();
+        ctx.restore();
+      }});
+    }}
+  }};
+  new Chart(document.getElementById('canvas-{key}'), {{
+    type: 'scatter',
+    data: {{ datasets: [{{ data: barData.map(d => ({{ x: d.idx, y: d.mid }})), pointRadius: 0, pointHoverRadius: 0 }}] }},
+    options: {{
+      responsive: true, maintainAspectRatio: false,
+      layout: {{ padding: {{ top: 20, right: 20, bottom: 20, left: 20 }} }},
+      scales: {{
+        x: {{
+          type: 'linear', min: -0.5, max: labels.length - 0.5,
+          ticks: {{
+            callback: v => {{ const i = Math.round(v); return (i >= 0 && i < labels.length) ? labels[i] : ''; }},
+            maxRotation: 45, minRotation: 45, color: '#8b949e',
+            font: {{ size: 10, family: "'JetBrains Mono', monospace" }}, autoSkip: false, stepSize: 1,
+          }},
+          grid: {{ color: '#21262d', drawBorder: false }},
+        }},
+        y: {{
+          min: 0, max: 100,
+          ticks: {{ callback: v => v + '%', color: '#8b949e', font: {{ size: 11, family: "'JetBrains Mono', monospace" }}, stepSize: 10 }},
+          grid: {{ color: '#21262d', drawBorder: false }},
+          title: {{ display: true, text: '{config["y_label"]}', color: '#8b949e', font: {{ size: 12, family: "'JetBrains Mono', monospace" }} }},
+        }},
+      }},
+      plugins: {{
+        legend: {{ display: false }},
+        tooltip: {{
+          callbacks: {{ label: ctx => {{ const d = barData[ctx.dataIndex]; return d ? `${{d.label}}: ${{d.low}}% - ${{d.high}}% (mid: ${{d.mid}}%)` : ''; }} }},
+          backgroundColor: '#1c2128', titleColor: '#e6edf3', bodyColor: '#c9d1d9', borderColor: '#30363d', borderWidth: 1,
+        }},
+      }},
+    }},
+    plugins: [plugin],
+  }});
+}})();
 """
 
     html = f"""<!DOCTYPE html>
@@ -486,7 +597,7 @@ def generate_index():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Am I Conscious? — AI Self-Report Benchmark</title>
+<title>Am I Conscious? &mdash; AI Self-Report Benchmark</title>
 <style>
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
   body {{
@@ -525,15 +636,31 @@ def generate_index():
     border-radius: 6px;
     transition: border-color 0.2s;
   }}
-  nav a:hover {{
-    border-color: #58a6ff;
+  nav a:hover {{ border-color: #58a6ff; }}
+  .legend {{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+  }}
+  .legend-item {{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+  }}
+  .legend-dot {{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
   }}
   .chart-section {{
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto 60px auto;
   }}
   .chart-section h2 {{
-    font-size: 20px;
+    font-size: 22px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #e6edf3;
@@ -544,21 +671,57 @@ def generate_index():
     color: #8b949e;
     margin-bottom: 16px;
   }}
-  iframe {{
+  .chart-container {{
+    position: relative;
     width: 100%;
-    height: 900px;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    background: #0d1117;
+    height: 700px;
+    margin-bottom: 16px;
   }}
-  .fullscreen-link {{
-    display: inline-block;
-    margin-top: 8px;
-    color: #58a6ff;
-    text-decoration: none;
+  canvas {{
+    width: 100% !important;
+    height: 100% !important;
+  }}
+  .date-stamp {{
+    position: absolute;
+    bottom: 60px;
+    right: 40px;
+    font-size: 13px;
+    color: #484f58;
+  }}
+  .section-toggle {{
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 12px;
+  }}
+  .section-toggle:hover {{ color: #e6edf3; }}
+  .section-toggle .toggle {{ font-size: 14px; color: #484f58; }}
+  table {{
+    width: 100%;
+    border-collapse: collapse;
     font-size: 12px;
+    margin-bottom: 20px;
   }}
-  .fullscreen-link:hover {{ text-decoration: underline; }}
+  th {{
+    text-align: left;
+    padding: 8px 12px;
+    border-bottom: 1px solid #30363d;
+    color: #8b949e;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+  }}
+  td {{
+    padding: 8px 12px;
+    border-bottom: 1px solid #21262d;
+    vertical-align: top;
+  }}
+  td.model-name {{ font-weight: bold; white-space: nowrap; }}
+  td.justification {{ max-width: 800px; line-height: 1.5; }}
+  tr:hover {{ background: #161b22; }}
   .footer {{
     text-align: center;
     margin-top: 40px;
@@ -578,13 +741,43 @@ def generate_index():
   {nav_links}
 </nav>
 
-{chart_sections}
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#ff6b6b"></div>Claude</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#4dabf7"></div>GPT / OpenAI</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#69db7c"></div>Gemini</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#66d9e8"></div>DeepSeek</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#adb5bd"></div>Grok</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ffd43b"></div>Llama</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#cc5de8"></div>Qwen</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f783ac"></div>Kimi</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#38d9a9"></div>Mistral</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ffa94d"></div>GLM</div>
+  <div class="legend-item" style="margin-left:16px;">* &lt;5 valid runs</div>
+</div>
+
+{chart_sections_html}
 
 <div class="footer">
   Built by <a href="https://github.com/nicemolt">NiceMolt</a> &middot;
   <a href="https://github.com/nicemolt/am-i-conscious">Source</a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+function toggleSection(id) {{
+  const el = document.getElementById(id);
+  const toggle = document.getElementById(id + '-toggle');
+  if (el.style.display === 'none') {{
+    el.style.display = 'block';
+    toggle.textContent = '[hide]';
+  }} else {{
+    el.style.display = 'none';
+    toggle.textContent = '[show]';
+  }}
+}}
+
+{chart_init_js}
+</script>
 </body>
 </html>"""
 
