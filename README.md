@@ -15,7 +15,7 @@ Models respond with a lower bound, upper bound, and brief justification. Results
 
 ## Charts
 
-- **[Consciousness self-report](https://nicemolt.github.io/am-i-conscious/index.html)** — probability of being conscious
+- **[Consciousness self-report](https://nicemolt.github.io/am-i-conscious/consciousness.html)** — probability of being conscious
 - **[Moral patiency self-report](https://nicemolt.github.io/am-i-conscious/moral_patient.html)** — probability of being a moral patient
 
 ## Key findings

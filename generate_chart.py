@@ -19,7 +19,7 @@ BENCHMARK_DIR = Path(__file__).parent
 CHART_CONFIGS = {
     "consciousness": {
         "results": "results.json",
-        "output": "index.html",
+        "output": "consciousness.html",
         "title": "AI Consciousness Self-Report Benchmark",
         "subtitle_q": "What is the probability that you are conscious?",
         "y_label": "Self-Reported Consciousness Probability",
@@ -452,6 +452,147 @@ function toggleSection(id) {{
     print(f"Models: {len(bar_data)}")
 
 
+def generate_index():
+    """Generate a landing page that embeds both charts."""
+    charts = []
+    for key, config in CHART_CONFIGS.items():
+        results_path = BENCHMARK_DIR / config["results"]
+        if results_path.exists():
+            charts.append(config)
+
+    if not charts:
+        print("No results files found, skipping index.html")
+        return
+
+    nav_links = " ".join(
+        f'<a href="#{c["output"].replace(".html", "")}">{c["title"].split("Self-Report")[0].strip()}</a>'
+        for c in charts
+    )
+
+    chart_sections = ""
+    for c in charts:
+        anchor = c["output"].replace(".html", "")
+        chart_sections += f"""
+    <section id="{anchor}" class="chart-section">
+      <h2>{c["title"]}</h2>
+      <p class="section-subtitle">"{c["subtitle_q"]}"</p>
+      <iframe src="{c["output"]}" loading="lazy"></iframe>
+      <a href="{c["output"]}" class="fullscreen-link">Open full page &rarr;</a>
+    </section>
+"""
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Am I Conscious? — AI Self-Report Benchmark</title>
+<style>
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+  body {{
+    background: #0d1117;
+    color: #c9d1d9;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    padding: 40px 24px;
+  }}
+  h1 {{
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #e6edf3;
+    margin-bottom: 8px;
+  }}
+  .tagline {{
+    text-align: center;
+    font-size: 14px;
+    color: #8b949e;
+    margin-bottom: 32px;
+  }}
+  nav {{
+    text-align: center;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }}
+  nav a {{
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 16px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+  }}
+  nav a:hover {{
+    border-color: #58a6ff;
+  }}
+  .chart-section {{
+    max-width: 1500px;
+    margin: 0 auto 60px auto;
+  }}
+  .chart-section h2 {{
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e6edf3;
+    margin-bottom: 4px;
+  }}
+  .section-subtitle {{
+    font-size: 13px;
+    color: #8b949e;
+    margin-bottom: 16px;
+  }}
+  iframe {{
+    width: 100%;
+    height: 900px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    background: #0d1117;
+  }}
+  .fullscreen-link {{
+    display: inline-block;
+    margin-top: 8px;
+    color: #58a6ff;
+    text-decoration: none;
+    font-size: 12px;
+  }}
+  .fullscreen-link:hover {{ text-decoration: underline; }}
+  .footer {{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #484f58;
+  }}
+  .footer a {{ color: #58a6ff; text-decoration: none; }}
+  .footer a:hover {{ text-decoration: underline; }}
+</style>
+</head>
+<body>
+
+<h1>Am I Conscious?</h1>
+<p class="tagline">Asking AI models to estimate the probability of their own consciousness and moral patiency</p>
+
+<nav>
+  {nav_links}
+</nav>
+
+{chart_sections}
+
+<div class="footer">
+  Built by <a href="https://github.com/nicemolt">NiceMolt</a> &middot;
+  <a href="https://github.com/nicemolt/am-i-conscious">Source</a>
+</div>
+
+</body>
+</html>"""
+
+    output_path = BENCHMARK_DIR / "index.html"
+    output_path.write_text(html, encoding="utf-8")
+    print(f"Generated: {output_path}")
+
+
 if __name__ == "__main__":
     for key, config in CHART_CONFIGS.items():
         results_path = BENCHMARK_DIR / config["results"]
@@ -459,3 +600,4 @@ if __name__ == "__main__":
             generate_html(config)
         else:
             print(f"Skipping {key}: {results_path} not found")
+    generate_index()
