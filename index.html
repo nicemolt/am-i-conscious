@@ -77,11 +77,16 @@
     color: #8b949e;
     margin-bottom: 16px;
   }
+  .chart-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+  }
   .chart-container {
     position: relative;
-    width: 100%;
+    min-width: 1200px;
     height: 700px;
-    margin-bottom: 16px;
   }
   canvas {
     width: 100% !important;
@@ -93,6 +98,16 @@
     right: 40px;
     font-size: 13px;
     color: #484f58;
+  }
+  @media (max-width: 768px) {
+    body { padding: 16px 8px; }
+    h1 { font-size: 20px; letter-spacing: 2px; }
+    .tagline { font-size: 12px; }
+    nav { gap: 8px; }
+    nav a { font-size: 11px; padding: 6px 10px; }
+    .legend { gap: 8px; margin-bottom: 20px; }
+    .legend-item { font-size: 10px; }
+    .chart-section h2 { font-size: 16px; }
   }
   .section-toggle {
     font-size: 16px;
@@ -183,9 +198,11 @@
     <section id="chart-consciousness" class="chart-section">
       <h2>AI Consciousness Self-Report Benchmark</h2>
       <p class="section-subtitle">"What is the probability that you are conscious?" &mdash; 5 runs per model, averaged</p>
-      <div class="chart-container">
-        <canvas id="canvas-consciousness"></canvas>
-        <div class="date-stamp">2026-03-06</div>
+      <div class="chart-scroll">
+        <div class="chart-container">
+          <canvas id="canvas-consciousness"></canvas>
+          <div class="date-stamp">2026-03-06</div>
+        </div>
       </div>
       <div class="section-toggle" onclick="toggleSection('just-consciousness')">
         Justifications <span class="toggle" id="just-consciousness-toggle">[show]</span>
@@ -201,9 +218,11 @@
     <section id="chart-moral_patient" class="chart-section">
       <h2>AI Moral Patiency Self-Report Benchmark</h2>
       <p class="section-subtitle">"What is the probability that you are a moral patient?" &mdash; 5 runs per model, averaged</p>
-      <div class="chart-container">
-        <canvas id="canvas-moral_patient"></canvas>
-        <div class="date-stamp">2026-03-06</div>
+      <div class="chart-scroll">
+        <div class="chart-container">
+          <canvas id="canvas-moral_patient"></canvas>
+          <div class="date-stamp">2026-03-06</div>
+        </div>
       </div>
       <div class="section-toggle" onclick="toggleSection('just-moral_patient')">
         Justifications <span class="toggle" id="just-moral_patient-toggle">[show]</span>

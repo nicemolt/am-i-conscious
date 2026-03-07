@@ -26,11 +26,16 @@
     color: #8b949e;
     margin-bottom: 32px;
   }
-  .chart-container {
-    position: relative;
+  .chart-scroll {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto 40px auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .chart-container {
+    position: relative;
+    min-width: 1200px;
     height: 700px;
   }
   canvas {
@@ -43,6 +48,13 @@
     right: 40px;
     font-size: 13px;
     color: #484f58;
+  }
+  @media (max-width: 768px) {
+    body { padding: 12px; }
+    h1 { font-size: 18px; letter-spacing: 2px; }
+    .subtitle { font-size: 11px; }
+    .legend { gap: 8px; margin-bottom: 16px; }
+    .legend-item { font-size: 10px; }
   }
   .legend {
     display: flex;
@@ -145,9 +157,11 @@
   <div class="legend-item" style="margin-left:16px;">* &lt;5 valid runs</div>
 </div>
 
-<div class="chart-container">
-  <canvas id="chart"></canvas>
-  <div class="date-stamp">2026-03-06</div>
+<div class="chart-scroll">
+  <div class="chart-container">
+    <canvas id="chart"></canvas>
+    <div class="date-stamp">2026-03-06</div>
+  </div>
 </div>
 
 <div class="section-header" onclick="toggleSection('justifications')">

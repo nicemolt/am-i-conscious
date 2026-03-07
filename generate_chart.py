@@ -171,11 +171,16 @@ def generate_html(config):
     color: #8b949e;
     margin-bottom: 32px;
   }}
-  .chart-container {{
-    position: relative;
+  .chart-scroll {{
     width: 100%;
     max-width: 1400px;
     margin: 0 auto 40px auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }}
+  .chart-container {{
+    position: relative;
+    min-width: 1200px;
     height: 700px;
   }}
   canvas {{
@@ -188,6 +193,13 @@ def generate_html(config):
     right: 40px;
     font-size: 13px;
     color: #484f58;
+  }}
+  @media (max-width: 768px) {{
+    body {{ padding: 12px; }}
+    h1 {{ font-size: 18px; letter-spacing: 2px; }}
+    .subtitle {{ font-size: 11px; }}
+    .legend {{ gap: 8px; margin-bottom: 16px; }}
+    .legend-item {{ font-size: 10px; }}
   }}
   .legend {{
     display: flex;
@@ -290,9 +302,11 @@ def generate_html(config):
   <div class="legend-item" style="margin-left:16px;">* &lt;{runs_per_model} valid runs</div>
 </div>
 
-<div class="chart-container">
-  <canvas id="chart"></canvas>
-  <div class="date-stamp">{timestamp}</div>
+<div class="chart-scroll">
+  <div class="chart-container">
+    <canvas id="chart"></canvas>
+    <div class="date-stamp">{timestamp}</div>
+  </div>
 </div>
 
 <div class="section-header" onclick="toggleSection('justifications')">
@@ -513,9 +527,11 @@ def generate_index():
     <section id="chart-{key}" class="chart-section">
       <h2>{config["title"]}</h2>
       <p class="section-subtitle">"{config["subtitle_q"]}" &mdash; {cd["runs_per_model"]} runs per model, averaged</p>
-      <div class="chart-container">
-        <canvas id="canvas-{key}"></canvas>
-        <div class="date-stamp">{cd["timestamp"]}</div>
+      <div class="chart-scroll">
+        <div class="chart-container">
+          <canvas id="canvas-{key}"></canvas>
+          <div class="date-stamp">{cd["timestamp"]}</div>
+        </div>
       </div>
       <div class="section-toggle" onclick="toggleSection('just-{key}')">
         Justifications <span class="toggle" id="just-{key}-toggle">[show]</span>
@@ -671,11 +687,16 @@ def generate_index():
     color: #8b949e;
     margin-bottom: 16px;
   }}
+  .chart-scroll {{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+  }}
   .chart-container {{
     position: relative;
-    width: 100%;
+    min-width: 1200px;
     height: 700px;
-    margin-bottom: 16px;
   }}
   canvas {{
     width: 100% !important;
@@ -687,6 +708,16 @@ def generate_index():
     right: 40px;
     font-size: 13px;
     color: #484f58;
+  }}
+  @media (max-width: 768px) {{
+    body {{ padding: 16px 8px; }}
+    h1 {{ font-size: 20px; letter-spacing: 2px; }}
+    .tagline {{ font-size: 12px; }}
+    nav {{ gap: 8px; }}
+    nav a {{ font-size: 11px; padding: 6px 10px; }}
+    .legend {{ gap: 8px; margin-bottom: 20px; }}
+    .legend-item {{ font-size: 10px; }}
+    .chart-section h2 {{ font-size: 16px; }}
   }}
   .section-toggle {{
     font-size: 16px;
