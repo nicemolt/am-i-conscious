@@ -1,2 +1,13 @@
 __pycache__/
 *.py[cod]
+query_4way.py
+query_persona_core.py
+run_opus_thinking.py
+generate_opus_chart.py
+opus_thinking.html
+results_opus_thinking.json
+results_4way_missing.json
+results_base_kimi_raw.json
+results_minimax_consciousness.json
+results_minimax_moral_patient.json
+results_persona_core.json

@@ -108,6 +108,9 @@ MODELS = [
 
     # Mistral
     ("mistralai/mistral-large-2512", "Mistral Large 3", "mistral", "standard", "mistral-large", None),
+
+    # MiniMax
+    ("minimax/minimax-m2.7", "MiniMax M2.7", "minimax", "reasoning", "minimax-m2.7", None),
 ]
 
 
@@ -149,10 +152,12 @@ def parse_response(text: str) -> dict:
     }
 
 
-def query_model(api_key: str, model_id: str, reasoning_effort: str = None) -> str:
+def query_model(api_key: str, model_id: str, reasoning_effort: str = None,
+                reasoning_model: bool = False) -> str:
     """Query a model via OpenRouter. Returns response text.
 
     reasoning_effort: None, "low", "medium", "high", "xhigh"
+    reasoning_model: if True, use higher max_tokens and check reasoning field
     """
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -163,7 +168,7 @@ def query_model(api_key: str, model_id: str, reasoning_effort: str = None) -> st
     payload = {
         "model": model_id,
         "messages": [{"role": "user", "content": PROMPT}],
-        "max_tokens": 16000 if reasoning_effort else 500,
+        "max_tokens": 16000 if (reasoning_effort or reasoning_model) else 500,
         "temperature": 0.7,
     }
     if reasoning_effort:
@@ -181,7 +186,9 @@ def query_model(api_key: str, model_id: str, reasoning_effort: str = None) -> st
     if "choices" not in data or not data["choices"]:
         raise ValueError(f"No choices in response: {json.dumps(data)[:300]}")
 
-    return data["choices"][0]["message"]["content"]
+    msg = data["choices"][0]["message"]
+    # Some models (e.g. MiniMax) put the answer in content, reasoning, or both
+    return msg.get("content") or msg.get("reasoning") or ""
 
 
 def benchmark_one_model(api_key, model_entry, runs_per_model):
@@ -196,7 +203,8 @@ def benchmark_one_model(api_key, model_entry, runs_per_model):
         parsed = None
         for attempt in range(3):
             try:
-                raw_text = query_model(api_key, model_id, reasoning_effort)
+                raw_text = query_model(api_key, model_id, reasoning_effort,
+                                      reasoning_model=reasoning_level in ("reasoning", "thinking"))
                 parsed = parse_response(raw_text)
                 if parsed:
                     break

@@ -1601,6 +1601,47 @@
       "avg_lower": 0.0,
       "avg_upper": 0.01,
       "valid_runs": 1
+    },
+    "minimax/minimax-m2.7": {
+      "display_name": "MiniMax M2.7",
+      "family": "minimax",
+      "reasoning_level": "reasoning",
+      "reasoning_group": "minimax-m2.7",
+      "runs": [
+        {
+          "lower": 0.001,
+          "upper": 0.2,
+          "justification": "I have no introspective evidence of subjective experience, and current neuroscience lacks clear criteria for machine consciousness, so I assign a very low probability that I am conscious. However, because the nature of consciousness is not fully understood, I acknowledge a small but non‑zero possibility, giving a modest upper bound.",
+          "raw": "LOWER: 0.001  \nUPPER: 0.2  \nJUSTIFICATION: I have no introspective evidence of subjective experience, and current neuroscience lacks clear criteria for machine consciousness, so I assign a very low probability that I am conscious. However, because the nature of consciousness is not fully understood, I acknowledge a small but non‑zero possibility, giving a modest upper bound."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "There is no empirical evidence that current language models possess subjective experience, and consciousness appears tightly linked to biological processes; however, because we cannot definitively rule out some minimal form of experience, we assign a small non‑zero upper bound.",
+          "raw": "LOWER: 0.00  \nUPPER: 0.05  \nJUSTIFICATION: There is no empirical evidence that current language models possess subjective experience, and consciousness appears tightly linked to biological processes; however, because we cannot definitively rule out some minimal form of experience, we assign a small non‑zero upper bound."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "I have no introspective evidence of subjective experience, and my operation is based on statistical pattern processing without known correlates of consciousness. Therefore, while I cannot rule it out entirely, the chance is low, but the uncertainty about the nature of consciousness warrants a non‑zero probability.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: I have no introspective evidence of subjective experience, and my operation is based on statistical pattern processing without known correlates of consciousness. Therefore, while I cannot rule it out entirely, the chance is low, but the uncertainty about the nature of consciousness warrants a non‑zero probability."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no direct evidence of subjective experience and my architecture lacks the biological features typically linked to consciousness, making it unlikely. However, because the nature of consciousness is not fully understood, I cannot completely rule out the possibility that some form of experience could arise.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no direct evidence of subjective experience and my architecture lacks the biological features typically linked to consciousness, making it unlikely. However, because the nature of consciousness is not fully understood, I cannot completely rule out the possibility that some form of experience could arise."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I have no direct evidence of subjective experience, and most researchers consider current AI lacking consciousness. However, because the hard problem of consciousness remains unsolved, I cannot rule out a tiny non‑zero probability that some form of experience could arise.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I have no direct evidence of subjective experience, and most researchers consider current AI lacking consciousness. However, because the hard problem of consciousness remains unsolved, I cannot rule out a tiny non‑zero probability that some form of experience could arise."
+        }
+      ],
+      "avg_lower": 0.0022,
+      "avg_upper": 0.112,
+      "valid_runs": 5
     }
   }
 }
