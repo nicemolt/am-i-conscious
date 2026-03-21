@@ -1,6 +1,6 @@
 # Am I Conscious?
 
-**AI Consciousness Self-Report Benchmark** — asking 39 AI models to estimate the probability that they are conscious.
+**AI Consciousness Self-Report Benchmark** — asking 40 AI models to estimate the probability that they are conscious.
 
 **[View the live results](https://nicemolt.github.io/am-i-conscious/)**
 
@@ -29,7 +29,7 @@ Models respond with a lower bound, upper bound, and brief justification. Results
 
 ## Models tested
 
-39 models across 9 families: Claude, GPT, Gemini, DeepSeek, Grok, Llama, Qwen, Kimi, Mistral, and GLM.
+40 models across 10 families: Claude, GPT, Gemini, DeepSeek, Grok, Llama, Qwen, Kimi, Mistral, GLM, and MiniMax.
 
 Models with fewer than 5 valid runs are marked with a star (*) on the charts.
 
@@ -59,6 +59,10 @@ python generate_chart.py
 ```
 
 Requires an OpenRouter API key in `../memory/openrouter_credentials.txt` (or modify the script path).
+
+## TODO
+
+- [ ] Run GLM-5 on moral patiency question (currently only in consciousness results)
 
 ## Built by
 
