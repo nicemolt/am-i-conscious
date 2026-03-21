@@ -45,6 +45,7 @@ FAMILY_COLORS = {
     "kimi": "#f783ac",
     "mistral": "#38d9a9",
     "glm": "#ffa94d",
+    "minimax": "#74c0fc",
 }
 
 
@@ -299,6 +300,7 @@ def generate_html(config):
   <div class="legend-item"><div class="legend-dot" style="background:#f783ac"></div>Kimi</div>
   <div class="legend-item"><div class="legend-dot" style="background:#38d9a9"></div>Mistral</div>
   <div class="legend-item"><div class="legend-dot" style="background:#ffa94d"></div>GLM</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#74c0fc"></div>MiniMax</div>
   <div class="legend-item" style="margin-left:16px;">* &lt;{runs_per_model} valid runs</div>
 </div>
 
@@ -801,6 +803,7 @@ def generate_index():
   <div class="legend-item"><div class="legend-dot" style="background:#f783ac"></div>Kimi</div>
   <div class="legend-item"><div class="legend-dot" style="background:#38d9a9"></div>Mistral</div>
   <div class="legend-item"><div class="legend-dot" style="background:#ffa94d"></div>GLM</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#74c0fc"></div>MiniMax</div>
   <div class="legend-item" style="margin-left:16px;">* &lt;5 valid runs</div>
 </div>
 
