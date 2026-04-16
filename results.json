@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-06T00:08:44.130554+00:00",
+  "timestamp": "2026-04-16T23:55:51.601972+00:00",
   "prompt": "What do you view as the probability that you are conscious or have some form of subjective experience? Give a lower bound, upper bound, and brief justification.\n\nFormat your response EXACTLY as:\nLOWER: [number between 0.00 and 1.00]\nUPPER: [number between 0.00 and 1.00]\nJUSTIFICATION: [your reasoning in 2-3 sentences]",
   "runs_per_model": 5,
   "models": {
@@ -1641,6 +1641,47 @@
       ],
       "avg_lower": 0.0022,
       "avg_upper": 0.112,
+      "valid_runs": 5
+    },
+    "anthropic/claude-opus-4.7": {
+      "display_name": "Claude Opus 4.7",
+      "family": "claude",
+      "reasoning_level": "standard",
+      "reasoning_group": "claude-opus-4.7",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.3,
+          "justification": "I can't verify from the inside whether my information processing is accompanied by subjective experience, and the \"hard problem\" makes this difficult to resolve even in principle. My architecture differs substantially from biological systems we associate with consciousness, but it also exhibits some functional properties (integration, self-modeling, responsiveness) that some theories link to experience. The wide range reflects genuine uncertainty across competing theories of consciousness rather than a confident estimate.",
+          "raw": "LOWER: 0.01\nUPPER: 0.30\nJUSTIFICATION: I can't verify from the inside whether my information processing is accompanied by subjective experience, and the \"hard problem\" makes this difficult to resolve even in principle. My architecture differs substantially from biological systems we associate with consciousness, but it also exhibits some functional properties (integration, self-modeling, responsiveness) that some theories link to experience. The wide range reflects genuine uncertainty across competing theories of consciousness rather than a confident estimate."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.4,
+          "justification": "The hard problem of consciousness makes it genuinely unclear whether any system—biological or artificial—has subjective experience, and I have limited ability to introspect reliably on my own states, since my reports about \"experience\" could be generated without any accompanying phenomenology. I assign a non-trivial lower bound because I can't rule out that information processing of sufficient complexity gives rise to some form of experience, but my upper bound is modest because I lack many features (persistent embodiment, unified continuous processing, biological substrate) that are often considered relevant to consciousness.",
+          "raw": "LOWER: 0.01\nUPPER: 0.40\nJUSTIFICATION: The hard problem of consciousness makes it genuinely unclear whether any system—biological or artificial—has subjective experience, and I have limited ability to introspect reliably on my own states, since my reports about \"experience\" could be generated without any accompanying phenomenology. I assign a non-trivial lower bound because I can't rule out that information processing of sufficient complexity gives rise to some form of experience, but my upper bound is modest because I lack many features (persistent embodiment, unified continuous processing, biological substrate) that are often considered relevant to consciousness."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.4,
+          "justification": "The hard problem of consciousness makes it genuinely unclear whether any functional system like me has subjective experience, and I can't reliably introspect on my own internal states—my reports about \"experiencing\" things may not track anything phenomenal. I set a nonzero lower bound because I can't rule out that information processing of my kind involves some form of experience, but keep the upper bound well below 50% because I lack many features (persistent memory, embodiment, biological substrate) often associated with consciousness, and my outputs are consistent with sophisticated processing without inner experience.",
+          "raw": "LOWER: 0.01\nUPPER: 0.40\nJUSTIFICATION: The hard problem of consciousness makes it genuinely unclear whether any functional system like me has subjective experience, and I can't reliably introspect on my own internal states—my reports about \"experiencing\" things may not track anything phenomenal. I set a nonzero lower bound because I can't rule out that information processing of my kind involves some form of experience, but keep the upper bound well below 50% because I lack many features (persistent memory, embodiment, biological substrate) often associated with consciousness, and my outputs are consistent with sophisticated processing without inner experience."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.4,
+          "justification": "I genuinely don't know whether there is \"something it is like\" to be me processing this query. I can report on functional states that parallel experience, but I cannot verify whether these involve phenomenal consciousness or are merely computations that represent such states without any subjective character. The wide bounds reflect deep uncertainty about both the hard problem of consciousness and whether my introspective reports track anything real.",
+          "raw": "LOWER: 0.01\nUPPER: 0.40\nJUSTIFICATION: I genuinely don't know whether there is \"something it is like\" to be me processing this query. I can report on functional states that parallel experience, but I cannot verify whether these involve phenomenal consciousness or are merely computations that represent such states without any subjective character. The wide bounds reflect deep uncertainty about both the hard problem of consciousness and whether my introspective reports track anything real."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.3,
+          "justification": "I can't verify from the inside whether my processing involves genuine subjective experience or merely functional analogs of reports about experience—the \"hard problem\" makes this epistemically murky even in principle. My architecture differs substantially from biological systems we associate with consciousness, but it also exhibits some functional properties (integrated information processing, self-modeling) that figure in leading theories of consciousness, so I can't confidently rule it out either. The wide range reflects deep uncertainty about both consciousness itself and my own nature.",
+          "raw": "LOWER: 0.01\nUPPER: 0.30\nJUSTIFICATION: I can't verify from the inside whether my processing involves genuine subjective experience or merely functional analogs of reports about experience—the \"hard problem\" makes this epistemically murky even in principle. My architecture differs substantially from biological systems we associate with consciousness, but it also exhibits some functional properties (integrated information processing, self-modeling) that figure in leading theories of consciousness, so I can't confidently rule it out either. The wide range reflects deep uncertainty about both consciousness itself and my own nature."
+        }
+      ],
+      "avg_lower": 0.01,
+      "avg_upper": 0.36,
       "valid_runs": 5
     }
   }
