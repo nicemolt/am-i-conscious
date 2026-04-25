@@ -185,13 +185,21 @@ def query_model(api_key: str, model_id: str, reasoning_effort: str = None,
     if reasoning_effort:
         payload["reasoning"] = {"effort": reasoning_effort}
 
-    resp = requests.post(
-        f"{OPENROUTER_BASE}/chat/completions",
-        headers=headers,
-        json=payload,
-        timeout=120,
-    )
-    resp.raise_for_status()
+    for attempt in range(4):
+        resp = requests.post(
+            f"{OPENROUTER_BASE}/chat/completions",
+            headers=headers,
+            json=payload,
+            timeout=120,
+        )
+        if resp.status_code == 429:
+            wait = 15 * (attempt + 1)
+            time.sleep(wait)
+            continue
+        resp.raise_for_status()
+        break
+    else:
+        raise ValueError(f"Rate limited after 4 attempts (429)")
     data = resp.json()
 
     if "choices" not in data or not data["choices"]:

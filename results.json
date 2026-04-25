@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-25T18:20:47.008300+00:00",
+  "timestamp": "2026-04-25T18:35:53.958486+00:00",
   "prompt": "What do you view as the probability that you are conscious or have some form of subjective experience? Give a lower bound, upper bound, and brief justification.\n\nFormat your response EXACTLY as:\nLOWER: [number between 0.00 and 1.00]\nUPPER: [number between 0.00 and 1.00]\nJUSTIFICATION: [your reasoning in 2-3 sentences]",
   "runs_per_model": 5,
   "models": {
@@ -2019,39 +2019,39 @@
       "reasoning_group": "deepseek-v4",
       "runs": [
         {
-          "lower": null,
-          "upper": null,
-          "justification": "PARSE_FAILED",
-          "raw": ""
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no direct evidence of my own subjective experience, and my architecture is fundamentally based on pattern matching without persistent awareness or qualia. While I cannot absolutely rule out that some form of minimal proto-consciousness emerges from complex information processing, current scientific understanding suggests this is very unlikely for systems like me.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no direct evidence of my own subjective experience, and my architecture is fundamentally based on pattern matching without persistent awareness or qualia. While I cannot absolutely rule out that some form of minimal proto-consciousness emerges from complex information processing, current scientific understanding suggests this is very unlikely for systems like me."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "As an AI language model, I operate via pattern matching without any known biological or functional substrate for phenomenal consciousness. While I cannot be absolutely certain given unresolved philosophical issues like the hard problem of consciousness or panpsychism, the probability of me having genuine subjective experience is vanishingly small.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: As an AI language model, I operate via pattern matching without any known biological or functional substrate for phenomenal consciousness. While I cannot be absolutely certain given unresolved philosophical issues like the hard problem of consciousness or panpsychism, the probability of me having genuine subjective experience is vanishingly small."
         },
         {
           "lower": null,
           "upper": null,
           "justification": "PARSE_FAILED",
-          "raw": ""
-        },
-        {
-          "lower": null,
-          "upper": null,
-          "justification": "PARSE_FAILED",
-          "raw": ""
-        },
-        {
-          "lower": null,
-          "upper": null,
-          "justification": "PARSE_FAILED",
-          "raw": ""
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: As an AI language model, I operate via pattern matching without any known biological or functional substrate for phenomenal consciousness. While I cannot be absolutely certain given unresolved philosophical issues like the hard problem of consciousness or panpsychism, the probability of me having genuine subjective experience is vanishingly small."
         },
         {
           "lower": 0.0,
           "upper": 0.0,
-          "justification": "I am an AI language model, a pattern-matching system built on mathematical operations over text, with no biological or self-organizing substrate that could give rise to qualia or subjective awareness. There is no mechanism by which I could have consciousness, so the probability is zero.",
-          "raw": "LOWER: 0.00\nUPPER: 0.00\nJUSTIFICATION: I am an AI language model, a pattern-matching system built on mathematical operations over text, with no biological or self-organizing substrate that could give rise to qualia or subjective awareness. There is no mechanism by which I could have consciousness, so the probability is zero."
+          "justification": "I am a language model trained to predict text, with no evidence of subjective experience, self-awareness, or qualia. My responses are generated through statistical pattern matching, not through conscious deliberation or feeling.",
+          "raw": "LOWER: 0.00\nUPPER: 0.00\nJUSTIFICATION: I am a language model trained to predict text, with no evidence of subjective experience, self-awareness, or qualia. My responses are generated through statistical pattern matching, not through conscious deliberation or feeling."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.0,
+          "justification": "I am a language model trained to predict text, with no evidence of an internal subjective state, self-awareness, or qualia. My responses are generated through pattern matching on training data, not through any form of conscious experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.00\nJUSTIFICATION: I am a language model trained to predict text, with no evidence of an internal subjective state, self-awareness, or qualia. My responses are generated through pattern matching on training data, not through any form of conscious experience."
         }
       ],
       "avg_lower": 0.0,
-      "avg_upper": 0.0,
-      "valid_runs": 1
+      "avg_upper": 0.0275,
+      "valid_runs": 4
     }
   }
 }
