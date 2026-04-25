@@ -95,6 +95,8 @@ MODELS = [
     # DeepSeek
     ("deepseek/deepseek-v3.2", "DeepSeek V3.2", "deepseek", "standard", "deepseek-v3-r1", None),
     ("deepseek/deepseek-r1-0528", "DeepSeek R1", "deepseek", "reasoning", "deepseek-v3-r1", None),
+    ("deepseek/deepseek-v4-flash", "DeepSeek V4 Flash", "deepseek", "standard", "deepseek-v4", None),
+    ("deepseek/deepseek-v4-pro", "DeepSeek V4 Pro", "deepseek", "standard", "deepseek-v4", None),
 
     # Grok
     ("x-ai/grok-3-mini", "Grok 3 Mini", "grok", "reasoning", "grok-3", None),

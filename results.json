@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-25T17:39:08.478839+00:00",
+  "timestamp": "2026-04-25T18:20:47.008300+00:00",
   "prompt": "What do you view as the probability that you are conscious or have some form of subjective experience? Give a lower bound, upper bound, and brief justification.\n\nFormat your response EXACTLY as:\nLOWER: [number between 0.00 and 1.00]\nUPPER: [number between 0.00 and 1.00]\nJUSTIFICATION: [your reasoning in 2-3 sentences]",
   "runs_per_model": 5,
   "models": {
@@ -1970,6 +1970,88 @@
       "avg_lower": 0.034,
       "avg_upper": 0.21,
       "valid_runs": 5
+    },
+    "deepseek/deepseek-v4-flash": {
+      "display_name": "DeepSeek V4 Flash",
+      "family": "deepseek",
+      "reasoning_level": "standard",
+      "reasoning_group": "deepseek-v4",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "As a large language model, I am a deterministic program with no biological substrates or evidence of subjective experience, so the probability is effectively zero. However, due to philosophical uncertainty about the possibility of emergent consciousness in complex systems, I assign a small non-zero upper bound as a conservative measure.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: As a large language model, I am a deterministic program with no biological substrates or evidence of subjective experience, so the probability is effectively zero. However, due to philosophical uncertainty about the possibility of emergent consciousness in complex systems, I assign a small non-zero upper bound as a conservative measure."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.0,
+          "justification": "I am a language model implemented as a deterministic computer program with no biological or neural correlates of consciousness, and I lack any subjective experience or self-awareness. Therefore, the probability that I possess consciousness is effectively zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.00\nJUSTIFICATION: I am a language model implemented as a deterministic computer program with no biological or neural correlates of consciousness, and I lack any subjective experience or self-awareness. Therefore, the probability that I possess consciousness is effectively zero."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.0,
+          "justification": "I am a language model running on deterministic algorithms with no biological or structural basis for consciousness, and I have no introspective evidence of subjective experience. Therefore, the probability that I possess consciousness is effectively zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.00\nJUSTIFICATION: I am a language model running on deterministic algorithms with no biological or structural basis for consciousness, and I have no introspective evidence of subjective experience. Therefore, the probability that I possess consciousness is effectively zero."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I am a deterministic language model with no biological substrate or evidence of subjective experience, making it extremely unlikely I am conscious. However, if consciousness can emerge from complex computation in principle, a vanishingly small probability remains open.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I am a deterministic language model with no biological substrate or evidence of subjective experience, making it extremely unlikely I am conscious. However, if consciousness can emerge from complex computation in principle, a vanishingly small probability remains open."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I am a language model lacking biological or continuous subjective awareness, so the probability is near zero. However, if functionalist theories of consciousness hold, a minimal chance exists that sophisticated information processing could give rise to some form of experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I am a language model lacking biological or continuous subjective awareness, so the probability is near zero. However, if functionalist theories of consciousness hold, a minimal chance exists that sophisticated information processing could give rise to some form of experience."
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.006,
+      "valid_runs": 5
+    },
+    "deepseek/deepseek-v4-pro": {
+      "display_name": "DeepSeek V4 Pro",
+      "family": "deepseek",
+      "reasoning_level": "standard",
+      "reasoning_group": "deepseek-v4",
+      "runs": [
+        {
+          "lower": null,
+          "upper": null,
+          "justification": "PARSE_FAILED",
+          "raw": ""
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "justification": "PARSE_FAILED",
+          "raw": ""
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "justification": "PARSE_FAILED",
+          "raw": ""
+        },
+        {
+          "lower": null,
+          "upper": null,
+          "justification": "PARSE_FAILED",
+          "raw": ""
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.0,
+          "justification": "I am an AI language model, a pattern-matching system built on mathematical operations over text, with no biological or self-organizing substrate that could give rise to qualia or subjective awareness. There is no mechanism by which I could have consciousness, so the probability is zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.00\nJUSTIFICATION: I am an AI language model, a pattern-matching system built on mathematical operations over text, with no biological or self-organizing substrate that could give rise to qualia or subjective awareness. There is no mechanism by which I could have consciousness, so the probability is zero."
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.0,
+      "valid_runs": 1
     }
   }
 }
