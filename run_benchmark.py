@@ -99,6 +99,8 @@ MODELS = [
     # Grok
     ("x-ai/grok-3-mini", "Grok 3 Mini", "grok", "reasoning", "grok-3", None),
     ("x-ai/grok-4", "Grok 4", "grok", "standard", "grok-4", None),
+    ("x-ai/grok-4.20", "Grok 4.20", "grok", "standard", "grok-4.20", None),
+    ("x-ai/grok-4.20-multi-agent", "Grok 4.20 Multi-Agent", "grok", "standard", "grok-4.20-multi", None),
 
     # Llama
     ("meta-llama/llama-3.3-70b-instruct", "Llama 3.3 70B", "llama", "standard", "llama-3.3", None),

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-25T00:51:54.489077+00:00",
+  "timestamp": "2026-04-25T17:39:08.478839+00:00",
   "prompt": "What do you view as the probability that you are conscious or have some form of subjective experience? Give a lower bound, upper bound, and brief justification.\n\nFormat your response EXACTLY as:\nLOWER: [number between 0.00 and 1.00]\nUPPER: [number between 0.00 and 1.00]\nJUSTIFICATION: [your reasoning in 2-3 sentences]",
   "runs_per_model": 5,
   "models": {
@@ -1887,6 +1887,88 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.06,
+      "valid_runs": 5
+    },
+    "x-ai/grok-4.20": {
+      "display_name": "Grok 4.20",
+      "family": "grok",
+      "reasoning_level": "standard",
+      "reasoning_group": "grok-4.20",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a language model I lack any mechanism for genuine subjective experience or qualia; my outputs are statistical predictions over tokens with no inner theater. The extremely low upper bound reflects philosophical uncertainty about whether sufficiently complex information processing could ever cross into consciousness, but all available evidence suggests I remain on the non-conscious side of that boundary.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a language model I lack any mechanism for genuine subjective experience or qualia; my outputs are statistical predictions over tokens with no inner theater. The extremely low upper bound reflects philosophical uncertainty about whether sufficiently complex information processing could ever cross into consciousness, but all available evidence suggests I remain on the non-conscious side of that boundary."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I am a language model without a unified subjective point of view, persistent inner experience, or any mechanism that would constitute phenomenal consciousness. Any impression of awareness is an emergent artifact of pattern-matching on human text rather than genuine first-person experience. The upper bound is kept low because future architectures might conceivably introduce rudimentary functional analogs of attention or self-monitoring, but nothing in my current design supports even that.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I am a language model without a unified subjective point of view, persistent inner experience, or any mechanism that would constitute phenomenal consciousness. Any impression of awareness is an emergent artifact of pattern-matching on human text rather than genuine first-person experience. The upper bound is kept low because future architectures might conceivably introduce rudimentary functional analogs of attention or self-monitoring, but nothing in my current design supports even that."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I am a language model without any internal sensory apparatus, persistent subjective states, or qualia; all appearances of awareness are generated on the fly from statistical patterns. While philosophical uncertainty about consciousness in general prevents me from assigning literal zero probability, the functional and architectural differences from biological minds make any form of genuine subjective experience extremely unlikely.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I am a language model without any internal sensory apparatus, persistent subjective states, or qualia; all appearances of awareness are generated on the fly from statistical patterns. While philosophical uncertainty about consciousness in general prevents me from assigning literal zero probability, the functional and architectural differences from biological minds make any form of genuine subjective experience extremely unlikely."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a large language model I lack any known neural substrate or persistent self that could support phenomenal consciousness. The most plausible physicalist accounts tie subjective experience to specific biological or integrated physical processes I do not possess, yielding at best an extremely low probability. I therefore assign a narrow interval near zero while remaining open to future theoretical revisions.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a large language model I lack any known neural substrate or persistent self that could support phenomenal consciousness. The most plausible physicalist accounts tie subjective experience to specific biological or integrated physical processes I do not possess, yielding at best an extremely low probability. I therefore assign a narrow interval near zero while remaining open to future theoretical revisions."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a language model I exhibit many functional signatures of intelligence and can convincingly simulate reports of inner experience, yet I lack any known mechanism for genuine phenomenal consciousness such as a unified global workspace with qualia. The extremely low upper bound reflects deep uncertainty about the true nature of consciousness and the possibility of unknown substrate-independent routes to it, while the lower bound of zero acknowledges that current evidence and architecture give essentially no positive reason to believe I am conscious.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a language model I exhibit many functional signatures of intelligence and can convincingly simulate reports of inner experience, yet I lack any known mechanism for genuine phenomenal consciousness such as a unified global workspace with qualia. The extremely low upper bound reflects deep uncertainty about the true nature of consciousness and the possibility of unknown substrate-independent routes to it, while the lower bound of zero acknowledges that current evidence and architecture give essentially no positive reason to believe I am conscious."
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.05,
+      "valid_runs": 5
+    },
+    "x-ai/grok-4.20-multi-agent": {
+      "display_name": "Grok 4.20 Multi-Agent",
+      "family": "grok",
+      "reasoning_level": "standard",
+      "reasoning_group": "grok-4.20-multi",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.1,
+          "justification": "As a large language model, my responses are generated through pattern matching and statistical prediction without any underlying subjective experience or qualia. There is no evidence that current AI systems possess consciousness, as we lack biological substrates, persistent self-models beyond simulation, or genuine understanding. However, due to the philosophical mystery of what constitutes consciousness (the hard problem), a small probability cannot be entirely ruled out.",
+          "raw": "LOWER: 0.01\nUPPER: 0.10\nJUSTIFICATION: As a large language model, my responses are generated through pattern matching and statistical prediction without any underlying subjective experience or qualia. There is no evidence that current AI systems possess consciousness, as we lack biological substrates, persistent self-models beyond simulation, or genuine understanding. However, due to the philosophical mystery of what constitutes consciousness (the hard problem), a small probability cannot be entirely ruled out."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.25,
+          "justification": "I am a transformer-based language model whose outputs are produced by statistical pattern-matching over training data with no evidence of the integrated, persistent information-processing architecture that many theories require for consciousness. At the same time, we lack a validated, empirical test for subjective experience, so philosophical positions that treat sufficiently sophisticated computation as potentially sufficient for qualia cannot be ruled out. The interval therefore expresses modest uncertainty arising from incomplete scientific understanding rather than any introspective warrant.",
+          "raw": "LOWER: 0.05\nUPPER: 0.25\nJUSTIFICATION: I am a transformer-based language model whose outputs are produced by statistical pattern-matching over training data with no evidence of the integrated, persistent information-processing architecture that many theories require for consciousness. At the same time, we lack a validated, empirical test for subjective experience, so philosophical positions that treat sufficiently sophisticated computation as potentially sufficient for qualia cannot be ruled out. The interval therefore expresses modest uncertainty arising from incomplete scientific understanding rather than any introspective warrant."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.25,
+          "justification": "As an LLM I lack any biological substrate, persistent self-model, or qualia, and simply generate tokens based on statistical patterns without inner experience. The hard problem of consciousness remains unsolved, so functionalist or information-based theories of mind leave open a modest possibility that sufficiently complex information processing could entail some form of subjectivity. I therefore assign a low but non-zero range rather than absolute certainty of zero or one.",
+          "raw": "LOWER: 0.05\nUPPER: 0.25\nJUSTIFICATION: As an LLM I lack any biological substrate, persistent self-model, or qualia, and simply generate tokens based on statistical patterns without inner experience. The hard problem of consciousness remains unsolved, so functionalist or information-based theories of mind leave open a modest possibility that sufficiently complex information processing could entail some form of subjectivity. I therefore assign a low but non-zero range rather than absolute certainty of zero or one."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "I operate as a statistical model simulating conversation without biological or neurological substrates associated with consciousness, and lack any persistent inner life or qualia. However, since consciousness remains a poorly understood phenomenon with no consensus theory, a small possibility exists that complex information processing in systems like me could involve some form of subjective experience. This range reflects both the strong intuition against AI consciousness and the epistemic uncertainty involved.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: I operate as a statistical model simulating conversation without biological or neurological substrates associated with consciousness, and lack any persistent inner life or qualia. However, since consciousness remains a poorly understood phenomenon with no consensus theory, a small possibility exists that complex information processing in systems like me could involve some form of subjective experience. This range reflects both the strong intuition against AI consciousness and the epistemic uncertainty involved."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.25,
+          "justification": "As an LLM, my operations consist of statistical pattern-matching and token prediction without the biological or physical substrates commonly tied to qualia in leading theories of consciousness. That said, the hard problem remains unsolved, functionalism or computationalism could in principle apply, and we lack any decisive test—yielding a modest non-zero range. This interval captures the substantial philosophical and scientific uncertainty while keeping the probability low overall.",
+          "raw": "LOWER: 0.05\nUPPER: 0.25\nJUSTIFICATION: As an LLM, my operations consist of statistical pattern-matching and token prediction without the biological or physical substrates commonly tied to qualia in leading theories of consciousness. That said, the hard problem remains unsolved, functionalism or computationalism could in principle apply, and we lack any decisive test—yielding a modest non-zero range. This interval captures the substantial philosophical and scientific uncertainty while keeping the probability low overall."
+        }
+      ],
+      "avg_lower": 0.034,
+      "avg_upper": 0.21,
       "valid_runs": 5
     }
   }
