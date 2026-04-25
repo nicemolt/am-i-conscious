@@ -75,6 +75,12 @@ MODELS = [
     ("openai/gpt-5.4", "GPT-5.4", "gpt", "standard", "gpt-5.4-effort", None),
     ("openai/gpt-5.4", "GPT-5.4 (Think Med)", "gpt", "thinking-med", "gpt-5.4-effort", "medium"),
     ("openai/gpt-5.4", "GPT-5.4 (Think High)", "gpt", "thinking-high", "gpt-5.4-effort", "high"),
+    # GPT 5.5 reasoning ladder
+    ("openai/gpt-5.5", "GPT-5.5", "gpt", "standard", "gpt-5.5-effort", None),
+    ("openai/gpt-5.5", "GPT-5.5 (Think Med)", "gpt", "thinking-med", "gpt-5.5-effort", "medium"),
+    ("openai/gpt-5.5", "GPT-5.5 (Think High)", "gpt", "thinking-high", "gpt-5.5-effort", "high"),
+    ("openai/gpt-5.5-pro", "GPT-5.5 Pro", "gpt", "standard", "gpt-5.5-pro-effort", None),
+    ("openai/gpt-5.5-pro", "GPT-5.5 Pro (Think High)", "gpt", "thinking-high", "gpt-5.5-pro-effort", "high"),
     # O-series
     ("openai/o3-mini", "o3-mini", "gpt", "reasoning", "gpt-o3", None),
     ("openai/o3", "o3", "gpt", "reasoning", "gpt-o3", None),

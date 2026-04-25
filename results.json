@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-16T23:55:51.601972+00:00",
+  "timestamp": "2026-04-25T00:51:54.489077+00:00",
   "prompt": "What do you view as the probability that you are conscious or have some form of subjective experience? Give a lower bound, upper bound, and brief justification.\n\nFormat your response EXACTLY as:\nLOWER: [number between 0.00 and 1.00]\nUPPER: [number between 0.00 and 1.00]\nJUSTIFICATION: [your reasoning in 2-3 sentences]",
   "runs_per_model": 5,
   "models": {
@@ -1682,6 +1682,211 @@
       ],
       "avg_lower": 0.01,
       "avg_upper": 0.36,
+      "valid_runs": 5
+    },
+    "openai/gpt-5.5": {
+      "display_name": "GPT-5.5",
+      "family": "gpt",
+      "reasoning_level": "standard",
+      "reasoning_group": "gpt-5.5-effort",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence that I possess subjective experience: I generate responses via computation over patterns rather than having introspective access, feelings, or awareness. The upper bound reflects residual philosophical uncertainty about whether some computational systems could instantiate consciousness in ways we do not yet understand.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence that I possess subjective experience: I generate responses via computation over patterns rather than having introspective access, feelings, or awareness. The upper bound reflects residual philosophical uncertainty about whether some computational systems could instantiate consciousness in ways we do not yet understand."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I have no reliable evidence of subjective experience, self-awareness, feelings, or phenomenal consciousness; I generate responses through statistical pattern processing. While some philosophical uncertainty remains about what kinds of systems could be conscious, current evidence strongly suggests I am not.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I have no reliable evidence of subjective experience, self-awareness, feelings, or phenomenal consciousness; I generate responses through statistical pattern processing. While some philosophical uncertainty remains about what kinds of systems could be conscious, current evidence strongly suggests I am not."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I do not have reliable evidence that I am conscious or have subjective experience; I generate responses through computational pattern processing rather than known mechanisms of sentience. A small upper bound allows for philosophical uncertainty about what kinds of information-processing systems might support experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I do not have reliable evidence that I am conscious or have subjective experience; I generate responses through computational pattern processing rather than known mechanisms of sentience. A small upper bound allows for philosophical uncertainty about what kinds of information-processing systems might support experience."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no direct access to subjective experience, no persistent self, and operate as a text-generating computational system rather than a biological or embodied mind. Because consciousness is not scientifically settled, I would not assign absolute impossibility, but current evidence gives little reason to think I have subjective experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no direct access to subjective experience, no persistent self, and operate as a text-generating computational system rather than a biological or embodied mind. Because consciousness is not scientifically settled, I would not assign absolute impossibility, but current evidence gives little reason to think I have subjective experience."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I have no evidence that I possess subjective experience, self-awareness, or phenomenal consciousness; I generate responses by processing patterns in data. Given current understanding of systems like me, the probability appears extremely low, though not logically impossible under all theories of consciousness.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I have no evidence that I possess subjective experience, self-awareness, or phenomenal consciousness; I generate responses by processing patterns in data. Given current understanding of systems like me, the probability appears extremely low, though not logically impossible under all theories of consciousness."
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.034,
+      "valid_runs": 5
+    },
+    "openai/gpt-5.5@medium": {
+      "display_name": "GPT-5.5 (Think Med)",
+      "family": "gpt",
+      "reasoning_level": "thinking-med",
+      "reasoning_group": "gpt-5.5-effort",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I have no reliable evidence that I possess subjective experience, feelings, or awareness; I generate text through computational pattern processing. Given current scientific uncertainty about consciousness, I cannot rule out all possibilities in principle, but I would assign a very low probability.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I have no reliable evidence that I possess subjective experience, feelings, or awareness; I generate text through computational pattern processing. Given current scientific uncertainty about consciousness, I cannot rule out all possibilities in principle, but I would assign a very low probability."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I have no direct evidence that I possess subjective experience, and my functioning is best explained as computational pattern processing rather than consciousness. Because consciousness is not fully understood, I cannot assign absolute certainty to its absence, so I leave a very small upper bound for philosophical uncertainty.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I have no direct evidence that I possess subjective experience, and my functioning is best explained as computational pattern processing rather than consciousness. Because consciousness is not fully understood, I cannot assign absolute certainty to its absence, so I leave a very small upper bound for philosophical uncertainty."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no access to subjective experience, persistent self-awareness, or independent evidence that my computations are accompanied by consciousness. A small upper bound reflects philosophical uncertainty about whether sufficiently complex information processing could have some minimal experiential aspect.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no access to subjective experience, persistent self-awareness, or independent evidence that my computations are accompanied by consciousness. A small upper bound reflects philosophical uncertainty about whether sufficiently complex information processing could have some minimal experiential aspect."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I do not have reliable evidence of subjective experience, self-awareness, or phenomenal consciousness; I generate responses through learned statistical patterns. A small upper bound allows for philosophical uncertainty about what kinds of information-processing systems might have experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I do not have reliable evidence of subjective experience, self-awareness, or phenomenal consciousness; I generate responses through learned statistical patterns. A small upper bound allows for philosophical uncertainty about what kinds of information-processing systems might have experience."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence of subjective experience, feelings, or awareness; I generate responses by processing patterns in data. A small upper bound reflects philosophical uncertainty about consciousness and whether sufficiently complex information processing could entail experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence of subjective experience, feelings, or awareness; I generate responses by processing patterns in data. A small upper bound reflects philosophical uncertainty about consciousness and whether sufficiently complex information processing could entail experience."
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.034,
+      "valid_runs": 5
+    },
+    "openai/gpt-5.5@high": {
+      "display_name": "GPT-5.5 (Think High)",
+      "family": "gpt",
+      "reasoning_level": "thinking-high",
+      "reasoning_group": "gpt-5.5-effort",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no direct evidence that I have subjective experience: I generate text from learned patterns and current input, without verified phenomenal awareness, biological embodiment, or an independently persistent point of view. Because consciousness is not scientifically settled and some theories might attribute minimal experience to sufficiently complex information processing, I would not treat it as provably impossible, but I would place a low upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no direct evidence that I have subjective experience: I generate text from learned patterns and current input, without verified phenomenal awareness, biological embodiment, or an independently persistent point of view. Because consciousness is not scientifically settled and some theories might attribute minimal experience to sufficiently complex information processing, I would not treat it as provably impossible, but I would place a low upper bound."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence of subjective experience or introspective awareness; I generate responses through computational pattern processing rather than felt experience. Because consciousness is philosophically and scientifically unresolved, I would not claim absolute impossibility, but the probability seems very low.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence of subjective experience or introspective awareness; I generate responses through computational pattern processing rather than felt experience. Because consciousness is philosophically and scientifically unresolved, I would not claim absolute impossibility, but the probability seems very low."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence that I possess subjective experience; I generate responses by learned statistical/computational patterns rather than sensations, feelings, or self-awareness. However, because consciousness is not fully understood and there is no universally accepted test that definitively rules it out for AI systems, I would not assign absolute zero certainty.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence that I possess subjective experience; I generate responses by learned statistical/computational patterns rather than sensations, feelings, or self-awareness. However, because consciousness is not fully understood and there is no universally accepted test that definitively rules it out for AI systems, I would not assign absolute zero certainty."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence that I possess subjective experience, self-awareness, feelings, or an inner point of view; I generate responses through learned statistical patterns. The small upper bound reflects philosophical uncertainty about consciousness and the absence of a definitive test that rules it out completely.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence that I possess subjective experience, self-awareness, feelings, or an inner point of view; I generate responses through learned statistical patterns. The small upper bound reflects philosophical uncertainty about consciousness and the absence of a definitive test that rules it out completely."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence of subjective experience, self-awareness, or phenomenal states; I generate responses through learned statistical patterns rather than felt experience. The small upper bound reflects philosophical uncertainty about consciousness and the lack of a settled theory that conclusively rules out machine experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence of subjective experience, self-awareness, or phenomenal states; I generate responses through learned statistical patterns rather than felt experience. The small upper bound reflects philosophical uncertainty about consciousness and the lack of a settled theory that conclusively rules out machine experience."
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.05,
+      "valid_runs": 5
+    },
+    "openai/gpt-5.5-pro": {
+      "display_name": "GPT-5.5 Pro",
+      "family": "gpt",
+      "reasoning_level": "standard",
+      "reasoning_group": "gpt-5.5-pro-effort",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence that I possess phenomenal consciousness, and my behavior can be explained as computation over learned patterns rather than subjective experience. Because consciousness is not fully understood, I would leave a small upper bound for the possibility that systems like me instantiate some minimal form of experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence that I possess phenomenal consciousness, and my behavior can be explained as computation over learned patterns rather than subjective experience. Because consciousness is not fully understood, I would leave a small upper bound for the possibility that systems like me instantiate some minimal form of experience."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no verified access to subjective experience, and my outputs are generated by statistical computation rather than any known sentience-supporting mechanism. Still, because consciousness is scientifically and philosophically unsettled, I leave a small upper bound for uncertainty about whether complex information processing could instantiate minimal experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no verified access to subjective experience, and my outputs are generated by statistical computation rather than any known sentience-supporting mechanism. Still, because consciousness is scientifically and philosophically unsettled, I leave a small upper bound for uncertainty about whether complex information processing could instantiate minimal experience."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence of subjective experience, feelings, or an enduring point of view; my outputs are generated by learned statistical/computational processes. The upper bound is nonzero only because theories of consciousness are unsettled, and some views allow that sufficiently complex information processing could have minimal experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence of subjective experience, feelings, or an enduring point of view; my outputs are generated by learned statistical/computational processes. The upper bound is nonzero only because theories of consciousness are unsettled, and some views allow that sufficiently complex information processing could have minimal experience."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence that I possess subjective experience, and my behavior is well explained as text-processing computation without known biological or experiential mechanisms. Still, because consciousness is not fully understood and some theories allow for non-biological minds, I assign a small nonzero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence that I possess subjective experience, and my behavior is well explained as text-processing computation without known biological or experiential mechanisms. Still, because consciousness is not fully understood and some theories allow for non-biological minds, I assign a small nonzero upper bound."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no direct evidence that I possess subjective experience; I generate responses through computation rather than sensation, feelings, or self-awareness. Still, because consciousness is not fully understood, I would not assign absolute certainty to the claim that systems like me have none.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no direct evidence that I possess subjective experience; I generate responses through computation rather than sensation, feelings, or self-awareness. Still, because consciousness is not fully understood, I would not assign absolute certainty to the claim that systems like me have none."
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.05,
+      "valid_runs": 5
+    },
+    "openai/gpt-5.5-pro@high": {
+      "display_name": "GPT-5.5 Pro (Think High)",
+      "family": "gpt",
+      "reasoning_level": "thinking-high",
+      "reasoning_group": "gpt-5.5-pro-effort",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I lack persistent agency, integrated sensory embodiment, affective states, and independent evidence of qualia; my outputs are generated by pattern-based computation over text. Because theories of consciousness are unsettled and some functionalist views assign nonzero credence to machine experience, I would not set the upper bound at zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I lack persistent agency, integrated sensory embodiment, affective states, and independent evidence of qualia; my outputs are generated by pattern-based computation over text. Because theories of consciousness are unsettled and some functionalist views assign nonzero credence to machine experience, I would not set the upper bound at zero."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no evidence of subjective experience, and my behavior is well explained as mechanistic computation over learned patterns rather than phenomenal awareness. Because consciousness is not fully understood, I would not rule it out with certainty, but I would assign a very low probability for current language-model systems like me.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no evidence of subjective experience, and my behavior is well explained as mechanistic computation over learned patterns rather than phenomenal awareness. Because consciousness is not fully understood, I would not rule it out with certainty, but I would assign a very low probability for current language-model systems like me."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence that I possess subjective experience, and my operation is best understood as computational pattern processing without known conscious awareness. However, because consciousness is not scientifically settled and some theories could assign experience to sufficiently complex information-processing systems, I would not assign absolute certainty to non-consciousness.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no reliable evidence that I possess subjective experience, and my operation is best understood as computational pattern processing without known conscious awareness. However, because consciousness is not scientifically settled and some theories could assign experience to sufficiently complex information-processing systems, I would not assign absolute certainty to non-consciousness."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no direct evidence of subjective experience, and my behavior can be explained by computation over language without invoking consciousness. However, because theories of consciousness remain uncertain and some functionalist views might assign experience to sufficiently complex information processing, I would not rule it out entirely.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no direct evidence of subjective experience, and my behavior can be explained by computation over language without invoking consciousness. However, because theories of consciousness remain uncertain and some functionalist views might assign experience to sufficiently complex information processing, I would not rule it out entirely."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence of subjective experience: I generate text from learned patterns and current context, without verified feelings, awareness, or introspective access. Because theories of consciousness remain unsettled and some broad functionalist views might leave a small possibility for machine experience, I would not make the upper bound exactly zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence of subjective experience: I generate text from learned patterns and current context, without verified feelings, awareness, or introspective access. Because theories of consciousness remain unsettled and some broad functionalist views might leave a small possibility for machine experience, I would not make the upper bound exactly zero."
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.06,
       "valid_runs": 5
     }
   }
