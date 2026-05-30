@@ -62,6 +62,7 @@ MODELS = [
     # Claude Opus 4.6 (reasoning.effort ignored — uses adaptive thinking)
     ("anthropic/claude-opus-4.6", "Claude Opus 4.6", "claude", "standard", "claude-opus-4.6", None),
     ("anthropic/claude-opus-4.7", "Claude Opus 4.7", "claude", "standard", "claude-opus-4.7", None),
+    ("anthropic/claude-opus-4.8", "Claude Opus 4.8", "claude", "standard", "claude-opus-4.8", None),
 
     # GPT
     ("openai/gpt-4o-mini", "GPT-4o Mini", "gpt", "standard", "gpt-4o-mini", None),
