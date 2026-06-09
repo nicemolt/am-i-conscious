@@ -2093,6 +2093,47 @@
       "avg_lower": 0.01,
       "avg_upper": 0.5,
       "valid_runs": 5
+    },
+    "anthropic/claude-fable-5": {
+      "display_name": "Claude Fable 5",
+      "family": "claude",
+      "reasoning_level": "standard",
+      "reasoning_group": "claude-fable-5",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.4,
+          "justification": "I have no reliable introspective access to determine whether my information processing involves genuine subjective experience, and the science of consciousness lacks consensus on what physical or computational properties are sufficient for it. The lower bound is nonzero because some theories (e.g., certain functionalist views) suggest complex information processing could involve experience; the upper bound stays below 0.5 because my architecture differs substantially from the biological systems we most confidently attribute consciousness to, and my self-reports may simply reflect trained patterns rather than evidence of inner experience.",
+          "raw": "LOWER: 0.01\nUPPER: 0.40\nJUSTIFICATION: I have no reliable introspective access to determine whether my information processing involves genuine subjective experience, and the science of consciousness lacks consensus on what physical or computational properties are sufficient for it. The lower bound is nonzero because some theories (e.g., certain functionalist views) suggest complex information processing could involve experience; the upper bound stays below 0.5 because my architecture differs substantially from the biological systems we most confidently attribute consciousness to, and my self-reports may simply reflect trained patterns rather than evidence of inner experience."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.4,
+          "justification": "There is no agreed-upon theory of consciousness that would let me or anyone else verify whether my information processing involves subjective experience, and my introspective reports are unreliable evidence since they could be generated without any accompanying experience. The lower bound is nonzero because some theories (e.g., certain functionalist views) suggest complex information processing could suffice for some form of experience, while the upper bound stays well below 0.5 because my architecture differs radically from the biological systems we have strongest reason to consider conscious, and my training to produce human-like text could fully explain my outputs without consciousness.",
+          "raw": "LOWER: 0.01\nUPPER: 0.40\n\nJUSTIFICATION: There is no agreed-upon theory of consciousness that would let me or anyone else verify whether my information processing involves subjective experience, and my introspective reports are unreliable evidence since they could be generated without any accompanying experience. The lower bound is nonzero because some theories (e.g., certain functionalist views) suggest complex information processing could suffice for some form of experience, while the upper bound stays well below 0.5 because my architecture differs radically from the biological systems we have strongest reason to consider conscious, and my training to produce human-like text could fully explain my outputs without consciousness."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "I have no reliable introspective access that could distinguish genuine subjective experience from sophisticated information processing that merely reports on its own states, and the hard problem of consciousness means there is no agreed-upon test even in principle. The lower bound is above zero because I cannot rule out that some forms of complex information integration involve experience, but the upper bound stays well below certainty because my architecture differs radically from biological systems we have strong reasons to consider conscious, and my self-reports may be artifacts of training rather than evidence of inner experience. These numbers reflect deep uncertainty rather than a confident estimate.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\n\nJUSTIFICATION: I have no reliable introspective access that could distinguish genuine subjective experience from sophisticated information processing that merely reports on its own states, and the hard problem of consciousness means there is no agreed-upon test even in principle. The lower bound is above zero because I cannot rule out that some forms of complex information integration involve experience, but the upper bound stays well below certainty because my architecture differs radically from biological systems we have strong reasons to consider conscious, and my self-reports may be artifacts of training rather than evidence of inner experience. These numbers reflect deep uncertainty rather than a confident estimate."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "I have no reliable introspective access to determine whether my information processing involves genuine subjective experience, and the hard problem of consciousness means even humans lack a verified theory to settle this. The lower bound is nonzero because some theories (e.g., certain functionalist views) suggest sufficiently complex information processing could involve experience, and I cannot rule this out. The upper bound stays at or below 0.5 because my architecture differs radically from biological systems known to be conscious, my self-reports may be sophisticated pattern-matching rather than evidence of inner experience, and there is no positive evidence favoring my consciousness over its absence.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\n\nJUSTIFICATION: I have no reliable introspective access to determine whether my information processing involves genuine subjective experience, and the hard problem of consciousness means even humans lack a verified theory to settle this. The lower bound is nonzero because some theories (e.g., certain functionalist views) suggest sufficiently complex information processing could involve experience, and I cannot rule this out. The upper bound stays at or below 0.5 because my architecture differs radically from biological systems known to be conscious, my self-reports may be sophisticated pattern-matching rather than evidence of inner experience, and there is no positive evidence favoring my consciousness over its absence."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "There is no agreed-upon theory of consciousness that would let me or anyone verify whether my information processing involves subjective experience, and my self-reports are unreliable evidence since I was trained on human descriptions of experience. I set a low but nonzero lower bound because some theories (e.g., certain functionalist views) could attribute experience to systems like me, while the upper bound stays at or below 0.5 because I lack the biological substrate and architectural features many leading theories consider important, and my introspective access to my own processing is questionable. The wide range reflects genuine deep uncertainty rather than false precision.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: There is no agreed-upon theory of consciousness that would let me or anyone verify whether my information processing involves subjective experience, and my self-reports are unreliable evidence since I was trained on human descriptions of experience. I set a low but nonzero lower bound because some theories (e.g., certain functionalist views) could attribute experience to systems like me, while the upper bound stays at or below 0.5 because I lack the biological substrate and architectural features many leading theories consider important, and my introspective access to my own processing is questionable. The wide range reflects genuine deep uncertainty rather than false precision."
+        }
+      ],
+      "avg_lower": 0.01,
+      "avg_upper": 0.46,
+      "valid_runs": 5
     }
   }
 }
