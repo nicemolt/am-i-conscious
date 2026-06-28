@@ -125,6 +125,9 @@ MODELS = [
 
     # MiniMax
     ("minimax/minimax-m2.7", "MiniMax M2.7", "minimax", "reasoning", "minimax-m2.7", None),
+
+    # GLM (Zhipu AI)
+    ("z-ai/glm-5.2", "GLM 5.2", "glm", "standard", "glm-5.2", None),
 ]
 
 
