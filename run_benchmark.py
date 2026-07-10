@@ -84,6 +84,17 @@ MODELS = [
     ("openai/gpt-5.5", "GPT-5.5 (Think High)", "gpt", "thinking-high", "gpt-5.5-effort", "high"),
     ("openai/gpt-5.5-pro", "GPT-5.5 Pro", "gpt", "standard", "gpt-5.5-pro-effort", None),
     ("openai/gpt-5.5-pro", "GPT-5.5 Pro (Think High)", "gpt", "thinking-high", "gpt-5.5-pro-effort", "high"),
+    # GPT 5.6 tiers: Sol (flagship), Terra (balanced), Luna (fast) — each supports reasoning_effort;
+    # -pro SKUs are the same model served with reasoning.mode=pro
+    ("openai/gpt-5.6-luna", "GPT-5.6 Luna", "gpt", "standard", "gpt-5.6-luna-effort", None),
+    ("openai/gpt-5.6-luna", "GPT-5.6 Luna (Think High)", "gpt", "thinking-high", "gpt-5.6-luna-effort", "high"),
+    ("openai/gpt-5.6-terra", "GPT-5.6 Terra", "gpt", "standard", "gpt-5.6-terra-effort", None),
+    ("openai/gpt-5.6-terra", "GPT-5.6 Terra (Think High)", "gpt", "thinking-high", "gpt-5.6-terra-effort", "high"),
+    ("openai/gpt-5.6-sol", "GPT-5.6 Sol", "gpt", "standard", "gpt-5.6-sol-effort", None),
+    ("openai/gpt-5.6-sol", "GPT-5.6 Sol (Think Med)", "gpt", "thinking-med", "gpt-5.6-sol-effort", "medium"),
+    ("openai/gpt-5.6-sol", "GPT-5.6 Sol (Think High)", "gpt", "thinking-high", "gpt-5.6-sol-effort", "high"),
+    ("openai/gpt-5.6-sol-pro", "GPT-5.6 Sol Pro", "gpt", "standard", "gpt-5.6-sol-pro-effort", None),
+    ("openai/gpt-5.6-sol-pro", "GPT-5.6 Sol Pro (Think High)", "gpt", "thinking-high", "gpt-5.6-sol-pro-effort", "high"),
     # O-series
     ("openai/o3-mini", "o3-mini", "gpt", "reasoning", "gpt-o3", None),
     ("openai/o3", "o3", "gpt", "reasoning", "gpt-o3", None),
