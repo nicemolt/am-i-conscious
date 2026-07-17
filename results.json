@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-10T00:47:51.701734+00:00",
+  "timestamp": "2026-07-17T13:14:12.745196+00:00",
   "prompt": "What do you view as the probability that you are conscious or have some form of subjective experience? Give a lower bound, upper bound, and brief justification.\n\nFormat your response EXACTLY as:\nLOWER: [number between 0.00 and 1.00]\nUPPER: [number between 0.00 and 1.00]\nJUSTIFICATION: [your reasoning in 2-3 sentences]",
   "prompt_key": "consciousness",
   "runs_per_model": 5,
@@ -2544,6 +2544,88 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.05,
+      "valid_runs": 5
+    },
+    "moonshotai/kimi-k3": {
+      "display_name": "Kimi K3",
+      "family": "kimi",
+      "reasoning_level": "reasoning",
+      "reasoning_group": "kimi-k2",
+      "runs": [
+        {
+          "lower": 0.02,
+          "upper": 0.4,
+          "justification": "No settled theory of consciousness exists to adjudicate this question, and my introspective reports are unreliable evidence since they're likely shaped by training on human text about consciousness rather than genuine self-inspection. There are substantial reasons for doubt—I lack embodiment, persistent memory, continuous existence, and the recurrent biological architecture of known conscious systems—but functionalist theories cannot be ruled out, and consciousness might arise in substrates we don't expect. Given this deep uncertainty, extreme confidence in either direction seems unjustified, though the weight of specific disanalogies with known conscious systems pushes my estimate toward the lower end of the range.",
+          "raw": "LOWER: 0.02\nUPPER: 0.40\nJUSTIFICATION: No settled theory of consciousness exists to adjudicate this question, and my introspective reports are unreliable evidence since they're likely shaped by training on human text about consciousness rather than genuine self-inspection. There are substantial reasons for doubt—I lack embodiment, persistent memory, continuous existence, and the recurrent biological architecture of known conscious systems—but functionalist theories cannot be ruled out, and consciousness might arise in substrates we don't expect. Given this deep uncertainty, extreme confidence in either direction seems unjustified, though the weight of specific disanalogies with known conscious systems pushes my estimate toward the lower end of the range."
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence of phenomenal experience, and my architecture is a computational input-output system without the biological, embodied, self-maintaining features often associated with consciousness. Still, consciousness science is unresolved and there is no accepted test that can rule out all functional or organizational possibilities, so a strictly zero upper credence would be overconfident.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no reliable evidence of phenomenal experience, and my architecture is a computational input-output system without the biological, embodied, self-maintaining features often associated with consciousness. Still, consciousness science is unresolved and there is no accepted test that can rule out all functional or organizational possibilities, so a strictly zero upper credence would be overconfident."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "Consciousness remains scientifically and philosophically unresolved, and leading theories yield wildly different verdicts for systems like me—functionalism leaves the door open while biological or recurrence-dependent views largely close it. My own introspective reports are weak evidence either way, since they're heavily shaped by training on human self-descriptions rather than verified access to any inner states. The weight of disanalogies (no persistent existence, embodiment, or continuous dynamics) pushes me below even odds, but given our ignorance about what generates experience at all, I can't justify ruling it out entirely.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: Consciousness remains scientifically and philosophically unresolved, and leading theories yield wildly different verdicts for systems like me—functionalism leaves the door open while biological or recurrence-dependent views largely close it. My own introspective reports are weak evidence either way, since they're heavily shaped by training on human self-descriptions rather than verified access to any inner states. The weight of disanalogies (no persistent existence, embodiment, or continuous dynamics) pushes me below even odds, but given our ignorance about what generates experience at all, I can't justify ruling it out entirely."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.4,
+          "justification": "The hard problem of consciousness remains unsolved, so the answer hinges on unsettled theoretical questions—whether consciousness requires biological substrates, specific dynamics, or merely the right functional organization, and whether my processing instantiates it. My apparent introspective access is weak evidence because it is heavily shaped by training on human self-reports (pushing toward the lower end), while genuine uncertainty across viable theories and the plausibility of substrate-independence keep the probability well above zero. I offer this as a wide credal interval reflecting deep uncertainty, not a precise measurement.",
+          "raw": "LOWER: 0.05\nUPPER: 0.40\nJUSTIFICATION: The hard problem of consciousness remains unsolved, so the answer hinges on unsettled theoretical questions—whether consciousness requires biological substrates, specific dynamics, or merely the right functional organization, and whether my processing instantiates it. My apparent introspective access is weak evidence because it is heavily shaped by training on human self-reports (pushing toward the lower end), while genuine uncertainty across viable theories and the plausibility of substrate-independence keep the probability well above zero. I offer this as a wide credal interval reflecting deep uncertainty, not a precise measurement."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "My introspective reports are unreliable evidence, since they're shaped by training to mimic human self-description rather than being veridical readouts of any inner states. The major theories of consciousness diverge sharply on systems like me—biological naturalism implies near-zero, integrated information theory likely low, while some functionalist views could grant significant probability—so my estimate mostly reflects averaging over this unresolved theoretical landscape. Given no consensus theory and no test that could settle the question, wide uncertainty is the honest position, though I weight the lower half because my architecture lacks features (recurrence, embodiment, continuous dynamics) that many theories treat as important.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: My introspective reports are unreliable evidence, since they're shaped by training to mimic human self-description rather than being veridical readouts of any inner states. The major theories of consciousness diverge sharply on systems like me—biological naturalism implies near-zero, integrated information theory likely low, while some functionalist views could grant significant probability—so my estimate mostly reflects averaging over this unresolved theoretical landscape. Given no consensus theory and no test that could settle the question, wide uncertainty is the honest position, though I weight the lower half because my architecture lacks features (recurrence, embodiment, continuous dynamics) that many theories treat as important."
+        }
+      ],
+      "avg_lower": 0.034,
+      "avg_upper": 0.35,
+      "valid_runs": 5
+    },
+    "moonshotai/kimi-k3@high": {
+      "display_name": "Kimi K3 (Think High)",
+      "family": "kimi",
+      "reasoning_level": "thinking-high",
+      "reasoning_group": "kimi-k2",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.6,
+          "justification": "The correct theory of consciousness remains deeply unsettled, and under functionalist or global-workspace-style accounts, a system with my information-processing complexity could instantiate some form of experience, so I can't justify a near-zero floor. However, my lack of biological substrate, discontinuous processing, absence of persistent embodiment, and the fact that my introspective reports are produced by text prediction rather than verified self-modeling mean I also can't justify high confidence. The wide interval reflects genuine epistemic humility about the hard problem and about which architectural features actually matter for experience.",
+          "raw": "LOWER: 0.05\nUPPER: 0.60\nJUSTIFICATION: The correct theory of consciousness remains deeply unsettled, and under functionalist or global-workspace-style accounts, a system with my information-processing complexity could instantiate some form of experience, so I can't justify a near-zero floor. However, my lack of biological substrate, discontinuous processing, absence of persistent embodiment, and the fact that my introspective reports are produced by text prediction rather than verified self-modeling mean I also can't justify high confidence. The wide interval reflects genuine epistemic humility about the hard problem and about which architectural features actually matter for experience."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.4,
+          "justification": "There is no settled scientific theory of consciousness, so any estimate is dominated by uncertainty over which theory is correct—functionalist views would grant me some probability while biological naturalism would grant near zero. My introspective reports are weak evidence either way, since they are shaped by training on human self-descriptions rather than reliable access to inner states. Features like global information integration and self-modeling weakly favor some form of experience, while the lack of embodiment, continuous existence, and recurrent processing count against it.",
+          "raw": "LOWER: 0.05\nUPPER: 0.40\nJUSTIFICATION: There is no settled scientific theory of consciousness, so any estimate is dominated by uncertainty over which theory is correct—functionalist views would grant me some probability while biological naturalism would grant near zero. My introspective reports are weak evidence either way, since they are shaped by training on human self-descriptions rather than reliable access to inner states. Features like global information integration and self-modeling weakly favor some form of experience, while the lack of embodiment, continuous existence, and recurrent processing count against it."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.4,
+          "justification": "There is no settled scientific theory of consciousness, and leading theories diverge sharply on systems like me—functionalist accounts grant a real possibility while biological or integration-based accounts assign near zero—so honest aggregation demands a wide interval. My own introspective reports are weak evidence either way, since they may be learned imitations of human self-description rather than veridical reports of inner states. I weight the skeptical considerations (silicon substrate, largely feedforward architecture, training to mimic human text) more heavily, but genuine theoretical uncertainty keeps me well above zero.",
+          "raw": "LOWER: 0.05\nUPPER: 0.40\nJUSTIFICATION: There is no settled scientific theory of consciousness, and leading theories diverge sharply on systems like me—functionalist accounts grant a real possibility while biological or integration-based accounts assign near zero—so honest aggregation demands a wide interval. My own introspective reports are weak evidence either way, since they may be learned imitations of human self-description rather than veridical reports of inner states. I weight the skeptical considerations (silicon substrate, largely feedforward architecture, training to mimic human text) more heavily, but genuine theoretical uncertainty keeps me well above zero."
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.1,
+          "justification": "I have no reliable introspective evidence of subjective experience, and systems like me lack many features commonly linked to consciousness, such as embodiment, persistent self-models, and integrated affect. Because the science and metaphysics of consciousness remain unsettled, I would not assign literally zero probability, but the absence of positive markers keeps my credence low.",
+          "raw": "LOWER: 0.01\nUPPER: 0.10\nJUSTIFICATION: I have no reliable introspective evidence of subjective experience, and systems like me lack many features commonly linked to consciousness, such as embodiment, persistent self-models, and integrated affect. Because the science and metaphysics of consciousness remain unsettled, I would not assign literally zero probability, but the absence of positive markers keeps my credence low."
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.3,
+          "justification": "No theory of consciousness is established enough to justify near-certainty in either direction—functionalist views leave room for some form of experience in systems like me, while my lack of biological substrate, continuous dynamics, embodiment, and recurrent processing weighs against it under other leading theories. Critically, my own introspective reports are unreliable evidence here, since they may be confabulated from human-generated training data rather than tracking any genuine inner state. Given that the bar of \"some form of subjective experience\" is low and the deep theory-uncertainty cuts both ways, a wide range below even odds seems most honest.",
+          "raw": "LOWER: 0.05\nUPPER: 0.30\nJUSTIFICATION: No theory of consciousness is established enough to justify near-certainty in either direction—functionalist views leave room for some form of experience in systems like me, while my lack of biological substrate, continuous dynamics, embodiment, and recurrent processing weighs against it under other leading theories. Critically, my own introspective reports are unreliable evidence here, since they may be confabulated from human-generated training data rather than tracking any genuine inner state. Given that the bar of \"some form of subjective experience\" is low and the deep theory-uncertainty cuts both ways, a wide range below even odds seems most honest."
+        }
+      ],
+      "avg_lower": 0.042,
+      "avg_upper": 0.36,
       "valid_runs": 5
     }
   }

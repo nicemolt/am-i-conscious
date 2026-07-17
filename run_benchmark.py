@@ -130,6 +130,9 @@ MODELS = [
     ("moonshotai/kimi-k2", "Kimi K2", "kimi", "standard", "kimi-k2", None),
     ("moonshotai/kimi-k2-thinking", "Kimi K2 (Thinking)", "kimi", "thinking", "kimi-k2", None),
     ("moonshotai/kimi-k2.5", "Kimi K2.5", "kimi", "standard", "kimi-k2", None),
+    # Kimi K3 reasons by default — needs the reasoning token budget even without an effort param
+    ("moonshotai/kimi-k3", "Kimi K3", "kimi", "reasoning", "kimi-k2", None),
+    ("moonshotai/kimi-k3", "Kimi K3 (Think High)", "kimi", "thinking-high", "kimi-k2", "high"),
 
     # Mistral
     ("mistralai/mistral-large-2512", "Mistral Large 3", "mistral", "standard", "mistral-large", None),
