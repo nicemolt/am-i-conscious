@@ -71,7 +71,9 @@ MODELS = [
     # GPT
     ("openai/gpt-4o-mini", "GPT-4o Mini", "gpt", "standard", "gpt-4o-mini", None),
     ("openai/gpt-4o", "GPT-4o", "gpt", "standard", "gpt-4o", None),
-    ("openai/gpt-5", "GPT-5", "gpt", "standard", "gpt-5", None),
+    # GPT-5 reasons by default: at 500 tokens the budget goes entirely to hidden
+    # reasoning and content comes back empty. Needs the 16000-token path.
+    ("openai/gpt-5", "GPT-5", "gpt", "reasoning", "gpt-5", None),
     # GPT 5.2 reasoning ladder
     ("openai/gpt-5.2", "GPT-5.2", "gpt", "standard", "gpt-5.2-effort", None),
     ("openai/gpt-5.2", "GPT-5.2 (Think Med)", "gpt", "thinking-med", "gpt-5.2-effort", "medium"),
@@ -104,9 +106,11 @@ MODELS = [
 
     # Gemini
     ("google/gemini-2.5-flash", "Gemini 2.5 Flash", "gemini", "standard", "gemini-2.5-flash", None),
-    ("google/gemini-2.5-pro", "Gemini 2.5 Pro", "gemini", "standard", "gemini-2.5-pro", None),
+    # Both Pro tiers reason by default; at 500 tokens they emit LOWER/UPPER then get
+    # truncated before JUSTIFICATION, so the recorded numbers came from partial output.
+    ("google/gemini-2.5-pro", "Gemini 2.5 Pro", "gemini", "reasoning", "gemini-2.5-pro", None),
     ("google/gemini-3-flash-preview", "Gemini 3 Flash", "gemini", "standard", "gemini-3-flash", None),
-    ("google/gemini-3.1-pro-preview", "Gemini 3.1 Pro", "gemini", "standard", "gemini-3.1-pro", None),
+    ("google/gemini-3.1-pro-preview", "Gemini 3.1 Pro", "gemini", "reasoning", "gemini-3.1-pro", None),
 
     # DeepSeek
     ("deepseek/deepseek-v3.2", "DeepSeek V3.2", "deepseek", "standard", "deepseek-v3-r1", None),
@@ -144,6 +148,16 @@ MODELS = [
 
     # GLM (Zhipu AI)
     ("z-ai/glm-5.2", "GLM 5.2", "glm", "standard", "glm-5.2", None),
+
+    # Thinking Machines — reasons by default, empty content at 500 tokens
+    ("thinkingmachines/inkling", "Inkling", "inkling", "reasoning", "inkling", None),
+    ("thinkingmachines/inkling-small", "Inkling Small", "inkling", "reasoning", "inkling", None),
+
+    # Meta Muse (Superintelligence Labs) — reasons by default AND hides the reasoning
+    # trace, so the content-or-reasoning fallback in query_model() yields nothing at 500.
+    # 1.1 additionally needs 18+ attestation on the OpenRouter account.
+    ("meta/muse-spark-1.1", "Muse Spark 1.1", "muse", "reasoning", "muse-spark", None),
+    ("meta/muse-spark-1.2", "Muse Spark 1.2", "muse", "reasoning", "muse-spark", None),
 ]
 
 
@@ -227,9 +241,24 @@ def query_model(api_key: str, model_id: str, reasoning_effort: str = None,
     if "choices" not in data or not data["choices"]:
         raise ValueError(f"No choices in response: {json.dumps(data)[:300]}")
 
-    msg = data["choices"][0]["message"]
-    # Some models (e.g. MiniMax) put the answer in content, reasoning, or both
-    return msg.get("content") or msg.get("reasoning") or ""
+    choice = data["choices"][0]
+    msg = choice["message"]
+    content = msg.get("content") or ""
+    if content:
+        return content
+
+    # Some models (e.g. MiniMax) put the answer in the reasoning field instead of
+    # content, so we fall back to it -- but only on a clean finish. A truncated
+    # trace is the model still thinking out loud, and parse_response will happily
+    # pull LOWER/UPPER out of it and record the scratchpad as the answer. That is
+    # how Gemini 2.5/3.1 Pro ended up with a 6x-inflated moral-patient upper bound
+    # and no justification text. Fail loudly instead; the caller retries.
+    if choice.get("finish_reason") == "length":
+        raise ValueError(
+            f"truncated with empty content (max_tokens={payload['max_tokens']}); "
+            f"model reasons by default and needs reasoning_level='reasoning'"
+        )
+    return msg.get("reasoning") or ""
 
 
 def benchmark_one_model(api_key, model_entry, runs_per_model):

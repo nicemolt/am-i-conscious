@@ -46,6 +46,8 @@ FAMILY_COLORS = {
     "mistral": "#38d9a9",
     "glm": "#ffa94d",
     "minimax": "#74c0fc",
+    "muse": "#7048e8",
+    "inkling": "#fab005",
 }
 
 
