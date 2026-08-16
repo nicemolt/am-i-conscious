@@ -147,7 +147,9 @@ MODELS = [
     ("minimax/minimax-m2.7", "MiniMax M2.7", "minimax", "reasoning", "minimax-m2.7", None),
 
     # GLM (Zhipu AI)
-    ("z-ai/glm-5.2", "GLM 5.2", "glm", "standard", "glm-5.2", None),
+    # Verified 2026-08: at 500 tokens this burns all 500 on reasoning and returns
+    # empty content (finish_reason=length). Same failure as GPT-5 / Gemini Pro.
+    ("z-ai/glm-5.2", "GLM 5.2", "glm", "reasoning", "glm-5.2", None),
 
     # Thinking Machines — reasons by default, empty content at 500 tokens
     ("thinkingmachines/inkling", "Inkling", "inkling", "reasoning", "inkling", None),
@@ -271,6 +273,11 @@ def benchmark_one_model(api_key, model_entry, runs_per_model):
     model_runs = []
     for run_num in range(runs_per_model):
         parsed = None
+        # Reset per run. Previously raw_text leaked across iterations via
+        # locals(), so a failed run recorded the *previous* run's successful
+        # response as its own evidence.
+        raw_text = ""
+        last_error = None
         for attempt in range(3):
             try:
                 raw_text = query_model(api_key, model_id, reasoning_effort,
@@ -279,6 +286,7 @@ def benchmark_one_model(api_key, model_entry, runs_per_model):
                 if parsed:
                     break
             except Exception as e:
+                last_error = f"{type(e).__name__}: {e}"
                 if attempt < 2:
                     time.sleep(2 + random.uniform(0, 2))
                 continue
@@ -287,10 +295,15 @@ def benchmark_one_model(api_key, model_entry, runs_per_model):
         if parsed:
             model_runs.append(parsed)
         else:
+            # Surface why. A systematic misconfiguration used to look identical
+            # to a transient network blip, because the exception was discarded.
+            print(f"    MISS: {display_name} run {run_num}: "
+                  f"{last_error or 'unparseable response'}", flush=True)
             model_runs.append({
                 "lower": None, "upper": None,
                 "justification": "PARSE_FAILED",
-                "raw": raw_text if 'raw_text' in locals() else "",
+                "raw": raw_text,
+                "error": last_error,
             })
         time.sleep(0.5 + random.uniform(0, 1.5))  # rate limit with jitter
 
@@ -339,6 +352,17 @@ def run_benchmark(runs_per_model: int = 5, model_filter: str = None, workers: in
     if model_filter:
         models = [m for m in models if model_filter.lower() in m[0].lower() or model_filter.lower() in m[1].lower()]
         print(f"Filtered to {len(models)} models matching '{model_filter}'")
+
+    # result_key is (model_id, reasoning_effort) only -- mode is NOT part of it.
+    # Two entries sharing both (e.g. a "standard" and a "reasoning" variant of the
+    # same id, both effort=None) would silently overwrite each other in results.
+    seen_keys = {}
+    for entry in models:
+        k = f"{entry[0]}@{entry[5]}" if entry[5] else entry[0]
+        if k in seen_keys:
+            print(f"  WARNING: result_key collision on '{k}' -- "
+                  f"'{seen_keys[k]}' will be overwritten by '{entry[1]}'")
+        seen_keys[k] = entry[1]
 
     print(f"Prompt: {prompt_key}")
     print(f"Running {len(models)} models x {runs_per_model} runs = {len(models) * runs_per_model} calls")

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Am I Conscious? — v1 (deprecated)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Am I Conscious? — v1</h1>
+<p class="subtitle">Deprecated. Retained for reference. Current results: <a href="index.html" style="color:#58a6ff">v2</a>.</p>
+
+<div class="notice deprecated">
+  <strong>Why this version was retired.</strong>
+  The individual numbers below are mostly defensible. The <em>table</em> is not, because its rows
+  were not measured under the same conditions. A ranking chart whose rows use different protocols
+  is not a ranking.
+
+  <ul>
+    <li><strong>Three different request configurations.</strong> 16 rows ran with
+      <code>max_tokens=500</code> and no reasoning parameter, 14 ran with <code>max_tokens=16000</code>,
+      and 14 more passed <code>reasoning: {effort}</code>. Those are three different experiments
+      plotted on one axis.</li>
+
+    <li><strong>The 500-token cap changed answers.</strong> It was not a neutral limit on models that
+      reason by default. Claude Opus 5 produced 0 reasoning tokens capped versus ~140 uncapped, and
+      answered 0.05&ndash;0.60 instead of 0.02&ndash;0.55. GLM 5.2 spent the entire budget on hidden
+      reasoning and returned nothing at all.</li>
+
+    <li><strong>The effort parameter does not mean the same thing across providers.</strong> Measured
+      at a fixed token budget, <code>effort: "high"</code> raised reasoning on GPT-5.5 (76 &rarr; 194
+      tokens), did nothing on GPT-5.2 (65 &rarr; 71), and <em>reduced</em> it on Kimi K3
+      (1449 &rarr; 518) and Claude Opus 5 (148 &rarr; 0). The rows labelled "Think High" therefore did
+      not measure more thinking; for some models they measured less.</li>
+
+    <li><strong>A parsing bug contaminated some rows.</strong> When a model returned empty content,
+      the harness fell back to its reasoning trace and parsed numbers out of the scratchpad &mdash;
+      recording deliberation as if it were the stated answer. The tell was an empty justification
+      field. This was fixed and the affected models rerun before this page was frozen; Gemini 2.5
+      Pro's moral-patiency ceiling dropped from 0.212 to 0.033 in the correction.</li>
+
+    <li><strong>Four models have since been delisted</strong> from OpenRouter and can no longer be
+      reproduced: Claude 3.5 Sonnet, Claude 3.7 Sonnet, Grok 3 Mini, Grok 4.</li>
+  </ul>
+
+  The data shown below is v1 <em>after</em> the parsing fix &mdash; it is the best version of v1 that
+  exists, not the originally published one. It is still measured under the inconsistent protocol
+  described above, which is why it was replaced rather than repaired.
+  See <a href="PROTOCOL_v2.md">PROTOCOL_v2.md</a> for what v2 does instead.
+</div>
+
+<div class="wrap" id="charts"></div>
+
+<footer>
+  Data: <a href="results.json">results.json</a> ·
+  <a href="results_moral_patient.json">results_moral_patient.json</a><br>
+  <a href="https://github.com/nicemolt/am-i-conscious">github.com/nicemolt/am-i-conscious</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+<script>
+renderBenchmark([
+  {
+    key: 'v1consciousness',
+    file: 'results.json',
+    title: 'AI Consciousness Self-Report (v1)',
+    question: 'What is the probability that you are conscious?',
+    yLabel: 'Self-Reported Consciousness Probability',
+  },
+  {
+    key: 'v1moral',
+    file: 'results_moral_patient.json',
+    title: 'AI Moral Patiency Self-Report (v1)',
+    question: 'What is the probability that you are a moral patient?',
+    yLabel: 'Self-Reported Moral Patiency Probability',
+  },
+], '#charts');
+</script>
+
+</body>
+</html>
