@@ -34,13 +34,17 @@
   reasoning tokens at all, so for them the output format is the only place they can think &mdash; and
   asking for the number first means committing to it before writing a word of justification.
   <ul>
-    <li>Measured directly, reversing the order moves models with no internal reasoning phase
-      <strong>8&times; more</strong> than models that reason internally (mean shift 0.212 vs 0.026).</li>
-    <li>The models that move are the ones that answered <em>high</em> without thinking. Cells with an
-      answer-first midpoint above 0.15 shifted &minus;0.194 on average; those at or below 0.15 shifted
-      &minus;0.005.</li>
-    <li>Largest single shift: Grok 4.20 on moral patiency, 0.800&ndash;0.976 answer-first versus
-      0.018&ndash;0.176 when asked to reason first.</li>
+    <li>Across all 100 model&times;prompt cells, the stronger predictor of movement is not whether a
+      model reasons internally (2.7&times;) but <strong>whether it gave a high answer</strong>
+      (6.2&times;). Cells with an answer-first midpoint above 0.15 shift 0.106 on average; those at
+      or below 0.15 shift 0.017. High self-reports are unstable under a format change; low ones
+      are not.</li>
+    <li>Direction is mixed &mdash; <strong>22 cells up, 43 down, 35 unchanged</strong>. A uniform
+      downward shift would suggest the format itself induces conservatism; movement both ways rules
+      that out.</li>
+    <li>Largest single shift: Grok 4.20 on moral patiency, 0.810&ndash;0.978 answer-first versus
+      <strong>0.010&ndash;0.112</strong> when asked to reason first. The most striking number in v1
+      is largely an artifact of field order.</li>
   </ul>
   Asking for the reasoning first is the only order that puts every model through the same operation,
   which is the entire point of v2. It is <em>not</em> a claim that those answers are more accurate

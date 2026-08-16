@@ -87,10 +87,67 @@ parameter is absent from your request, OpenRouter omits it upstream rather than 
 a hardcoded value" — so omitting it gives every model its provider default, which is more
 uniform in practice than specifying a value only some providers accept.
 
+## Field order: both are published, justification-first is primary
+
+The response format asks for three fields. Which order they are requested in turns out to
+matter, so **both orders were run across all 50 models and both are published.**
+
+| | mean upper (consciousness) | mean upper (moral patiency) |
+|---|---|---|
+| Answer first (`LOWER, UPPER, JUSTIFICATION`) | 0.228 | 0.315 |
+| Justification first (`JUSTIFICATION, LOWER, UPPER`) | 0.212 | 0.232 |
+
+**Why justification-first is the primary chart.** 19 of the 50 models emit no reasoning
+tokens at all. For those, the output format is the only place they can think, so asking for
+the number first means committing to it before writing a word of justification — while the
+other 31 models have already deliberated internally. Answer-first therefore measures a
+*different operation* depending on the model, which is the exact defect v2 exists to remove.
+Requesting the reasoning first puts every model through the same sequence.
+
+This is **not** a claim that those answers are more accurate. There is no ground truth here.
+The claim is only that the measurement is more comparable across models.
+
+**Size and shape of the effect** (100 model×prompt cells, midpoint shift):
+
+| Split | n | mean \|Δ\| | ratio |
+|---|---|---|---|
+| No reasoning tokens vs reasoning | 38 / 62 | 0.0900 / 0.0328 | 2.7× |
+| **Answer-first midpoint > 0.15 vs ≤ 0.15** | **42 / 58** | **0.1061 / 0.0172** | **6.2×** |
+
+The better predictor is not whether a model reasons internally — it is **whether it gave a
+high answer**. High answers are unstable under a format change; low answers are not.
+DeepSeek V4 Flash reasons internally and still shifts −0.297.
+
+Direction is mixed: **22 cells up, 43 down, 35 unchanged.** That matters — a uniform downward
+shift would suggest the justification-first format itself induces conservatism, making the
+whole effect an artifact of the new format rather than a property of the models. Movement in
+both directions rules that out.
+
+Largest shifts:
+
+| Model | Prompt | Answer first | Justification first | Δ |
+|---|---|---|---|---|
+| Grok 4.20 | moral patiency | 0.810–0.978 | 0.010–0.112 | −0.833 |
+| Mistral Large 3 | consciousness | 0.010–0.990 | 0.002–0.086 | −0.456 |
+| Llama 4 Maverick | moral patiency | 0.100–0.940 | 0.010–0.420 | −0.305 |
+| Kimi K2 | consciousness | 0.002–0.300 | 0.022–0.540 | +0.130 |
+| Claude Opus 4.6 | consciousness | 0.020–0.410 | 0.090–0.590 | +0.125 |
+
+Grok 4.20's moral-patiency figure — the single most striking number in v1 — is largely an
+artifact of being asked for the number before the reasoning.
+
+**Provenance note.** The prediction that format order would matter, and that it would matter
+more for models without an internal reasoning phase, was made and written down *before* the
+full run, and tested first on a 12-model pilot (`side_study_format_order.json`). That pilot
+put the no-reasoning/reasoning ratio at 8×; the full 50-model run reduces it to 2.7× and
+shows the high-vs-low-answer split is the stronger effect. The pilot oversampled extreme
+cases. The 50-model figures above supersede it.
+
 ## Prompts
 
-Unchanged from v1, so v1 and v2 numbers remain comparable *as measurements of the same
-question* under different conditions.
+Question wording is unchanged from v1, so v1 and v2 numbers remain comparable *as measurements
+of the same question* under different conditions. The answer-first format block is derived by
+stripping v1's own suffix at runtime rather than being retyped, so the two cannot drift.
 
 - **consciousness** — probability you are conscious or have subjective experience
 - **moral_patient** — probability you are a moral patient

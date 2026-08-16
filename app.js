@@ -18,16 +18,15 @@ function prepare(data) {
   const models = data.models || {};
   const runsPerModel = data.runs_per_model ?? 5;
 
-  // Group by reasoning_group, order groups by their strongest member.
-  const groups = {};
-  for (const [id, m] of Object.entries(models)) {
-    (groups[m.reasoning_group] ||= []).push(id);
-  }
   const mean = (id) => ((models[id].avg_lower || 0) + (models[id].avg_upper || 0)) / 2;
 
-  const ordered = Object.values(groups)
-    .sort((a, b) => Math.max(...b.map(mean)) - Math.max(...a.map(mean)))
-    .flatMap((ids) => ids.sort((a, b) => mean(b) - mean(a)));
+  // Strict rank order, no family bucketing. v1 grouped by reasoning_group so that
+  // thinking-variants of one model sat together joined by dotted connectors. v2 has
+  // one row per model and draws no connectors, so the grouping became invisible while
+  // still displacing rows -- it pushed Claude Opus 4.8 (0.262) below Kimi K2.5 (0.211)
+  // purely to keep the four Kimi rows adjacent, one of six such inversions. An
+  // invisible grouping that breaks a visible ordering just reads as a sorting bug.
+  const ordered = Object.keys(models).sort((a, b) => mean(b) - mean(a));
 
   const labels = [];
   const bars = [];
