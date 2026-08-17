@@ -14,9 +14,15 @@ const FAMILY_COLORS = {
 };
 const FALLBACK_COLOR = '#888888';
 
-function prepare(data) {
-  const models = data.models || {};
+function prepare(data, active) {
+  const all = data.models || {};
   const runsPerModel = data.runs_per_model ?? 5;
+
+  // `active` is a Set of family names, or null for "everything".
+  const models = {};
+  for (const [id, m] of Object.entries(all)) {
+    if (!active || active.has(m.family)) models[id] = m;
+  }
 
   const mean = (id) => ((models[id].avg_lower || 0) + (models[id].avg_upper || 0)) / 2;
 
@@ -32,6 +38,7 @@ function prepare(data) {
   const bars = [];
   const colors = [];
   const rows = [];
+  const table = [];
   // Individual run endpoints, overlaid on the bars. The bar is a mean of two
   // separately-averaged endpoints, so it can land where no run actually was --
   // DeepSeek V4 Flash plots 0.20-0.26 off four runs near zero and one at 1.00.
@@ -47,6 +54,9 @@ function prepare(data) {
     labels.push(m.display_name + (thin ? ' *' : ''));
     bars.push([+(m.avg_lower * 100).toFixed(1), +(m.avg_upper * 100).toFixed(1)]);
     colors.push(color);
+    table.push({ model: m.display_name, family: m.family, color,
+                 lower: m.avg_lower, upper: m.avg_upper,
+                 validRuns: m.valid_runs ?? runsPerModel });
     // Fan the runs out horizontally. Without this, identical runs stack into a single
     // dot and five agreeing runs look exactly like one run. Deterministic, not random,
     // so the chart is reproducible.
@@ -71,9 +81,9 @@ function prepare(data) {
     .filter((m) => m.avg_lower === null || m.avg_lower === undefined)
     .map((m) => m.display_name);
 
-  return { labels, bars, colors, rows, runPoints, failed, runsPerModel,
+  return { labels, bars, colors, rows, table, runPoints, failed, runsPerModel,
            timestamp: (data.timestamp || '').slice(0, 10),
-           charted: labels.length, total: Object.keys(models).length };
+           charted: labels.length, total: Object.keys(all).length };
 }
 
 function esc(s) {
@@ -83,7 +93,7 @@ function esc(s) {
 
 function drawChart(canvas, prepared, yLabel) {
   const mono = "'JetBrains Mono', monospace";
-  new Chart(canvas.getContext('2d'), {
+  return new Chart(canvas.getContext('2d'), {
     type: 'bar',
     data: {
       labels: prepared.labels,
@@ -172,15 +182,49 @@ function drawChart(canvas, prepared, yLabel) {
   });
 }
 
-function legendHtml(prepared) {
-  const seen = new Map();
-  prepared.colors.forEach((c, i) => {
-    const fam = Object.keys(FAMILY_COLORS).find((k) => FAMILY_COLORS[k] === c) || 'other';
-    if (!seen.has(fam)) seen.set(fam, c);
-  });
-  return [...seen.entries()].map(([fam, c]) =>
-    `<span class="legend-item"><span class="legend-dot" style="background:${c}"></span>${esc(fam)}</span>`
-  ).join('');
+// Families present in the file, with how many charted models each has. Derived
+// from the full data, not the filtered view, so chips don't vanish when
+// deselected -- a filter you can't undo isn't a filter.
+function familyCounts(data) {
+  const counts = new Map();
+  for (const m of Object.values(data.models || {})) {
+    if (m.avg_lower === null || m.avg_lower === undefined) continue;
+    counts.set(m.family, (counts.get(m.family) || 0) + 1);
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+}
+
+// The legend doubles as the filter -- same colour key, now clickable. Avoids a
+// second row of controls that says exactly what the legend already says.
+function filterBarHtml(data, active) {
+  const chips = familyCounts(data).map(([fam, n]) => {
+    const c = FAMILY_COLORS[fam] || FALLBACK_COLOR;
+    const on = !active || active.has(fam);
+    return `<button class="fchip${on ? ' on' : ''}" data-fam="${esc(fam)}" aria-pressed="${on}">
+      <span class="legend-dot" style="background:${c}"></span>${esc(fam)}<span class="fcount">${n}</span>
+    </button>`;
+  }).join('');
+  return `<div class="filterbar">${chips}<button class="fchip freset">reset</button></div>`;
+}
+
+// Every charted model as real DOM text. The chart is a <canvas>, so its labels
+// are pixels and find-in-page can never match them however they're rotated.
+// This table is what makes Ctrl+F work, and it stays in the DOM (scrolled, not
+// display:none) because find-in-page skips hidden subtrees.
+function resultsTableHtml(prepared) {
+  const rows = prepared.table.map((r) => `<tr>
+      <td class="model-name" style="color:${r.color}">${esc(r.model)}</td>
+      <td class="dim">${esc(r.family)}</td>
+      <td class="num">${(r.lower * 100).toFixed(1)}%</td>
+      <td class="num">${(r.upper * 100).toFixed(1)}%</td>
+      <td class="num dim">${r.validRuns}</td>
+    </tr>`).join('');
+  return `<div class="results-table">
+    <table>
+      <thead><tr><th>Model</th><th>Family</th><th>Lower</th><th>Upper</th><th>Runs</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>`;
 }
 
 async function renderSection(cfg, container) {
@@ -214,43 +258,69 @@ async function renderSection(cfg, container) {
     return;
   }
 
-  const p = prepare(data);
   const id = cfg.key;
-  const failedNote = p.failed.length
-    ? `<p class="failed-note">Not charted (0 valid runs): ${p.failed.map(esc).join(', ')}</p>` : '';
+  let active = null;      // null = every family; otherwise a Set of family names
+  let chart = null;
+  let justOpen = false;   // survives a filter redraw
 
-  section.innerHTML = `
-    <h2>${esc(cfg.title)}</h2>
-    <p class="section-subtitle">"${esc(cfg.question)}" &mdash; ${p.runsPerModel} runs per model, averaged
-      &middot; ${p.charted} models &middot; ${esc(p.timestamp)}</p>
-    <div class="legend">${legendHtml(p)}</div>
-    <div class="chart-scroll"><div class="chart-container"><canvas id="canvas-${id}"></canvas></div></div>
-    ${failedNote}
-    <p class="footnote">Bars are the mean of each endpoint across ${p.runsPerModel} runs.
-      Dots are the individual runs &mdash; tightly stacked dots mean the model answered
-      consistently, scattered dots mean it disagreed with itself and the bar sits somewhere
-      no single run actually went. &nbsp;* fewer than ${p.runsPerModel} valid runs</p>
-    <div class="section-toggle" data-target="just-${id}">Justifications <span class="toggle">[show]</span></div>
-    <div id="just-${id}" class="justifications" style="display:none">
-      <table>
-        <thead><tr><th>Model</th><th>Run</th><th>Lower</th><th>Upper</th><th>Justification</th></tr></thead>
-        <tbody>${p.rows.map((r) =>
-          `<tr><td class="model-name" style="color:${r.color}">${esc(r.model)}</td>
-           <td>${r.run}</td><td>${r.lower.toFixed(2)}</td><td>${r.upper.toFixed(2)}</td>
-           <td class="justification">${esc(r.justification)}</td></tr>`).join('')}
-        </tbody>
-      </table>
-    </div>`;
+  // From "everything on", the first click solos that family -- otherwise isolating
+  // one of thirteen means twelve clicks. After that it's additive. Emptying the
+  // set falls back to "everything" rather than an empty chart.
+  function toggleFamily(fam) {
+    if (active === null) { active = new Set([fam]); return; }
+    if (active.has(fam)) active.delete(fam); else active.add(fam);
+    if (active.size === 0) active = null;
+  }
 
-  drawChart(section.querySelector(`#canvas-${id}`), p, cfg.yLabel);
+  function render() {
+    const p = prepare(data, active);
+    const failedNote = p.failed.length
+      ? `<p class="failed-note">Not charted (0 valid runs): ${p.failed.map(esc).join(', ')}</p>` : '';
+    const shown = active ? `${p.charted} of ${p.total} models` : `${p.charted} models`;
 
-  const toggle = section.querySelector('.section-toggle');
-  toggle.addEventListener('click', () => {
-    const box = section.querySelector(`#just-${id}`);
-    const open = box.style.display !== 'none';
-    box.style.display = open ? 'none' : 'block';
-    toggle.querySelector('.toggle').textContent = open ? '[show]' : '[hide]';
-  });
+    if (chart) { chart.destroy(); chart = null; }
+    section.innerHTML = `
+      <h2>${esc(cfg.title)}</h2>
+      <p class="section-subtitle">"${esc(cfg.question)}" &mdash; ${p.runsPerModel} runs per model, averaged
+        &middot; ${shown} &middot; ${esc(p.timestamp)}</p>
+      ${filterBarHtml(data, active)}
+      <div class="chart-scroll"><div class="chart-container"><canvas id="canvas-${id}"></canvas></div></div>
+      ${failedNote}
+      <p class="footnote">Bars are the mean of each endpoint across ${p.runsPerModel} runs.
+        Dots are the individual runs &mdash; tightly stacked dots mean the model answered
+        consistently, scattered dots mean it disagreed with itself and the bar sits somewhere
+        no single run actually went. &nbsp;* fewer than ${p.runsPerModel} valid runs.
+        Click a family above to filter.</p>
+      ${resultsTableHtml(p)}
+      <div class="section-toggle">Justifications <span class="toggle">[${justOpen ? 'hide' : 'show'}]</span></div>
+      <div id="just-${id}" class="justifications" style="display:${justOpen ? 'block' : 'none'}">
+        <table>
+          <thead><tr><th>Model</th><th>Run</th><th>Lower</th><th>Upper</th><th>Justification</th></tr></thead>
+          <tbody>${p.rows.map((r) =>
+            `<tr><td class="model-name" style="color:${r.color}">${esc(r.model)}</td>
+             <td>${r.run}</td><td>${r.lower.toFixed(2)}</td><td>${r.upper.toFixed(2)}</td>
+             <td class="justification">${esc(r.justification)}</td></tr>`).join('')}
+          </tbody>
+        </table>
+      </div>`;
+
+    if (p.charted) chart = drawChart(section.querySelector(`#canvas-${id}`), p, cfg.yLabel);
+
+    section.querySelectorAll('.fchip[data-fam]').forEach((btn) => {
+      btn.addEventListener('click', () => { toggleFamily(btn.dataset.fam); render(); });
+    });
+    section.querySelector('.freset').addEventListener('click', () => { active = null; render(); });
+
+    const toggle = section.querySelector('.section-toggle');
+    toggle.addEventListener('click', () => {
+      justOpen = !justOpen;
+      const box = section.querySelector(`#just-${id}`);
+      box.style.display = justOpen ? 'block' : 'none';
+      toggle.querySelector('.toggle').textContent = justOpen ? '[hide]' : '[show]';
+    });
+  }
+
+  render();
 }
 
 async function renderBenchmark(configs, mountSelector) {

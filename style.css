@@ -64,9 +64,32 @@ h2 {
 .chart-container { position: relative; min-width: 1900px; height: 700px; }
 canvas { width: 100% !important; height: 100% !important; }
 
-.legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 16px; }
-.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #8b949e; }
-.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+/* --- family filter; also the colour legend, so there's only one control --- */
+.filterbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; align-items: center; }
+.fchip {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #11161d; border: 1px solid #30363d; border-radius: 12px;
+  color: #6e7681; font-family: inherit; font-size: 11.5px; padding: 4px 10px;
+  cursor: pointer; opacity: 0.5;
+  transition: opacity 0.12s, border-color 0.12s, color 0.12s;
+}
+.fchip:hover { border-color: #58a6ff; color: #c9d1d9; }
+.fchip.on { opacity: 1; color: #c9d1d9; border-color: #484f58; }
+.fchip .fcount { color: #6e7681; font-size: 10.5px; }
+.freset { opacity: 1; color: #58a6ff; border-style: dashed; }
+
+/* --- per-model results, as real DOM text so find-in-page can reach it ---
+   Scrolled rather than collapsed: browsers skip display:none subtrees when
+   searching, but will scroll an overflow container to reveal a match. */
+.results-table {
+  margin-top: 16px; max-height: 420px; overflow-y: auto;
+  border: 1px solid #21262d;
+}
+.results-table th, .results-table td { padding: 5px 10px; }
+.results-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.results-table .dim { color: #6e7681; }
 
 .footnote, .failed-note { font-size: 11px; color: #6e7681; margin-top: 10px; }
 .failed-note { color: #d29922; }
