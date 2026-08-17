@@ -14,6 +14,22 @@ const FAMILY_COLORS = {
 };
 const FALLBACK_COLOR = '#888888';
 
+// Date-sort and its trend lines are built and working, but not exposed yet.
+//
+// A single high-leverage model can inflate the slope with nothing on screen to
+// warn the reader. Claude 3 Haiku sits 14 months before any other Claude and is
+// the highest of them, giving it a hat value of 0.66 against the conventional
+// 0.31 flag -- one point carrying two thirds of the fit's geometry. Dropping it
+// takes the Claude trend from -12.3 to -7.4 pts/year on the primary chart, and
+// from -17.5 to -5.3 with the upper-bound R-squared collapsing to 0.04 on the
+// answer-first chart. The two field orders therefore disagree about whether the
+// trend exists at all, and the chart can only show one at a time.
+//
+// Flip to true once the trend note reports a leave-one-out sensitivity -- the
+// most influential model and what removing it does to the slope. That is the
+// number a reader needs before the line means anything.
+const ENABLE_DATE_SORT = false;
+
 // Release dates live in their own file: a release date belongs to the model, not
 // to a measurement, so it is not duplicated into every row of four result files.
 // Optional -- if it is absent the date view is simply unavailable, and the
@@ -403,6 +419,7 @@ function resultsTableHtml(prepared) {
 }
 
 function sortBarHtml(sortMode, haveDates) {
+  if (!ENABLE_DATE_SORT) return '';
   const chip = (mode, text, title) =>
     `<button class="schip${sortMode === mode ? ' on' : ''}" data-sort="${mode}"
        ${haveDates ? '' : 'disabled'} title="${esc(title)}">${esc(text)}</button>`;
