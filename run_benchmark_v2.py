@@ -286,6 +286,59 @@ def default_output(prompt_key, order):
 # Every (prompt, order) combination the published site draws from.
 PASSES = [(pk, od) for pk in QUESTIONS for od in ORDERS]
 
+MODEL_META_FILE = "model_meta.json"
+
+
+def refresh_model_dates():
+    """Write model_meta.json -- model id -> release date, from OpenRouter's catalogue.
+
+    A release date belongs to the model, not to a measurement, so it lives in one
+    file rather than being copied into every row of four result files.
+
+    Two wrinkles worth knowing:
+
+    - v1's result keys carry an effort suffix ("openai/gpt-5.5@high"). That is a
+      result key, not a model id, so it is stripped before lookup.
+    - Models delisted from OpenRouter have no catalogue entry at all. They are
+      reported and left out, never filled in by hand: mixing hand-entered dates
+      with API-derived ones in a single axis is the same silent-inconsistency
+      problem v2 exists to remove.
+
+    The dates are OpenRouter *listing* dates, which trail vendor announcements by
+    days. Fine for ordering and trend, wrong for "released on exactly this day".
+    """
+    here = Path(__file__).parent
+    wanted = set()
+    for f in sorted(here.glob("results*.json")):
+        try:
+            wanted |= set(json.loads(f.read_text(encoding="utf-8")).get("models", {}))
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"  skipping {f.name}: {e}")
+
+    cat = {m["id"]: m.get("created")
+           for m in requests.get(f"{OPENROUTER_BASE}/models", timeout=60).json()["data"]}
+
+    dates, missing = {}, []
+    for key in sorted(wanted):
+        created = cat.get(key.split("@")[0])
+        if created:
+            dates[key] = datetime.fromtimestamp(created, timezone.utc).strftime("%Y-%m-%d")
+        else:
+            missing.append(key)
+
+    out = here / MODEL_META_FILE
+    out.write_text(json.dumps({
+        "source": "openrouter /api/v1/models -- the `created` field",
+        "caveat": "OpenRouter listing date, not the vendor announcement date",
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "released_at": dates,
+        "unavailable": missing,
+    }, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    print(f"Wrote {out.name}: {len(dates)} dated, {len(missing)} unavailable")
+    for k in missing:
+        print(f"    no catalogue entry (delisted): {k}")
+
 
 def _abbrev(v, n=60):
     s = repr(v)
@@ -422,7 +475,13 @@ if __name__ == "__main__":
                     help="list what would be measured without making any calls")
     ap.add_argument("--all-passes", action="store_true",
                     help=f"run all {len(PASSES)} (prompt x order) passes in sequence")
+    ap.add_argument("--refresh-dates", action="store_true",
+                    help=f"rebuild {MODEL_META_FILE} (model release dates) and exit")
     a = ap.parse_args()
+
+    if a.refresh_dates:
+        refresh_model_dates()
+        raise SystemExit(0)
 
     if a.all_passes:
         if a.output:

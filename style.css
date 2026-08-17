@@ -80,6 +80,24 @@ canvas { width: 100% !important; height: 100% !important; }
 .fchip .fcount { color: #6e7681; font-size: 10.5px; }
 .freset { opacity: 1; color: #58a6ff; border-style: dashed; }
 
+/* --- sort mode; rank stays the published default, date is opt-in --- */
+.sortbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.sortlabel { font-size: 10.5px; color: #6e7681; letter-spacing: 1.5px; text-transform: uppercase; }
+.schip {
+  background: #11161d; border: 1px solid #30363d; border-radius: 4px;
+  color: #8b949e; font-family: inherit; font-size: 11.5px; padding: 4px 10px;
+  cursor: pointer; transition: border-color 0.12s, color 0.12s, background 0.12s;
+}
+.schip:hover:not([disabled]) { border-color: #58a6ff; color: #c9d1d9; }
+.schip.on { background: #1c2432; border-color: #58a6ff; color: #e6edf3; }
+.schip[disabled] { opacity: 0.4; cursor: not-allowed; }
+
+.trend-note {
+  font-size: 11.5px; color: #8b949e; margin-top: 12px;
+  border-left: 2px solid #58a6ff; padding-left: 10px; line-height: 1.6;
+}
+.trend-note strong { color: #e6edf3; }
+
 /* --- per-model results, as real DOM text so find-in-page can reach it ---
    Scrolled rather than collapsed: browsers skip display:none subtrees when
    searching, but will scroll an overflow container to reveal a match. */

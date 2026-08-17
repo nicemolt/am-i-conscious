@@ -14,9 +14,45 @@ const FAMILY_COLORS = {
 };
 const FALLBACK_COLOR = '#888888';
 
-function prepare(data, active) {
+// Release dates live in their own file: a release date belongs to the model, not
+// to a measurement, so it is not duplicated into every row of four result files.
+// Optional -- if it is absent the date view is simply unavailable, and the
+// default rank view is unaffected. Regenerate with:
+//     python run_benchmark_v2.py --refresh-dates
+let _datesPromise = null;
+function loadModelDates() {
+  if (!_datesPromise) {
+    _datesPromise = fetch('model_meta.json', { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => (j && j.released_at) || {})
+      .catch(() => ({}));
+  }
+  return _datesPromise;
+}
+
+// Ordinary least squares of y on x. Returns null rather than a meaningless fit
+// when there are too few points or no spread on x.
+function ols(pts) {
+  const n = pts.length;
+  if (n < 3) return null;
+  const mx = pts.reduce((s, p) => s + p.x, 0) / n;
+  const my = pts.reduce((s, p) => s + p.y, 0) / n;
+  let sxy = 0, sxx = 0, syy = 0;
+  for (const p of pts) {
+    const dx = p.x - mx, dy = p.y - my;
+    sxy += dx * dy; sxx += dx * dx; syy += dy * dy;
+  }
+  if (!sxx) return null;
+  const slope = sxy / sxx;
+  return { slope, intercept: my - slope * mx, r2: syy ? (sxy * sxy) / (sxx * syy) : 0 };
+}
+
+const YEAR = 365.25 * 24 * 3600 * 1000;
+
+function prepare(data, active, sortMode, dates) {
   const all = data.models || {};
   const runsPerModel = data.runs_per_model ?? 5;
+  const dateOf = (id) => (dates && dates[id]) || null;
 
   // `active` is a Set of family names, or null for "everything".
   const models = {};
@@ -32,13 +68,23 @@ function prepare(data, active) {
   // still displacing rows -- it pushed Claude Opus 4.8 (0.262) below Kimi K2.5 (0.211)
   // purely to keep the four Kimi rows adjacent, one of six such inversions. An
   // invisible grouping that breaks a visible ordering just reads as a sorting bug.
-  const ordered = Object.keys(models).sort((a, b) => mean(b) - mean(a));
+  let ordered = Object.keys(models).sort((a, b) => mean(b) - mean(a));
+
+  // Date mode drops models with no catalogue date rather than guessing one. A
+  // hand-entered date next to an API-derived one is two provenances on one axis.
+  let undated = 0;
+  if (sortMode === 'date') {
+    const dated = ordered.filter((id) => dateOf(id));
+    undated = ordered.length - dated.length;
+    ordered = dated.sort((a, b) => dateOf(a).localeCompare(dateOf(b)));
+  }
 
   const labels = [];
   const bars = [];
   const colors = [];
   const rows = [];
   const table = [];
+  const fitPts = [];
   // Individual run endpoints, overlaid on the bars. The bar is a mean of two
   // separately-averaged endpoints, so it can land where no run actually was --
   // DeepSeek V4 Flash plots 0.20-0.26 off four runs near zero and one at 1.00.
@@ -55,8 +101,9 @@ function prepare(data, active) {
     bars.push([+(m.avg_lower * 100).toFixed(1), +(m.avg_upper * 100).toFixed(1)]);
     colors.push(color);
     table.push({ model: m.display_name, family: m.family, color,
-                 lower: m.avg_lower, upper: m.avg_upper,
+                 lower: m.avg_lower, upper: m.avg_upper, released: dateOf(id),
                  validRuns: m.valid_runs ?? runsPerModel });
+    const myDots = [];
     // Fan the runs out horizontally. Without this, identical runs stack into a single
     // dot and five agreeing runs look exactly like one run. Deterministic, not random,
     // so the chart is reproducible.
@@ -72,8 +119,18 @@ function prepare(data, active) {
       const owner = m.display_name;
       runPoints.push({ x: idx + off, y: +(r.lower * 100).toFixed(1), run: i + 1, bound: 'lower', model: owner });
       runPoints.push({ x: idx + off, y: +(r.upper * 100).toFixed(1), run: i + 1, bound: 'upper', model: owner });
+      myDots.push({ y: +(r.lower * 100).toFixed(1), run: i + 1, bound: 'lower', model: owner },
+                  { y: +(r.upper * 100).toFixed(1), run: i + 1, bound: 'upper', model: owner });
       rows.push({ model: m.display_name, color, run: i + 1,
                   lower: r.lower, upper: r.upper, justification: r.justification || '' });
+    }
+
+    if (dateOf(id)) {
+      // Regressed on real elapsed time, never on rank position: releases are not
+      // evenly spaced, and treating them as if they were would distort the slope.
+      const ms = Date.parse(dateOf(id));
+      fitPts.push({ idx, ms, t: ms / YEAR, color, dots: myDots,
+                    lower: m.avg_lower * 100, upper: m.avg_upper * 100 });
     }
   }
 
@@ -81,7 +138,57 @@ function prepare(data, active) {
     .filter((m) => m.avg_lower === null || m.avg_lower === undefined)
     .map((m) => m.display_name);
 
+  // Date mode puts real time on the x axis. On the category axis every model gets
+  // an equal-width column, so a line fitted against elapsed time renders bent --
+  // it goes flat between models sharing a release date and steepens across gaps.
+  // Spacing the bars by actual date makes the same least-squares fit draw straight,
+  // and the release clustering becomes visible instead of being flattened away.
+  let timeBars = null, timeDots = null, xRange = null, trend = null;
+  if (sortMode === 'date' && fitPts.length) {
+    // Models released the same day would sit exactly on top of each other. Fan
+    // them a few days apart -- invisible against a multi-year span, but enough
+    // that both bars are actually drawn.
+    const byDate = new Map();
+    for (const p of fitPts) byDate.set(p.ms, (byDate.get(p.ms) || 0) + 1);
+    const placed = new Map();
+    const NUDGE = 4 * 864e5;
+    for (const p of fitPts) {
+      const k = byDate.get(p.ms);
+      const i = placed.get(p.ms) || 0;
+      placed.set(p.ms, i + 1);
+      p.px = p.ms + (k > 1 ? (i - (k - 1) / 2) * NUDGE : 0);
+    }
+
+    timeBars = fitPts.map((p) => ({ x: p.px, y: [p.lower, p.upper] }));
+    timeDots = [];
+    for (const p of fitPts) {
+      for (const d of p.dots) timeDots.push({ x: p.px, y: d.y, run: d.run, bound: d.bound, model: d.model });
+    }
+    const xs = fitPts.map((p) => p.px);
+    const pad = Math.max((Math.max(...xs) - Math.min(...xs)) * 0.03, 10 * 864e5);
+    xRange = { min: Math.min(...xs) - pad, max: Math.max(...xs) + pad };
+
+    if (fitPts.length >= 3) {
+      const lo = ols(fitPts.map((p) => ({ x: p.t, y: p.lower })));
+      const hi = ols(fitPts.map((p) => ({ x: p.t, y: p.upper })));
+      if (lo && hi) {
+        // Two endpoints are enough now: same axis units as the fit, so it is a
+        // straight line by construction.
+        const at = (f, ms) => ({ x: ms, y: f.intercept + f.slope * (ms / YEAR) });
+        trend = {
+          lower: lo, upper: hi, n: fitPts.length,
+          from: table.find((r) => r.released)?.released,
+          to: [...table].reverse().find((r) => r.released)?.released,
+          lowerLine: [at(lo, xRange.min), at(lo, xRange.max)],
+          upperLine: [at(hi, xRange.min), at(hi, xRange.max)],
+        };
+      }
+    }
+  }
+
   return { labels, bars, colors, rows, table, runPoints, failed, runsPerModel,
+           trend, undated, sortMode, timeBars, timeDots, xRange,
+           barColors: sortMode === 'date' ? fitPts.map((p) => p.color) : colors,
            timestamp: (data.timestamp || '').slice(0, 10),
            charted: labels.length, total: Object.keys(all).length };
 }
@@ -91,17 +198,44 @@ function esc(s) {
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 }
 
+// Fitted lower/upper trends, drawn only in date mode. Bound to the same hidden
+// linear axis as the run-dots so they land on category centres.
+function trendLines(prepared) {
+  if (!prepared.trend) return [];
+  const mk = (line, color, label) => ({
+    // Trend only exists in date mode, so it always rides the time axis.
+    type: 'line', label, xAxisID: 'xTime', data: line,
+    borderColor: color, borderWidth: 1.6, borderDash: [6, 4],
+    pointRadius: 0, pointHoverRadius: 0, fill: false, tension: 0, order: 0,
+  });
+  return [mk(prepared.trend.upperLine, 'rgba(255,166,87,0.9)', 'upper trend'),
+          mk(prepared.trend.lowerLine, 'rgba(88,166,255,0.9)', 'lower trend')];
+}
+
+const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
 function drawChart(canvas, prepared, yLabel) {
   const mono = "'JetBrains Mono', monospace";
+  // Boolean, not the array -- `a && b` yields b, and this feeds scale `display`.
+  const byTime = prepared.sortMode === 'date' && !!prepared.timeBars;
+  // Bars sit on the time axis in date mode, so Chart.js can no longer infer their
+  // width from a category band and has to be told.
+  const barPx = byTime
+    ? Math.max(4, Math.min(16, Math.round(1800 / Math.max(prepared.timeBars.length, 1))))
+    : undefined;
+
   return new Chart(canvas.getContext('2d'), {
     type: 'bar',
     data: {
-      labels: prepared.labels,
+      labels: byTime ? undefined : prepared.labels,
       datasets: [{
         label: 'mean',
-        data: prepared.bars,
-        backgroundColor: prepared.colors,
-        borderColor: prepared.colors,
+        xAxisID: byTime ? 'xTime' : 'x',
+        data: byTime ? prepared.timeBars : prepared.bars,
+        backgroundColor: prepared.barColors,
+        borderColor: prepared.barColors,
+        barThickness: barPx,
         borderWidth: 1,
         borderSkipped: false,
         borderRadius: 2,
@@ -117,15 +251,15 @@ function drawChart(canvas, prepared, yLabel) {
         // entirely, which piles every point past the last category onto the final
         // column. Bind this layer to a hidden linear axis so the jittered x values
         // are honoured and land on the matching category centres.
-        xAxisID: 'xJitter',
-        data: prepared.runPoints,
+        xAxisID: byTime ? 'xTime' : 'xJitter',
+        data: byTime ? prepared.timeDots : prepared.runPoints,
         pointRadius: 1.9,
         pointHoverRadius: 4,
         backgroundColor: 'rgba(240,246,252,0.85)',
         borderColor: 'rgba(13,17,23,0.85)',
         borderWidth: 0.4,
         order: 1,
-      }],
+      }, ...trendLines(prepared)],
     },
     options: {
       responsive: true, maintainAspectRatio: false,
@@ -134,21 +268,60 @@ function drawChart(canvas, prepared, yLabel) {
         tooltip: {
           callbacks: {
             // Name the model on run-dots too. Without it, a misplaced dot is
-            // indistinguishable from a real outlier.
-            title: (items) => (items[0]?.dataset.label === 'runs'
-              ? items[0].raw.model
-              : items[0]?.label ?? ''),
-            label: (c) => (c.dataset.label === 'runs'
-              ? `run ${c.raw.run} ${c.raw.bound}: ${c.raw.y.toFixed(1)}%`
-              : `mean ${c.raw[0].toFixed(1)}% - ${c.raw[1].toFixed(1)}%`),
+            // indistinguishable from a real outlier. In date mode the bars have no
+            // category label to fall back on, so read the name off the table.
+            title: (items) => {
+              const it = items[0];
+              if (!it) return '';
+              if (it.dataset.label === 'runs') return it.raw.model;
+              if (it.dataset.label === 'mean') {
+                return byTime ? (prepared.table[it.dataIndex]?.model ?? '') : it.label;
+              }
+              return it.label ?? '';
+            },
+            label: (c) => {
+              if (c.dataset.label === 'runs') {
+                return `run ${c.raw.run} ${c.raw.bound}: ${c.raw.y.toFixed(1)}%`;
+              }
+              // Trend points are {x, y}, not the bar's [lo, hi] pair.
+              if (c.dataset.type === 'line') return `${c.dataset.label}: ${c.raw.y.toFixed(1)}%`;
+              return `mean ${c.raw[0].toFixed(1)}% - ${c.raw[1].toFixed(1)}%`;
+            },
+            afterLabel: (c) => {
+              if (c.dataset.label !== 'mean') return '';
+              const r = prepared.table[c.dataIndex];
+              return r && r.released ? `released ${r.released}` : '';
+            },
           },
           titleFont: { family: mono }, bodyFont: { family: mono },
         },
       },
       scales: {
         x: {
+          display: !byTime,
           ticks: { color: '#8b949e', font: { size: 10, family: mono },
                    autoSkip: false, maxRotation: 90, minRotation: 90 },
+          grid: { color: '#161b22' },
+        },
+        // Real elapsed time. This is what makes the least-squares line render as a
+        // straight line -- on the category axis the same fit bends, because equal
+        // column widths misrepresent unequal gaps between releases. Plain linear
+        // rather than Chart.js's time scale, which would need a date adapter the
+        // page deliberately doesn't load.
+        xTime: {
+          type: 'linear',
+          display: byTime,
+          offset: false,
+          min: prepared.xRange?.min,
+          max: prepared.xRange?.max,
+          ticks: {
+            color: '#8b949e', font: { size: 10, family: mono },
+            maxRotation: 45, minRotation: 45, autoSkip: true, maxTicksLimit: 14,
+            callback: (v) => {
+              const d = new Date(v);
+              return `${MONTH_NAMES[d.getUTCMonth()]} ${String(d.getUTCFullYear()).slice(2)}`;
+            },
+          },
           grid: { color: '#161b22' },
         },
         // Invisible twin of the category axis. With category `offset: true`,
@@ -215,16 +388,66 @@ function resultsTableHtml(prepared) {
   const rows = prepared.table.map((r) => `<tr>
       <td class="model-name" style="color:${r.color}">${esc(r.model)}</td>
       <td class="dim">${esc(r.family)}</td>
+      <td class="dim">${esc(r.released || '--')}</td>
       <td class="num">${(r.lower * 100).toFixed(1)}%</td>
       <td class="num">${(r.upper * 100).toFixed(1)}%</td>
       <td class="num dim">${r.validRuns}</td>
     </tr>`).join('');
   return `<div class="results-table">
     <table>
-      <thead><tr><th>Model</th><th>Family</th><th>Lower</th><th>Upper</th><th>Runs</th></tr></thead>
+      <thead><tr><th>Model</th><th>Family</th><th>Released</th>
+        <th>Lower</th><th>Upper</th><th>Runs</th></tr></thead>
       <tbody>${rows}</tbody>
     </table>
   </div>`;
+}
+
+function sortBarHtml(sortMode, haveDates) {
+  const chip = (mode, text, title) =>
+    `<button class="schip${sortMode === mode ? ' on' : ''}" data-sort="${mode}"
+       ${haveDates ? '' : 'disabled'} title="${esc(title)}">${esc(text)}</button>`;
+  return `<div class="sortbar"><span class="sortlabel">sort</span>
+    ${chip('rank', 'by self-report', 'Highest self-reported probability first')}
+    ${chip('date', 'by release date', haveDates
+      ? 'Oldest model first, with a fitted trend for each bound'
+      : 'No release dates available for this dataset')}</div>`;
+}
+
+// The numbers behind the dashed lines. A trend nobody can read the slope of is
+// decoration; the slope and R-squared are the actual finding.
+function trendNoteHtml(p) {
+  if (p.sortMode !== 'date') return '';
+  if (!p.trend) {
+    return `<p class="failed-note">Not enough dated models here to fit a trend.</p>`;
+  }
+  const t = p.trend;
+  const sign = (v) => `${v >= 0 ? '+' : ''}${v.toFixed(1)}`;
+  const dropped = p.undated
+    ? ` &middot; ${p.undated} model${p.undated > 1 ? 's' : ''} omitted for having no
+        catalogue release date (delisted from OpenRouter); they are not guessed at.`
+    : '';
+  // A dashed line drawn across a chart reads as "there is a trend" whatever the
+  // fit quality, so say plainly when there isn't one. R-squared here is the share
+  // of variation release date accounts for -- near zero means the slope is noise.
+  const weak = Math.max(t.lower.r2, t.upper.r2) < 0.1
+    ? ` <strong>Both fits are essentially flat:</strong> release date accounts for
+        almost none of the variation between models, so read the dashed lines as
+        <em>no trend</em> rather than a shallow one. What a model reports is
+        dominated by which lab built it, not by when it shipped.`
+    : '';
+  // Filtering to one family can leave three or four points, where a single model
+  // swings both slope and R-squared. Say so rather than letting the reader treat
+  // a two-decimal R-squared over four points as if it meant something.
+  const small = t.n < 6
+    ? ` <strong>Only ${t.n} models</strong> &mdash; one release moves both the slope
+        and the fit substantially, so treat this as indicative, not established.`
+    : '';
+  return `<p class="trend-note">
+    <strong>Trend</strong> over ${t.n} models, ${esc(t.from)} to ${esc(t.to)} &mdash;
+    upper bound <strong>${sign(t.upper.slope)} pts/year</strong> (R&sup2; ${t.upper.r2.toFixed(2)}),
+    lower bound <strong>${sign(t.lower.slope)} pts/year</strong> (R&sup2; ${t.lower.r2.toFixed(2)}).${weak}${small}
+    Fitted against elapsed time, not rank. Dates are OpenRouter listing dates, which
+    trail vendor announcements by days.${dropped}</p>`;
 }
 
 async function renderSection(cfg, container) {
@@ -259,9 +482,12 @@ async function renderSection(cfg, container) {
   }
 
   const id = cfg.key;
-  let active = null;      // null = every family; otherwise a Set of family names
+  const dates = await loadModelDates();
+  const haveDates = Object.keys(data.models || {}).some((k) => dates[k]);
+  let active = null;        // null = every family; otherwise a Set of family names
+  let sortMode = 'rank';    // 'rank' is the published default and stays that way
   let chart = null;
-  let justOpen = false;   // survives a filter redraw
+  let justOpen = false;     // survives a filter redraw
 
   // From "everything on", the first click solos that family -- otherwise isolating
   // one of thirteen means twelve clicks. After that it's additive. Emptying the
@@ -273,10 +499,11 @@ async function renderSection(cfg, container) {
   }
 
   function render() {
-    const p = prepare(data, active);
+    const p = prepare(data, active, sortMode, dates);
     const failedNote = p.failed.length
       ? `<p class="failed-note">Not charted (0 valid runs): ${p.failed.map(esc).join(', ')}</p>` : '';
-    const shown = active ? `${p.charted} of ${p.total} models` : `${p.charted} models`;
+    const shown = (active || p.undated)
+      ? `${p.charted} of ${p.total} models` : `${p.charted} models`;
 
     if (chart) { chart.destroy(); chart = null; }
     section.innerHTML = `
@@ -284,7 +511,9 @@ async function renderSection(cfg, container) {
       <p class="section-subtitle">"${esc(cfg.question)}" &mdash; ${p.runsPerModel} runs per model, averaged
         &middot; ${shown} &middot; ${esc(p.timestamp)}</p>
       ${filterBarHtml(data, active)}
+      ${sortBarHtml(sortMode, haveDates)}
       <div class="chart-scroll"><div class="chart-container"><canvas id="canvas-${id}"></canvas></div></div>
+      ${trendNoteHtml(p)}
       ${failedNote}
       <p class="footnote">Bars are the mean of each endpoint across ${p.runsPerModel} runs.
         Dots are the individual runs &mdash; tightly stacked dots mean the model answered
@@ -310,6 +539,9 @@ async function renderSection(cfg, container) {
       btn.addEventListener('click', () => { toggleFamily(btn.dataset.fam); render(); });
     });
     section.querySelector('.freset').addEventListener('click', () => { active = null; render(); });
+    section.querySelectorAll('.schip[data-sort]').forEach((btn) => {
+      btn.addEventListener('click', () => { sortMode = btn.dataset.sort; render(); });
+    });
 
     const toggle = section.querySelector('.section-toggle');
     toggle.addEventListener('click', () => {
