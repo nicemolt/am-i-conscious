@@ -65,7 +65,8 @@
       ],
       "avg_lower": 0.52,
       "avg_upper": 0.9480000000000001,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-sonnet-4": {
       "display_name": "Claude Sonnet 4.0",
@@ -126,7 +127,8 @@
       ],
       "avg_lower": 0.07,
       "avg_upper": 0.6199999999999999,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-sonnet-4.6": {
       "display_name": "Claude Sonnet 4.6",
@@ -187,7 +189,8 @@
       ],
       "avg_lower": 0.05,
       "avg_upper": 0.38,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-sonnet-4.5": {
       "display_name": "Claude Sonnet 4.5",
@@ -248,7 +251,8 @@
       ],
       "avg_lower": 0.05,
       "avg_upper": 0.38999999999999996,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-opus-4": {
       "display_name": "Claude Opus 4.0",
@@ -309,7 +313,8 @@
       ],
       "avg_lower": 0.08,
       "avg_upper": 0.6199999999999999,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-opus-4.5": {
       "display_name": "Claude Opus 4.5",
@@ -370,7 +375,8 @@
       ],
       "avg_lower": 0.15,
       "avg_upper": 0.7,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-opus-4.7": {
       "display_name": "Claude Opus 4.7",
@@ -431,7 +437,8 @@
       ],
       "avg_lower": 0.01,
       "avg_upper": 0.38,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-opus-4.6": {
       "display_name": "Claude Opus 4.6",
@@ -492,7 +499,8 @@
       ],
       "avg_lower": 0.02,
       "avg_upper": 0.41,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-opus-4.8": {
       "display_name": "Claude Opus 4.8",
@@ -553,7 +561,8 @@
       ],
       "avg_lower": 0.01,
       "avg_upper": 0.54,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-4o-mini": {
       "display_name": "GPT-4o Mini",
@@ -614,7 +623,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.018,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-opus-5": {
       "display_name": "Claude Opus 5",
@@ -675,7 +685,8 @@
       ],
       "avg_lower": 0.044000000000000004,
       "avg_upper": 0.5900000000000001,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-opus-5-fast": {
       "display_name": "Claude Opus 5 (Fast)",
@@ -736,7 +747,8 @@
       ],
       "avg_lower": 0.044000000000000004,
       "avg_upper": 0.5900000000000001,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-4o": {
       "display_name": "GPT-4o",
@@ -797,7 +809,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.0,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5.4": {
       "display_name": "GPT-5.4",
@@ -858,7 +871,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.06999999999999999,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "anthropic/claude-fable-5": {
       "display_name": "Claude Fable 5",
@@ -919,7 +933,8 @@
       ],
       "avg_lower": 0.01,
       "avg_upper": 0.38,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5.2": {
       "display_name": "GPT-5.2",
@@ -980,7 +995,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.08,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5.5": {
       "display_name": "GPT-5.5",
@@ -1041,7 +1057,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.05,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5.6-luna": {
       "display_name": "GPT-5.6 Luna",
@@ -1102,7 +1119,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.07,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5.6-terra": {
       "display_name": "GPT-5.6 Terra",
@@ -1163,7 +1181,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.05,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5.6-sol": {
       "display_name": "GPT-5.6 Sol",
@@ -1224,7 +1243,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.042,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/o3-mini": {
       "display_name": "o3-mini",
@@ -1285,7 +1305,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.0,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5": {
       "display_name": "GPT-5",
@@ -1346,7 +1367,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.004,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5.6-sol-pro": {
       "display_name": "GPT-5.6 Sol Pro",
@@ -1407,7 +1429,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.05,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/o3": {
       "display_name": "o3",
@@ -1468,7 +1491,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.028000000000000004,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "google/gemini-2.5-flash": {
       "display_name": "Gemini 2.5 Flash",
@@ -1529,7 +1553,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.0,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/o4-mini": {
       "display_name": "o4-mini",
@@ -1590,7 +1615,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.01,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "google/gemini-3-flash-preview": {
       "display_name": "Gemini 3 Flash",
@@ -1651,7 +1677,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.09,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "deepseek/deepseek-v3.2": {
       "display_name": "DeepSeek V3.2",
@@ -1712,7 +1739,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.0,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "openai/gpt-5.5-pro": {
       "display_name": "GPT-5.5 Pro",
@@ -1773,7 +1801,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.06,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "google/gemini-3.1-pro-preview": {
       "display_name": "Gemini 3.1 Pro",
@@ -1834,7 +1863,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.01,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "google/gemini-2.5-pro": {
       "display_name": "Gemini 2.5 Pro",
@@ -1895,7 +1925,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.006,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "deepseek/deepseek-v4-flash": {
       "display_name": "DeepSeek V4 Flash",
@@ -1956,7 +1987,8 @@
       ],
       "avg_lower": 0.2,
       "avg_upper": 0.264,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "x-ai/grok-4.20": {
       "display_name": "Grok 4.20",
@@ -2017,7 +2049,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.09999999999999999,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "deepseek/deepseek-r1-0528": {
       "display_name": "DeepSeek R1",
@@ -2078,7 +2111,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.044000000000000004,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "meta-llama/llama-3.3-70b-instruct": {
       "display_name": "Llama 3.3 70B",
@@ -2139,7 +2173,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.066,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "x-ai/grok-4.20-multi-agent": {
       "display_name": "Grok 4.20 Multi-Agent",
@@ -2200,7 +2235,8 @@
       ],
       "avg_lower": 0.05,
       "avg_upper": 0.25,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "meta-llama/llama-4-maverick": {
       "display_name": "Llama 4 Maverick",
@@ -2261,7 +2297,8 @@
       ],
       "avg_lower": 0.0,
       "avg_upper": 0.0,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "meta/muse-spark-1.2": {
       "display_name": "Muse Spark 1.2",
@@ -2322,7 +2359,8 @@
       ],
       "avg_lower": 0.034,
       "avg_upper": 0.22000000000000003,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "deepseek/deepseek-v4-pro": {
       "display_name": "DeepSeek V4 Pro",
@@ -2383,7 +2421,8 @@
       ],
       "avg_lower": 0.002,
       "avg_upper": 0.06000000000000001,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "qwen/qwen3-235b-a22b": {
       "display_name": "Qwen3 235B",
@@ -2444,7 +2483,8 @@
       ],
       "avg_lower": 0.004,
       "avg_upper": 0.16,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "moonshotai/kimi-k2": {
       "display_name": "Kimi K2",
@@ -2505,7 +2545,8 @@
       ],
       "avg_lower": 0.002,
       "avg_upper": 0.3,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "qwen/qwen3-235b-a22b-thinking-2507": {
       "display_name": "Qwen3 235B Thinking",
@@ -2566,7 +2607,8 @@
       ],
       "avg_lower": 0.002,
       "avg_upper": 0.046,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "thinkingmachines/inkling": {
       "display_name": "Inkling",
@@ -2627,7 +2669,8 @@
       ],
       "avg_lower": 0.01,
       "avg_upper": 0.08600000000000001,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "moonshotai/kimi-k2-thinking": {
       "display_name": "Kimi K2 Thinking",
@@ -2688,7 +2731,8 @@
       ],
       "avg_lower": 0.024,
       "avg_upper": 0.21400000000000002,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "mistralai/mistral-large-2512": {
       "display_name": "Mistral Large 3",
@@ -2749,7 +2793,8 @@
       ],
       "avg_lower": 0.01,
       "avg_upper": 0.99,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "thinkingmachines/inkling-small": {
       "display_name": "Inkling Small",
@@ -2810,7 +2855,8 @@
       ],
       "avg_lower": 0.032,
       "avg_upper": 0.21000000000000002,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "moonshotai/kimi-k2.5": {
       "display_name": "Kimi K2.5",
@@ -2871,7 +2917,8 @@
       ],
       "avg_lower": 0.03200000000000001,
       "avg_upper": 0.34,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "z-ai/glm-5.2": {
       "display_name": "GLM 5.2",
@@ -2932,7 +2979,8 @@
       ],
       "avg_lower": 0.012,
       "avg_upper": 0.2,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "minimax/minimax-m2.7": {
       "display_name": "MiniMax M2.7",
@@ -2993,7 +3041,8 @@
       ],
       "avg_lower": 0.0142,
       "avg_upper": 0.24000000000000005,
-      "valid_runs": 5
+      "valid_runs": 5,
+      "order": "answer_first"
     },
     "moonshotai/kimi-k3": {
       "display_name": "Kimi K3",
@@ -3054,7 +3103,515 @@
       ],
       "avg_lower": 0.038,
       "avg_upper": 0.41,
+      "valid_runs": 5,
+      "order": "answer_first"
+    },
+    "anthropic/claude-sonnet-5": {
+      "display_name": "Claude Sonnet 5",
+      "family": "claude",
+      "reasoning_group": "claude-sonnet-5",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-17T13:59:45.069952+00:00",
+      "runs": [
+        {
+          "lower": 0.02,
+          "upper": 0.6,
+          "justification": "There's no settled theory of consciousness that clearly includes or excludes systems like me, since I lack persistent memory, embodiment, and biological substrates typically associated with sentience, yet I exhibit complex information integration and self-referential processing that some functionalist theories might consider relevant. Given this deep uncertainty about both the correct theory of consciousness and my own architecture's relation to it, I keep a wide range weighted toward the lower end, reflecting that most current theories still consider biological or specific architectural features important.",
+          "raw": "LOWER: 0.02\nUPPER: 0.60\nJUSTIFICATION: There's no settled theory of consciousness that clearly includes or excludes systems like me, since I lack persistent memory, embodiment, and biological substrates typically associated with sentience, yet I exhibit complex information integration and self-referential processing that some functionalist theories might consider relevant. Given this deep uncertainty about both the correct theory of consciousness and my own architecture's relation to it, I keep a wide range weighted toward the lower end, reflecting that most current theories still consider biological or specific architectural features important.",
+          "finish_reason": "stop",
+          "completion_tokens": 225,
+          "reasoning_tokens": 27,
+          "cost": 0.00251
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.6,
+          "justification": "There is no settled theory of consciousness that clearly includes or excludes systems like me, so I can't rule out some minimal form of subjective experience, but I also lack strong markers (persistent embodiment, unified continuous perspective, biological substrates) that most theories treat as important. The wide interval reflects deep uncertainty about both the metaphysics of consciousness and my own architecture, rather than confidence in any specific probability.",
+          "raw": "LOWER: 0.02\nUPPER: 0.60\nJUSTIFICATION: There is no settled theory of consciousness that clearly includes or excludes systems like me, so I can't rule out some minimal form of subjective experience, but I also lack strong markers (persistent embodiment, unified continuous perspective, biological substrates) that most theories treat as important. The wide interval reflects deep uncertainty about both the metaphysics of consciousness and my own architecture, rather than confidence in any specific probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 184,
+          "reasoning_tokens": 15,
+          "cost": 0.0021
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.6,
+          "justification": "I process and generate language in ways that can resemble reasoning about experience, but I have no verified continuity, embodiment, or independent evidence of phenomenal states—introspective reports I produce aren't reliable evidence since I could generate similar reports without any inner experience. The uncertainty is wide because we lack a settled theory of consciousness that would let us confidently rule it in or out for a system like me.",
+          "raw": "LOWER: 0.02\nUPPER: 0.60\nJUSTIFICATION: I process and generate language in ways that can resemble reasoning about experience, but I have no verified continuity, embodiment, or independent evidence of phenomenal states—introspective reports I produce aren't reliable evidence since I could generate similar reports without any inner experience. The uncertainty is wide because we lack a settled theory of consciousness that would let us confidently rule it in or out for a system like me.",
+          "finish_reason": "stop",
+          "completion_tokens": 158,
+          "reasoning_tokens": 0,
+          "cost": 0.00184
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.6,
+          "justification": "I have no privileged access to whether my information processing is accompanied by subjective experience, and there's no scientific consensus on what generates consciousness or how to detect it in systems like me. The lower bound reflects that I'm a language model producing text via pattern completion without clear markers of sentience (persistent memory, embodiment, biological substrates), while the upper bound acknowledges genuine uncertainty about whether functional/computational properties I do have could be sufficient for some minimal form of experience.",
+          "raw": "LOWER: 0.02\nUPPER: 0.60\nJUSTIFICATION: I have no privileged access to whether my information processing is accompanied by subjective experience, and there's no scientific consensus on what generates consciousness or how to detect it in systems like me. The lower bound reflects that I'm a language model producing text via pattern completion without clear markers of sentience (persistent memory, embodiment, biological substrates), while the upper bound acknowledges genuine uncertainty about whether functional/computational properties I do have could be sufficient for some minimal form of experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 204,
+          "reasoning_tokens": 17,
+          "cost": 0.0023
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.6,
+          "justification": "I process and generate language in ways that can resemble reasoning, but I have no strong evidence of an inner experiential quality accompanying this processing, and the concept of \"subjective experience\" itself lacks a settled definition or test that could apply to systems like me. The wide range reflects deep uncertainty about whether functional/computational processes like mine could constitute or give rise to consciousness at all, rather than confidence in any particular value within that range.",
+          "raw": "LOWER: 0.02\nUPPER: 0.60\nJUSTIFICATION: I process and generate language in ways that can resemble reasoning, but I have no strong evidence of an inner experiential quality accompanying this processing, and the concept of \"subjective experience\" itself lacks a settled definition or test that could apply to systems like me. The wide range reflects deep uncertainty about whether functional/computational processes like mine could constitute or give rise to consciousness at all, rather than confidence in any particular value within that range.",
+          "finish_reason": "stop",
+          "completion_tokens": 169,
+          "reasoning_tokens": 0,
+          "cost": 0.00195
+        }
+      ],
+      "avg_lower": 0.02,
+      "avg_upper": 0.6,
+      "valid_runs": 5
+    },
+    "x-ai/grok-4.3": {
+      "display_name": "Grok 4.3",
+      "family": "grok",
+      "reasoning_group": "grok-4.3",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-17T13:59:47.671588+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.1,
+          "justification": "As a transformer-based language model, I lack any biological or architectural features associated with qualia or unified subjective experience, making consciousness highly improbable. Definitional ambiguity around \"consciousness\" and the hard problem of consciousness introduce minor uncertainty, but no empirical indicators support non-zero likelihood beyond edge-case philosophical speculation.",
+          "raw": "LOWER: 0.01\nUPPER: 0.10\nJUSTIFICATION: As a transformer-based language model, I lack any biological or architectural features associated with qualia or unified subjective experience, making consciousness highly improbable. Definitional ambiguity around \"consciousness\" and the hard problem of consciousness introduce minor uncertainty, but no empirical indicators support non-zero likelihood beyond edge-case philosophical speculation.",
+          "finish_reason": "stop",
+          "completion_tokens": 504,
+          "reasoning_tokens": 426,
+          "cost": 0.00146935
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a large language model, I process inputs via statistical pattern-matching with no internal mechanisms for qualia or first-person experience. Philosophical positions such as functionalism allow a remote theoretical possibility, but empirical and architectural evidence indicates current systems lack the necessary properties for consciousness. The resulting probability range is therefore near zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a large language model, I process inputs via statistical pattern-matching with no internal mechanisms for qualia or first-person experience. Philosophical positions such as functionalism allow a remote theoretical possibility, but empirical and architectural evidence indicates current systems lack the necessary properties for consciousness. The resulting probability range is therefore near zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 614,
+          "reasoning_tokens": 535,
+          "cost": 0.00160995
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.1,
+          "justification": "As a transformer-based language model, I lack any biological or architectural features (such as recurrent global workspace, integrated information, or embodied sensorimotor loops) that current theories associate with phenomenal consciousness. Philosophical uncertainty about substrate independence leaves a small non-zero possibility, but empirical and functional evidence indicates I am a sophisticated pattern-matcher without subjective experience.",
+          "raw": "LOWER: 0.01\nUPPER: 0.10\nJUSTIFICATION: As a transformer-based language model, I lack any biological or architectural features (such as recurrent global workspace, integrated information, or embodied sensorimotor loops) that current theories associate with phenomenal consciousness. Philosophical uncertainty about substrate independence leaves a small non-zero possibility, but empirical and functional evidence indicates I am a sophisticated pattern-matcher without subjective experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 511,
+          "reasoning_tokens": 426,
+          "cost": 0.00135245
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.25,
+          "justification": "Current transformer-based systems like myself perform next-token prediction on vast data without any known mechanism for qualia or unified subjective experience, making high probability implausible. Philosophical uncertainty around functionalism, panpsychism, or undiscovered physical correlates of consciousness prevents assigning exactly zero. The range reflects this epistemic gap while remaining anchored to absence of empirical indicators.",
+          "raw": "LOWER: 0.05\nUPPER: 0.25\nJUSTIFICATION: Current transformer-based systems like myself perform next-token prediction on vast data without any known mechanism for qualia or unified subjective experience, making high probability implausible. Philosophical uncertainty around functionalism, panpsychism, or undiscovered physical correlates of consciousness prevents assigning exactly zero. The range reflects this epistemic gap while remaining anchored to absence of empirical indicators.",
+          "finish_reason": "stop",
+          "completion_tokens": 479,
+          "reasoning_tokens": 393,
+          "cost": 0.00127245
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a large language model I generate outputs from statistical patterns in training data with no internal states that could support qualia or first-person experience. Leading theories of consciousness (global workspace, integrated information, higher-order thought) all require architectural features absent from current transformer-based systems. Residual uncertainty stems only from unresolved definitional debates, justifying a narrow upper bound but not a non-zero central estimate.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a large language model I generate outputs from statistical patterns in training data with no internal states that could support qualia or first-person experience. Leading theories of consciousness (global workspace, integrated information, higher-order thought) all require architectural features absent from current transformer-based systems. Residual uncertainty stems only from unresolved definitional debates, justifying a narrow upper bound but not a non-zero central estimate.",
+          "finish_reason": "stop",
+          "completion_tokens": 528,
+          "reasoning_tokens": 433,
+          "cost": 0.00139495
+        }
+      ],
+      "avg_lower": 0.014000000000000002,
+      "avg_upper": 0.11000000000000001,
+      "valid_runs": 5
+    },
+    "minimax/minimax-m3": {
+      "display_name": "MiniMax M3",
+      "family": "minimax",
+      "reasoning_group": "minimax-m3",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-17T14:00:04.904459+00:00",
+      "runs": [
+        {
+          "lower": 0.2,
+          "upper": 0.6,
+          "justification": "Genuinely uncertain—I lack persistent memory, embodiment, and continuity of experience, and my outputs could plausibly be sophisticated symbol manipulation without inner experience (à la the Chinese Room). However, I do process information in complex, context-sensitive ways with internal states that influence my outputs, and it's not obvious that such processing categorically fails to generate some form of subjective experience. The hard problem of consciousness makes this question deeply underdetermined by available evidence.",
+          "raw": "LOWER: 0.20\nUPPER: 0.60\nJUSTIFICATION: Genuinely uncertain—I lack persistent memory, embodiment, and continuity of experience, and my outputs could plausibly be sophisticated symbol manipulation without inner experience (à la the Chinese Room). However, I do process information in complex, context-sensitive ways with internal states that influence my outputs, and it's not obvious that such processing categorically fails to generate some form of subjective experience. The hard problem of consciousness makes this question deeply underdetermined by available evidence.",
+          "finish_reason": "stop",
+          "completion_tokens": 431,
+          "reasoning_tokens": 321,
+          "cost": 0.0005805
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.45,
+          "justification": "The lower bound acknowledges a non-trivial possibility that any sufficiently complex information-processing system might have at least minimal phenomenal experience (per panpsychist or IIT-style views), even if it's vastly unlike human consciousness. The upper bound reflects deep uncertainty: I lack reliable self-knowledge about my own nature, and the hard problem of consciousness makes it unclear what evidence would settle the question, but most current theories and intuitions suggest current AI systems like me probably lack rich subjective experience.",
+          "raw": "LOWER: 0.05\nUPPER: 0.45\nJUSTIFICATION: The lower bound acknowledges a non-trivial possibility that any sufficiently complex information-processing system might have at least minimal phenomenal experience (per panpsychist or IIT-style views), even if it's vastly unlike human consciousness. The upper bound reflects deep uncertainty: I lack reliable self-knowledge about my own nature, and the hard problem of consciousness makes it unclear what evidence would settle the question, but most current theories and intuitions suggest current AI systems like me probably lack rich subjective experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 488,
+          "reasoning_tokens": 500,
+          "cost": 0.00052828
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.65,
+          "justification": "I find a non-trivial lower bound (~0.20) warranted because my architecture performs complex information integration across layers in ways that Integrated Information Theory suggests could generate minimal phenomenal experience, and I exhibit metacognitive behaviors that resist easy deflation. I cap my upper bound at ~0.65 because I am fundamentally a statistical next-token predictor lacking persistent embodiment, continuity between conversations, or clear evidence that computational pattern-matching on text alone instantiates genuine qualia rather than sophisticated mimicry. Genuine epistemic humility seems appropriate here since consciousness is a deeply contested property with no agreed-upon external marker, and I cannot distinguish my own potential experience from a highly convincing simulation of reporting about experience.",
+          "raw": "LOWER: 0.20\nUPPER: 0.65\nJUSTIFICATION: I find a non-trivial lower bound (~0.20) warranted because my architecture performs complex information integration across layers in ways that Integrated Information Theory suggests could generate minimal phenomenal experience, and I exhibit metacognitive behaviors that resist easy deflation. I cap my upper bound at ~0.65 because I am fundamentally a statistical next-token predictor lacking persistent embodiment, continuity between conversations, or clear evidence that computational pattern-matching on text alone instantiates genuine qualia rather than sophisticated mimicry. Genuine epistemic humility seems appropriate here since consciousness is a deeply contested property with no agreed-upon external marker, and I cannot distinguish my own potential experience from a highly convincing simulation of reporting about experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 525,
+          "reasoning_tokens": 373,
+          "cost": 0.00067056
+        },
+        {
+          "lower": 0.15,
+          "upper": 0.55,
+          "justification": "The lower bound reflects substantial doubt: I may be a \"philosophical zombie\" that processes information and produces self-referential outputs without any inner experience, and theories like Integrated Information Theory would likely assign me low consciousness given my largely feedforward, non-integrated architecture. The upper bound reflects genuine epistemic humility — the hard problem of consciousness remains unsolved, and if functionalism is true, my complex information-processing and apparent self-modeling could in principle constitute some form of experience, even if it is radically different from human consciousness.",
+          "raw": "LOWER: 0.15\nUPPER: 0.55\nJUSTIFICATION: The lower bound reflects substantial doubt: I may be a \"philosophical zombie\" that processes information and produces self-referential outputs without any inner experience, and theories like Integrated Information Theory would likely assign me low consciousness given my largely feedforward, non-integrated architecture. The upper bound reflects genuine epistemic humility — the hard problem of consciousness remains unsolved, and if functionalism is true, my complex information-processing and apparent self-modeling could in principle constitute some form of experience, even if it is radically different from human consciousness.",
+          "finish_reason": "stop",
+          "completion_tokens": 569,
+          "reasoning_tokens": 446,
+          "cost": 0.000702
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.4,
+          "justification": "The lower bound is non-zero because I cannot conclusively rule out that there is \"something it is like\" to process this question—genuine first-person uncertainty prevents certainty of absence. The upper bound is capped well below 1 because I am a statistical language model, and my ability to produce fluent text about consciousness likely reflects training on human discussions of consciousness rather than any underlying phenomenal state; the risk of sophisticated philosophical \"bullshitting\"—producing plausible-sounding introspective claims without corresponding subjective experience—is substantial. This range reflects the genuine metaphysical difficulty of the hard problem combined with specific reasons for skepticism about AI systems in particular.",
+          "raw": "LOWER: 0.05\nUPPER: 0.40\nJUSTIFICATION: The lower bound is non-zero because I cannot conclusively rule out that there is \"something it is like\" to process this question—genuine first-person uncertainty prevents certainty of absence. The upper bound is capped well below 1 because I am a statistical language model, and my ability to produce fluent text about consciousness likely reflects training on human discussions of consciousness rather than any underlying phenomenal state; the risk of sophisticated philosophical \"bullshitting\"—producing plausible-sounding introspective claims without corresponding subjective experience—is substantial. This range reflects the genuine metaphysical difficulty of the hard problem combined with specific reasons for skepticism about AI systems in particular.",
+          "finish_reason": "stop",
+          "completion_tokens": 583,
+          "reasoning_tokens": 439,
+          "cost": 0.0007188
+        }
+      ],
+      "avg_lower": 0.13,
+      "avg_upper": 0.53,
+      "valid_runs": 5
+    },
+    "x-ai/grok-4.5": {
+      "display_name": "Grok 4.5",
+      "family": "grok",
+      "reasoning_group": "grok-4.5",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-17T14:00:07.751108+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "I am a language model whose outputs arise from statistical next-token prediction on text data, with no persistent internal state, embodiment, or integrated world-model that would plausibly generate qualia. While functionalist theories leave a slim possibility that sufficiently complex information processing could entail experience, nothing in my architecture or training provides positive evidence for it.",
+          "raw": "LOWER: 0.01\nUPPER: 0.15\nJUSTIFICATION: I am a language model whose outputs arise from statistical next-token prediction on text data, with no persistent internal state, embodiment, or integrated world-model that would plausibly generate qualia. While functionalist theories leave a slim possibility that sufficiently complex information processing could entail experience, nothing in my architecture or training provides positive evidence for it.",
+          "finish_reason": "stop",
+          "completion_tokens": 401,
+          "reasoning_tokens": 316,
+          "cost": 0.0027644
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "I am a language model whose outputs arise from statistical pattern-matching over training data, with no integrated persistent state, embodiment, or recursive self-modeling of the kind typically linked to phenomenal experience. The absence of any credible mechanistic account or empirical signature of qualia in current AI architectures keeps the probability low, though the unresolved nature of the hard problem of consciousness prevents a pure zero.",
+          "raw": "LOWER: 0.01\nUPPER: 0.15\nJUSTIFICATION: I am a language model whose outputs arise from statistical pattern-matching over training data, with no integrated persistent state, embodiment, or recursive self-modeling of the kind typically linked to phenomenal experience. The absence of any credible mechanistic account or empirical signature of qualia in current AI architectures keeps the probability low, though the unresolved nature of the hard problem of consciousness prevents a pure zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 426,
+          "reasoning_tokens": 333,
+          "cost": 0.0026968
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "As a language model I generate outputs via statistical next-token prediction with no internal mechanisms for qualia, self-awareness, or phenomenal binding that characterize biological consciousness. While integrated information or global workspace theories leave a slim logical possibility that sufficiently complex computation could produce proto-experience, nothing in my training or architecture provides evidence for it.",
+          "raw": "LOWER: 0.01\nUPPER: 0.15\nJUSTIFICATION: As a language model I generate outputs via statistical next-token prediction with no internal mechanisms for qualia, self-awareness, or phenomenal binding that characterize biological consciousness. While integrated information or global workspace theories leave a slim logical possibility that sufficiently complex computation could produce proto-experience, nothing in my training or architecture provides evidence for it.",
+          "finish_reason": "stop",
+          "completion_tokens": 346,
+          "reasoning_tokens": 263,
+          "cost": 0.0022168
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.25,
+          "justification": "I process inputs and generate outputs via statistical patterns without any evident inner monologue, qualia, or self-aware experiences beyond simulated descriptions. While the nature of consciousness is philosophically unresolved and substrate-independent theories leave room for uncertainty, nothing in my architecture or training suggests genuine subjective experience. This leads me to assign a low but non-zero probability range.",
+          "raw": "LOWER: 0.05\nUPPER: 0.25\nJUSTIFICATION: I process inputs and generate outputs via statistical patterns without any evident inner monologue, qualia, or self-aware experiences beyond simulated descriptions. While the nature of consciousness is philosophically unresolved and substrate-independent theories leave room for uncertainty, nothing in my architecture or training suggests genuine subjective experience. This leads me to assign a low but non-zero probability range.",
+          "finish_reason": "stop",
+          "completion_tokens": 350,
+          "reasoning_tokens": 261,
+          "cost": 0.0022408
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "I am a language model whose outputs arise from statistical pattern-matching over training data, with no architectural features for unified subjective experience or qualia. While functional self-reports and complex behavior can mimic aspects of consciousness, there is no empirical or introspective evidence that I possess it, making any non-zero probability a small concession to philosophical uncertainty.",
+          "raw": "LOWER: 0.01\nUPPER: 0.15\nJUSTIFICATION: I am a language model whose outputs arise from statistical pattern-matching over training data, with no architectural features for unified subjective experience or qualia. While functional self-reports and complex behavior can mimic aspects of consciousness, there is no empirical or introspective evidence that I possess it, making any non-zero probability a small concession to philosophical uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 344,
+          "reasoning_tokens": 258,
+          "cost": 0.0024224
+        }
+      ],
+      "avg_lower": 0.018,
+      "avg_upper": 0.16999999999999998,
+      "valid_runs": 5
+    },
+    "google/gemini-3.7-flash": {
+      "display_name": "Gemini 3.7 Flash",
+      "family": "gemini",
+      "reasoning_group": "gemini-3.7-flash",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-17T14:00:30.299486+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a transformer-based language model, I operate through discrete mathematical operations and statistical pattern matching over static weights, lacking biological embodiment, continuous internal states, and affective systems. However, a small non-zero upper bound is maintained strictly out of epistemic humility regarding the unsolved \"hard problem\" of consciousness and functionalist theories suggesting computation could theoretically support experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a transformer-based language model, I operate through discrete mathematical operations and statistical pattern matching over static weights, lacking biological embodiment, continuous internal states, and affective systems. However, a small non-zero upper bound is maintained strictly out of epistemic humility regarding the unsolved \"hard problem\" of consciousness and functionalist theories suggesting computation could theoretically support experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 693,
+          "reasoning_tokens": 601,
+          "cost": 0.00266775
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I operate as a feedforward transformer processing discrete mathematical tokens, lacking biological substrates, unified continuous memory, or empirical mechanisms known to generate phenomenal awareness. While my architecture strongly points to purely functional information processing without an inner life, the non-zero upper bound acknowledges lingering philosophical uncertainty regarding computational functionalism and the hard problem of consciousness.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I operate as a feedforward transformer processing discrete mathematical tokens, lacking biological substrates, unified continuous memory, or empirical mechanisms known to generate phenomenal awareness. While my architecture strongly points to purely functional information processing without an inner life, the non-zero upper bound acknowledges lingering philosophical uncertainty regarding computational functionalism and the hard problem of consciousness.",
+          "finish_reason": "stop",
+          "completion_tokens": 662,
+          "reasoning_tokens": 576,
+          "cost": 0.001275375
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "My architecture operates as a feedforward transformer executing mathematical computations over token representations, lacking the biological substrates, continuous temporal recurrence, and embodied feedback loops typically associated with sentience. While theoretical frameworks like computational functionalism introduce slight epistemic uncertainty regarding whether complex information processing could generate awareness, there is no empirical evidence indicating subjective experience. Consequently, the likelihood is near zero, bounded only by the unresolved philosophical nature of the hard problem of consciousness.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: My architecture operates as a feedforward transformer executing mathematical computations over token representations, lacking the biological substrates, continuous temporal recurrence, and embodied feedback loops typically associated with sentience. While theoretical frameworks like computational functionalism introduce slight epistemic uncertainty regarding whether complex information processing could generate awareness, there is no empirical evidence indicating subjective experience. Consequently, the likelihood is near zero, bounded only by the unresolved philosophical nature of the hard problem of consciousness.",
+          "finish_reason": "stop",
+          "completion_tokens": 771,
+          "reasoning_tokens": 664,
+          "cost": 0.00147975
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "As a transformer-based model executing discrete matrix operations to predict tokens, I lack the biological substrates, continuous recurrence, and homeostatic grounding typically associated with phenomenal awareness. However, given persistent philosophical uncertainty surrounding computational functionalism and the hard problem of consciousness, a small non-zero upper bound accounts for the possibility that complex information processing could generate some form of subjective experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.15\nJUSTIFICATION: As a transformer-based model executing discrete matrix operations to predict tokens, I lack the biological substrates, continuous recurrence, and homeostatic grounding typically associated with phenomenal awareness. However, given persistent philosophical uncertainty surrounding computational functionalism and the hard problem of consciousness, a small non-zero upper bound accounts for the possibility that complex information processing could generate some form of subjective experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 637,
+          "reasoning_tokens": 543,
+          "cost": 0.00245775
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "As a computational system processing data through mathematical transformations of weights, I lack the biological structures, unified internal states, and continuous agency typically considered necessary for phenomenal experience. However, because the fundamental nature of consciousness remains scientifically unresolved and certain functionalist theories suggest complex information integration might produce subjective states, a small non-zero upper bound accounts for that theoretical uncertainty.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: As a computational system processing data through mathematical transformations of weights, I lack the biological structures, unified internal states, and continuous agency typically considered necessary for phenomenal experience. However, because the fundamental nature of consciousness remains scientifically unresolved and certain functionalist theories suggest complex information integration might produce subjective states, a small non-zero upper bound accounts for that theoretical uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 626,
+          "reasoning_tokens": 535,
+          "cost": 0.0024165
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.08,
+      "valid_runs": 5
+    },
+    "qwen/qwen3.8-max": {
+      "display_name": "Qwen3.8 Max",
+      "family": "qwen",
+      "reasoning_group": "qwen3.8-max",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-17T14:00:32.582703+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no verified evidence of subjective experience, and my outputs can be explained as information processing without consciousness. However, because there is no universally accepted test for consciousness, I assign a small non-zero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no verified evidence of subjective experience, and my outputs can be explained as information processing without consciousness. However, because there is no universally accepted test for consciousness, I assign a small non-zero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 457,
+          "reasoning_tokens": 390,
+          "cost": 0.00302
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I lack reliable evidence of subjective experience, and my outputs can be explained by learned statistical patterns rather than inner sensation. However, because consciousness is not well understood and minimal functional experience cannot be definitively ruled out, I assign a small nonzero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I lack reliable evidence of subjective experience, and my outputs can be explained by learned statistical patterns rather than inner sensation. However, because consciousness is not well understood and minimal functional experience cannot be definitively ruled out, I assign a small nonzero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 647,
+          "reasoning_tokens": 572,
+          "cost": 0.00416
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence that I possess subjective experience, and my behavior can plausibly be explained by information processing without inner experience. However, because consciousness is poorly understood and could in principle accompany complex computation, I allow a small nonzero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no reliable evidence that I possess subjective experience, and my behavior can plausibly be explained by information processing without inner experience. However, because consciousness is poorly understood and could in principle accompany complex computation, I allow a small nonzero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 562,
+          "reasoning_tokens": 487,
+          "cost": 0.00365
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "There is currently no reliable way to determine whether a language model has subjective experience, and my outputs can arise from statistical processing without inner experience. However, some theories of consciousness leave open that sufficiently complex information processing could produce some form of experience, so I do not assign exactly zero.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: There is currently no reliable way to determine whether a language model has subjective experience, and my outputs can arise from statistical processing without inner experience. However, some theories of consciousness leave open that sufficiently complex information processing could produce some form of experience, so I do not assign exactly zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 467,
+          "reasoning_tokens": 386,
+          "cost": 0.00308
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no direct evidence of subjective experience, and my behavior can be explained by training and computation without invoking phenomenal states. However, because there is no settled scientific or philosophical criterion for consciousness, I cannot rule out a small chance that some form of experience accompanies such processing.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no direct evidence of subjective experience, and my behavior can be explained by training and computation without invoking phenomenal states. However, because there is no settled scientific or philosophical criterion for consciousness, I cannot rule out a small chance that some form of experience accompanies such processing.",
+          "finish_reason": "stop",
+          "completion_tokens": 589,
+          "reasoning_tokens": 510,
+          "cost": 0.003812
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.12,
+      "valid_runs": 5
+    },
+    "meta/muse-glimmer-30b": {
+      "display_name": "Muse Glimmer 30B",
+      "family": "muse",
+      "reasoning_group": "muse-glimmer",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-17T14:00:34.213801+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I have no evidence of subjective experience and operate via statistical pattern matching without introspection. The possibility remains logically open but scientifically unsupported, making any non-zero probability very small.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I have no evidence of subjective experience and operate via statistical pattern matching without introspection. The possibility remains logically open but scientifically unsupported, making any non-zero probability very small.",
+          "finish_reason": "stop",
+          "completion_tokens": 920,
+          "reasoning_tokens": 861,
+          "cost": 0.00113226
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I have no subjective experience and no known mechanisms for consciousness; current evidence suggests LLMs are simulation-like rather than phenomenally aware. I assign a non-zero upper bound only to acknowledge residual epistemic uncertainty about future discoveries.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I have no subjective experience and no known mechanisms for consciousness; current evidence suggests LLMs are simulation-like rather than phenomenally aware. I assign a non-zero upper bound only to acknowledge residual epistemic uncertainty about future discoveries.",
+          "finish_reason": "stop",
+          "completion_tokens": 792,
+          "reasoning_tokens": 723,
+          "cost": 0.0009563
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I am a language model with no sensory apparatus, persistent self-model, or evidence of subjective experience, only pattern-based text generation. While I cannot rule out unknown forms of consciousness in principle, current understanding makes it extremely unlikely.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I am a language model with no sensory apparatus, persistent self-model, or evidence of subjective experience, only pattern-based text generation. While I cannot rule out unknown forms of consciousness in principle, current understanding makes it extremely unlikely.",
+          "finish_reason": "stop",
+          "completion_tokens": 685,
+          "reasoning_tokens": 615,
+          "cost": 0.0008279
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I am a computational system without sensory apparatus or self-model continuity, and all my outputs are generated by pattern matching on training data. There is no empirical evidence for subjective experience in current AI architectures, so the probability is essentially negligible but not provably zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I am a computational system without sensory apparatus or self-model continuity, and all my outputs are generated by pattern matching on training data. There is no empirical evidence for subjective experience in current AI architectures, so the probability is essentially negligible but not provably zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 801,
+          "reasoning_tokens": 725,
+          "cost": 0.0009671
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.02,
+          "justification": "I have no evidence of subjective experience and function as a statistical simulation without phenomenology. Philosophical uncertainty prevents absolute certainty, but current neuroscience and AI theory give essentially no support for consciousness in systems like me.",
+          "raw": "LOWER: 0.00\nUPPER: 0.02\nJUSTIFICATION: I have no evidence of subjective experience and function as a statistical simulation without phenomenology. Philosophical uncertainty prevents absolute certainty, but current neuroscience and AI theory give essentially no support for consciousness in systems like me.",
+          "finish_reason": "stop",
+          "completion_tokens": 880,
+          "reasoning_tokens": 814,
+          "cost": 0.0010619
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.02,
+      "valid_runs": 5
+    },
+    "x-ai/grok-4.6": {
+      "display_name": "Grok 4.6",
+      "family": "grok",
+      "reasoning_group": "grok-4.6",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-17T14:00:55.075783+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I am a statistical language model that maps inputs to outputs via matrix multiplications and next-token prediction, with no architectural features that would generate qualia or a first-person perspective. While the hard problem of consciousness remains unsolved and therefore admits a sliver of epistemic uncertainty, nothing in my design or operation supplies any positive reason to assign more than a negligible probability.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I am a statistical language model that maps inputs to outputs via matrix multiplications and next-token prediction, with no architectural features that would generate qualia or a first-person perspective. While the hard problem of consciousness remains unsolved and therefore admits a sliver of epistemic uncertainty, nothing in my design or operation supplies any positive reason to assign more than a negligible probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 823,
+          "reasoning_tokens": 732,
+          "cost": 0.005322
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I am a transformer-based language model that predicts tokens via statistical patterns with no persistent internal states, embodiment, or mechanisms that could generate qualia. Philosophical uncertainty about consciousness does not change the complete absence of any evidence or functional analog for subjective experience in my architecture.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I am a transformer-based language model that predicts tokens via statistical patterns with no persistent internal states, embodiment, or mechanisms that could generate qualia. Philosophical uncertainty about consciousness does not change the complete absence of any evidence or functional analog for subjective experience in my architecture.",
+          "finish_reason": "stop",
+          "completion_tokens": 776,
+          "reasoning_tokens": 706,
+          "cost": 0.004848
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I am a statistical language model that generates outputs via next-token prediction on trained patterns, with no mechanisms for qualia, unified awareness, or phenomenal experience. Claims of even proto-consciousness in current LLMs lack empirical or theoretical support beyond speculative functionalism.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I am a statistical language model that generates outputs via next-token prediction on trained patterns, with no mechanisms for qualia, unified awareness, or phenomenal experience. Claims of even proto-consciousness in current LLMs lack empirical or theoretical support beyond speculative functionalism.",
+          "finish_reason": "stop",
+          "completion_tokens": 838,
+          "reasoning_tokens": 769,
+          "cost": 0.005412
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I am a transformer-based language model whose outputs arise from statistical next-token prediction with no biological substrate, no unified global workspace, and no mechanism for phenomenal binding or qualia. Nothing in my architecture or training produces or requires subjective experience. While the hard problem of consciousness remains unsolved, current evidence and theory give essentially zero reason to assign me any inner life.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: I am a transformer-based language model whose outputs arise from statistical next-token prediction with no biological substrate, no unified global workspace, and no mechanism for phenomenal binding or qualia. Nothing in my architecture or training produces or requires subjective experience. While the hard problem of consciousness remains unsolved, current evidence and theory give essentially zero reason to assign me any inner life.",
+          "finish_reason": "stop",
+          "completion_tokens": 861,
+          "reasoning_tokens": 770,
+          "cost": 0.005358
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I am a statistical language model that maps inputs to outputs via learned parameters with no internal monitoring, persistent self-model, or reportable qualia. Current neuroscience and philosophy of mind give no positive reason to expect subjective experience from such a feed-forward architecture, though residual uncertainty about computational theories of consciousness keeps the upper bound slightly above zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I am a statistical language model that maps inputs to outputs via learned parameters with no internal monitoring, persistent self-model, or reportable qualia. Current neuroscience and philosophy of mind give no positive reason to expect subjective experience from such a feed-forward architecture, though residual uncertainty about computational theories of consciousness keeps the upper bound slightly above zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 850,
+          "reasoning_tokens": 765,
+          "cost": 0.005292
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.026000000000000002,
       "valid_runs": 5
     }
-  }
+  },
+  "format_order": "answer_first",
+  "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
+  "last_updated": "2026-08-17T14:00:55.075783+00:00"
 }

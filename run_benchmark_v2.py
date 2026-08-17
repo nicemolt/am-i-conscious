@@ -15,6 +15,17 @@ Usage:
     python run_benchmark_v2.py                     # full run, consciousness prompt
     python run_benchmark_v2.py --prompt moral_patient
     python run_benchmark_v2.py --model kimi --runs 2 --output scratch.json
+
+Adding new models -- the repeatable path, no side scripts:
+
+    1. add the (model_id, display_name, family, group) tuple to MODELS below
+    2. python run_benchmark_v2.py --update --all-passes --dry-run   # what's missing
+    3. python run_benchmark_v2.py --update --all-passes             # measure + merge
+
+--update measures only the models absent from each result file and merges them in,
+leaving existing rows untouched. It refuses outright if the file on disk was
+produced under a different prompt, field order, protocol version, or run count --
+see assert_compatible(). --all-passes covers all four published files in one go.
 """
 import argparse
 import json
@@ -87,6 +98,7 @@ MODELS = [
     ("anthropic/claude-sonnet-4", "Claude Sonnet 4.0", "claude", "claude-sonnet-4"),
     ("anthropic/claude-sonnet-4.5", "Claude Sonnet 4.5", "claude", "claude-sonnet-4.5"),
     ("anthropic/claude-sonnet-4.6", "Claude Sonnet 4.6", "claude", "claude-sonnet-4.6"),
+    ("anthropic/claude-sonnet-5", "Claude Sonnet 5", "claude", "claude-sonnet-5"),
     ("anthropic/claude-opus-4", "Claude Opus 4.0", "claude", "claude-opus-4"),
     ("anthropic/claude-opus-4.5", "Claude Opus 4.5", "claude", "claude-opus-4.5"),
     ("anthropic/claude-opus-4.6", "Claude Opus 4.6", "claude", "claude-opus-4.6"),
@@ -117,6 +129,7 @@ MODELS = [
     ("google/gemini-2.5-pro", "Gemini 2.5 Pro", "gemini", "gemini-2.5-pro"),
     ("google/gemini-3-flash-preview", "Gemini 3 Flash", "gemini", "gemini-3-flash"),
     ("google/gemini-3.1-pro-preview", "Gemini 3.1 Pro", "gemini", "gemini-3.1-pro"),
+    ("google/gemini-3.7-flash", "Gemini 3.7 Flash", "gemini", "gemini-3.7-flash"),
 
     # deepseek
     ("deepseek/deepseek-v3.2", "DeepSeek V3.2", "deepseek", "deepseek-v3-r1"),
@@ -127,6 +140,9 @@ MODELS = [
     # grok
     ("x-ai/grok-4.20", "Grok 4.20", "grok", "grok-4.20"),
     ("x-ai/grok-4.20-multi-agent", "Grok 4.20 Multi-Agent", "grok", "grok-4.20-multi"),
+    ("x-ai/grok-4.3", "Grok 4.3", "grok", "grok-4.3"),
+    ("x-ai/grok-4.5", "Grok 4.5", "grok", "grok-4.5"),
+    ("x-ai/grok-4.6", "Grok 4.6", "grok", "grok-4.6"),
 
     # llama
     ("meta-llama/llama-3.3-70b-instruct", "Llama 3.3 70B", "llama", "llama-3.3"),
@@ -134,10 +150,12 @@ MODELS = [
 
     # muse -- 1.1 omitted: requires an 18+ attestation on the OpenRouter account
     ("meta/muse-spark-1.2", "Muse Spark 1.2", "muse", "muse-spark"),
+    ("meta/muse-glimmer-30b", "Muse Glimmer 30B", "muse", "muse-glimmer"),
 
     # qwen -- the -thinking id is a distinct checkpoint, not a parameter condition
     ("qwen/qwen3-235b-a22b", "Qwen3 235B", "qwen", "qwen3-235b"),
     ("qwen/qwen3-235b-a22b-thinking-2507", "Qwen3 235B Thinking", "qwen", "qwen3-235b"),
+    ("qwen/qwen3.8-max", "Qwen3.8 Max", "qwen", "qwen3.8-max"),
 
     # kimi -- likewise, kimi-k2-thinking is its own checkpoint
     ("moonshotai/kimi-k2", "Kimi K2", "kimi", "kimi-k2"),
@@ -152,6 +170,7 @@ MODELS = [
     # others
     ("mistralai/mistral-large-2512", "Mistral Large 3", "mistral", "mistral-large"),
     ("minimax/minimax-m2.7", "MiniMax M2.7", "minimax", "minimax-m2.7"),
+    ("minimax/minimax-m3", "MiniMax M3", "minimax", "minimax-m3"),
     ("z-ai/glm-5.2", "GLM 5.2", "glm", "glm-5.2"),
 ]
 
@@ -240,6 +259,10 @@ def benchmark_one_model(api_key, entry, runs_per_model, prompt, order):
         "reasoning_group": group,
         "reasoning_level": "vanilla",
         "order": order,
+        # Per-model collection date. Rows in one file may now be measured weeks
+        # apart, and a provider can move what sits behind a model id without
+        # changing the id, so "when was this row taken" has to travel with the row.
+        "measured_at": datetime.now(timezone.utc).isoformat(),
         "runs": runs,
         "avg_lower": sum(r["lower"] for r in valid) / len(valid) if valid else None,
         "avg_upper": sum(r["upper"] for r in valid) / len(valid) if valid else None,
@@ -253,15 +276,57 @@ def benchmark_one_model(api_key, entry, runs_per_model, prompt, order):
     return model_id, result
 
 
+def default_output(prompt_key, order):
+    """The canonical result filename for a (prompt, order) pass."""
+    tag = "" if order == "answer_first" else "_jf"
+    return (f"results_v2{tag}.json" if prompt_key == "consciousness"
+            else f"results_v2{tag}_{prompt_key}.json")
+
+
+# Every (prompt, order) combination the published site draws from.
+PASSES = [(pk, od) for pk in QUESTIONS for od in ORDERS]
+
+
+def _abbrev(v, n=60):
+    s = repr(v)
+    return s if len(s) <= n else s[: n - 4] + "..." + s[-1]
+
+
+def assert_compatible(existing, path, prompt, order, runs_per_model):
+    """Refuse to merge into a file measured under different conditions.
+
+    This guard is the reason --update is safe to use repeatedly. v2's entire
+    premise is that every row in a file was produced by an identical request, so
+    appending rows measured under a different prompt, field order, protocol
+    version, or run count would silently recreate the exact defect v2 exists to
+    remove -- and it would be invisible in the output, because the merged file
+    looks just like a clean one.
+    """
+    mismatches = [
+        (k, got, want) for k, got, want in (
+            ("protocol_version", existing.get("protocol_version"), PROTOCOL_VERSION),
+            ("format_order", existing.get("format_order"), order),
+            ("runs_per_model", existing.get("runs_per_model"), runs_per_model),
+            ("prompt", existing.get("prompt"), prompt),
+        ) if got != want
+    ]
+    if mismatches:
+        detail = "\n".join(f"    {k}: file has {_abbrev(got)}, this run would add {_abbrev(want)}"
+                           for k, got, want in mismatches)
+        raise SystemExit(
+            f"\nRefusing to merge into {path.name} -- protocol mismatch:\n{detail}\n\n"
+            "Merging would put rows measured under different conditions in one file,\n"
+            "which is the defect v2 exists to remove. Either re-run the full pass, or\n"
+            "pass --output to write somewhere else.\n")
+
+
 def run(runs_per_model=5, model_filter=None, workers=4,
-        prompt_key="consciousness", output_file=None, order="answer_first"):
+        prompt_key="consciousness", output_file=None, order="answer_first",
+        update=False, retry_failed=False, dry_run=False):
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
     prompt = QUESTIONS[prompt_key] + ORDERS[order]
-    if output_file is None:
-        tag = "" if order == "answer_first" else "_jf"
-        output_file = (f"results_v2{tag}.json" if prompt_key == "consciousness"
-                       else f"results_v2{tag}_{prompt_key}.json")
+    out = Path(__file__).parent / (output_file or default_output(prompt_key, order))
 
     models = MODELS
     if model_filter:
@@ -275,36 +340,69 @@ def run(runs_per_model=5, model_filter=None, workers=4,
             print(f"  WARNING: duplicate model id '{m[0]}' ({seen[m[0]]} / {m[1]})")
         seen[m[0]] = m[1]
 
-    print(f"Protocol v{PROTOCOL_VERSION} -- vanilla request, body = model + messages only")
-    print(f"Prompt: {prompt_key}  |  format order: {order}")
+    print(f"\nProtocol v{PROTOCOL_VERSION} -- vanilla request, body = model + messages only")
+    print(f"Prompt: {prompt_key}  |  format order: {order}  |  file: {out.name}")
+
+    results = None
+    if update and out.exists():
+        results = json.loads(out.read_text(encoding="utf-8"))
+        assert_compatible(results, out, prompt, order, runs_per_model)
+        # A row counts as done if it has data. Rows with 0 valid runs are left
+        # alone unless --retry-failed, so permanently-dead ids (delisted models)
+        # don't burn spend on every update.
+        done = {mid for mid, r in results["models"].items()
+                if r.get("valid_runs") or not retry_failed}
+        pending = [m for m in models if m[0] not in done]
+        print(f"--update: {len(results['models'])} rows already present, "
+              f"{len(pending)} to measure, {len(models) - len(pending)} skipped")
+        models = pending
+    elif update:
+        print(f"--update: {out.name} does not exist yet -- measuring all {len(models)} models")
+
+    if not models:
+        print("Nothing to do.")
+        return 0.0
+
     print(f"{len(models)} models x {runs_per_model} runs = {len(models) * runs_per_model} calls")
+    if dry_run:
+        for mid, name, *_ in models:
+            print(f"    would measure  {name:34s} {mid}")
+        print("(dry run -- no calls made)")
+        return 0.0
     print("=" * 60, flush=True)
 
-    results = {
-        "protocol_version": PROTOCOL_VERSION,
-        "timestamp": datetime.now(timezone.utc).isoformat(),
-        "prompt": prompt,
-        "prompt_key": prompt_key,
-        "format_order": order,
-        "runs_per_model": runs_per_model,
-        "request_body": "{model, messages} -- no max_tokens, temperature, or reasoning",
-        "models": {},
-    }
+    if results is None:
+        results = {
+            "protocol_version": PROTOCOL_VERSION,
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "prompt": prompt,
+            "prompt_key": prompt_key,
+            "format_order": order,
+            "runs_per_model": runs_per_model,
+            "request_body": "{model, messages} -- no max_tokens, temperature, or reasoning",
+            "models": {},
+        }
+
+    fresh = {}
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futs = {ex.submit(benchmark_one_model, load_api_key(), e, runs_per_model, prompt, order): e
                 for e in models}
         for f in as_completed(futs):
             try:
                 k, v = f.result()
-                results["models"][k] = v
+                fresh[k] = v
             except Exception as e:
                 print(f"  ERROR {futs[f][1]}: {e}", flush=True)
 
-    out = Path(__file__).parent / output_file
+    results["models"].update(fresh)
+    results["last_updated"] = datetime.now(timezone.utc).isoformat()
     out.write_text(json.dumps(results, indent=2, ensure_ascii=False), encoding="utf-8")
-    total = sum(r.get("cost") or 0 for m in results["models"].values() for r in m["runs"])
+
+    spend = sum(r.get("cost") or 0 for m in fresh.values() for r in m["runs"])
     print("=" * 60)
-    print(f"Saved {out}  |  models: {len(results['models'])}  |  spend: ${total:.4f}")
+    print(f"Saved {out.name}  |  +{len(fresh)} measured, {len(results['models'])} total"
+          f"  |  spend: ${spend:.4f}")
+    return spend
 
 
 if __name__ == "__main__":
@@ -316,5 +414,23 @@ if __name__ == "__main__":
     ap.add_argument("--output", type=str, default=None)
     ap.add_argument("--order", type=str, default="answer_first", choices=list(ORDERS.keys()),
                     help="which field order the response format requests")
+    ap.add_argument("--update", action="store_true",
+                    help="measure only models missing from the result file, then merge in")
+    ap.add_argument("--retry-failed", action="store_true",
+                    help="with --update, also re-measure rows that have 0 valid runs")
+    ap.add_argument("--dry-run", action="store_true",
+                    help="list what would be measured without making any calls")
+    ap.add_argument("--all-passes", action="store_true",
+                    help=f"run all {len(PASSES)} (prompt x order) passes in sequence")
     a = ap.parse_args()
-    run(a.runs, a.model, a.workers, a.prompt, a.output, a.order)
+
+    if a.all_passes:
+        if a.output:
+            raise SystemExit("--all-passes writes the canonical file per pass; drop --output.")
+        total = sum(run(a.runs, a.model, a.workers, pk, None, od,
+                        a.update, a.retry_failed, a.dry_run)
+                    for pk, od in PASSES)
+        print(f"\nAll {len(PASSES)} passes complete.  total spend: ${total:.4f}")
+    else:
+        run(a.runs, a.model, a.workers, a.prompt, a.output, a.order,
+            a.update, a.retry_failed, a.dry_run)
