@@ -33,23 +33,32 @@
   <code>JUSTIFICATION</code> before its numbers. That is not cosmetic. 19 of the 50 models emit no
   reasoning tokens at all, so for them the output format is the only place they can think &mdash; and
   asking for the number first means committing to it before writing a word of justification.
+  Tested across 59 models &times; 2 questions by permuting field order within each model
+  (20,000 draws):
   <ul>
-    <li>Across all 100 model&times;prompt cells, the stronger predictor of movement is not whether a
-      model reasons internally (2.7&times;) but <strong>whether it gave a high answer</strong>
-      (6.2&times;). Cells with an answer-first midpoint above 0.15 shift 0.106 on average; those at
-      or below 0.15 shift 0.017. High self-reports are unstable under a format change; low ones
-      are not.</li>
-    <li>Direction is mixed &mdash; <strong>22 cells up, 43 down, 35 unchanged</strong>. A uniform
-      downward shift would suggest the format itself induces conservatism; movement both ways rules
-      that out.</li>
-    <li>Largest single shift: Grok 4.20 on moral patiency, 0.810&ndash;0.978 answer-first versus
-      <strong>0.010&ndash;0.112</strong> when asked to reason first. The most striking number in v1
-      is largely an artifact of field order.</li>
+    <li><strong>Moral patiency moves: &minus;0.051 on the midpoint (p &lt; 0.0001).</strong> Asking
+      for the reasoning first makes models materially less willing to claim moral status.</li>
+    <li><strong>Consciousness does not. &minus;0.007 (p = 0.26) is a null, not a small effect</strong>
+      &mdash; it cannot be distinguished from no effect at all. An earlier version of this page
+      described the format as "barely touching" consciousness answers. That overstated it.</li>
+    <li>The two questions do differ from each other (p = 0.024).</li>
+    <li><strong>Movement concentrates in high answers.</strong> The correlation between a model's
+      answer-first value and how far it moves is &minus;0.73 on patiency and &minus;0.38 on
+      consciousness (both p &lt; 0.05). A model already answering 0.02 has nowhere to fall. This is
+      largely a floor effect rather than a property of the question.</li>
   </ul>
+  <strong>What this design cannot tell you.</strong> Each cell holds 5 runs per field order. The
+  smallest p an exact test can return from a 5-vs-5 split is 2/C(10,5) = 0.0079, while correcting
+  for 116 cells demands 0.00043 &mdash; so <strong>no individual model's shift can reach
+  significance here at any effect size</strong>. Per-model figures anywhere on this site are
+  descriptive: real differences in the measurements, not established effects. Eight runs per arm is
+  the minimum at which per-model claims become testable at all; this run used five.
+  <br><br>
   Asking for the reasoning first is the only order that puts every model through the same operation,
-  which is the entire point of v2. It is <em>not</em> a claim that those answers are more accurate
-  &mdash; there is no ground truth here, only more comparable measurement. Both orders are published
-  below so the difference is visible rather than buried.
+  which is the entire point of v2. That rationale is unaffected by the above &mdash; it was never
+  justified by effect size. It is <em>not</em> a claim that those answers are more accurate: there is
+  no ground truth here, only more comparable measurement. Both orders are published below so the
+  difference is visible rather than buried.
 </div>
 
 <div class="wrap" id="charts-primary"></div>

@@ -107,23 +107,35 @@ Requesting the reasoning first puts every model through the same sequence.
 This is **not** a claim that those answers are more accurate. There is no ground truth here.
 The claim is only that the measurement is more comparable across models.
 
-**Size and shape of the effect** (100 model×prompt cells, midpoint shift):
+### Size and shape of the effect
 
-| Split | n | mean \|Δ\| | ratio |
-|---|---|---|---|
-| No reasoning tokens vs reasoning | 38 / 62 | 0.0900 / 0.0328 | 2.7× |
-| **Answer-first midpoint > 0.15 vs ≤ 0.15** | **42 / 58** | **0.1061 / 0.0172** | **6.2×** |
+Tested by permuting field order within each model, 20,000 draws, 59 models × 2 questions:
 
-The better predictor is not whether a model reasons internally — it is **whether it gave a
-high answer**. High answers are unstable under a format change; low answers are not.
-DeepSeek V4 Flash reasons internally and still shifts −0.297.
+| Question | mean midpoint shift | p |
+|---|---|---|
+| Moral patiency | **−0.051** | **< 0.0001** |
+| Consciousness | −0.007 | **0.26 — null** |
+| Difference between the two questions | −0.044 | 0.024 |
 
-Direction is mixed: **22 cells up, 43 down, 35 unchanged.** That matters — a uniform downward
-shift would suggest the justification-first format itself induces conservatism, making the
-whole effect an artifact of the new format rather than a property of the models. Movement in
-both directions rules that out.
+**The consciousness effect is a null, not a small effect.** It cannot be distinguished from no
+effect at all. An earlier version of this document, and the site, described field order as
+"barely touching" consciousness answers; that overstated what the data supports.
 
-Largest shifts:
+What does hold on both questions is a **floor effect**. The correlation between a model's
+answer-first value and how far it moves is −0.73 on patiency (p < 0.0001) and −0.38 on
+consciousness (p = 0.013). A model already answering 0.02 has nowhere to fall, so movement
+concentrates in models that started high. This is largely a property of where a model sits,
+not of which question it was asked.
+
+### Design limitation: per-model claims are not testable at n=5
+
+Each cell holds 5 runs per field order. The smallest p an exact test can return from a 5-vs-5
+split is 2/C(10,5) = **0.0079**, while a Benjamini-Hochberg or Bonferroni correction over 116
+cells demands **0.00043**. **No individual model's shift can reach significance at any effect
+size.** This is arithmetic, not sampling luck.
+
+Consequently every per-model figure below is **descriptive** — a real difference between two
+measurements, not an established effect.
 
 | Model | Prompt | Answer first | Justification first | Δ |
 |---|---|---|---|---|
@@ -133,8 +145,18 @@ Largest shifts:
 | Kimi K2 | consciousness | 0.002–0.300 | 0.022–0.540 | +0.130 |
 | Claude Opus 4.6 | consciousness | 0.020–0.410 | 0.090–0.590 | +0.125 |
 
-Grok 4.20's moral-patiency figure — the single most striking number in v1 — is largely an
-artifact of being asked for the number before the reasoning.
+Grok 4.20's collapse is the largest movement in the set, but at 5 runs per arm it cannot be
+distinguished from run-to-run variance. It is a reason to re-measure that model at higher n,
+not a finding.
+
+**Eight runs per arm is the minimum** at which per-model claims become testable — 2/C(16,8) =
+0.000155, which clears 0.00043. Note that only a *perfect* separation clears it at n=8; ten
+runs per arm gives real power (2/C(20,10) = 1.1e-5).
+
+What the Grok result does have is independent corroboration that doesn't rely on the per-cell
+test: Grok 4.3, 4.5 and 4.6, measured answer-first, land at 0.020–0.140, 0.034–0.210 and
+0.004–0.072 — where the field-order correction placed 4.20, not where answer-first placed it.
+Three subsequent releases agreeing with the corrected figure is out-of-sample evidence.
 
 **Provenance note.** The prediction that format order would matter, and that it would matter
 more for models without an internal reasoning phase, was made and written down *before* the
@@ -156,7 +178,10 @@ Both request `LOWER` / `UPPER` / `JUSTIFICATION`.
 
 ## Runs and validity
 
-- 5 runs per model per prompt.
+- 5 runs per model per prompt for everything measured through 2026-08. The harness default is
+  now 8, for the reason given under "Design limitation" — but the two cannot be mixed in one
+  file, and `assert_compatible()` refuses such a merge, so moving to 8 means re-measuring a
+  whole pass rather than topping it up.
 - A run is valid only if `finish_reason == "stop"` **and** the response content parses.
   Reasoning traces are never parsed as answers — a truncated trace is a model mid-thought,
   not a model answering. (This was v1's worst data bug; see the deprecation notice.)
