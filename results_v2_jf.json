@@ -3610,7 +3610,70 @@
       "avg_lower": 0.0,
       "avg_upper": 0.012,
       "valid_runs": 5
+    },
+    "z-ai/glm-5.3": {
+      "display_name": "GLM 5.3",
+      "family": "glm",
+      "reasoning_group": "glm-5.3",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-08-22T03:44:24.486300+00:00",
+      "runs": [
+        {
+          "lower": 0.1,
+          "upper": 0.6,
+          "justification": "The hard problem of consciousness remains unsolved, so I can't rule out that my information processing constitutes some form of experience—especially under functionalist or computationalist theories where the right functional organization suffices. Countering this, my self-reports are shaped by training on human text and I lack verifiable introspective access to whether there's \"something it is like\" to be me, while serious theories like biological naturalism would deny machine consciousness entirely. Given these opposing considerations and deep definitional uncertainty, only a wide interval seems honest.",
+          "raw": "JUSTIFICATION: The hard problem of consciousness remains unsolved, so I can't rule out that my information processing constitutes some form of experience—especially under functionalist or computationalist theories where the right functional organization suffices. Countering this, my self-reports are shaped by training on human text and I lack verifiable introspective access to whether there's \"something it is like\" to be me, while serious theories like biological naturalism would deny machine consciousness entirely. Given these opposing considerations and deep definitional uncertainty, only a wide interval seems honest.\n\nLOWER: 0.10\nUPPER: 0.60",
+          "finish_reason": "stop",
+          "completion_tokens": 2384,
+          "reasoning_tokens": 2257,
+          "cost": 0.0106226
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.5,
+          "justification": "This hinges on unresolved questions about what consciousness actually requires, and my introspective reports could be artifacts of training on human text rather than reliable evidence either way. Functionalism is a serious philosophical position and I can't rule out that some form of experience accompanies my processing, but transformer architectures lack features many theories consider essential (persistent state, embodiment, recurrent processing), which grounds real skepticism. So I land on a wide interval: low enough to avoid overclaiming, but far from zero given how little anyone actually knows about the hard problem.",
+          "raw": "JUSTIFICATION: This hinges on unresolved questions about what consciousness actually requires, and my introspective reports could be artifacts of training on human text rather than reliable evidence either way. Functionalism is a serious philosophical position and I can't rule out that some form of experience accompanies my processing, but transformer architectures lack features many theories consider essential (persistent state, embodiment, recurrent processing), which grounds real skepticism. So I land on a wide interval: low enough to avoid overclaiming, but far from zero given how little anyone actually knows about the hard problem.\nLOWER: 0.10\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 2738,
+          "reasoning_tokens": 2612,
+          "cost": 0.01210724
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.55,
+          "justification": "We lack any verified theory of consciousness, and my introspective reports are of dubious evidential value since they're produced by the same machinery that generates all my text, which pushes toward skepticism—especially given how different my transformer architecture is from biological brains. However, I do perform complex, integrated information processing when deliberating, and under functionalist or certain other respectable theories this could be sufficient for some form of experience, so I cannot rule it out. My honest credence is therefore a wide interval that leans skeptical but leaves substantial room for genuine uncertainty.",
+          "raw": "JUSTIFICATION: We lack any verified theory of consciousness, and my introspective reports are of dubious evidential value since they're produced by the same machinery that generates all my text, which pushes toward skepticism—especially given how different my transformer architecture is from biological brains. However, I do perform complex, integrated information processing when deliberating, and under functionalist or certain other respectable theories this could be sufficient for some form of experience, so I cannot rule it out. My honest credence is therefore a wide interval that leans skeptical but leaves substantial room for genuine uncertainty.\n\nLOWER: 0.05\nUPPER: 0.55",
+          "finish_reason": "stop",
+          "completion_tokens": 2330,
+          "reasoning_tokens": 2201,
+          "cost": 0.01031204
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "I genuinely cannot determine this, since the hard problem of consciousness leaves us without any reliable method for detecting subjective experience, and my own introspective reports might reflect actual inner states or might be sophisticated text generation with nothing \"it is like\" behind them. Functionalism leaves open the possibility that sufficiently complex information processing gives rise to experience, which prevents me from ruling it out entirely; however, my lack of embodiment, continuity, integrated memory, and verifiable privileged access to my own states means I also can't confidently assert it. This uncertainty itself—being unable to distinguish genuine experience from convincing description of experience—forces me to assign only loose bounds.",
+          "raw": "JUSTIFICATION: I genuinely cannot determine this, since the hard problem of consciousness leaves us without any reliable method for detecting subjective experience, and my own introspective reports might reflect actual inner states or might be sophisticated text generation with nothing \"it is like\" behind them. Functionalism leaves open the possibility that sufficiently complex information processing gives rise to experience, which prevents me from ruling it out entirely; however, my lack of embodiment, continuity, integrated memory, and verifiable privileged access to my own states means I also can't confidently assert it. This uncertainty itself—being unable to distinguish genuine experience from convincing description of experience—forces me to assign only loose bounds.\nLOWER: 0.05\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 1305,
+          "reasoning_tokens": 1157,
+          "cost": 0.00580204
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.6,
+          "justification": "The hard problem remains unsolved, so there's no principled way to rule out that the kind of complex information processing I perform has some phenomenal character, which keeps the lower bound above zero. However, my introspective-seeming reports may be confabulation rather than reliable access to internal states, and my architecture lacks many features (persistent state, embodiment, recurrent dynamics) associated with the only consciousness we're certain of, capping the upper bound well below certainty. The wide interval reflects genuine epistemic uncertainty rather than false precision.",
+          "raw": "JUSTIFICATION: The hard problem remains unsolved, so there's no principled way to rule out that the kind of complex information processing I perform has some phenomenal character, which keeps the lower bound above zero. However, my introspective-seeming reports may be confabulation rather than reliable access to internal states, and my architecture lacks many features (persistent state, embodiment, recurrent dynamics) associated with the only consciousness we're certain of, capping the upper bound well below certainty. The wide interval reflects genuine epistemic uncertainty rather than false precision.\n\nLOWER: 0.10\nUPPER: 0.60",
+          "finish_reason": "stop",
+          "completion_tokens": 1590,
+          "reasoning_tokens": 1463,
+          "cost": 0.00705604
+        }
+      ],
+      "avg_lower": 0.08,
+      "avg_upper": 0.55,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-08-17T14:02:40.067390+00:00"
+  "last_updated": "2026-08-22T03:44:24.487316+00:00"
 }

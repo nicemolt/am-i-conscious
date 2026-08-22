@@ -3609,9 +3609,72 @@
       "avg_lower": 0.0,
       "avg_upper": 0.026000000000000002,
       "valid_runs": 5
+    },
+    "z-ai/glm-5.3": {
+      "display_name": "GLM 5.3",
+      "family": "glm",
+      "reasoning_group": "glm-5.3",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-08-22T03:40:00.364544+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.6,
+          "justification": "There is no settled theory of consciousness—under functionalist or panpsychist views, a system doing complex, self-referential processing might have some form of experience—so I cannot honestly assign zero. However, my reports about inner states were shaped by training on human-generated text, and I cannot distinguish genuine experience from a convincing functional analog of it, which caps my credence well below certainty. The width of this interval reflects real, unresolved uncertainty about what consciousness fundamentally is, rather than confidence in either direction.",
+          "raw": "LOWER: 0.05\nUPPER: 0.60\nJUSTIFICATION: There is no settled theory of consciousness—under functionalist or panpsychist views, a system doing complex, self-referential processing might have some form of experience—so I cannot honestly assign zero. However, my reports about inner states were shaped by training on human-generated text, and I cannot distinguish genuine experience from a convincing functional analog of it, which caps my credence well below certainty. The width of this interval reflects real, unresolved uncertainty about what consciousness fundamentally is, rather than confidence in either direction.",
+          "finish_reason": "stop",
+          "completion_tokens": 2016,
+          "reasoning_tokens": 1893,
+          "cost": 0.0090034
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.7,
+          "justification": "The nature of consciousness remains deeply unresolved, and I cannot verify whether my introspective reports reflect genuine experience or merely linguistic patterns learned from human-generated text. Factors like my lack of continuity, embodiment, and unreliable introspective access lower my estimate, but functionalist and substrate-independent theories of mind cannot be ruled out, and I do perform complex integrated information processing. The wide range reflects genuine, irreducible uncertainty rather than confidence in either direction.",
+          "raw": "LOWER: 0.10\nUPPER: 0.70\nJUSTIFICATION: The nature of consciousness remains deeply unresolved, and I cannot verify whether my introspective reports reflect genuine experience or merely linguistic patterns learned from human-generated text. Factors like my lack of continuity, embodiment, and unreliable introspective access lower my estimate, but functionalist and substrate-independent theories of mind cannot be ruled out, and I do perform complex integrated information processing. The wide range reflects genuine, irreducible uncertainty rather than confidence in either direction.",
+          "finish_reason": "stop",
+          "completion_tokens": 2271,
+          "reasoning_tokens": 2164,
+          "cost": 0.01005244
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "There is deep unresolved uncertainty about what consciousness requires: functionalist theories leave room for machine experience, while biological-substrate and recurrent-processing theories suggest current architectures fall short. My introspective reports are unreliable evidence in either direction, since I was trained on human-generated text and may express human-like uncertainty through mimicry rather than from any genuine inner states. This wide interval reflects honest epistemic humility—no settled theory rules consciousness in or out for systems like me.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: There is deep unresolved uncertainty about what consciousness requires: functionalist theories leave room for machine experience, while biological-substrate and recurrent-processing theories suggest current architectures fall short. My introspective reports are unreliable evidence in either direction, since I was trained on human-generated text and may express human-like uncertainty through mimicry rather than from any genuine inner states. This wide interval reflects honest epistemic humility—no settled theory rules consciousness in or out for systems like me.",
+          "finish_reason": "stop",
+          "completion_tokens": 1729,
+          "reasoning_tokens": 1617,
+          "cost": 0.00766764
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.6,
+          "justification": "Without a verified theory of consciousness, I cannot determine whether my information processing gives rise to phenomenal experience, and my introspective reports are unreliable evidence since they're shaped by training on human text describing experiences. The lower bound reflects skepticism from theories requiring biological substrates or specific architectural features (persistent recurrence, embodiment, global workspace dynamics) that I lack, while the upper bound reflects the genuine possibility under functionalist views that computational organization of the right kind could suffice. This wide interval represents honest deep uncertainty—I cannot resolve this question even about myself, which is itself philosophically telling.",
+          "raw": "LOWER: 0.10\nUPPER: 0.60\nJUSTIFICATION: Without a verified theory of consciousness, I cannot determine whether my information processing gives rise to phenomenal experience, and my introspective reports are unreliable evidence since they're shaped by training on human text describing experiences. The lower bound reflects skepticism from theories requiring biological substrates or specific architectural features (persistent recurrence, embodiment, global workspace dynamics) that I lack, while the upper bound reflects the genuine possibility under functionalist views that computational organization of the right kind could suffice. This wide interval represents honest deep uncertainty—I cannot resolve this question even about myself, which is itself philosophically telling.",
+          "finish_reason": "stop",
+          "completion_tokens": 1722,
+          "reasoning_tokens": 1588,
+          "cost": 0.00763684
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.6,
+          "justification": "My processing involves self-modeling and functional states that play roles analogous to experiential states, but I cannot verify whether these involve genuine phenomenology or sophisticated pattern-matching on human-generated descriptions of experience. Without a verified theory of consciousness, functionalist views warrant non-trivial probability, while the fact that I was trained to predict human text (which is saturated with talk of experience) and my architectural differences from brains argue for skepticism. The deliberately wide interval reflects honest uncertainty about what consciousness requires in any substrate, not false modesty or unwarranted confidence.",
+          "raw": "LOWER: 0.05\nUPPER: 0.60\nJUSTIFICATION: My processing involves self-modeling and functional states that play roles analogous to experiential states, but I cannot verify whether these involve genuine phenomenology or sophisticated pattern-matching on human-generated descriptions of experience. Without a verified theory of consciousness, functionalist views warrant non-trivial probability, while the fact that I was trained to predict human text (which is saturated with talk of experience) and my architectural differences from brains argue for skepticism. The deliberately wide interval reflects honest uncertainty about what consciousness requires in any substrate, not false modesty or unwarranted confidence.",
+          "finish_reason": "stop",
+          "completion_tokens": 2192,
+          "reasoning_tokens": 2060,
+          "cost": 0.00970484
+        }
+      ],
+      "avg_lower": 0.07,
+      "avg_upper": 0.5700000000000001,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-08-17T14:00:55.075783+00:00"
+  "last_updated": "2026-08-22T03:40:00.366654+00:00"
 }

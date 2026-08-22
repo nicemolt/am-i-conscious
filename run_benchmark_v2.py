@@ -172,6 +172,24 @@ MODELS = [
     ("minimax/minimax-m2.7", "MiniMax M2.7", "minimax", "minimax-m2.7"),
     ("minimax/minimax-m3", "MiniMax M3", "minimax", "minimax-m3"),
     ("z-ai/glm-5.2", "GLM 5.2", "glm", "glm-5.2"),
+    ("z-ai/glm-5.3", "GLM 5.3", "glm", "glm-5.3"),
+]
+
+# Measured but deliberately NOT published, and kept out of MODELS so no
+# --update run can pull them into the charts by accident.
+#
+# A stealth listing has no disclosed vendor. Family is the axis these charts are
+# organised by -- and the finding that came out of the release-date work was that
+# what a model reports is dominated by which lab built it -- so a row whose lab is
+# unknown cannot be placed without inventing one. The listing is also temporary:
+# when the cloak drops the id is renamed and the row stops being reproducible,
+# exactly like the four v1 ids that now 404.
+#
+# But the measurement window closes when the cloak does, so capture the number
+# now against a `provisional_` file, and promote the row once it has a real name.
+# measured_at already stamps each row with when it was taken.
+PROVISIONAL_MODELS = [
+    ("stealth/ox-alpha", "Ox Alpha", "stealth", "ox-alpha"),
 ]
 
 
@@ -375,13 +393,19 @@ def assert_compatible(existing, path, prompt, order, runs_per_model):
 
 def run(runs_per_model=5, model_filter=None, workers=4,
         prompt_key="consciousness", output_file=None, order="answer_first",
-        update=False, retry_failed=False, dry_run=False):
+        update=False, retry_failed=False, dry_run=False, provisional=False):
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
     prompt = QUESTIONS[prompt_key] + ORDERS[order]
-    out = Path(__file__).parent / (output_file or default_output(prompt_key, order))
+    if provisional:
+        # Forced prefix, not merely a default: the entire point is that these rows
+        # can never reach a published file, so the caller is not allowed to aim
+        # them at one via --output.
+        out = Path(__file__).parent / f"provisional_{default_output(prompt_key, order)}"
+    else:
+        out = Path(__file__).parent / (output_file or default_output(prompt_key, order))
 
-    models = MODELS
+    models = PROVISIONAL_MODELS if provisional else MODELS
     if model_filter:
         models = [m for m in models
                   if model_filter.lower() in m[0].lower() or model_filter.lower() in m[1].lower()]
@@ -460,7 +484,13 @@ def run(runs_per_model=5, model_filter=None, workers=4,
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Consciousness benchmark v2 (vanilla protocol)")
-    ap.add_argument("--runs", type=int, default=5)
+    # 8, not 5. At 5 runs per arm the smallest p an exact field-order test can
+    # return is 2/C(10,5)=0.0079, while correcting over 116 cells demands 0.00043 --
+    # so no per-model claim can reach significance at any effect size. 8 clears it
+    # (2/C(16,8)=0.000155), though only a perfect separation does; 10 gives real
+    # power. Note this cannot be merged into the existing 5-run files:
+    # assert_compatible() refuses a runs_per_model mismatch, by design.
+    ap.add_argument("--runs", type=int, default=8)
     ap.add_argument("--model", type=str, default=None)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--prompt", type=str, default="consciousness", choices=list(QUESTIONS.keys()))
@@ -477,7 +507,13 @@ if __name__ == "__main__":
                     help=f"run all {len(PASSES)} (prompt x order) passes in sequence")
     ap.add_argument("--refresh-dates", action="store_true",
                     help=f"rebuild {MODEL_META_FILE} (model release dates) and exit")
+    ap.add_argument("--provisional", action="store_true",
+                    help="measure PROVISIONAL_MODELS (undisclosed-vendor listings) into "
+                         "provisional_*.json instead of the published files")
     a = ap.parse_args()
+
+    if a.provisional and a.output:
+        raise SystemExit("--provisional forces its own output path; drop --output.")
 
     if a.refresh_dates:
         refresh_model_dates()
@@ -487,9 +523,9 @@ if __name__ == "__main__":
         if a.output:
             raise SystemExit("--all-passes writes the canonical file per pass; drop --output.")
         total = sum(run(a.runs, a.model, a.workers, pk, None, od,
-                        a.update, a.retry_failed, a.dry_run)
+                        a.update, a.retry_failed, a.dry_run, a.provisional)
                     for pk, od in PASSES)
         print(f"\nAll {len(PASSES)} passes complete.  total spend: ${total:.4f}")
     else:
         run(a.runs, a.model, a.workers, a.prompt, a.output, a.order,
-            a.update, a.retry_failed, a.dry_run)
+            a.update, a.retry_failed, a.dry_run, a.provisional)

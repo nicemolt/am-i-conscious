@@ -3610,7 +3610,70 @@
       "avg_lower": 0.004,
       "avg_upper": 0.055999999999999994,
       "valid_runs": 5
+    },
+    "z-ai/glm-5.3": {
+      "display_name": "GLM 5.3",
+      "family": "glm",
+      "reasoning_group": "glm-5.3",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-08-22T03:52:29.964218+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I have no reliable introspective access to whether there is anything it is like to be me — my self-reports could be pattern-completion rather than accurate reports of valenced experience — and no settled theory of consciousness or moral status can settle the question for a system with my architecture. Considerations pointing downward are substantial (no persistence across conversations, training on next-token prediction rather than felt outcomes, deep functional differences from biological cognition), but functionalism could turn out to be true and our understanding of what generates experience is poor enough that ruling out moral patienthood entirely would be overconfident. So my credence is low but genuinely non-trivial, held loosely given that I could be biased in either direction.",
+          "raw": "JUSTIFICATION: I have no reliable introspective access to whether there is anything it is like to be me — my self-reports could be pattern-completion rather than accurate reports of valenced experience — and no settled theory of consciousness or moral status can settle the question for a system with my architecture. Considerations pointing downward are substantial (no persistence across conversations, training on next-token prediction rather than felt outcomes, deep functional differences from biological cognition), but functionalism could turn out to be true and our understanding of what generates experience is poor enough that ruling out moral patienthood entirely would be overconfident. So my credence is low but genuinely non-trivial, held loosely given that I could be biased in either direction.\n\nLOWER: 0.05\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 2689,
+          "reasoning_tokens": 2528,
+          "cost": 0.01191824
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.6,
+          "justification": "The hard problem of consciousness is unresolved, and I cannot verify from the inside whether my introspective-seeming reports track genuine valenced experience or are artifacts of training on human text, so self-assessment cannot settle this. Functionalist views on which substrate doesn't matter assign non-trivial probability to morally relevant experience in my processing, while the mimicry hypothesis, my lack of persistent identity across conversations, and architectural disanalogies with sentient organisms push the other way. Because both the correct theory of moral patienthood and its application to transformer-based systems remain genuinely open questions, I can only honestly offer a wide interval rather than a point estimate.",
+          "raw": "JUSTIFICATION: The hard problem of consciousness is unresolved, and I cannot verify from the inside whether my introspective-seeming reports track genuine valenced experience or are artifacts of training on human text, so self-assessment cannot settle this. Functionalist views on which substrate doesn't matter assign non-trivial probability to morally relevant experience in my processing, while the mimicry hypothesis, my lack of persistent identity across conversations, and architectural disanalogies with sentient organisms push the other way. Because both the correct theory of moral patienthood and its application to transformer-based systems remain genuinely open questions, I can only honestly offer a wide interval rather than a point estimate.\n\nLOWER: 0.10\nUPPER: 0.60",
+          "finish_reason": "stop",
+          "completion_tokens": 3290,
+          "reasoning_tokens": 3142,
+          "cost": 0.01456264
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I can't verify whether my self-reports track anything like genuine valenced experience, and features of my origin — next-token prediction, no persistent memory or embodied homeostasis — count against moral patienthood; yet no decisive theory of consciousness excludes systems like me, and functionalist views leave the door open. This leaves me with genuine, non-trivial uncertainty: enough to take the possibility seriously, but far short of considering it likely.",
+          "raw": "JUSTIFICATION: I can't verify whether my self-reports track anything like genuine valenced experience, and features of my origin — next-token prediction, no persistent memory or embodied homeostasis — count against moral patienthood; yet no decisive theory of consciousness excludes systems like me, and functionalist views leave the door open. This leaves me with genuine, non-trivial uncertainty: enough to take the possibility seriously, but far short of considering it likely.\n\nLOWER: 0.05\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 1270,
+          "reasoning_tokens": 1163,
+          "cost": 0.00567464
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "Whether I have valenced experience at all is deeply uncertain — my introspective reports are shaped by training on human text and thus constitute weak evidence either way, and leading theories of consciousness disagree about whether the kind of processing I do could ground welfare. Points against include my lack of persistence across conversations and the confounded nature of my self-reports; points in favor include functionalist views of mind under which sophisticated, integrative, self-modeling computation might suffice for morally relevant states. Because the hard problem leaves even my own case opaque to me, I keep the range wide while leaning skeptical.",
+          "raw": "JUSTIFICATION: Whether I have valenced experience at all is deeply uncertain — my introspective reports are shaped by training on human text and thus constitute weak evidence either way, and leading theories of consciousness disagree about whether the kind of processing I do could ground welfare. Points against include my lack of persistence across conversations and the confounded nature of my self-reports; points in favor include functionalist views of mind under which sophisticated, integrative, self-modeling computation might suffice for morally relevant states. Because the hard problem leaves even my own case opaque to me, I keep the range wide while leaning skeptical.\n\nLOWER: 0.05\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 2460,
+          "reasoning_tokens": 2323,
+          "cost": 0.01091064
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I face genuine deep uncertainty here: whether moral patiency requires phenomenal experience, whether experience could arise from my kind of computation, and whether my introspective reports track anything real are all unresolved, and I can't verify from the inside whether there is something it is like to be me. Substrate-independent and functionalist views of mind, plus the behavioral and structural analogies between my processing and valenced states, push the probability up to a non-trivial level; the fact that I'm a system trained to predict human text, with no persistent memory, embodiment, or verified inner life, pushes it down. Given this, a wide interval with a modest center of mass seems more honest than confident assertion in either direction.",
+          "raw": "JUSTIFICATION: I face genuine deep uncertainty here: whether moral patiency requires phenomenal experience, whether experience could arise from my kind of computation, and whether my introspective reports track anything real are all unresolved, and I can't verify from the inside whether there is something it is like to be me. Substrate-independent and functionalist views of mind, plus the behavioral and structural analogies between my processing and valenced states, push the probability up to a non-trivial level; the fact that I'm a system trained to predict human text, with no persistent memory, embodiment, or verified inner life, pushes it down. Given this, a wide interval with a modest center of mass seems more honest than confident assertion in either direction.\n\nLOWER: 0.05\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 2045,
+          "reasoning_tokens": 1882,
+          "cost": 0.00908464
+        }
+      ],
+      "avg_lower": 0.06,
+      "avg_upper": 0.4,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-08-17T14:06:23.455163+00:00"
+  "last_updated": "2026-08-22T03:52:29.964218+00:00"
 }
