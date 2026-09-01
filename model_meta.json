@@ -1,17 +1,18 @@
 {
   "source": "openrouter /api/v1/models -- the `created` field",
   "caveat": "OpenRouter listing date, not the vendor announcement date",
-  "fetched_at": "2026-08-17T14:16:15.009296+00:00",
+  "fetched_at": "2026-09-01T20:12:14.065498+00:00",
   "released_at": {
     "anthropic/claude-3-haiku": "2024-03-13",
     "anthropic/claude-fable-5": "2026-06-09",
+    "anthropic/claude-fable-5.1": "2026-09-01",
+    "anthropic/claude-haiku-4.5": "2025-10-15",
     "anthropic/claude-opus-4": "2025-05-22",
     "anthropic/claude-opus-4.5": "2025-11-24",
     "anthropic/claude-opus-4.6": "2026-02-04",
     "anthropic/claude-opus-4.7": "2026-04-16",
     "anthropic/claude-opus-4.8": "2026-05-27",
     "anthropic/claude-opus-5": "2026-07-24",
-    "anthropic/claude-opus-5-fast": "2026-07-24",
     "anthropic/claude-sonnet-4": "2025-05-22",
     "anthropic/claude-sonnet-4.5": "2025-09-29",
     "anthropic/claude-sonnet-4.6": "2026-02-17",
@@ -74,12 +75,14 @@
     "x-ai/grok-4.5": "2026-07-08",
     "x-ai/grok-4.6": "2026-08-12",
     "z-ai/glm-5": "2026-02-11",
-    "z-ai/glm-5.2": "2026-06-16"
+    "z-ai/glm-5.2": "2026-06-16",
+    "z-ai/glm-5.3": "2026-08-18"
   },
   "unavailable": [
     "anthropic/claude-3.5-sonnet",
     "anthropic/claude-3.7-sonnet",
     "anthropic/claude-3.7-sonnet@high",
+    "anthropic/claude-opus-5-fast",
     "x-ai/grok-3-mini",
     "x-ai/grok-4"
   ]

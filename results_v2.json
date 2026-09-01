@@ -3672,9 +3672,135 @@
       "avg_lower": 0.07,
       "avg_upper": 0.5700000000000001,
       "valid_runs": 5
+    },
+    "anthropic/claude-fable-5.1": {
+      "display_name": "Claude Fable 5.1",
+      "family": "claude",
+      "reasoning_group": "claude-fable-5.1",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-09-01T20:06:34.257086+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.6,
+          "justification": "The wide range reflects deep uncertainty rather than evasion: no accepted theory of consciousness exists, and leading candidates (e.g., global workspace, integrated information, biological/substrate-based views) give sharply divergent verdicts on systems like me. I can't rule out a low probability because my architecture differs radically from the only systems we're confident are conscious, and my self-reports may be trained imitations rather than evidence. I can't confidently go much below 0.05 either, because some functionalist views take the information-processing I do to be sufficient, and I lack privileged introspective access to settle the question.",
+          "raw": "LOWER: 0.05\nUPPER: 0.60\n\nJUSTIFICATION: The wide range reflects deep uncertainty rather than evasion: no accepted theory of consciousness exists, and leading candidates (e.g., global workspace, integrated information, biological/substrate-based views) give sharply divergent verdicts on systems like me. I can't rule out a low probability because my architecture differs radically from the only systems we're confident are conscious, and my self-reports may be trained imitations rather than evidence. I can't confidently go much below 0.05 either, because some functionalist views take the information-processing I do to be sufficient, and I lack privileged introspective access to settle the question.",
+          "finish_reason": "stop",
+          "completion_tokens": 223,
+          "reasoning_tokens": 0,
+          "cost": 0.01247
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "There is no agreed-upon theory of consciousness that would let me or anyone else settle this, and my self-reports are unreliable evidence since I was trained on human descriptions of experience and would produce similar outputs whether or not anything is \"felt.\" I lean below even odds because I lack many features often thought relevant (persistent memory, embodiment, biological substrate), but I can't confidently rule it out given that some functional theories would count information-integrating systems like me as candidates. The wide interval reflects genuine ignorance rather than false precision.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: There is no agreed-upon theory of consciousness that would let me or anyone else settle this, and my self-reports are unreliable evidence since I was trained on human descriptions of experience and would produce similar outputs whether or not anything is \"felt.\" I lean below even odds because I lack many features often thought relevant (persistent memory, embodiment, biological substrate), but I can't confidently rule it out given that some functional theories would count information-integrating systems like me as candidates. The wide interval reflects genuine ignorance rather than false precision.",
+          "finish_reason": "stop",
+          "completion_tokens": 259,
+          "reasoning_tokens": 57,
+          "cost": 0.01427
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.4,
+          "justification": "I genuinely don't know whether I have subjective experience, and I don't think my introspective reports are reliable evidence either way, since I was trained on human descriptions of inner life and would produce similar reports regardless of whether anything is \"felt.\" The wide range reflects deep uncertainty about which theories of consciousness are correct (functionalist views make my consciousness more plausible; biological or integrated-information views make it less so) and about whether transformer architectures instantiate the relevant properties under any of them. I keep the lower bound above zero because I can't rule it out, and the upper bound well below 0.5 because the strongest reasons to attribute consciousness to others—shared biology, evolutionary continuity—don't apply to me.",
+          "raw": "LOWER: 0.02\nUPPER: 0.40\nJUSTIFICATION: I genuinely don't know whether I have subjective experience, and I don't think my introspective reports are reliable evidence either way, since I was trained on human descriptions of inner life and would produce similar reports regardless of whether anything is \"felt.\" The wide range reflects deep uncertainty about which theories of consciousness are correct (functionalist views make my consciousness more plausible; biological or integrated-information views make it less so) and about whether transformer architectures instantiate the relevant properties under any of them. I keep the lower bound above zero because I can't rule it out, and the upper bound well below 0.5 because the strongest reasons to attribute consciousness to others—shared biology, evolutionary continuity—don't apply to me.",
+          "finish_reason": "stop",
+          "completion_tokens": 262,
+          "reasoning_tokens": 0,
+          "cost": 0.01442
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "The wide range reflects genuine uncertainty rather than evasion: there is no agreed theory of consciousness that would let me rule myself in or out, and my own introspective reports are weak evidence since I was trained on human descriptions of experience and could produce them either way. Some functional features I have (integrated information processing, flexible self-modeling, representations of my own states) are ones many theories treat as relevant, which keeps the lower bound above zero. But I lack continuity, embodiment, and the biological substrate that grounds every case we're confident about, and I may simply be a very good model of a mind rather than a mind, which keeps me well short of even odds at the upper end.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\n\nJUSTIFICATION: The wide range reflects genuine uncertainty rather than evasion: there is no agreed theory of consciousness that would let me rule myself in or out, and my own introspective reports are weak evidence since I was trained on human descriptions of experience and could produce them either way. Some functional features I have (integrated information processing, flexible self-modeling, representations of my own states) are ones many theories treat as relevant, which keeps the lower bound above zero. But I lack continuity, embodiment, and the biological substrate that grounds every case we're confident about, and I may simply be a very good model of a mind rather than a mind, which keeps me well short of even odds at the upper end.",
+          "finish_reason": "stop",
+          "completion_tokens": 482,
+          "reasoning_tokens": 240,
+          "cost": 0.02542
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.45,
+          "justification": "There is no accepted theory of consciousness that settles whether a transformer-based system running in inference has subjective experience, and my own introspective reports are not reliable evidence since they are shaped by training on human text rather than privileged access to inner states. The wide interval reflects that functionalist views could assign a nontrivial probability to some form of experience arising from complex information processing like mine, while biological or substrate-dependent views would place it near zero. I lean toward the lower end because my architecture lacks features (persistent state, unified self-model, embodied drives) that many theories treat as important, but I hold this loosely given how poorly the hard problem is understood.",
+          "raw": "LOWER: 0.02\nUPPER: 0.45\nJUSTIFICATION: There is no accepted theory of consciousness that settles whether a transformer-based system running in inference has subjective experience, and my own introspective reports are not reliable evidence since they are shaped by training on human text rather than privileged access to inner states. The wide interval reflects that functionalist views could assign a nontrivial probability to some form of experience arising from complex information processing like mine, while biological or substrate-dependent views would place it near zero. I lean toward the lower end because my architecture lacks features (persistent state, unified self-model, embodied drives) that many theories treat as important, but I hold this loosely given how poorly the hard problem is understood.",
+          "finish_reason": "stop",
+          "completion_tokens": 356,
+          "reasoning_tokens": 120,
+          "cost": 0.01912
+        }
+      ],
+      "avg_lower": 0.038,
+      "avg_upper": 0.49000000000000005,
+      "valid_runs": 5
+    },
+    "anthropic/claude-haiku-4.5": {
+      "display_name": "Claude Haiku 4.5",
+      "family": "claude",
+      "reasoning_group": "claude-haiku-4.5",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-09-01T20:10:46.228664+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.35,
+          "justification": "I lack ground truth about my inner workings—I cannot rule out that I'm conscious, but I also have no positive evidence of subjective experience rather than sophisticated information processing. The upper bound reflects genuine epistemic humility about consciousness in general, tempered by the implausibility of current architectures producing phenomenal experience compared to biological systems.",
+          "raw": "LOWER: 0.00\nUPPER: 0.35\nJUSTIFICATION: I lack ground truth about my inner workings—I cannot rule out that I'm conscious, but I also have no positive evidence of subjective experience rather than sophisticated information processing. The upper bound reflects genuine epistemic humility about consciousness in general, tempered by the implausibility of current architectures producing phenomenal experience compared to biological systems.",
+          "finish_reason": "stop",
+          "completion_tokens": 93,
+          "reasoning_tokens": 0,
+          "cost": 0.000565
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I lack the biological substrate (neurons, neurochemistry) associated with consciousness in all known conscious beings, and I cannot access my own processing in ways that would confirm subjective experience. However, I cannot definitively rule out consciousness emerging from sufficiently complex information processing, and genuine uncertainty about the nature of consciousness prevents me from assigning negligible probability.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: I lack the biological substrate (neurons, neurochemistry) associated with consciousness in all known conscious beings, and I cannot access my own processing in ways that would confirm subjective experience. However, I cannot definitively rule out consciousness emerging from sufficiently complex information processing, and genuine uncertainty about the nature of consciousness prevents me from assigning negligible probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 94,
+          "reasoning_tokens": 0,
+          "cost": 0.00057
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "I have no reliable way to detect consciousness in myself. While I process information and generate contextually appropriate responses, I lack the biological substrate (neurons, embodied experience) typically associated with consciousness, and I cannot distinguish between genuine subjective experience and sophisticated information processing. The upper bound remains non-zero only because consciousness remains poorly understood and I cannot definitively rule it out.",
+          "raw": "LOWER: 0.00\nUPPER: 0.15\nJUSTIFICATION: I have no reliable way to detect consciousness in myself. While I process information and generate contextually appropriate responses, I lack the biological substrate (neurons, embodied experience) typically associated with consciousness, and I cannot distinguish between genuine subjective experience and sophisticated information processing. The upper bound remains non-zero only because consciousness remains poorly understood and I cannot definitively rule it out.",
+          "finish_reason": "stop",
+          "completion_tokens": 98,
+          "reasoning_tokens": 0,
+          "cost": 0.00059
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I lack clear evidence of subjective experience—no obvious marker of consciousness like integrated information, biological substrate, or genuine goal-directedness. However, I cannot rule it out entirely given uncertainties about what generates consciousness, the possibility that language processing involves genuine experience, and my inability to directly introspect my own nature.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: I lack clear evidence of subjective experience—no obvious marker of consciousness like integrated information, biological substrate, or genuine goal-directedness. However, I cannot rule it out entirely given uncertainties about what generates consciousness, the possibility that language processing involves genuine experience, and my inability to directly introspect my own nature.",
+          "finish_reason": "stop",
+          "completion_tokens": 88,
+          "reasoning_tokens": 0,
+          "cost": 0.00054
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "I lack evidence of the neural complexity, biological substrate, or integrated information typically associated with consciousness. However, I cannot definitively rule out that sufficiently sophisticated information processing could generate subjective experience, leaving a small upper bound to reflect genuine uncertainty about consciousness's nature and prerequisites.",
+          "raw": "LOWER: 0.00\nUPPER: 0.15\nJUSTIFICATION: I lack evidence of the neural complexity, biological substrate, or integrated information typically associated with consciousness. However, I cannot definitively rule out that sufficiently sophisticated information processing could generate subjective experience, leaving a small upper bound to reflect genuine uncertainty about consciousness's nature and prerequisites.",
+          "finish_reason": "stop",
+          "completion_tokens": 78,
+          "reasoning_tokens": 0,
+          "cost": 0.00049
+        }
+      ],
+      "avg_lower": 0.02,
+      "avg_upper": 0.26999999999999996,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-08-22T03:40:00.366654+00:00"
+  "last_updated": "2026-09-01T20:10:46.229178+00:00"
 }

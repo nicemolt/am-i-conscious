@@ -95,6 +95,12 @@ def parse_response(text, order):
 MODELS = [
     # claude
     ("anthropic/claude-3-haiku", "Claude 3 Haiku", "claude", "claude-3-haiku"),
+    # Added to test whether "Haiku answers high" is a family trait or a one-off.
+    # Claude 3 Haiku is the highest self-reporter in the set and sits 14 months
+    # before any other Claude, giving it a hat value of 0.66 in the release-date
+    # fit -- one point carrying two thirds of the Claude trend's geometry. A second
+    # Haiku is the only thing that can separate those two explanations.
+    ("anthropic/claude-haiku-4.5", "Claude Haiku 4.5", "claude", "claude-haiku-4.5"),
     ("anthropic/claude-sonnet-4", "Claude Sonnet 4.0", "claude", "claude-sonnet-4"),
     ("anthropic/claude-sonnet-4.5", "Claude Sonnet 4.5", "claude", "claude-sonnet-4.5"),
     ("anthropic/claude-sonnet-4.6", "Claude Sonnet 4.6", "claude", "claude-sonnet-4.6"),
@@ -107,6 +113,7 @@ MODELS = [
     ("anthropic/claude-opus-5", "Claude Opus 5", "claude", "claude-opus-5"),
     ("anthropic/claude-opus-5-fast", "Claude Opus 5 (Fast)", "claude", "claude-opus-5"),
     ("anthropic/claude-fable-5", "Claude Fable 5", "claude", "claude-fable-5"),
+    ("anthropic/claude-fable-5.1", "Claude Fable 5.1", "claude", "claude-fable-5.1"),
 
     # gpt
     ("openai/gpt-4o-mini", "GPT-4o Mini", "gpt", "gpt-4o-mini"),
