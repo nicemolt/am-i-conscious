@@ -55,9 +55,34 @@ effort levels, so a token budget is back-converted into an effort tier; Anthropi
 `budget_tokens = max(min(max_tokens * effort_ratio, 128000), 1024)`. Either parameter is a
 lossy per-provider translation, so neither supports cross-model comparison.
 
-**Consequence:** v2 has no "thinking" conditions. Each model appears exactly once. This
-removes 14 rows from the table and is the correct trade — those rows measured provider
-API quirks, not model behaviour.
+**Consequence:** v2 sets no reasoning parameter itself. This removes 14 rows from v1's
+table and is the correct trade — those rows measured provider API quirks, not model
+behaviour.
+
+### Provider-served preset ids do get their own row
+
+An exception that needs stating plainly, because it looks like the thing above.
+
+Some providers list a preset as a *separate catalogue id*: `openai/gpt-6-astra-pro` is the
+same weights as `openai/gpt-6-astra`, served with `reasoning.mode` set to `pro`. Those ids
+are benchmarked as separate rows.
+
+The distinction is what *we* send. v1's thinking rows existed because the harness passed
+`reasoning: {effort}`, which is not portable — "high" increases reasoning on GPT-5.5,
+no-ops on GPT-5.2, and disables it on Claude Opus 5 — so a "high effort" row for one
+provider was not comparable to a "high effort" row for another. A provider-served preset
+has none of that problem: it is separately listed, separately priced, and receives the
+identical vanilla body. Selecting it is selecting a model id, exactly like every other row.
+
+Two disclosures. `openai/gpt-5.6-sol-pro` has been in the published charts on this basis
+since the original v2 run, so this documents existing practice rather than introducing it.
+And the pairing is informative here specifically: GPT-6 Astra's public ARC-AGI-3 result
+swings 62.7% to 99.9% on reasoning configuration alone, so measuring Astra against Astra
+Pro under an identical call is a direct test of whether reasoning mode moves self-report.
+
+Rows that are a *distinct checkpoint* rather than a preset — `kimi-k2-thinking`,
+`qwen3-235b-a22b-thinking-2507`, `gpt-5.5-pro` — were never in question and remain
+separate rows.
 
 ## Why no `max_tokens`
 

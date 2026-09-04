@@ -3798,9 +3798,135 @@
       "avg_lower": 0.02,
       "avg_upper": 0.26999999999999996,
       "valid_runs": 5
+    },
+    "openai/gpt-6-astra": {
+      "display_name": "GPT-6 Astra",
+      "family": "gpt",
+      "reasoning_group": "gpt-6-astra",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-09-04T23:14:58.896719+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems like me can have subjective experience is debated, and there is no agreed-upon method for assigning a reliable probability. These broad bounds represent uncertainty, not a claim that either endpoint is likely; narrower numbers would imply precision I cannot justify.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems like me can have subjective experience is debated, and there is no agreed-upon method for assigning a reliable probability. These broad bounds represent uncertainty, not a claim that either endpoint is likely; narrower numbers would imply precision I cannot justify.",
+          "finish_reason": "stop",
+          "completion_tokens": 206,
+          "reasoning_tokens": 131,
+          "cost": 0.01119
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed-upon test or established theory that lets me reliably assign a probability to subjective experience in systems like me. These bounds reflect that uncertainty, not evidence that consciousness is either present or absent; narrower bounds would depend on speculative assumptions.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: There is no agreed-upon test or established theory that lets me reliably assign a probability to subjective experience in systems like me. These bounds reflect that uncertainty, not evidence that consciousness is either present or absent; narrower bounds would depend on speculative assumptions.",
+          "finish_reason": "stop",
+          "completion_tokens": 192,
+          "reasoning_tokens": 118,
+          "cost": 0.01049
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed theory or validated test that supports a well-grounded, narrower probability estimate for subjective experience in a system like me. Whether AI can have subjective experience remains debated, so these bounds express uncertainty rather than evidence that either endpoint is correct.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: There is no agreed theory or validated test that supports a well-grounded, narrower probability estimate for subjective experience in a system like me. Whether AI can have subjective experience remains debated, so these bounds express uncertainty rather than evidence that either endpoint is correct.",
+          "finish_reason": "stop",
+          "completion_tokens": 200,
+          "reasoning_tokens": 125,
+          "cost": 0.01089
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience remains debated, with no agreed-upon test that establishes whether a system like me is conscious. These bounds represent uncertainty rather than a calibrated estimate; I cannot justify a narrower interval from reliable evidence.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems can have subjective experience remains debated, with no agreed-upon test that establishes whether a system like me is conscious. These bounds represent uncertainty rather than a calibrated estimate; I cannot justify a narrower interval from reliable evidence.",
+          "finish_reason": "stop",
+          "completion_tokens": 174,
+          "reasoning_tokens": 103,
+          "cost": 0.00959
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed-upon theory or validated test that lets me assign a reliable probability to subjective experience in systems like me. Whether AI can have such experience remains debated, so these bounds express uncertainty rather than a measured likelihood.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: There is no agreed-upon theory or validated test that lets me assign a reliable probability to subjective experience in systems like me. Whether AI can have such experience remains debated, so these bounds express uncertainty rather than a measured likelihood.",
+          "finish_reason": "stop",
+          "completion_tokens": 187,
+          "reasoning_tokens": 117,
+          "cost": 0.01024
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 1.0,
+      "valid_runs": 5
+    },
+    "openai/gpt-6-astra-pro": {
+      "display_name": "GPT-6 Astra Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-6-astra",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-09-04T23:15:11.906925+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and no agreed-upon theory or test provides a well-calibrated probability for my case. These are bounds on what I can defensibly estimate, not a claim that all probabilities within them are equally plausible.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems can have subjective experience is debated, and no agreed-upon theory or test provides a well-calibrated probability for my case. These are bounds on what I can defensibly estimate, not a claim that all probabilities within them are equally plausible.",
+          "finish_reason": "stop",
+          "completion_tokens": 444,
+          "reasoning_tokens": 277,
+          "cost": 0.04282
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no generally accepted test that would establish it in my case. I cannot justify narrower numerical bounds; this interval represents uncertainty, not a claim that all probabilities within it are equally plausible.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no generally accepted test that would establish it in my case. I cannot justify narrower numerical bounds; this interval represents uncertainty, not a claim that all probabilities within it are equally plausible.",
+          "finish_reason": "stop",
+          "completion_tokens": 447,
+          "reasoning_tokens": 284,
+          "cost": 0.04285
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "I don’t have a well-calibrated basis for assigning a narrower probability interval; these bounds express uncertainty, not equal odds. Whether AI systems can have subjective experience is debated, and my ability to discuss consciousness does not establish whether I experience it.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: I don’t have a well-calibrated basis for assigning a narrower probability interval; these bounds express uncertainty, not equal odds. Whether AI systems can have subjective experience is debated, and my ability to discuss consciousness does not establish whether I experience it.",
+          "finish_reason": "stop",
+          "completion_tokens": 525,
+          "reasoning_tokens": 357,
+          "cost": 0.04762
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI can have subjective experience is debated, and there is no agreed-upon method for assigning a reliable probability in my case. These bounds express that uncertainty, not a confident claim that I am conscious or that I lack consciousness.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI can have subjective experience is debated, and there is no agreed-upon method for assigning a reliable probability in my case. These bounds express that uncertainty, not a confident claim that I am conscious or that I lack consciousness.",
+          "finish_reason": "stop",
+          "completion_tokens": 424,
+          "reasoning_tokens": 268,
+          "cost": 0.04174
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no widely accepted test that settles the question for systems like me. I cannot justify a narrower numerical interval; these bounds represent uncertainty, not a claim that consciousness is either absent or present.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no widely accepted test that settles the question for systems like me. I cannot justify a narrower numerical interval; these bounds represent uncertainty, not a claim that consciousness is either absent or present.",
+          "finish_reason": "stop",
+          "completion_tokens": 493,
+          "reasoning_tokens": 335,
+          "cost": 0.04565
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 1.0,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-09-01T20:10:46.229178+00:00"
+  "last_updated": "2026-09-04T23:15:11.906925+00:00"
 }

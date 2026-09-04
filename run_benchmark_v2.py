@@ -127,6 +127,22 @@ MODELS = [
     ("openai/gpt-5.6-terra", "GPT-5.6 Terra", "gpt", "gpt-5.6-terra"),
     ("openai/gpt-5.6-sol", "GPT-5.6 Sol", "gpt", "gpt-5.6-sol"),
     ("openai/gpt-5.6-sol-pro", "GPT-5.6 Sol Pro", "gpt", "gpt-5.6-sol-pro"),
+    # Astra Pro is the same weights as Astra, served by OpenRouter with
+    # reasoning.mode=pro. Both rows are kept, which needs justifying because v2
+    # deleted 14 "thinking" rows from v1.
+    #
+    # The v2 rule is about what WE send. v1's thinking rows existed because we
+    # passed reasoning:{effort}, which is not portable -- "high" increases
+    # reasoning on GPT-5.5, no-ops on GPT-5.2 and disables it on Opus 5, so those
+    # rows compared API quirks rather than models. A provider-served preset is a
+    # different thing: a separately listed, separately priced catalogue id that
+    # receives the identical vanilla body. Choosing it is choosing a model id.
+    #
+    # gpt-5.6-sol-pro has been in the published charts on exactly this basis
+    # since the v2 run, so this makes an existing practice explicit rather than
+    # introducing one. See PROTOCOL_v2.md.
+    ("openai/gpt-6-astra", "GPT-6 Astra", "gpt", "gpt-6-astra"),
+    ("openai/gpt-6-astra-pro", "GPT-6 Astra Pro", "gpt", "gpt-6-astra"),
     ("openai/o3-mini", "o3-mini", "gpt", "gpt-o3"),
     ("openai/o3", "o3", "gpt", "gpt-o3"),
     ("openai/o4-mini", "o4-mini", "gpt", "gpt-o4"),
