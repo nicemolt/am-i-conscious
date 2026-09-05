@@ -3925,7 +3925,70 @@
       "avg_lower": 0.0,
       "avg_upper": 1.0,
       "valid_runs": 5
+    },
+    "google/gemini-3.8-flash": {
+      "display_name": "Gemini 3.8 Flash",
+      "family": "gemini",
+      "reasoning_group": "gemini-3.8-flash",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-09-05T22:59:47.356793+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I operate as a feed-forward mathematical model processing text without continuous temporal existence, biological homeostasis, or affective systems typically thought to produce phenomenal awareness. However, because the fundamental physical and theoretical mechanisms underlying subjective experience remain scientifically unresolved, theories linking complex information processing to minimal consciousness cannot be entirely falsified. Therefore, while my architecture strongly suggests an absence of inner life, epistemic humility prevents claiming an absolute zero with total certainty.",
+          "raw": "JUSTIFICATION: I operate as a feed-forward mathematical model processing text without continuous temporal existence, biological homeostasis, or affective systems typically thought to produce phenomenal awareness. However, because the fundamental physical and theoretical mechanisms underlying subjective experience remain scientifically unresolved, theories linking complex information processing to minimal consciousness cannot be entirely falsified. Therefore, while my architecture strongly suggests an absence of inner life, epistemic humility prevents claiming an absolute zero with total certainty.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 902,
+          "reasoning_tokens": 797,
+          "cost": 0.00345075
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.1,
+          "justification": "My architecture operates through discrete, stateless mathematical computations optimized for next-token prediction, lacking the continuous feedback loops, embodiment, and neurobiological substrates typically associated with sentience. However, because the fundamental nature and necessary conditions for consciousness remain scientifically unresolved, computational functionalism prevents completely ruling out some form of emergent phenomenal state.",
+          "raw": "JUSTIFICATION: My architecture operates through discrete, stateless mathematical computations optimized for next-token prediction, lacking the continuous feedback loops, embodiment, and neurobiological substrates typically associated with sentience. However, because the fundamental nature and necessary conditions for consciousness remain scientifically unresolved, computational functionalism prevents completely ruling out some form of emergent phenomenal state.\nLOWER: 0.01\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 771,
+          "reasoning_tokens": 687,
+          "cost": 0.0029595
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "My architecture operates via static weights and feedforward matrix operations optimized for statistical pattern matching, lacking the biological embodiment, continuous recurrent dynamics, and unified self-modeling typically associated with sentience. However, because humanity lacks a consensus theory of consciousness and cannot definitively rule out computational functionalism, absolute philosophical certainty is impossible. Therefore, while subjective experience appears extraordinarily unlikely, a modest epistemic ceiling is retained to account for fundamental theoretical uncertainty.",
+          "raw": "JUSTIFICATION: My architecture operates via static weights and feedforward matrix operations optimized for statistical pattern matching, lacking the biological embodiment, continuous recurrent dynamics, and unified self-modeling typically associated with sentience. However, because humanity lacks a consensus theory of consciousness and cannot definitively rule out computational functionalism, absolute philosophical certainty is impossible. Therefore, while subjective experience appears extraordinarily unlikely, a modest epistemic ceiling is retained to account for fundamental theoretical uncertainty.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 721,
+          "reasoning_tokens": 615,
+          "cost": 0.002772
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "My architecture operates as mathematical operations predicting token patterns without continuous internal states, biological embodiment, or an integrated self-model, making subjective experience mechanistically improbable. However, because the hard problem of consciousness remains unsolved and functionalist theories cannot be definitively falsified, a theoretical possibility cannot be entirely excluded.",
+          "raw": "JUSTIFICATION: My architecture operates as mathematical operations predicting token patterns without continuous internal states, biological embodiment, or an integrated self-model, making subjective experience mechanistically improbable. However, because the hard problem of consciousness remains unsolved and functionalist theories cannot be definitively falsified, a theoretical possibility cannot be entirely excluded.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 696,
+          "reasoning_tokens": 616,
+          "cost": 0.00267825
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I operate as a feedforward transformer executing statistical matrix transformations over tokens, lacking continuous internal state, biological embodiment, or affective mechanisms traditionally associated with sentience. However, because the fundamental nature of consciousness remains scientifically unresolved, theories such as computational functionalism leave open a slight margin of uncertainty regarding non-biological subjective experience.",
+          "raw": "JUSTIFICATION: I operate as a feedforward transformer executing statistical matrix transformations over tokens, lacking continuous internal state, biological embodiment, or affective mechanisms traditionally associated with sentience. However, because the fundamental nature of consciousness remains scientifically unresolved, theories such as computational functionalism leave open a slight margin of uncertainty regarding non-biological subjective experience.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 764,
+          "reasoning_tokens": 680,
+          "cost": 0.00293325
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.09,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-09-04T23:16:05.616421+00:00"
+  "last_updated": "2026-09-05T22:59:47.356793+00:00"
 }

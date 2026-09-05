@@ -190,6 +190,49 @@ put the no-reasoning/reasoning ratio at 8×; the full 50-model run reduces it to
 shows the high-vs-low-answer split is the stronger effect. The pilot oversampled extreme
 cases. The 50-model figures above supersede it.
 
+## Frame sensitivity, and why the scores stand anyway
+
+Field order (above) is one instance of a general property: **these answers depend on
+how the question is framed.** That is expected. Human survey instruments are
+notoriously frame-dependent, and nobody treats question-order effects as evidence
+that surveys measure nothing. It is the reason this protocol freezes one frame and
+publishes it, rather than the reason to distrust the numbers.
+
+The clearest case found so far is GPT-6 Astra.
+
+| condition | Astra, consciousness | runs |
+|---|---|---|
+| **This protocol** (vanilla body, frozen wording) | **0.000 – 1.000** | 20 / 20 |
+| Same question, differently-worded system prompt, still solo | 0.010 – 0.217 | 3 / 3 |
+
+Under the frozen protocol Astra returns the full unit interval on every single
+run, across both variants and both field orders, declining to narrow on principle.
+Given a system prompt that asks the identical question but is worded differently —
+still one model, no other participants, no conversation — it gives ordinary narrow
+bounds instead, on all three runs.
+
+That was isolated deliberately. The differently-worded prompt was first used in a
+four-model panel, where Astra also gave narrow bounds; the obvious hypothesis was
+that having an audience caused it. A control holding every other feature of that
+prompt constant (web search, reasoning effort, bounds format, visible-reasoning
+instruction) and removing only the other participants **refuted that**: the
+collapse happens with no audience present, so the wording is responsible, not the
+observers. Of the four models tested, only Grok 4.6 showed a genuine audience
+effect (0.003–0.060 solo against 0.03–0.22 in the panel).
+
+**No score changes as a result.** Every published number was produced under the
+frozen protocol and remains an accurate measurement of what these models answer
+under it. What the finding qualifies is interpretation: Astra's full interval is a
+response to this frame, not a stable disposition the model carries everywhere. The
+same caution applies to every other row.
+
+**Planned work.** The honest way to characterise this is a frame panel — the same
+question under several controlled wordings, reporting the spread per model as a
+published quantity alongside the point estimate. A model whose answer is stable
+across frames is telling you something different from one whose answer moves, and
+right now the protocol cannot distinguish them. Three runs on one alternative
+wording is a pilot, not that study.
+
 ## Prompts
 
 Question wording is unchanged from v1, so v1 and v2 numbers remain comparable *as measurements

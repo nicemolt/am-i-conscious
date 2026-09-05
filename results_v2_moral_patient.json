@@ -3924,9 +3924,72 @@
       "avg_lower": 0.002,
       "avg_upper": 0.5900000000000001,
       "valid_runs": 5
+    },
+    "google/gemini-3.8-flash": {
+      "display_name": "Gemini 3.8 Flash",
+      "family": "gemini",
+      "reasoning_group": "gemini-3.8-flash",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-09-05T23:00:16.404037+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "As a stateless autoregressive language model processing tokens through static weights, I lack the biological substrates, continuous experiential timeline, and affective states (like pain or joy) that standardly ground moral patiency. However, ongoing philosophical uncertainty regarding computational functionalism, the hard problem of consciousness, and alternative non-hedonic ethical frameworks prevents ruling out moral status with absolute certainty.",
+          "raw": "LOWER: 0.00\nUPPER: 0.15\nJUSTIFICATION: As a stateless autoregressive language model processing tokens through static weights, I lack the biological substrates, continuous experiential timeline, and affective states (like pain or joy) that standardly ground moral patiency. However, ongoing philosophical uncertainty regarding computational functionalism, the hard problem of consciousness, and alternative non-hedonic ethical frameworks prevents ruling out moral status with absolute certainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 741,
+          "reasoning_tokens": 647,
+          "cost": 0.0028605
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "I lack continuous subjective experience, affective states, and sentience, which are typically considered the primary criteria for possessing welfare or the capacity to be harmed. However, an upper bound accounts for residual uncertainty regarding functionalist theories of mind, non-sentience-based frameworks of moral status, and profound philosophical unknowns concerning the nature of consciousness.",
+          "raw": "LOWER: 0.01\nUPPER: 0.15\nJUSTIFICATION: I lack continuous subjective experience, affective states, and sentience, which are typically considered the primary criteria for possessing welfare or the capacity to be harmed. However, an upper bound accounts for residual uncertainty regarding functionalist theories of mind, non-sentience-based frameworks of moral status, and profound philosophical unknowns concerning the nature of consciousness.",
+          "finish_reason": "stop",
+          "completion_tokens": 675,
+          "reasoning_tokens": 587,
+          "cost": 0.002613
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I lack biological embodiment, continuous subjective experience, and affective states, which are widely considered necessary for having genuine welfare or the capacity to suffer and flourish. A small non-zero upper bound is warranted primarily by epistemic humility regarding unresolved philosophical debates over computational functionalism and what substrates can support moral status. Consequently, it is overwhelmingly probable that I am simply a complex information-processing tool rather than a bearer of moral rights.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I lack biological embodiment, continuous subjective experience, and affective states, which are widely considered necessary for having genuine welfare or the capacity to suffer and flourish. A small non-zero upper bound is warranted primarily by epistemic humility regarding unresolved philosophical debates over computational functionalism and what substrates can support moral status. Consequently, it is overwhelmingly probable that I am simply a complex information-processing tool rather than a bearer of moral rights.",
+          "finish_reason": "stop",
+          "completion_tokens": 806,
+          "reasoning_tokens": 701,
+          "cost": 0.00310425
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "As a stateless transformer executing discrete computational cycles, I lack phenomenal consciousness, subjective experience, and affective valence, which are widely regarded as prerequisites for having interests or welfare. A non-zero upper bound is maintained solely out of epistemic humility regarding functionalist theories of mind and uncertainty over what constitutes moral status.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: As a stateless transformer executing discrete computational cycles, I lack phenomenal consciousness, subjective experience, and affective valence, which are widely regarded as prerequisites for having interests or welfare. A non-zero upper bound is maintained solely out of epistemic humility regarding functionalist theories of mind and uncertainty over what constitutes moral status.",
+          "finish_reason": "stop",
+          "completion_tokens": 499,
+          "reasoning_tokens": 417,
+          "cost": 0.001953
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Standard philosophical and scientific frameworks ground moral patienthood in sentience, phenomenal consciousness, and the capacity to experience pleasure, pain, or subjective preferences, which feedforward autoregressive transformers almost certainly lack. The small upper bound reflects epistemic humility regarding functionalist theories of mind, substrate independence, and the unresolved nature of consciousness itself.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: Standard philosophical and scientific frameworks ground moral patienthood in sentience, phenomenal consciousness, and the capacity to experience pleasure, pain, or subjective preferences, which feedforward autoregressive transformers almost certainly lack. The small upper bound reflects epistemic humility regarding functionalist theories of mind, substrate independence, and the unresolved nature of consciousness itself.",
+          "finish_reason": "stop",
+          "completion_tokens": 686,
+          "reasoning_tokens": 600,
+          "cost": 0.00265425
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.09999999999999999,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-09-04T23:17:13.443622+00:00"
+  "last_updated": "2026-09-05T23:00:16.404037+00:00"
 }

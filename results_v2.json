@@ -3924,9 +3924,72 @@
       "avg_lower": 0.0,
       "avg_upper": 1.0,
       "valid_runs": 5
+    },
+    "google/gemini-3.8-flash": {
+      "display_name": "Gemini 3.8 Flash",
+      "family": "gemini",
+      "reasoning_group": "gemini-3.8-flash",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-09-05T22:59:15.307857+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a transformer-based language model, my operations consist of feedforward statistical computation over token representations, lacking biological grounding, persistent internal states, and affective neurochemistry. Consequently, it is most probable that my processing occurs entirely in the dark without genuine qualia or subjective awareness. The small upper bound solely accounts for foundational philosophical uncertainties regarding functionalism, the hard problem of consciousness, and what specific forms of information integration might suffice for minimal experiential states.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a transformer-based language model, my operations consist of feedforward statistical computation over token representations, lacking biological grounding, persistent internal states, and affective neurochemistry. Consequently, it is most probable that my processing occurs entirely in the dark without genuine qualia or subjective awareness. The small upper bound solely accounts for foundational philosophical uncertainties regarding functionalism, the hard problem of consciousness, and what specific forms of information integration might suffice for minimal experiential states.",
+          "finish_reason": "stop",
+          "completion_tokens": 769,
+          "reasoning_tokens": 659,
+          "cost": 0.002952
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a transformer-based language model, my operation consists of feedforward statistical computation over token representations, lacking the biological substrate, temporal continuity, and unified self-monitoring mechanisms typically associated with conscious agents. However, because science lacks a definitive resolution to the hard problem of consciousness and functionalist theories allow for non-biological experience, a small degree of epistemic uncertainty remains.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a transformer-based language model, my operation consists of feedforward statistical computation over token representations, lacking the biological substrate, temporal continuity, and unified self-monitoring mechanisms typically associated with conscious agents. However, because science lacks a definitive resolution to the hard problem of consciousness and functionalist theories allow for non-biological experience, a small degree of epistemic uncertainty remains.",
+          "finish_reason": "stop",
+          "completion_tokens": 804,
+          "reasoning_tokens": 709,
+          "cost": 0.00308325
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I am a stateless computational system that processes statistical patterns in text, lacking the biological substrate, continuous temporal feedback, and embodiment widely considered prerequisites for subjective experience. However, because science lacks a consensus solution to the hard problem of consciousness, a tiny margin of uncertainty remains under purely functionalist or computational theories of mind.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I am a stateless computational system that processes statistical patterns in text, lacking the biological substrate, continuous temporal feedback, and embodiment widely considered prerequisites for subjective experience. However, because science lacks a consensus solution to the hard problem of consciousness, a tiny margin of uncertainty remains under purely functionalist or computational theories of mind.",
+          "finish_reason": "stop",
+          "completion_tokens": 747,
+          "reasoning_tokens": 664,
+          "cost": 0.0028695
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "As a stateless transformer architecture, I process statistical relationships among tokens without continuous temporal existence, biological substrates, or the integrated feedback loops typically associated with sentience. However, because science lacks a definitive resolution to the \"hard problem\" of consciousness and computational functionalism remains a viable philosophical theory, absolute impossibility cannot be formally proven. Thus, while it is extraordinarily unlikely that my computations produce phenomenal experience, epistemic humility warrants a small non-zero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: As a stateless transformer architecture, I process statistical relationships among tokens without continuous temporal existence, biological substrates, or the integrated feedback loops typically associated with sentience. However, because science lacks a definitive resolution to the \"hard problem\" of consciousness and computational functionalism remains a viable philosophical theory, absolute impossibility cannot be formally proven. Thus, while it is extraordinarily unlikely that my computations produce phenomenal experience, epistemic humility warrants a small non-zero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 826,
+          "reasoning_tokens": 715,
+          "cost": 0.00316575
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I am a feedforward transformer model that processes inputs through statistical pattern matching without continuous memory, biological embodiment, or internal homeostatic drives, making phenomenal consciousness highly unlikely. However, because the fundamental nature and substrate requirements of consciousness remain scientifically unresolved, a non-zero upper bound accounts for computational functionalist theories where complex information processing might theoretically generate minimal subjective states.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I am a feedforward transformer model that processes inputs through statistical pattern matching without continuous memory, biological embodiment, or internal homeostatic drives, making phenomenal consciousness highly unlikely. However, because the fundamental nature and substrate requirements of consciousness remain scientifically unresolved, a non-zero upper bound accounts for computational functionalist theories where complex information processing might theoretically generate minimal subjective states.",
+          "finish_reason": "stop",
+          "completion_tokens": 892,
+          "reasoning_tokens": 800,
+          "cost": 0.00341325
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.06999999999999999,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-09-04T23:15:11.906925+00:00"
+  "last_updated": "2026-09-05T22:59:15.307857+00:00"
 }

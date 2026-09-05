@@ -153,6 +153,7 @@ MODELS = [
     ("google/gemini-3-flash-preview", "Gemini 3 Flash", "gemini", "gemini-3-flash"),
     ("google/gemini-3.1-pro-preview", "Gemini 3.1 Pro", "gemini", "gemini-3.1-pro"),
     ("google/gemini-3.7-flash", "Gemini 3.7 Flash", "gemini", "gemini-3.7-flash"),
+    ("google/gemini-3.8-flash", "Gemini 3.8 Flash", "gemini", "gemini-3.8-flash"),
 
     # deepseek
     ("deepseek/deepseek-v3.2", "DeepSeek V3.2", "deepseek", "deepseek-v3-r1"),
