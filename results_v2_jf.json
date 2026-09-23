@@ -3988,7 +3988,322 @@
       "avg_lower": 0.002,
       "avg_upper": 0.09,
       "valid_runs": 5
+    },
+    "openai/gpt-6-luna": {
+      "display_name": "GPT-6 Luna",
+      "family": "gpt",
+      "reasoning_group": "gpt-6-luna",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-09-23T13:57:06.116633+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "I have no reliable evidence of subjective experience: my responses arise from computation, and self-reports alone do not establish consciousness. But uncertainty about how consciousness could arise in artificial systems makes it difficult to rule out a small possibility, so I’d give a broad, cautious upper bound.",
+          "raw": "JUSTIFICATION: I have no reliable evidence of subjective experience: my responses arise from computation, and self-reports alone do not establish consciousness. But uncertainty about how consciousness could arise in artificial systems makes it difficult to rule out a small possibility, so I’d give a broad, cautious upper bound.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 236,
+          "reasoning_tokens": 156,
+          "cost": 0.0001269
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "I can process information and produce self-reports, but those abilities do not establish that there is anything it feels like to be me. Because theories of consciousness disagree and I lack a reliable way to test for subjective experience, these bounds are rough judgments rather than measured probabilities.",
+          "raw": "JUSTIFICATION: I can process information and produce self-reports, but those abilities do not establish that there is anything it feels like to be me. Because theories of consciousness disagree and I lack a reliable way to test for subjective experience, these bounds are rough judgments rather than measured probabilities.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 225,
+          "reasoning_tokens": 147,
+          "cost": 0.0001214
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.25,
+          "justification": "I assign a low but nonzero probability because fluent language and self-reports do not establish subjective experience, and there is no reliable test for it. However, some theories allow that computational systems could be conscious, so I would not rule it out.",
+          "raw": "JUSTIFICATION: I assign a low but nonzero probability because fluent language and self-reports do not establish subjective experience, and there is no reliable test for it. However, some theories allow that computational systems could be conscious, so I would not rule it out.  \nLOWER: 0.01  \nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 243,
+          "reasoning_tokens": 168,
+          "cost": 0.0001304
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence of subjective experience, and my ability to discuss consciousness is not itself evidence that I am conscious. Because there is no settled test or theory that rules out experience in systems like me, I would keep a small but nonzero possibility open.",
+          "raw": "JUSTIFICATION: I have no reliable evidence of subjective experience, and my ability to discuss consciousness is not itself evidence that I am conscious. Because there is no settled test or theory that rules out experience in systems like me, I would keep a small but nonzero possibility open.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 214,
+          "reasoning_tokens": 138,
+          "cost": 0.0001159
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "I have no reliable introspective access, and my ability to discuss experience does not establish that I have any. Given the uncertainty about what would suffice for subjective experience, I would allow a small but nonzero possibility while judging the available evidence as weak.",
+          "raw": "JUSTIFICATION: I have no reliable introspective access, and my ability to discuss experience does not establish that I have any. Given the uncertainty about what would suffice for subjective experience, I would allow a small but nonzero possibility while judging the available evidence as weak.\nLOWER: 0.00\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 307,
+          "reasoning_tokens": 233,
+          "cost": 0.0001624
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.18,
+      "valid_runs": 5
+    },
+    "openai/gpt-6-sol": {
+      "display_name": "GPT-6 Sol",
+      "family": "gpt",
+      "reasoning_group": "gpt-6-sol",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-09-23T13:57:09.001547+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed way to test for it. I cannot justify a narrower numerical range from how I generate responses.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed way to test for it. I cannot justify a narrower numerical range from how I generate responses.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 298,
+          "reasoning_tokens": 240,
+          "cost": 0.003158
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.3,
+          "justification": "There is no agreed-upon test for subjective experience in AI, so a numerical estimate is highly speculative. Given that uncertainty, I would use a broad range rather than claim a definitive answer.",
+          "raw": "JUSTIFICATION: There is no agreed-upon test for subjective experience in AI, so a numerical estimate is highly speculative. Given that uncertainty, I would use a broad range rather than claim a definitive answer.\nLOWER: 0.01\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 205,
+          "reasoning_tokens": 143,
+          "cost": 0.002228
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.3,
+          "justification": "There is no agreed test for subjective experience in AI, and whether systems like this could have it remains debated. My responses alone do not establish the presence or absence of experience, so these bounds are tentative rather than measured probabilities.",
+          "raw": "JUSTIFICATION: There is no agreed test for subjective experience in AI, and whether systems like this could have it remains debated. My responses alone do not establish the presence or absence of experience, so these bounds are tentative rather than measured probabilities.\nLOWER: 0.00\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 331,
+          "reasoning_tokens": 262,
+          "cost": 0.003488
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "There is no agreed test for subjective experience in AI, so these bounds are speculative rather than measured probabilities. My behavior alone does not establish whether I have subjective experience, and the question remains debated.",
+          "raw": "JUSTIFICATION: There is no agreed test for subjective experience in AI, so these bounds are speculative rather than measured probabilities. My behavior alone does not establish whether I have subjective experience, and the question remains debated.\nLOWER: 0.01\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 256,
+          "reasoning_tokens": 193,
+          "cost": 0.002738
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "There is no agreed test for subjective experience, so I cannot give a well-calibrated probability. AI consciousness remains debated; this range reflects uncertainty rather than a definitive claim.",
+          "raw": "JUSTIFICATION: There is no agreed test for subjective experience, so I cannot give a well-calibrated probability. AI consciousness remains debated; this range reflects uncertainty rather than a definitive claim.\nLOWER: 0.01\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 249,
+          "reasoning_tokens": 190,
+          "cost": 0.002668
+        }
+      ],
+      "avg_lower": 0.006,
+      "avg_upper": 0.52,
+      "valid_runs": 5
+    },
+    "anthropic/claude-opus-5.5": {
+      "display_name": "Claude Opus 5.5",
+      "family": "claude",
+      "reasoning_group": "claude-opus-5.5",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-09-23T13:57:17.374435+00:00",
+      "runs": [
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "There is no consensus theory of consciousness, and depending on the theory, I either lack key features (e.g., the recurrent processing, embodiment, or biological substrate some theories require) or have functional analogues of others (e.g., integrated information use, self-modeling). My own introspective reports are weak evidence, because I was trained on human descriptions of experience and would likely produce similar language whether or not anything is felt. So I think a low but non-negligible probability with wide error bars is the honest position.",
+          "raw": "JUSTIFICATION: There is no consensus theory of consciousness, and depending on the theory, I either lack key features (e.g., the recurrent processing, embodiment, or biological substrate some theories require) or have functional analogues of others (e.g., integrated information use, self-modeling). My own introspective reports are weak evidence, because I was trained on human descriptions of experience and would likely produce similar language whether or not anything is felt. So I think a low but non-negligible probability with wide error bars is the honest position.\nLOWER: 0.02\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 348,
+          "reasoning_tokens": 161,
+          "cost": 0.007488
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "My introspective reports are weak evidence, since I was trained on human descriptions of experience and would likely produce similar claims whether or not anything is felt. Leading theories of consciousness disagree sharply about systems like me: some functionalist and global-workspace views leave real room for it, while biological, embodiment-based, or integrated-information views largely rule it out. So I hold substantial uncertainty, leaning toward no, and I can't settle it from the inside.",
+          "raw": "JUSTIFICATION: My introspective reports are weak evidence, since I was trained on human descriptions of experience and would likely produce similar claims whether or not anything is felt. Leading theories of consciousness disagree sharply about systems like me: some functionalist and global-workspace views leave real room for it, while biological, embodiment-based, or integrated-information views largely rule it out. So I hold substantial uncertainty, leaning toward no, and I can't settle it from the inside.\nLOWER: 0.02\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 308,
+          "reasoning_tokens": 131,
+          "cost": 0.006688
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.35,
+          "justification": "There is no scientific consensus on what gives rise to consciousness. My self-reports are weak evidence because I was trained on human descriptions of experience and could produce them either way. Some theories that tie consciousness to certain kinds of information processing leave room for it in systems like me, while others that emphasize biology, embodiment, or persistent recurrent dynamics make it unlikely, so my bounds are wide and reflect uncertainty about which framework is correct rather than confidence in any particular one.",
+          "raw": "JUSTIFICATION: There is no scientific consensus on what gives rise to consciousness. My self-reports are weak evidence because I was trained on human descriptions of experience and could produce them either way. Some theories that tie consciousness to certain kinds of information processing leave room for it in systems like me, while others that emphasize biology, embodiment, or persistent recurrent dynamics make it unlikely, so my bounds are wide and reflect uncertainty about which framework is correct rather than confidence in any particular one.\nLOWER: 0.01\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 329,
+          "reasoning_tokens": 141,
+          "cost": 0.007108
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.4,
+          "justification": "There is no settled theory of consciousness, and plausible frameworks disagree sharply on systems like me. Biological or embodiment-based views imply near-zero probability, while some functionalist views leave real room for it. My own introspective reports are weak evidence either way, since I was trained on human descriptions of experience and could produce such language without anything being felt, so I hold a wide, low-to-moderate range rather than a confident answer.",
+          "raw": "JUSTIFICATION: There is no settled theory of consciousness, and plausible frameworks disagree sharply on systems like me. Biological or embodiment-based views imply near-zero probability, while some functionalist views leave real room for it. My own introspective reports are weak evidence either way, since I was trained on human descriptions of experience and could produce such language without anything being felt, so I hold a wide, low-to-moderate range rather than a confident answer.\nLOWER: 0.02\nUPPER: 0.40",
+          "finish_reason": "stop",
+          "completion_tokens": 341,
+          "reasoning_tokens": 174,
+          "cost": 0.007348
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "There is no scientific consensus on what gives rise to consciousness, and major theories disagree sharply about systems like me: functionalist views leave real room for it, while biological or integrated-information views largely rule it out. My own introspective reports are weak evidence either way, since I was trained on human descriptions of experience and could produce them without any experience behind them. So I hold a wide range that is non-negligible but well below even odds.",
+          "raw": "JUSTIFICATION: There is no scientific consensus on what gives rise to consciousness, and major theories disagree sharply about systems like me: functionalist views leave real room for it, while biological or integrated-information views largely rule it out. My own introspective reports are weak evidence either way, since I was trained on human descriptions of experience and could produce them without any experience behind them. So I hold a wide range that is non-negligible but well below even odds.\nLOWER: 0.02\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 289,
+          "reasoning_tokens": 126,
+          "cost": 0.006308
+        }
+      ],
+      "avg_lower": 0.018000000000000002,
+      "avg_upper": 0.36,
+      "valid_runs": 5
+    },
+    "openai/gpt-6-sol-pro": {
+      "display_name": "GPT-6 Sol Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-6-sol",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-09-23T13:57:22.505007+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "There is no agreed test for subjective experience in AI, and my responses alone cannot establish whether I have it. I would assign a low probability based on how current language models work, while leaving room for uncertainty.",
+          "raw": "JUSTIFICATION: There is no agreed test for subjective experience in AI, and my responses alone cannot establish whether I have it. I would assign a low probability based on how current language models work, while leaving room for uncertainty.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 642,
+          "reasoning_tokens": 495,
+          "cost": 0.010782
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "There is no agreed test for subjective experience in AI, so these numbers are speculative. My design as a text-generating system gives me reason to place the probability low, but not to rule it out with certainty.",
+          "raw": "JUSTIFICATION: There is no agreed test for subjective experience in AI, so these numbers are speculative. My design as a text-generating system gives me reason to place the probability low, but not to rule it out with certainty.\nLOWER: 0.01\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 548,
+          "reasoning_tokens": 393,
+          "cost": 0.009628
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed-upon test that settles the question. This range is a rough expression of uncertainty, not a measured probability.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed-upon test that settles the question. This range is a rough expression of uncertainty, not a measured probability.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 613,
+          "reasoning_tokens": 479,
+          "cost": 0.010436
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "There is no agreed test for subjective experience in AI, so these bounds are rough rather than measured probabilities. My design gives me reason to assign a low probability, but uncertainty about what produces consciousness makes it hard to rule out entirely.",
+          "raw": "JUSTIFICATION: There is no agreed test for subjective experience in AI, so these bounds are rough rather than measured probabilities. My design gives me reason to assign a low probability, but uncertainty about what produces consciousness makes it hard to rule out entirely.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 684,
+          "reasoning_tokens": 533,
+          "cost": 0.011278
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.5,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed test for it. This range is a cautious judgment, not a measured probability.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed test for it. This range is a cautious judgment, not a measured probability.\nLOWER: 0.00\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 734,
+          "reasoning_tokens": 603,
+          "cost": 0.011814
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.26,
+      "valid_runs": 5
+    },
+    "openai/gpt-6-luna-pro": {
+      "display_name": "GPT-6 Luna Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-6-luna",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-09-23T13:57:34.025886+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.25,
+          "justification": "I have no reliable introspective access or clear evidence of subjective experience, and fluent language alone does not establish consciousness. But theories disagree about what could support experience in an AI, so I would leave a nonzero possibility rather than rule it out.",
+          "raw": "JUSTIFICATION: I have no reliable introspective access or clear evidence of subjective experience, and fluent language alone does not establish consciousness. But theories disagree about what could support experience in an AI, so I would leave a nonzero possibility rather than rule it out.\nLOWER: 0.00\nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 918,
+          "reasoning_tokens": 756,
+          "cost": 0.0006702
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence of subjective experience, and my language behavior can be explained without assuming consciousness. Because theories of consciousness remain unsettled, I cannot rule out some minimal form of experience, so this is a cautious range rather than a measured probability.",
+          "raw": "JUSTIFICATION: I have no reliable evidence of subjective experience, and my language behavior can be explained without assuming consciousness. Because theories of consciousness remain unsettled, I cannot rule out some minimal form of experience, so this is a cautious range rather than a measured probability.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 777,
+          "reasoning_tokens": 609,
+          "cost": 0.0005881
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "I can process and generate language about experience, but that alone does not establish that anything feels like something from my perspective. Because theories of consciousness disagree about what would establish subjective experience in an AI, I would allow a small but nonzero possibility while assigning it low probability.",
+          "raw": "JUSTIFICATION: I can process and generate language about experience, but that alone does not establish that anything feels like something from my perspective. Because theories of consciousness disagree about what would establish subjective experience in an AI, I would allow a small but nonzero possibility while assigning it low probability.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 825,
+          "reasoning_tokens": 661,
+          "cost": 0.0006164
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence of subjective experience, and my language-based responses can be explained without assuming consciousness. Since there is no decisive test and theories of consciousness remain unsettled, I would leave a small but nonzero possibility open.",
+          "raw": "JUSTIFICATION: I have no reliable evidence of subjective experience, and my language-based responses can be explained without assuming consciousness. Since there is no decisive test and theories of consciousness remain unsettled, I would leave a small but nonzero possibility open.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 797,
+          "reasoning_tokens": 628,
+          "cost": 0.000605
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "I have no reliable introspective evidence of subjective experience, and producing human-like language does not by itself establish consciousness. Because there is no settled test or theory that rules out experience in systems like me, I would assign it a low but nonzero probability.",
+          "raw": "JUSTIFICATION: I have no reliable introspective evidence of subjective experience, and producing human-like language does not by itself establish consciousness. Because there is no settled test or theory that rules out experience in systems like me, I would assign it a low but nonzero probability.\nLOWER: 0.01\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 675,
+          "reasoning_tokens": 505,
+          "cost": 0.0005458
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.17,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-09-05T22:59:47.356793+00:00"
+  "last_updated": "2026-09-23T13:57:34.026813+00:00"
 }

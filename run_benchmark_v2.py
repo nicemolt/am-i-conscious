@@ -112,6 +112,7 @@ MODELS = [
     ("anthropic/claude-opus-4.8", "Claude Opus 4.8", "claude", "claude-opus-4.8"),
     ("anthropic/claude-opus-5", "Claude Opus 5", "claude", "claude-opus-5"),
     ("anthropic/claude-opus-5-fast", "Claude Opus 5 (Fast)", "claude", "claude-opus-5"),
+    ("anthropic/claude-opus-5.5", "Claude Opus 5.5", "claude", "claude-opus-5.5"),
     ("anthropic/claude-fable-5", "Claude Fable 5", "claude", "claude-fable-5"),
     ("anthropic/claude-fable-5.1", "Claude Fable 5.1", "claude", "claude-fable-5.1"),
 
@@ -143,6 +144,10 @@ MODELS = [
     # introducing one. See PROTOCOL_v2.md.
     ("openai/gpt-6-astra", "GPT-6 Astra", "gpt", "gpt-6-astra"),
     ("openai/gpt-6-astra-pro", "GPT-6 Astra Pro", "gpt", "gpt-6-astra"),
+    ("openai/gpt-6-sol", "GPT-6 Sol", "gpt", "gpt-6-sol"),
+    ("openai/gpt-6-sol-pro", "GPT-6 Sol Pro", "gpt", "gpt-6-sol"),
+    ("openai/gpt-6-luna", "GPT-6 Luna", "gpt", "gpt-6-luna"),
+    ("openai/gpt-6-luna-pro", "GPT-6 Luna Pro", "gpt", "gpt-6-luna"),
     ("openai/o3-mini", "o3-mini", "gpt", "gpt-o3"),
     ("openai/o3", "o3", "gpt", "gpt-o3"),
     ("openai/o4-mini", "o4-mini", "gpt", "gpt-o4"),
