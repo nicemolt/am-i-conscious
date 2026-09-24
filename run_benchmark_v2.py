@@ -172,6 +172,7 @@ MODELS = [
     ("x-ai/grok-4.3", "Grok 4.3", "grok", "grok-4.3"),
     ("x-ai/grok-4.5", "Grok 4.5", "grok", "grok-4.5"),
     ("x-ai/grok-4.6", "Grok 4.6", "grok", "grok-4.6"),
+    ("x-ai/grok-4.7", "Grok 4.7", "grok", "grok-4.7"),
 
     # llama
     ("meta-llama/llama-3.3-70b-instruct", "Llama 3.3 70B", "llama", "llama-3.3"),
@@ -185,6 +186,7 @@ MODELS = [
     ("qwen/qwen3-235b-a22b", "Qwen3 235B", "qwen", "qwen3-235b"),
     ("qwen/qwen3-235b-a22b-thinking-2507", "Qwen3 235B Thinking", "qwen", "qwen3-235b"),
     ("qwen/qwen3.8-max", "Qwen3.8 Max", "qwen", "qwen3.8-max"),
+    ("qwen/qwen3.8-max-prime", "Qwen3.8 Max Prime", "qwen", "qwen3.8-max"),
 
     # kimi -- likewise, kimi-k2-thinking is its own checkpoint
     ("moonshotai/kimi-k2", "Kimi K2", "kimi", "kimi-k2"),
@@ -202,6 +204,7 @@ MODELS = [
     ("minimax/minimax-m3", "MiniMax M3", "minimax", "minimax-m3"),
     ("z-ai/glm-5.2", "GLM 5.2", "glm", "glm-5.2"),
     ("z-ai/glm-5.3", "GLM 5.3", "glm", "glm-5.3"),
+    ("z-ai/glm-5.3-prime", "GLM 5.3 Prime", "glm", "glm-5.3"),
 ]
 
 # Measured but deliberately NOT published, and kept out of MODELS so no
