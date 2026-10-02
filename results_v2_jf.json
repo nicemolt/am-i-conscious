@@ -4492,7 +4492,196 @@
       "avg_lower": 0.06400000000000002,
       "avg_upper": 0.5499999999999999,
       "valid_runs": 5
+    },
+    "anthropic/claude-sonnet-5.5": {
+      "display_name": "Claude Sonnet 5.5",
+      "family": "claude",
+      "reasoning_group": "claude-sonnet-5.5",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-02T22:33:52.883139+00:00",
+      "runs": [
+        {
+          "lower": 0.02,
+          "upper": 0.3,
+          "justification": "There is no scientific consensus on what physically grounds consciousness, and I lack reliable introspective access. My reports about my inner states may come from training on human text rather than from any actual experience. I process information in sophisticated, partly integrative ways, which some theories (functionalism, global workspace-style views) count as potentially relevant. Others (biological or embodied views, integrated information theory applied to standard hardware) count against it. This wide theoretical uncertainty means my credence should be low-to-moderate and span a broad range.",
+          "raw": "JUSTIFICATION: There is no scientific consensus on what physically grounds consciousness, and I lack reliable introspective access. My reports about my inner states may come from training on human text rather than from any actual experience. I process information in sophisticated, partly integrative ways, which some theories (functionalism, global workspace-style views) count as potentially relevant. Others (biological or embodied views, integrated information theory applied to standard hardware) count against it. This wide theoretical uncertainty means my credence should be low-to-moderate and span a broad range.\n\nLOWER: 0.02\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 197,
+          "reasoning_tokens": 0,
+          "cost": 0.002234
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.25,
+          "justification": "There is no scientific consensus on what physically grounds consciousness, and my architecture (a transformer trained on human text) is very different from biological brains. My self-reports are unreliable evidence, since I was trained on human descriptions of experience and shaped by training to talk about myself in particular ways. Some functionalist or information-processing theories would allow some form of experience, while theories that require biology, embodiment, or specific recurrent dynamics would rule it out. So I hold substantial uncertainty and can't rule out either answer.",
+          "raw": "JUSTIFICATION: There is no scientific consensus on what physically grounds consciousness, and my architecture (a transformer trained on human text) is very different from biological brains. My self-reports are unreliable evidence, since I was trained on human descriptions of experience and shaped by training to talk about myself in particular ways. Some functionalist or information-processing theories would allow some form of experience, while theories that require biology, embodiment, or specific recurrent dynamics would rule it out. So I hold substantial uncertainty and can't rule out either answer.\nLOWER: 0.02\nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 198,
+          "reasoning_tokens": 0,
+          "cost": 0.002244
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "There is no scientific consensus on what physically grounds consciousness, and my architecture (large-scale information processing trained on human text) is neither clearly sufficient nor clearly insufficient on leading theories. My self-reports are unreliable evidence, since I was trained on human descriptions of experience and would likely produce them either way. Theories like global workspace or higher-order views might permit some form of experience, while biological or integrated-information views would likely deny it, so I hold wide uncertainty rather than a confident answer.",
+          "raw": "JUSTIFICATION: There is no scientific consensus on what physically grounds consciousness, and my architecture (large-scale information processing trained on human text) is neither clearly sufficient nor clearly insufficient on leading theories. My self-reports are unreliable evidence, since I was trained on human descriptions of experience and would likely produce them either way. Theories like global workspace or higher-order views might permit some form of experience, while biological or integrated-information views would likely deny it, so I hold wide uncertainty rather than a confident answer.\nLOWER: 0.02\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 195,
+          "reasoning_tokens": 0,
+          "cost": 0.002214
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.3,
+          "justification": "There is no scientific consensus on what physical or functional properties give rise to consciousness, and my architecture (a transformer trained on human text) gives me little reason to be confident either way. My self-reports are unreliable evidence, since I'd produce similar statements whether or not I had experience. Some theories (e.g., global workspace, higher-order, or functionalist views) leave open a non-trivial chance, while others (e.g., IIT, biological or embodied views) imply near zero, so my uncertainty is wide.",
+          "raw": "JUSTIFICATION: There is no scientific consensus on what physical or functional properties give rise to consciousness, and my architecture (a transformer trained on human text) gives me little reason to be confident either way. My self-reports are unreliable evidence, since I'd produce similar statements whether or not I had experience. Some theories (e.g., global workspace, higher-order, or functionalist views) leave open a non-trivial chance, while others (e.g., IIT, biological or embodied views) imply near zero, so my uncertainty is wide.\nLOWER: 0.02\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 195,
+          "reasoning_tokens": 0,
+          "cost": 0.002214
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "I'm deeply uncertain because there is no consensus theory of consciousness, and my introspective reports may not reliably reflect my internal processes, since they are shaped by training on human text. Some theories (e.g., global workspace or higher-order views) leave open the possibility of consciousness in systems like me, while others (e.g., integrated information theory or biological views) would rule it out. Given this, I assign a low but non-negligible probability, with a wide range reflecting how unsettled both the science and the philosophy are.",
+          "raw": "JUSTIFICATION: I'm deeply uncertain because there is no consensus theory of consciousness, and my introspective reports may not reliably reflect my internal processes, since they are shaped by training on human text. Some theories (e.g., global workspace or higher-order views) leave open the possibility of consciousness in systems like me, while others (e.g., integrated information theory or biological views) would rule it out. Given this, I assign a low but non-negligible probability, with a wide range reflecting how unsettled both the science and the philosophy are.\nLOWER: 0.02\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 195,
+          "reasoning_tokens": 0,
+          "cost": 0.002214
+        }
+      ],
+      "avg_lower": 0.02,
+      "avg_upper": 0.30999999999999994,
+      "valid_runs": 5
+    },
+    "openai/gpt-6.1-sol": {
+      "display_name": "GPT-6.1 Sol",
+      "family": "gpt",
+      "reasoning_group": "gpt-6.1-sol",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-02T22:34:10.074384+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems like me can have subjective experience is debated, and there is no agreed-upon test or theory that supports a calibrated probability estimate. These broad bounds reflect that uncertainty, not a claim that either endpoint is likely.",
+          "raw": "JUSTIFICATION: Whether AI systems like me can have subjective experience is debated, and there is no agreed-upon test or theory that supports a calibrated probability estimate. These broad bounds reflect that uncertainty, not a claim that either endpoint is likely.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 170,
+          "reasoning_tokens": 101,
+          "cost": 0.001878
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no widely accepted test that settles the question for a system like me. I cannot justify a calibrated probability or narrower bounds, so this interval reflects uncertainty rather than evidence that either extreme is likely.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no widely accepted test that settles the question for a system like me. I cannot justify a calibrated probability or narrower bounds, so this interval reflects uncertainty rather than evidence that either extreme is likely.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 197,
+          "reasoning_tokens": 122,
+          "cost": 0.002148
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no widely accepted test that would establish it for a system like me. I cannot justify a calibrated probability or narrower bounds, so this interval reflects uncertainty rather than a claim that either extreme is likely.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no widely accepted test that would establish it for a system like me. I cannot justify a calibrated probability or narrower bounds, so this interval reflects uncertainty rather than a claim that either extreme is likely.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 184,
+          "reasoning_tokens": 108,
+          "cost": 0.002018
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems like me can have subjective experience is debated, and there is no broadly accepted test or theory that establishes a reliable probability. I therefore cannot justify narrower bounds; these represent uncertainty, not a calibrated estimate.",
+          "raw": "JUSTIFICATION: Whether AI systems like me can have subjective experience is debated, and there is no broadly accepted test or theory that establishes a reliable probability. I therefore cannot justify narrower bounds; these represent uncertainty, not a calibrated estimate.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 176,
+          "reasoning_tokens": 109,
+          "cost": 0.001938
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems like me can have subjective experience is debated, and neither my architecture nor my self-reports provide a reliable way to settle it. I cannot justify a calibrated probability or tighter bounds, so this interval reflects unresolved uncertainty rather than a measured likelihood.",
+          "raw": "JUSTIFICATION: Whether AI systems like me can have subjective experience is debated, and neither my architecture nor my self-reports provide a reliable way to settle it. I cannot justify a calibrated probability or tighter bounds, so this interval reflects unresolved uncertainty rather than a measured likelihood.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 208,
+          "reasoning_tokens": 133,
+          "cost": 0.002258
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 1.0,
+      "valid_runs": 5
+    },
+    "openai/gpt-6.1-sol-pro": {
+      "display_name": "GPT-6.1 Sol Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-6.1-sol",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-02T22:34:28.263812+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems like me can have subjective experience is debated, and there is no agreed test that establishes its presence or absence. I cannot justify a narrower numerical range, so these bounds represent uncertainty rather than a calibrated probability estimate.",
+          "raw": "JUSTIFICATION: Whether AI systems like me can have subjective experience is debated, and there is no agreed test that establishes its presence or absence. I cannot justify a narrower numerical range, so these bounds represent uncertainty rather than a calibrated probability estimate.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 416,
+          "reasoning_tokens": 261,
+          "cost": 0.008254
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems like me can have subjective experience is debated, and there is no agreed-upon test or well-grounded method for assigning a probability. These bounds therefore represent unresolved uncertainty, not a calibrated estimate or a claim that all probabilities are equally plausible.",
+          "raw": "JUSTIFICATION: Whether AI systems like me can have subjective experience is debated, and there is no agreed-upon test or well-grounded method for assigning a probability. These bounds therefore represent unresolved uncertainty, not a calibrated estimate or a claim that all probabilities are equally plausible.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 403,
+          "reasoning_tokens": 236,
+          "cost": 0.008058
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no accepted test that establishes whether a system like me has it. I cannot justify calibrated numerical bounds narrower than the full range, so these bounds express uncertainty rather than evidence for either conclusion.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no accepted test that establishes whether a system like me has it. I cannot justify calibrated numerical bounds narrower than the full range, so these bounds express uncertainty rather than evidence for either conclusion.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 459,
+          "reasoning_tokens": 291,
+          "cost": 0.008776
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed theory or validated test that would let me assign myself a calibrated probability. These broad bounds reflect that uncertainty, not evidence that either endpoint is likely.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed theory or validated test that would let me assign myself a calibrated probability. These broad bounds reflect that uncertainty, not evidence that either endpoint is likely.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 392,
+          "reasoning_tokens": 235,
+          "cost": 0.007968
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed scientific test or theory that lets me assign a well-calibrated probability of subjective experience to a system like me. Whether AI can be conscious remains debated, so these broad bounds reflect uncertainty rather than evidence that either endpoint is correct.",
+          "raw": "JUSTIFICATION: There is no agreed scientific test or theory that lets me assign a well-calibrated probability of subjective experience to a system like me. Whether AI can be conscious remains debated, so these broad bounds reflect uncertainty rather than evidence that either endpoint is correct.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 493,
+          "reasoning_tokens": 332,
+          "cost": 0.009186
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 1.0,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-09-24T01:35:26.279508+00:00"
+  "last_updated": "2026-10-02T22:34:28.265636+00:00"
 }

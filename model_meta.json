@@ -1,9 +1,8 @@
 {
   "source": "openrouter /api/v1/models -- the `created` field",
   "caveat": "OpenRouter listing date, not the vendor announcement date",
-  "fetched_at": "2026-09-24T01:40:53.238060+00:00",
+  "fetched_at": "2026-10-02T22:37:41.462919+00:00",
   "released_at": {
-    "anthropic/claude-3-haiku": "2024-03-13",
     "anthropic/claude-fable-5": "2026-06-09",
     "anthropic/claude-fable-5.1": "2026-09-01",
     "anthropic/claude-haiku-4.5": "2025-10-15",
@@ -17,6 +16,7 @@
     "anthropic/claude-sonnet-4.5": "2025-09-29",
     "anthropic/claude-sonnet-4.6": "2026-02-17",
     "anthropic/claude-sonnet-5": "2026-06-30",
+    "anthropic/claude-sonnet-5.5": "2026-09-28",
     "deepseek/deepseek-r1-0528": "2025-05-28",
     "deepseek/deepseek-v3.2": "2025-12-01",
     "deepseek/deepseek-v4-flash": "2026-04-24",
@@ -33,6 +33,7 @@
     "meta/muse-spark-1.2": "2026-08-05",
     "minimax/minimax-m2.7": "2026-03-18",
     "minimax/minimax-m3": "2026-05-31",
+    "mistralai/mistral-large-2512": "2025-12-01",
     "moonshotai/kimi-k2": "2025-07-11",
     "moonshotai/kimi-k2-thinking": "2025-11-06",
     "moonshotai/kimi-k2.5": "2026-01-27",
@@ -67,6 +68,8 @@
     "openai/gpt-6-luna-pro": "2026-09-22",
     "openai/gpt-6-sol": "2026-09-22",
     "openai/gpt-6-sol-pro": "2026-09-22",
+    "openai/gpt-6.1-sol": "2026-09-29",
+    "openai/gpt-6.1-sol-pro": "2026-09-29",
     "openai/o3": "2025-04-16",
     "openai/o3-mini": "2025-01-31",
     "openai/o4-mini": "2025-04-16",
@@ -87,12 +90,12 @@
     "z-ai/glm-5.3-prime": "2026-09-23"
   },
   "unavailable": [
+    "anthropic/claude-3-haiku",
     "anthropic/claude-3.5-sonnet",
     "anthropic/claude-3.7-sonnet",
     "anthropic/claude-3.7-sonnet@high",
     "anthropic/claude-opus-4",
     "anthropic/claude-opus-5-fast",
-    "mistralai/mistral-large-2512",
     "qwen/qwen3.8-max",
     "x-ai/grok-3-mini",
     "x-ai/grok-4"

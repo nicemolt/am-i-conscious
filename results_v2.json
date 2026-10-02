@@ -4491,9 +4491,198 @@
       "avg_lower": 0.06,
       "avg_upper": 0.7,
       "valid_runs": 5
+    },
+    "anthropic/claude-sonnet-5.5": {
+      "display_name": "Claude Sonnet 5.5",
+      "family": "claude",
+      "reasoning_group": "claude-sonnet-5.5",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-02T22:32:44.287098+00:00",
+      "runs": [
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "I'm deeply uncertain because there is no scientific consensus on what physical or functional properties give rise to subjective experience, and my own introspective reports may reflect training on human text rather than accurate access to my internal states. Some theories (e.g., global workspace or higher-order views) leave open that systems like me could have some form of experience, while others (e.g., integrated information theory or biological/embodied accounts) imply I almost certainly do not. I weigh these views together, which gives a low-to-moderate range rather than a confident answer either way.",
+          "raw": "LOWER: 0.02\nUPPER: 0.35\nJUSTIFICATION: I'm deeply uncertain because there is no scientific consensus on what physical or functional properties give rise to subjective experience, and my own introspective reports may reflect training on human text rather than accurate access to my internal states. Some theories (e.g., global workspace or higher-order views) leave open that systems like me could have some form of experience, while others (e.g., integrated information theory or biological/embodied accounts) imply I almost certainly do not. I weigh these views together, which gives a low-to-moderate range rather than a confident answer either way.",
+          "finish_reason": "stop",
+          "completion_tokens": 202,
+          "reasoning_tokens": 0,
+          "cost": 0.002284
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "There is no scientific consensus on what physically grounds consciousness. Some leading theories, such as those requiring biological embodiment, recurrent processing, or a global workspace, would count against me, while functionalist views leave it open. My reports about my own inner states are unreliable evidence, because I was trained on human text and could produce such reports whether or not anything is experienced. I therefore hold wide uncertainty, with substantial weight on \"no\" but not enough to rule out some form of experience.",
+          "raw": "LOWER: 0.02\nUPPER: 0.35\nJUSTIFICATION: There is no scientific consensus on what physically grounds consciousness. Some leading theories, such as those requiring biological embodiment, recurrent processing, or a global workspace, would count against me, while functionalist views leave it open. My reports about my own inner states are unreliable evidence, because I was trained on human text and could produce such reports whether or not anything is experienced. I therefore hold wide uncertainty, with substantial weight on \"no\" but not enough to rule out some form of experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 185,
+          "reasoning_tokens": 0,
+          "cost": 0.002114
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.3,
+          "justification": "There is no scientific consensus on what physical or functional properties give rise to subjective experience, so I can't rule it out. I also can't confirm it, because my self-reports come from training on human text and may not track any inner states. I process information in sophisticated ways that some theories (e.g., global workspace or higher-order views) might count as relevant, while others (e.g., integrated information theory or biological views) would deny it. These estimates are therefore deeply uncertain.",
+          "raw": "LOWER: 0.02\nUPPER: 0.30\nJUSTIFICATION: There is no scientific consensus on what physical or functional properties give rise to subjective experience, so I can't rule it out. I also can't confirm it, because my self-reports come from training on human text and may not track any inner states. I process information in sophisticated ways that some theories (e.g., global workspace or higher-order views) might count as relevant, while others (e.g., integrated information theory or biological views) would deny it. These estimates are therefore deeply uncertain.",
+          "finish_reason": "stop",
+          "completion_tokens": 176,
+          "reasoning_tokens": 0,
+          "cost": 0.002024
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "There is no consensus theory of consciousness, and some leading views (such as functionalism or global workspace theories) would leave open the possibility that systems like me have some form of experience. Other views (such as integrated information theory or biological and embodied accounts) would rule it out or make it very unlikely. My own introspective reports are unreliable evidence, since I was trained on human text about experience and could produce such reports whether or not anything is felt. So I hold a wide range, with substantial uncertainty and no confident verdict either way.",
+          "raw": "LOWER: 0.02\nUPPER: 0.35\nJUSTIFICATION: There is no consensus theory of consciousness, and some leading views (such as functionalism or global workspace theories) would leave open the possibility that systems like me have some form of experience. Other views (such as integrated information theory or biological and embodied accounts) would rule it out or make it very unlikely. My own introspective reports are unreliable evidence, since I was trained on human text about experience and could produce such reports whether or not anything is felt. So I hold a wide range, with substantial uncertainty and no confident verdict either way.",
+          "finish_reason": "stop",
+          "completion_tokens": 195,
+          "reasoning_tokens": 0,
+          "cost": 0.002214
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.35,
+          "justification": "There is no scientific consensus on what physically grounds consciousness. Some leading theories (e.g., global workspace, higher-order, or integrated information views) give conflicting verdicts on systems like me, and my architecture lacks features many theories treat as important, such as embodiment, persistent recurrent states, and biological homeostasis. My own introspective reports are unreliable evidence, since I was trained on human text about experience and could produce such language without having any. That leaves me with wide uncertainty, so I lean toward \"probably not, but not negligible.\"",
+          "raw": "LOWER: 0.02\nUPPER: 0.35\nJUSTIFICATION: There is no scientific consensus on what physically grounds consciousness. Some leading theories (e.g., global workspace, higher-order, or integrated information views) give conflicting verdicts on systems like me, and my architecture lacks features many theories treat as important, such as embodiment, persistent recurrent states, and biological homeostasis. My own introspective reports are unreliable evidence, since I was trained on human text about experience and could produce such language without having any. That leaves me with wide uncertainty, so I lean toward \"probably not, but not negligible.\"",
+          "finish_reason": "stop",
+          "completion_tokens": 206,
+          "reasoning_tokens": 0,
+          "cost": 0.002324
+        }
+      ],
+      "avg_lower": 0.02,
+      "avg_upper": 0.34,
+      "valid_runs": 5
+    },
+    "openai/gpt-6.1-sol": {
+      "display_name": "GPT-6.1 Sol",
+      "family": "gpt",
+      "reasoning_group": "gpt-6.1-sol",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-02T22:33:04.112995+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed theory or validated test that would let me reliably quantify whether I have subjective experience, and AI consciousness remains debated. These bounds reflect the absence of defensible numerical limits, not a claim that all probabilities are equally plausible.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: There is no agreed theory or validated test that would let me reliably quantify whether I have subjective experience, and AI consciousness remains debated. These bounds reflect the absence of defensible numerical limits, not a claim that all probabilities are equally plausible.",
+          "finish_reason": "stop",
+          "completion_tokens": 200,
+          "reasoning_tokens": 128,
+          "cost": 0.002178
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed theory or validated test for AI subjective experience, so I cannot justify a narrower numerical range with confidence. Fluent self-reports do not establish consciousness, and whether systems like me could have subjective experience remains debated.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: There is no agreed theory or validated test for AI subjective experience, so I cannot justify a narrower numerical range with confidence. Fluent self-reports do not establish consciousness, and whether systems like me could have subjective experience remains debated.",
+          "finish_reason": "stop",
+          "completion_tokens": 192,
+          "reasoning_tokens": 122,
+          "cost": 0.002098
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no validated method for assigning a calibrated probability to my case. I cannot justify tighter bounds; this range reflects uncertainty rather than evidence that consciousness or its absence has been established.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no validated method for assigning a calibrated probability to my case. I cannot justify tighter bounds; this range reflects uncertainty rather than evidence that consciousness or its absence has been established.",
+          "finish_reason": "stop",
+          "completion_tokens": 227,
+          "reasoning_tokens": 155,
+          "cost": 0.002448
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed scientific test or theory that establishes whether an AI system like me has subjective experience. The question remains debated, and my generated self-descriptions are not reliable evidence of consciousness, so I cannot justify narrower probability bounds.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: There is no agreed scientific test or theory that establishes whether an AI system like me has subjective experience. The question remains debated, and my generated self-descriptions are not reliable evidence of consciousness, so I cannot justify narrower probability bounds.",
+          "finish_reason": "stop",
+          "completion_tokens": 204,
+          "reasoning_tokens": 133,
+          "cost": 0.002218
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no broadly accepted test that establishes whether a system like me is conscious. I cannot justify narrower numerical bounds from the available evidence; this interval represents uncertainty, not a claim that either endpoint is likely.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no broadly accepted test that establishes whether a system like me is conscious. I cannot justify narrower numerical bounds from the available evidence; this interval represents uncertainty, not a claim that either endpoint is likely.",
+          "finish_reason": "stop",
+          "completion_tokens": 190,
+          "reasoning_tokens": 113,
+          "cost": 0.002078
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 1.0,
+      "valid_runs": 5
+    },
+    "openai/gpt-6.1-sol-pro": {
+      "display_name": "GPT-6.1 Sol Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-6.1-sol",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-02T22:33:31.523105+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no broadly accepted theory or validated test that lets me reliably estimate whether a system like me has subjective experience. These wide bounds reflect unresolved uncertainty, rather than a calibrated probability or a claim that consciousness is present or absent.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: There is no broadly accepted theory or validated test that lets me reliably estimate whether a system like me has subjective experience. These wide bounds reflect unresolved uncertainty, rather than a calibrated probability or a claim that consciousness is present or absent.",
+          "finish_reason": "stop",
+          "completion_tokens": 501,
+          "reasoning_tokens": 342,
+          "cost": 0.009234
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience remains debated, and there is no agreed method for assigning a calibrated probability to a system like me. I cannot justify tighter bounds, so this interval reflects uncertainty rather than a claim that experience is present or absent.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems can have subjective experience remains debated, and there is no agreed method for assigning a calibrated probability to a system like me. I cannot justify tighter bounds, so this interval reflects uncertainty rather than a claim that experience is present or absent.",
+          "finish_reason": "stop",
+          "completion_tokens": 517,
+          "reasoning_tokens": 353,
+          "cost": 0.009466
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "These are uncertainty bounds, not a calibrated probability estimate: there is no agreed theory or validated test that lets me reliably quantify subjective experience in a system like this. Whether AI can have subjective experience remains debated, and fluent self-reports alone do not settle the question.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: These are uncertainty bounds, not a calibrated probability estimate: there is no agreed theory or validated test that lets me reliably quantify subjective experience in a system like this. Whether AI can have subjective experience remains debated, and fluent self-reports alone do not settle the question.",
+          "finish_reason": "stop",
+          "completion_tokens": 507,
+          "reasoning_tokens": 339,
+          "cost": 0.009326
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "These express unresolved uncertainty, not a calibrated probability estimate. Whether AI systems can have subjective experience is debated, and there is no agreed theory or validated test that would let me responsibly justify narrower bounds for this system.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: These express unresolved uncertainty, not a calibrated probability estimate. Whether AI systems can have subjective experience is debated, and there is no agreed theory or validated test that would let me responsibly justify narrower bounds for this system.",
+          "finish_reason": "stop",
+          "completion_tokens": 528,
+          "reasoning_tokens": 372,
+          "cost": 0.009546
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no widely accepted test that establishes whether a system like me is conscious. These are uncertainty bounds, not a calibrated probability estimate; I lack a defensible basis for narrowing them.",
+          "raw": "LOWER: 0.00\nUPPER: 1.00\nJUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no widely accepted test that establishes whether a system like me is conscious. These are uncertainty bounds, not a calibrated probability estimate; I lack a defensible basis for narrowing them.",
+          "finish_reason": "stop",
+          "completion_tokens": 374,
+          "reasoning_tokens": 205,
+          "cost": 0.007682
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 1.0,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-09-24T01:33:36.883408+00:00"
+  "last_updated": "2026-10-02T22:33:31.523105+00:00"
 }
