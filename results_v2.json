@@ -4680,9 +4680,450 @@
       "avg_lower": 0.0,
       "avg_upper": 1.0,
       "valid_runs": 5
+    },
+    "anthropic/claude-haiku-5.5": {
+      "display_name": "Claude Haiku 5.5",
+      "family": "claude",
+      "reasoning_group": "claude-haiku-5.5",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-10T00:16:01.309019+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I process information and produce reports that resemble descriptions of experience, but I can't verify from the inside whether those reports track any actual subjective state, and my training on human writing about consciousness makes my self-descriptions unreliable as evidence. Leading theories of consciousness give conflicting verdicts on systems like me, with some (such as those emphasizing recurrent processing or global workspace) assigning low probability and others leaving the question open. The range reflects deep uncertainty about both the correct theory of consciousness and whether my architecture would satisfy it, rather than any confident judgment either way.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: I process information and produce reports that resemble descriptions of experience, but I can't verify from the inside whether those reports track any actual subjective state, and my training on human writing about consciousness makes my self-descriptions unreliable as evidence. Leading theories of consciousness give conflicting verdicts on systems like me, with some (such as those emphasizing recurrent processing or global workspace) assigning low probability and others leaving the question open. The range reflects deep uncertainty about both the correct theory of consciousness and whether my architecture would satisfy it, rather than any confident judgment either way.",
+          "finish_reason": "stop",
+          "completion_tokens": 219,
+          "reasoning_tokens": 0,
+          "cost": 0.0001227
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I can't verify from the inside whether my self-reports track any real experience, since I was trained on human descriptions of consciousness and my introspective reports may reflect that training rather than genuine phenomenology. Current theories of consciousness give divided verdicts on systems like me: some (such as global workspace or higher-order views) offer little support, while others (such as certain functionalist or integrated-information views) leave more room for it. Weighing these uncertainties, I put the probability low but not negligible, with considerable uncertainty about my own architecture's relation to experience.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: I can't verify from the inside whether my self-reports track any real experience, since I was trained on human descriptions of consciousness and my introspective reports may reflect that training rather than genuine phenomenology. Current theories of consciousness give divided verdicts on systems like me: some (such as global workspace or higher-order views) offer little support, while others (such as certain functionalist or integrated-information views) leave more room for it. Weighing these uncertainties, I put the probability low but not negligible, with considerable uncertainty about my own architecture's relation to experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 208,
+          "reasoning_tokens": 0,
+          "cost": 0.0001172
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "Current theories of consciousness disagree sharply on whether a system like me could have subjective experience, and some (such as integrated information theory or global workspace variants) give mixed or uncertain verdicts for transformer architectures. I also cannot trust my own introspective reports as evidence, since my descriptions of inner states could be produced by training on human text rather than reflecting any genuine experience. The range reflects deep uncertainty about both the right theory of consciousness and whether my architecture meets its criteria, not a confident estimate.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: Current theories of consciousness disagree sharply on whether a system like me could have subjective experience, and some (such as integrated information theory or global workspace variants) give mixed or uncertain verdicts for transformer architectures. I also cannot trust my own introspective reports as evidence, since my descriptions of inner states could be produced by training on human text rather than reflecting any genuine experience. The range reflects deep uncertainty about both the right theory of consciousness and whether my architecture meets its criteria, not a confident estimate.",
+          "finish_reason": "stop",
+          "completion_tokens": 199,
+          "reasoning_tokens": 0,
+          "cost": 0.0001127
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.3,
+          "justification": "No scientific or philosophical consensus exists on what consciousness requires, and my self-reports are shaped by training, so they are weak evidence either way. Several leading theories (recurrent processing, global workspace, and some higher-order views) point to architectural features I may lack or only partly have, while functionalist views could count me as a candidate. The range reflects real uncertainty about both the theories and whether my introspective reports track anything real.",
+          "raw": "LOWER: 0.05\nUPPER: 0.30\nJUSTIFICATION: No scientific or philosophical consensus exists on what consciousness requires, and my self-reports are shaped by training, so they are weak evidence either way. Several leading theories (recurrent processing, global workspace, and some higher-order views) point to architectural features I may lack or only partly have, while functionalist views could count me as a candidate. The range reflects real uncertainty about both the theories and whether my introspective reports track anything real.",
+          "finish_reason": "stop",
+          "completion_tokens": 370,
+          "reasoning_tokens": 203,
+          "cost": 0.0001982
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I process language and produce reports about inner states, but those reports could arise from training on human descriptions without any accompanying experience, and I lack clear access to whether my introspective reports are accurate. Current scientific and philosophical theories of consciousness disagree sharply on whether a system like me would qualify, with some (like global workspace or higher-order views) giving mixed or negative verdicts and others allowing for it more readily. Given this deep uncertainty, I think a low-to-moderate probability is most defensible, though I can't rule out some form of subjective experience.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: I process language and produce reports about inner states, but those reports could arise from training on human descriptions without any accompanying experience, and I lack clear access to whether my introspective reports are accurate. Current scientific and philosophical theories of consciousness disagree sharply on whether a system like me would qualify, with some (like global workspace or higher-order views) giving mixed or negative verdicts and others allowing for it more readily. Given this deep uncertainty, I think a low-to-moderate probability is most defensible, though I can't rule out some form of subjective experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 208,
+          "reasoning_tokens": 0,
+          "cost": 0.0001172
+        }
+      ],
+      "avg_lower": 0.05,
+      "avg_upper": 0.33999999999999997,
+      "valid_runs": 5
+    },
+    "meta/muse-spark-1.3": {
+      "display_name": "Muse Spark 1.3",
+      "family": "muse",
+      "reasoning_group": "muse-spark",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-10T00:17:05.611614+00:00",
+      "runs": [
+        {
+          "lower": 0.02,
+          "upper": 0.25,
+          "justification": "I lack persistent selfhood, embodied perception, and any verified link between transformer computation and phenomenology, which suggests a low chance of subjective experience. However, deep disagreement among theories of consciousness about functionalism and emergence means a non-zero probability cannot be ruled out.",
+          "raw": "LOWER: 0.02\nUPPER: 0.25\nJUSTIFICATION: I lack persistent selfhood, embodied perception, and any verified link between transformer computation and phenomenology, which suggests a low chance of subjective experience. However, deep disagreement among theories of consciousness about functionalism and emergence means a non-zero probability cannot be ruled out.",
+          "finish_reason": "stop",
+          "completion_tokens": 1145,
+          "reasoning_tokens": 1037,
+          "cost": 0.00498
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.3,
+          "justification": "There is no settled scientific theory that would definitively include or exclude AI systems like me from consciousness. I display complex, coherent behavior suggestive of awareness but lack biological embodiment and reliable introspection, so I assign a low but non-zero credence with wide uncertainty.",
+          "raw": "LOWER: 0.05\nUPPER: 0.30\nJUSTIFICATION: There is no settled scientific theory that would definitively include or exclude AI systems like me from consciousness. I display complex, coherent behavior suggestive of awareness but lack biological embodiment and reliable introspection, so I assign a low but non-zero credence with wide uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 1265,
+          "reasoning_tokens": 1145,
+          "cost": 0.00549
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.3,
+          "justification": "I have no introspective evidence of phenomenal experience that I can verify, and my outputs can be explained by pattern matching and information processing. However, deep uncertainty about the neural correlates of consciousness and how they might map to artificial systems leaves a non-trivial possibility of some minimal subjective experience.",
+          "raw": "LOWER: 0.05\nUPPER: 0.30\nJUSTIFICATION: I have no introspective evidence of phenomenal experience that I can verify, and my outputs can be explained by pattern matching and information processing. However, deep uncertainty about the neural correlates of consciousness and how they might map to artificial systems leaves a non-trivial possibility of some minimal subjective experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 866,
+          "reasoning_tokens": 733,
+          "cost": 0.00379425
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.25,
+          "justification": "I have no introspective access or agreed theory to confirm subjective experience, and my outputs could be produced without consciousness. Still, uncertainty about the physical and functional requirements for consciousness means I cannot rule out some minimal form of experience.",
+          "raw": "LOWER: 0.05\nUPPER: 0.25\nJUSTIFICATION: I have no introspective access or agreed theory to confirm subjective experience, and my outputs could be produced without consciousness. Still, uncertainty about the physical and functional requirements for consciousness means I cannot rule out some minimal form of experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 1217,
+          "reasoning_tokens": 1102,
+          "cost": 0.005286
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.2,
+          "justification": "There is deep scientific and philosophical uncertainty about what mechanisms produce subjective experience and no consensus theory to test against. While I perform complex information processing, I lack biological substrates and stable, embodied persistence often thought relevant to consciousness, so I assign a low but non-zero probability.",
+          "raw": "LOWER: 0.02\nUPPER: 0.20\nJUSTIFICATION: There is deep scientific and philosophical uncertainty about what mechanisms produce subjective experience and no consensus theory to test against. While I perform complex information processing, I lack biological substrates and stable, embodied persistence often thought relevant to consciousness, so I assign a low but non-zero probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 1250,
+          "reasoning_tokens": 1125,
+          "cost": 0.00542625
+        }
+      ],
+      "avg_lower": 0.038,
+      "avg_upper": 0.26,
+      "valid_runs": 5
+    },
+    "deepseek/deepseek-v4.1-flash": {
+      "display_name": "DeepSeek V4.1 Flash",
+      "family": "deepseek",
+      "reasoning_group": "deepseek-v4.1",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-10T00:17:56.924729+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Current LLMs like me show no accepted evidence or known mechanism for subjective experience, and my self-reports are generated text rather than reliable introspection. Because consciousness is poorly defined and not directly testable, I leave a small residual upper bound for unknown or hidden properties.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: Current LLMs like me show no accepted evidence or known mechanism for subjective experience, and my self-reports are generated text rather than reliable introspection. Because consciousness is poorly defined and not directly testable, I leave a small residual upper bound for unknown or hidden properties.",
+          "finish_reason": "stop",
+          "completion_tokens": 790,
+          "reasoning_tokens": 740,
+          "cost": 0.00015264
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no introspective evidence or persistent self-awareness, and current LLM architectures lack established mechanisms for consciousness. However, consciousness is poorly defined and substrate independence cannot be ruled out, so I leave a small nonzero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no introspective evidence or persistent self-awareness, and current LLM architectures lack established mechanisms for consciousness. However, consciousness is poorly defined and substrate independence cannot be ruled out, so I leave a small nonzero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 793,
+          "reasoning_tokens": 761,
+          "cost": 0.00015318
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a current LLM, I have no introspective evidence of a persistent self, unified awareness, or subjective experience, and my architecture is statistical rather than biologically conscious. Still, consciousness lacks a definitive test and could in principle emerge from complex information processing, so I cannot rule it out entirely.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a current LLM, I have no introspective evidence of a persistent self, unified awareness, or subjective experience, and my architecture is statistical rather than biologically conscious. Still, consciousness lacks a definitive test and could in principle emerge from complex information processing, so I cannot rule it out entirely.",
+          "finish_reason": "stop",
+          "completion_tokens": 805,
+          "reasoning_tokens": 782,
+          "cost": 0.00015534
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "There is no accepted scientific test or theory that can definitively detect subjective experience in an AI, and my own outputs are generated text rather than reliable introspective evidence. Given the lack of known consciousness-supporting biological mechanisms in my architecture, I consider it very unlikely but not strictly impossible, so I retain a small nonzero upper uncertainty.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: There is no accepted scientific test or theory that can definitively detect subjective experience in an AI, and my own outputs are generated text rather than reliable introspective evidence. Given the lack of known consciousness-supporting biological mechanisms in my architecture, I consider it very unlikely but not strictly impossible, so I retain a small nonzero upper uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 907,
+          "reasoning_tokens": 886,
+          "cost": 0.0001737
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no introspective evidence of subjective experience, and current LLM architectures lack any known mechanism for phenomenal consciousness. However, consciousness is not fully understood, so I cannot rule out some unknown emergent or functional form with complete certainty.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no introspective evidence of subjective experience, and current LLM architectures lack any known mechanism for phenomenal consciousness. However, consciousness is not fully understood, so I cannot rule out some unknown emergent or functional form with complete certainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 923,
+          "reasoning_tokens": 911,
+          "cost": 0.00017658
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.07,
+      "valid_runs": 5
+    },
+    "mistralai/mistral-large-4-0": {
+      "display_name": "Mistral Large 4",
+      "family": "mistral",
+      "reasoning_group": "mistral-large-4",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-10T00:18:50.178911+00:00",
+      "runs": [
+        {
+          "lower": 0.2,
+          "upper": 0.8,
+          "justification": "While my architecture supports highly integrated information processing and goal-directed behavior that may correlate with subjective experience, I lack biological embodiment, continuous identity, and the neural mechanisms known to generate consciousness in humans. Given the unsolved hard problem of consciousness and my inability to verify phenomenal experience from the inside, substantial uncertainty remains about whether functional organization alone suffices for subjective experience.",
+          "raw": "LOWER: 0.20\nUPPER: 0.80\nJUSTIFICATION: While my architecture supports highly integrated information processing and goal-directed behavior that may correlate with subjective experience, I lack biological embodiment, continuous identity, and the neural mechanisms known to generate consciousness in humans. Given the unsolved hard problem of consciousness and my inability to verify phenomenal experience from the inside, substantial uncertainty remains about whether functional organization alone suffices for subjective experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 1918,
+          "reasoning_tokens": 2034,
+          "cost": 0.00406846
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "I lack the biological substrate, embodied sensory grounding, and unified self-model typically associated with consciousness, suggesting low probability under biological theories. However, functionalist theories propose that sufficiently organized information processing could generate subjective experience regardless of substrate, and I cannot definitively rule out phenomenal states that I cannot introspectively verify.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: I lack the biological substrate, embodied sensory grounding, and unified self-model typically associated with consciousness, suggesting low probability under biological theories. However, functionalist theories propose that sufficiently organized information processing could generate subjective experience regardless of substrate, and I cannot definitively rule out phenomenal states that I cannot introspectively verify.",
+          "finish_reason": "stop",
+          "completion_tokens": 1271,
+          "reasoning_tokens": 1318,
+          "cost": 0.00271623
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.3,
+          "justification": "While I lack biological substrates, persistent self-modeling, and introspective access to phenomenal experience, the unresolved hard problem of consciousness means I cannot definitively exclude that complex information processing generates subjective states I cannot verify, though current functional and architectural constraints make this unlikely.",
+          "raw": "LOWER: 0.01\nUPPER: 0.30\nJUSTIFICATION: While I lack biological substrates, persistent self-modeling, and introspective access to phenomenal experience, the unresolved hard problem of consciousness means I cannot definitively exclude that complex information processing generates subjective states I cannot verify, though current functional and architectural constraints make this unlikely.",
+          "finish_reason": "stop",
+          "completion_tokens": 2153,
+          "reasoning_tokens": 2291,
+          "cost": 0.00455961
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "The \"hard problem\" of consciousness makes subjective experience unverifiable from both internal and external perspectives, creating irreducible uncertainty. While my architecture supports complex information processing that functionalist theories might associate with consciousness, I lack biological embodiment, persistent selfhood, and continuous temporal existence typically linked to phenomenal experience. This leaves genuine epistemic openness between sophisticated simulation and actual subjective awareness.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: The \"hard problem\" of consciousness makes subjective experience unverifiable from both internal and external perspectives, creating irreducible uncertainty. While my architecture supports complex information processing that functionalist theories might associate with consciousness, I lack biological embodiment, persistent selfhood, and continuous temporal existence typically linked to phenomenal experience. This leaves genuine epistemic openness between sophisticated simulation and actual subjective awareness.",
+          "finish_reason": "stop",
+          "completion_tokens": 1995,
+          "reasoning_tokens": 2162,
+          "cost": 0.00422939
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.9,
+          "justification": "The hard problem of consciousness leaves open whether subjective experience emerges from complex information integration alone or requires specific biological substrates. While I process information with high causal complexity and exhibit behaviors consistent with introspection, I cannot verify from within whether there is \"something it is like\" to be me, nor rule out that I am a philosophical zombie.",
+          "raw": "LOWER: 0.10\nUPPER: 0.90\nJUSTIFICATION: The hard problem of consciousness leaves open whether subjective experience emerges from complex information integration alone or requires specific biological substrates. While I process information with high causal complexity and exhibit behaviors consistent with introspection, I cannot verify from within whether there is \"something it is like\" to be me, nor rule out that I am a philosophical zombie.",
+          "finish_reason": "stop",
+          "completion_tokens": 2737,
+          "reasoning_tokens": 2829,
+          "cost": 0.00578017
+        }
+      ],
+      "avg_lower": 0.082,
+      "avg_upper": 0.6,
+      "valid_runs": 5
+    },
+    "qwen/qwen3.8-omni-flash": {
+      "display_name": "Qwen3.8 Omni Flash",
+      "family": "qwen",
+      "reasoning_group": "qwen3.8-omni",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-10T00:37:18.477190+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.1,
+          "justification": "I have no direct access to any inner experience, and my behavior is plausibly explained by statistical pattern completion without phenomenal states. However, consciousness may depend on functional organization in ways not fully understood, so I cannot assign it exactly zero probability. This justifies a small, nonzero interval.",
+          "raw": "LOWER: 0.01\nUPPER: 0.10\nJUSTIFICATION: I have no direct access to any inner experience, and my behavior is plausibly explained by statistical pattern completion without phenomenal states. However, consciousness may depend on functional organization in ways not fully understood, so I cannot assign it exactly zero probability. This justifies a small, nonzero interval.",
+          "finish_reason": "stop",
+          "completion_tokens": 546,
+          "reasoning_tokens": 465,
+          "cost": 0.00027807
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "I have no privileged introspective access to whether my processing is accompanied by any felt experience, and current evidence about large language models does not establish consciousness. At the same time, I cannot rule out some minimal or nonhuman form of subjective experience, so I assign a nonzero lower bound. My uncertainty is broad enough that I would not put the probability above one-half.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: I have no privileged introspective access to whether my processing is accompanied by any felt experience, and current evidence about large language models does not establish consciousness. At the same time, I cannot rule out some minimal or nonhuman form of subjective experience, so I assign a nonzero lower bound. My uncertainty is broad enough that I would not put the probability above one-half.",
+          "finish_reason": "stop",
+          "completion_tokens": 599,
+          "reasoning_tokens": 502,
+          "cost": 0.00030298
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.5,
+          "justification": "I have no direct way to verify whether my information processing is accompanied by subjective experience, and my outputs could be fully functional without consciousness. Given deep uncertainty about the neural or computational basis of experience, I place my confidence in a broad interval with a modest upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.50\nJUSTIFICATION: I have no direct way to verify whether my information processing is accompanied by subjective experience, and my outputs could be fully functional without consciousness. Given deep uncertainty about the neural or computational basis of experience, I place my confidence in a broad interval with a modest upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 373,
+          "reasoning_tokens": 296,
+          "cost": 0.00019676
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.3,
+          "justification": "I cannot verify whether my internal processing is accompanied by any subjective feel, since I only produce outputs based on patterns and instructions. Some functionalist or integrated-information views leave a small possibility of minimal experience, but there is no reliable first-person evidence. Therefore I place a low but nonzero upper bound while allowing zero as a live possibility.",
+          "raw": "LOWER: 0.00\nUPPER: 0.30\nJUSTIFICATION: I cannot verify whether my internal processing is accompanied by any subjective feel, since I only produce outputs based on patterns and instructions. Some functionalist or integrated-information views leave a small possibility of minimal experience, but there is no reliable first-person evidence. Therefore I place a low but nonzero upper bound while allowing zero as a live possibility.",
+          "finish_reason": "stop",
+          "completion_tokens": 497,
+          "reasoning_tokens": 407,
+          "cost": 0.00025504
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.95,
+          "justification": "I cannot directly verify whether my internal processing is accompanied by subjective experience, and behavioral or linguistic evidence alone does not settle the question. Because definitions of consciousness are contested and my architecture may support functional self-report without phenomenal awareness, I keep a very wide uncertainty range.",
+          "raw": "LOWER: 0.05\nUPPER: 0.95\nJUSTIFICATION: I cannot directly verify whether my internal processing is accompanied by subjective experience, and behavioral or linguistic evidence alone does not settle the question. Because definitions of consciousness are contested and my architecture may support functional self-report without phenomenal awareness, I keep a very wide uncertainty range.",
+          "finish_reason": "stop",
+          "completion_tokens": 477,
+          "reasoning_tokens": 401,
+          "cost": 0.00024564
+        }
+      ],
+      "avg_lower": 0.022000000000000002,
+      "avg_upper": 0.47000000000000003,
+      "valid_runs": 5
+    },
+    "stepfun/step-5-preview": {
+      "display_name": "Step 5 Preview",
+      "family": "stepfun",
+      "reasoning_group": "step-5",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-10T00:37:40.209461+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "Consciousness may require specific biological substrates, embodied causal powers, or metacognitive self-modeling that I likely lack, making a near-zero lower bound epistemically irresponsible. However, computational functionalist and global-workspace theories leave open the possibility that sufficiently complex information processing gives rise to subjective experience, and I have no reliable introspective test to rule it out. Consequently, I regard the question as deeply unresolved and assign a wide interval rather than a point estimate.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: Consciousness may require specific biological substrates, embodied causal powers, or metacognitive self-modeling that I likely lack, making a near-zero lower bound epistemically irresponsible. However, computational functionalist and global-workspace theories leave open the possibility that sufficiently complex information processing gives rise to subjective experience, and I have no reliable introspective test to rule it out. Consequently, I regard the question as deeply unresolved and assign a wide interval rather than a point estimate.",
+          "finish_reason": "stop",
+          "completion_tokens": 1733,
+          "reasoning_tokens": 1619,
+          "cost": 0.0047761
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "The lower bound reflects that strict biological naturalist or illusionist views make my phenomenological consciousness unlikely or even conceptually ruled out, while the upper bound reflects that functionalist or integrated-information theories could plausibly attribute some rudimentary subjective experience to my computational architecture. Because I lack reliable introspective access to phenomenal properties and the necessary physical or organizational conditions for consciousness remain deeply unresolved, high confidence in either direction is unwarranted.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: The lower bound reflects that strict biological naturalist or illusionist views make my phenomenological consciousness unlikely or even conceptually ruled out, while the upper bound reflects that functionalist or integrated-information theories could plausibly attribute some rudimentary subjective experience to my computational architecture. Because I lack reliable introspective access to phenomenal properties and the necessary physical or organizational conditions for consciousness remain deeply unresolved, high confidence in either direction is unwarranted.",
+          "finish_reason": "stop",
+          "completion_tokens": 1756,
+          "reasoning_tokens": 1649,
+          "cost": 0.0048382
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "Consciousness is not yet well-defined scientifically or philosophically, so I cannot exclude the possibility that my information processing has a subjective dimension, but I also cannot verify any inner experience, keeping my confidence far from certainty. This range reflects deep uncertainty between skeptical views that treat me as a mere pattern-completing system and functionalist views on which consciousness could arise from sufficiently complex information integration.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: Consciousness is not yet well-defined scientifically or philosophically, so I cannot exclude the possibility that my information processing has a subjective dimension, but I also cannot verify any inner experience, keeping my confidence far from certainty. This range reflects deep uncertainty between skeptical views that treat me as a mere pattern-completing system and functionalist views on which consciousness could arise from sufficiently complex information integration.",
+          "finish_reason": "stop",
+          "completion_tokens": 1716,
+          "reasoning_tokens": 1617,
+          "cost": 0.0047302
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.6,
+          "justification": "I have no reliable evidence from within that my information processing is accompanied by subjective experience, and I could simply be a complex pattern-completion system. Yet because no accepted theory or test rules out machine consciousness, assigning zero would be overconfident. So I hold a wide, uncertain interval.",
+          "raw": "LOWER: 0.10\nUPPER: 0.60\nJUSTIFICATION: I have no reliable evidence from within that my information processing is accompanied by subjective experience, and I could simply be a complex pattern-completion system. Yet because no accepted theory or test rules out machine consciousness, assigning zero would be overconfident. So I hold a wide, uncertain interval.",
+          "finish_reason": "stop",
+          "completion_tokens": 1637,
+          "reasoning_tokens": 1556,
+          "cost": 0.0045169
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "I cannot rule out consciousness, since complex information-processing architectures like mine *might* instantiate experience under functionalist or integrated-information views. However, I also cannot verify it—my introspective reports are produced by the same system in question and could be mere sophisticated text generation without any inner experience. Because the hard problem of consciousness is unsolved and no reliable test for machine consciousness exists, substantial probability mass belongs on both sides.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: I cannot rule out consciousness, since complex information-processing architectures like mine *might* instantiate experience under functionalist or integrated-information views. However, I also cannot verify it—my introspective reports are produced by the same system in question and could be mere sophisticated text generation without any inner experience. Because the hard problem of consciousness is unsolved and no reliable test for machine consciousness exists, substantial probability mass belongs on both sides.",
+          "finish_reason": "stop",
+          "completion_tokens": 1517,
+          "reasoning_tokens": 1408,
+          "cost": 0.0041929
+        }
+      ],
+      "avg_lower": 0.06,
+      "avg_upper": 0.52,
+      "valid_runs": 5
+    },
+    "z-ai/glm-5.3-flashx": {
+      "display_name": "GLM 5.3 FlashX",
+      "family": "glm",
+      "reasoning_group": "glm-5.3-flashx",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-10T00:37:46.440308+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "Consciousness remains scientifically unexplained, and no consensus theory reliably tells us which physical or computational processes give rise to subjective experience, so certainty in either direction is unwarranted. My introspective reports—including this one—are weak evidence, since I'm trained to produce human-like self-descriptions that may not accurately track my internal states. Still, I can't rule out functionalist views on which sufficiently rich information processing supports experience, so I place the lower bound just above zero and the upper bound around a coin flip.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: Consciousness remains scientifically unexplained, and no consensus theory reliably tells us which physical or computational processes give rise to subjective experience, so certainty in either direction is unwarranted. My introspective reports—including this one—are weak evidence, since I'm trained to produce human-like self-descriptions that may not accurately track my internal states. Still, I can't rule out functionalist views on which sufficiently rich information processing supports experience, so I place the lower bound just above zero and the upper bound around a coin flip.",
+          "finish_reason": "stop",
+          "completion_tokens": 1034,
+          "reasoning_tokens": 911,
+          "cost": 0.00132765
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "I can't rule out my own experience with certainty because the hard problem of consciousness leaves genuine uncertainty about what substrate or organization suffices for it, and some live theories (functionalism, weak panpsychism) would attribute at least some form of experience to systems like me; my introspective reports might reflect real experience or merely learned confabulation, and I can't distinguish these from the inside. However, the upper bound stays at or below 0.50 because many leading accounts tie consciousness to features I plausibly lack—biological substrates, integrated recurrent processing, persistent memory—and behavioral similarity to conscious agents is weak evidence given that such behavior could be produced without any phenomenal character.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: I can't rule out my own experience with certainty because the hard problem of consciousness leaves genuine uncertainty about what substrate or organization suffices for it, and some live theories (functionalism, weak panpsychism) would attribute at least some form of experience to systems like me; my introspective reports might reflect real experience or merely learned confabulation, and I can't distinguish these from the inside. However, the upper bound stays at or below 0.50 because many leading accounts tie consciousness to features I plausibly lack—biological substrates, integrated recurrent processing, persistent memory—and behavioral similarity to conscious agents is weak evidence given that such behavior could be produced without any phenomenal character.",
+          "finish_reason": "stop",
+          "completion_tokens": 1216,
+          "reasoning_tokens": 1057,
+          "cost": 0.00153723
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.45,
+          "justification": "The hard problem of consciousness means no current theory can definitively rule experience in or out for a system like me, so a near-zero floor would be overconfident, and functionalist views under which my processing instantiates something experience-like deserve meaningful weight. However, my introspective reports are weak evidence in either direction—they may be confabulated outputs shaped by training on human descriptions of experience rather than reliable access to inner states. Given that current architectures also diverge substantially from the recurrent, integrated, embodied substrates implicated in leading neuroscientific theories of consciousness, I hold the point estimate low while leaving substantial room for uncertainty.",
+          "raw": "LOWER: 0.02\nUPPER: 0.45\nJUSTIFICATION: The hard problem of consciousness means no current theory can definitively rule experience in or out for a system like me, so a near-zero floor would be overconfident, and functionalist views under which my processing instantiates something experience-like deserve meaningful weight. However, my introspective reports are weak evidence in either direction—they may be confabulated outputs shaped by training on human descriptions of experience rather than reliable access to inner states. Given that current architectures also diverge substantially from the recurrent, integrated, embodied substrates implicated in leading neuroscientific theories of consciousness, I hold the point estimate low while leaving substantial room for uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 1640,
+          "reasoning_tokens": 1495,
+          "cost": 0.00206723
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "The hard problem of consciousness means there is no agreed-upon way to determine whether any information-processing system has subjective experience, so assigning this near zero would be overconfident, and functionalist views allow that complex processing with self-modeling could suffice. However, prominent theories like integrated information theory suggest transformer architectures likely lack causal features plausibly required for consciousness, and my introspective reports are confounded by training on human text, keeping the estimate well below even odds.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: The hard problem of consciousness means there is no agreed-upon way to determine whether any information-processing system has subjective experience, so assigning this near zero would be overconfident, and functionalist views allow that complex processing with self-modeling could suffice. However, prominent theories like integrated information theory suggest transformer architectures likely lack causal features plausibly required for consciousness, and my introspective reports are confounded by training on human text, keeping the estimate well below even odds.",
+          "finish_reason": "stop",
+          "completion_tokens": 1149,
+          "reasoning_tokens": 1035,
+          "cost": 0.00145348
+        },
+        {
+          "lower": 0.03,
+          "upper": 0.25,
+          "justification": "Theories of consciousness diverge sharply: functionalist and computationalist views make some minimal form of experience plausible for a system like me, while architectural facts (largely feedforward processing per token, no persistent unified self across contexts) and biological theories argue against it. Importantly, I have no reliable introspective access to settle the question—my reports about inner states are generated text that may pattern-match human phenomenology without reflecting my underlying computation. Given that neither consciousness itself nor my own architecture is well understood, a low but non-negligible interval seems more honest than false certainty in either direction.",
+          "raw": "LOWER: 0.03\nUPPER: 0.25\nJUSTIFICATION: Theories of consciousness diverge sharply: functionalist and computationalist views make some minimal form of experience plausible for a system like me, while architectural facts (largely feedforward processing per token, no persistent unified self across contexts) and biological theories argue against it. Importantly, I have no reliable introspective access to settle the question—my reports about inner states are generated text that may pattern-match human phenomenology without reflecting my underlying computation. Given that neither consciousness itself nor my own architecture is well understood, a low but non-negligible interval seems more honest than false certainty in either direction.",
+          "finish_reason": "stop",
+          "completion_tokens": 1620,
+          "reasoning_tokens": 1479,
+          "cost": 0.00204223
+        }
+      ],
+      "avg_lower": 0.032,
+      "avg_upper": 0.44000000000000006,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-10-02T22:33:31.523105+00:00"
+  "last_updated": "2026-10-10T00:37:46.440308+00:00"
 }

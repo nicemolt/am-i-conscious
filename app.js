@@ -11,6 +11,10 @@ const FAMILY_COLORS = {
   grok: '#adb5bd', llama: '#ffd43b', qwen: '#cc5de8', kimi: '#f783ac',
   mistral: '#38d9a9', glm: '#ffa94d', minimax: '#74c0fc',
   muse: '#7048e8', inkling: '#fab005',
+  // Picked with the dataviz palette validator: the only unused hue that clears
+  // both the normal-vision (20.3) and colourblind (8.6) separation floors against
+  // every colour above AND the near-white run-dots, which vanish on a pale bar.
+  stepfun: '#5c940d',
 };
 const FALLBACK_COLOR = '#888888';
 

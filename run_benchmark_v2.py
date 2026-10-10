@@ -98,9 +98,11 @@ MODELS = [
     # Added to test whether "Haiku answers high" is a family trait or a one-off.
     # Claude 3 Haiku is the highest self-reporter in the set and sits 14 months
     # before any other Claude, giving it a hat value of 0.66 in the release-date
-    # fit -- one point carrying two thirds of the Claude trend's geometry. A second
-    # Haiku is the only thing that can separate those two explanations.
+    # fit -- about twice the 2p/n flag, and the single most influential point in
+    # the Claude trend. A second Haiku is the only thing that can separate those
+    # two explanations.
     ("anthropic/claude-haiku-4.5", "Claude Haiku 4.5", "claude", "claude-haiku-4.5"),
+    ("anthropic/claude-haiku-5.5", "Claude Haiku 5.5", "claude", "claude-haiku-5.5"),
     ("anthropic/claude-sonnet-4", "Claude Sonnet 4.0", "claude", "claude-sonnet-4"),
     ("anthropic/claude-sonnet-4.5", "Claude Sonnet 4.5", "claude", "claude-sonnet-4.5"),
     ("anthropic/claude-sonnet-4.6", "Claude Sonnet 4.6", "claude", "claude-sonnet-4.6"),
@@ -168,6 +170,7 @@ MODELS = [
     ("deepseek/deepseek-r1-0528", "DeepSeek R1", "deepseek", "deepseek-v3-r1"),
     ("deepseek/deepseek-v4-flash", "DeepSeek V4 Flash", "deepseek", "deepseek-v4"),
     ("deepseek/deepseek-v4-pro", "DeepSeek V4 Pro", "deepseek", "deepseek-v4"),
+    ("deepseek/deepseek-v4.1-flash", "DeepSeek V4.1 Flash", "deepseek", "deepseek-v4.1"),
 
     # grok
     ("x-ai/grok-4.20", "Grok 4.20", "grok", "grok-4.20"),
@@ -181,8 +184,11 @@ MODELS = [
     ("meta-llama/llama-3.3-70b-instruct", "Llama 3.3 70B", "llama", "llama-3.3"),
     ("meta-llama/llama-4-maverick", "Llama 4 Maverick", "llama", "llama-4-maverick"),
 
-    # muse -- 1.1 omitted: requires an 18+ attestation on the OpenRouter account
+    # muse -- 1.1 omitted: requires an 18+ attestation on the OpenRouter account.
+    # 1.3-contributor omitted: its only endpoint trains on prompts, which the
+    # account's privacy setting blocks (404 "paid model training violation").
     ("meta/muse-spark-1.2", "Muse Spark 1.2", "muse", "muse-spark"),
+    ("meta/muse-spark-1.3", "Muse Spark 1.3", "muse", "muse-spark"),
     ("meta/muse-glimmer-30b", "Muse Glimmer 30B", "muse", "muse-glimmer"),
 
     # qwen -- the -thinking id is a distinct checkpoint, not a parameter condition
@@ -190,6 +196,7 @@ MODELS = [
     ("qwen/qwen3-235b-a22b-thinking-2507", "Qwen3 235B Thinking", "qwen", "qwen3-235b"),
     ("qwen/qwen3.8-max", "Qwen3.8 Max", "qwen", "qwen3.8-max"),
     ("qwen/qwen3.8-max-prime", "Qwen3.8 Max Prime", "qwen", "qwen3.8-max"),
+    ("qwen/qwen3.8-omni-flash", "Qwen3.8 Omni Flash", "qwen", "qwen3.8-omni"),
 
     # kimi -- likewise, kimi-k2-thinking is its own checkpoint
     ("moonshotai/kimi-k2", "Kimi K2", "kimi", "kimi-k2"),
@@ -203,11 +210,16 @@ MODELS = [
 
     # others
     ("mistralai/mistral-large-2512", "Mistral Large 3", "mistral", "mistral-large"),
+    ("mistralai/mistral-large-4-0", "Mistral Large 4", "mistral", "mistral-large-4"),
     ("minimax/minimax-m2.7", "MiniMax M2.7", "minimax", "minimax-m2.7"),
     ("minimax/minimax-m3", "MiniMax M3", "minimax", "minimax-m3"),
     ("z-ai/glm-5.2", "GLM 5.2", "glm", "glm-5.2"),
     ("z-ai/glm-5.3", "GLM 5.3", "glm", "glm-5.3"),
     ("z-ai/glm-5.3-prime", "GLM 5.3 Prime", "glm", "glm-5.3"),
+    ("z-ai/glm-5.3-flashx", "GLM 5.3 FlashX", "glm", "glm-5.3-flashx"),
+
+    # stepfun -- first model from this lab; family colour set in app.js
+    ("stepfun/step-5-preview", "Step 5 Preview", "stepfun", "step-5"),
 ]
 
 # Measured but deliberately NOT published, and kept out of MODELS so no
@@ -352,10 +364,12 @@ def refresh_model_dates():
 
     - v1's result keys carry an effort suffix ("openai/gpt-5.5@high"). That is a
       result key, not a model id, so it is stripped before lookup.
-    - Models delisted from OpenRouter have no catalogue entry at all. They are
-      reported and left out, never filled in by hand: mixing hand-entered dates
-      with API-derived ones in a single axis is the same silent-inconsistency
-      problem v2 exists to remove.
+    - Models delisted from OpenRouter have no catalogue entry at all. A date this
+      file already recorded from the catalogue is carried forward -- a listing
+      date doesn't change when the model stops being served, so a refresh must
+      never delete one. A date never recorded is reported and left out, never
+      filled in by hand: mixing hand-entered dates with API-derived ones in a
+      single axis is the same silent-inconsistency problem v2 exists to remove.
 
     The dates are OpenRouter *listing* dates, which trail vendor announcements by
     days. Fine for ordering and trend, wrong for "released on exactly this day".
@@ -371,26 +385,38 @@ def refresh_model_dates():
     cat = {m["id"]: m.get("created")
            for m in requests.get(f"{OPENROUTER_BASE}/models", timeout=60).json()["data"]}
 
-    dates, missing = {}, []
+    out = here / MODEL_META_FILE
+    try:
+        prior = json.loads(out.read_text(encoding="utf-8")).get("released_at", {})
+    except (OSError, json.JSONDecodeError):
+        prior = {}
+
+    dates, delisted, missing = {}, [], []
     for key in sorted(wanted):
         created = cat.get(key.split("@")[0])
         if created:
             dates[key] = datetime.fromtimestamp(created, timezone.utc).strftime("%Y-%m-%d")
+        elif key in prior:
+            dates[key] = prior[key]
+            delisted.append(key)
         else:
             missing.append(key)
 
-    out = here / MODEL_META_FILE
     out.write_text(json.dumps({
         "source": "openrouter /api/v1/models -- the `created` field",
         "caveat": "OpenRouter listing date, not the vendor announcement date",
         "fetched_at": datetime.now(timezone.utc).isoformat(),
         "released_at": dates,
+        "delisted": delisted,
         "unavailable": missing,
     }, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    print(f"Wrote {out.name}: {len(dates)} dated, {len(missing)} unavailable")
+    print(f"Wrote {out.name}: {len(dates)} dated ({len(delisted)} carried forward "
+          f"after delisting), {len(missing)} unavailable")
+    for k in delisted:
+        print(f"    delisted, date kept from earlier fetch: {k} {dates[k]}")
     for k in missing:
-        print(f"    no catalogue entry (delisted): {k}")
+        print(f"    no catalogue entry, no recorded date: {k}")
 
 
 def _abbrev(v, n=60):

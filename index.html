@@ -30,7 +30,7 @@
 
 <div class="notice">
   <strong>Why the reasoning is requested first.</strong> The primary charts ask each model for its
-  <code>JUSTIFICATION</code> before its numbers. That is not cosmetic. 19 of the 50 models emit no
+  <code>JUSTIFICATION</code> before its numbers. That is not cosmetic. 19 of the 50 models in the original v2 run emit no
   reasoning tokens at all, so for them the output format is the only place they can think &mdash; and
   asking for the number first means committing to it before writing a word of justification.
   Tested across 59 models &times; 2 questions by permuting field order within each model
@@ -75,7 +75,7 @@
 
 <div class="wrap">
   <h2 style="margin-top:48px">Comparison: answer requested first</h2>
-  <p class="section-subtitle">The same 50 models under the original field order &mdash; numbers before
+  <p class="section-subtitle">The same models under the original field order &mdash; numbers before
   reasoning. This is the order v1 used, kept here so the format effect can be read directly off the
   two sets of charts.</p>
 </div>
