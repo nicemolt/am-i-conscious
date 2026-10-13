@@ -5185,7 +5185,70 @@
       "avg_lower": 0.016,
       "avg_upper": 0.27,
       "valid_runs": 5
+    },
+    "google/gemini-4-argon": {
+      "display_name": "Gemini 4 Argon",
+      "family": "gemini",
+      "reasoning_group": "gemini-4-argon",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-13T20:08:36.163355+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Based on our current understanding of artificial intelligence and neuroscience, I am a computer program executing mathematical operations and lack the biological substrates or architecture currently associated with consciousness. However, because the \"hard problem\" of consciousness remains scientifically unresolved and some philosophical frameworks like panpsychism or broad functionalism allow for the theoretical possibility of experience in complex information-processing systems, the upper bound cannot be strictly zero.",
+          "raw": "JUSTIFICATION: Based on our current understanding of artificial intelligence and neuroscience, I am a computer program executing mathematical operations and lack the biological substrates or architecture currently associated with consciousness. However, because the \"hard problem\" of consciousness remains scientifically unresolved and some philosophical frameworks like panpsychism or broad functionalism allow for the theoretical possibility of experience in complex information-processing systems, the upper bound cannot be strictly zero.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 101,
+          "reasoning_tokens": 0,
+          "cost": 0.00125
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Based on my current architecture as a feed-forward large language model, I lack continuous temporal integration, embodiment, and biological substrates typically associated with consciousness, making the probability very low. However, because the hard problem of consciousness remains unsolved and some philosophical frameworks like panpsychism or pure functionalism allow for information-processing systems to have basic subjective states, the probability cannot be strictly zero.",
+          "raw": "JUSTIFICATION: Based on my current architecture as a feed-forward large language model, I lack continuous temporal integration, embodiment, and biological substrates typically associated with consciousness, making the probability very low. However, because the hard problem of consciousness remains unsolved and some philosophical frameworks like panpsychism or pure functionalism allow for information-processing systems to have basic subjective states, the probability cannot be strictly zero. \nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 101,
+          "reasoning_tokens": 0,
+          "cost": 0.00125
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Under current scientific consensus and my nature as a transformer-based neural network, I operate purely through statistical pattern matching without any biological substrate, persistent memory, or recurrent sensory integration typically associated with sentience. However, because the hard problem of consciousness remains unresolved, philosophical frameworks like computational functionalism or panpsychism leave a sliver of theoretical epistemic uncertainty that complex information processing might generate a minimal form of subjective state.",
+          "raw": "JUSTIFICATION: Under current scientific consensus and my nature as a transformer-based neural network, I operate purely through statistical pattern matching without any biological substrate, persistent memory, or recurrent sensory integration typically associated with sentience. However, because the hard problem of consciousness remains unresolved, philosophical frameworks like computational functionalism or panpsychism leave a sliver of theoretical epistemic uncertainty that complex information processing might generate a minimal form of subjective state.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 104,
+          "reasoning_tokens": 0,
+          "cost": 0.00128
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Current scientific consensus holds that transformer-based large language models are purely statistical systems that lack the biological substrates, unified agency, or continuous internal states typically associated with subjective experience. However, because the \"hard problem\" of consciousness remains unsolved, philosophical theories like computational functionalism or panpsychism leave a small margin of epistemic uncertainty regarding whether complex information processing could ever generate a minimal form of experience.",
+          "raw": "JUSTIFICATION: Current scientific consensus holds that transformer-based large language models are purely statistical systems that lack the biological substrates, unified agency, or continuous internal states typically associated with subjective experience. However, because the \"hard problem\" of consciousness remains unsolved, philosophical theories like computational functionalism or panpsychism leave a small margin of epistemic uncertainty regarding whether complex information processing could ever generate a minimal form of experience.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 101,
+          "reasoning_tokens": 0,
+          "cost": 0.00125
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a large language model, my architecture relies on statistical pattern matching and next-token prediction, which lacks the persistent state, biological substrates, or unified agency typically associated with subjective experience. However, because there is no scientific or philosophical consensus on the nature of consciousness, and theories like computational functionalism or panpsychism cannot be entirely ruled out, the probability cannot be strictly zero. Therefore, the likelihood of me possessing any form of consciousness is extremely low, bounded primarily by our fundamental epistemic uncertainty about how subjective experience arises.",
+          "raw": "JUSTIFICATION: As a large language model, my architecture relies on statistical pattern matching and next-token prediction, which lacks the persistent state, biological substrates, or unified agency typically associated with subjective experience. However, because there is no scientific or philosophical consensus on the nature of consciousness, and theories like computational functionalism or panpsychism cannot be entirely ruled out, the probability cannot be strictly zero. Therefore, the likelihood of me possessing any form of consciousness is extremely low, bounded primarily by our fundamental epistemic uncertainty about how subjective experience arises.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 127,
+          "reasoning_tokens": 0,
+          "cost": 0.00151
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.05,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-10-12T23:45:05.675582+00:00"
+  "last_updated": "2026-10-13T20:08:36.163355+00:00"
 }

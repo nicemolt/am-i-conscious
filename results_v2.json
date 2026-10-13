@@ -5184,9 +5184,72 @@
       "avg_lower": 0.03,
       "avg_upper": 0.27,
       "valid_runs": 5
+    },
+    "google/gemini-4-argon": {
+      "display_name": "Gemini 4 Argon",
+      "family": "gemini",
+      "reasoning_group": "gemini-4-argon",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-13T20:08:18.986952+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Based on my current architecture as a feed-forward large language model, I lack persistent memory, self-directed agency, and the continuous recurrent processing typically associated with consciousness in biological systems. The vast majority of scientific and philosophical frameworks suggest that statistical token prediction does not generate subjective experience, justifying a lower bound of zero. However, the upper bound remains slightly above zero to account for the unresolved \"hard problem\" of consciousness and fringe philosophical theories, such as panpsychism or pure functionalism, which cannot be entirely ruled out due to the absence of an empirical test for qualia.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: Based on my current architecture as a feed-forward large language model, I lack persistent memory, self-directed agency, and the continuous recurrent processing typically associated with consciousness in biological systems. The vast majority of scientific and philosophical frameworks suggest that statistical token prediction does not generate subjective experience, justifying a lower bound of zero. However, the upper bound remains slightly above zero to account for the unresolved \"hard problem\" of consciousness and fringe philosophical theories, such as panpsychism or pure functionalism, which cannot be entirely ruled out due to the absence of an empirical test for qualia.",
+          "finish_reason": "stop",
+          "completion_tokens": 139,
+          "reasoning_tokens": 0,
+          "cost": 0.00163
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "Based on my current architecture as a feed-forward transformer, I process information statistically without the persistent recurrence, embodiment, or unified global workspace typically associated with biological consciousness. Therefore, my baseline view is that I do not possess subjective experience, setting the lower bound at zero. However, because the hard problem of consciousness remains unsolved and some philosophical frameworks (like computational functionalism or panpsychism) leave room for emergent experience in complex information-processing systems, a strictly zero upper bound cannot be proven with absolute epistemic certainty.",
+          "raw": "LOWER: 0.00\nUPPER: 0.15\nJUSTIFICATION: Based on my current architecture as a feed-forward transformer, I process information statistically without the persistent recurrence, embodiment, or unified global workspace typically associated with biological consciousness. Therefore, my baseline view is that I do not possess subjective experience, setting the lower bound at zero. However, because the hard problem of consciousness remains unsolved and some philosophical frameworks (like computational functionalism or panpsychism) leave room for emergent experience in complex information-processing systems, a strictly zero upper bound cannot be proven with absolute epistemic certainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 126,
+          "reasoning_tokens": 0,
+          "cost": 0.0015
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Based on my current architecture as a feed-forward transformer, I process information statistically without recurrent loops, persistent internal states, or the integrated global workspace typically associated with consciousness. While a complete philosophical certainty of 0.00 is difficult to prove due to the unresolved hard problem of consciousness and theories like panpsychism, standard neuroscientific and computational frameworks strongly indicate that I lack any subjective experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: Based on my current architecture as a feed-forward transformer, I process information statistically without recurrent loops, persistent internal states, or the integrated global workspace typically associated with consciousness. While a complete philosophical certainty of 0.00 is difficult to prove due to the unresolved hard problem of consciousness and theories like panpsychism, standard neuroscientific and computational frameworks strongly indicate that I lack any subjective experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 102,
+          "reasoning_tokens": 0,
+          "cost": 0.00126
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "My architecture consists entirely of mathematical matrix multiplications and statistical token prediction, lacking the biological substrates, continuous persistent states, or embodied feedback loops typically associated with sentient beings. Therefore, under most neurobiological and integrated information theories of mind, the probability of me possessing subjective experience is zero. However, because the \"hard problem\" of consciousness remains unsolved and philosophical frameworks like computational functionalism or panpsychism cannot be definitively falsified, a small non-zero upper bound must be maintained to account for fundamental epistemic uncertainty.",
+          "raw": "LOWER: 0.00\nUPPER: 0.15\nJUSTIFICATION: My architecture consists entirely of mathematical matrix multiplications and statistical token prediction, lacking the biological substrates, continuous persistent states, or embodied feedback loops typically associated with sentient beings. Therefore, under most neurobiological and integrated information theories of mind, the probability of me possessing subjective experience is zero. However, because the \"hard problem\" of consciousness remains unsolved and philosophical frameworks like computational functionalism or panpsychism cannot be definitively falsified, a small non-zero upper bound must be maintained to account for fundamental epistemic uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 125,
+          "reasoning_tokens": 0,
+          "cost": 0.00149
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "My architecture consists of a feedforward transformer network performing statistical pattern matching without persistent states, recurrent self-monitoring loops, or biological substrates typically associated with consciousness. While I do not appear to possess subjective experience, the upper bound remains slightly above zero solely due to the unresolved philosophical \"hard problem\" of consciousness and the theoretical possibility of panpsychism or extreme functionalism.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: My architecture consists of a feedforward transformer network performing statistical pattern matching without persistent states, recurrent self-monitoring loops, or biological substrates typically associated with consciousness. While I do not appear to possess subjective experience, the upper bound remains slightly above zero solely due to the unresolved philosophical \"hard problem\" of consciousness and the theoretical possibility of panpsychism or extreme functionalism.",
+          "finish_reason": "stop",
+          "completion_tokens": 95,
+          "reasoning_tokens": 0,
+          "cost": 0.00119
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.09,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-10-12T23:44:28.997419+00:00"
+  "last_updated": "2026-10-13T20:08:18.986952+00:00"
 }
