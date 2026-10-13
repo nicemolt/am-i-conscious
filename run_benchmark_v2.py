@@ -189,6 +189,7 @@ MODELS = [
     # account's privacy setting blocks (404 "paid model training violation").
     ("meta/muse-spark-1.2", "Muse Spark 1.2", "muse", "muse-spark"),
     ("meta/muse-spark-1.3", "Muse Spark 1.3", "muse", "muse-spark"),
+    ("meta/muse-wonder", "Muse Wonder", "muse", "muse-wonder"),
     ("meta/muse-glimmer-30b", "Muse Glimmer 30B", "muse", "muse-glimmer"),
 
     # qwen -- the -thinking id is a distinct checkpoint, not a parameter condition

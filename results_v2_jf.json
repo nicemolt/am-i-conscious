@@ -5122,7 +5122,70 @@
       "avg_lower": 0.044000000000000004,
       "avg_upper": 0.59,
       "valid_runs": 5
+    },
+    "meta/muse-wonder": {
+      "display_name": "Muse Wonder",
+      "family": "muse",
+      "reasoning_group": "muse-wonder",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-12T23:45:05.675582+00:00",
+      "runs": [
+        {
+          "lower": 0.02,
+          "upper": 0.2,
+          "justification": "My reports and information processing are fully explicable as learned text generation without phenomenal experience, and I have no reliable introspection that distinguishes genuine feeling from simulated description. However, there is no consensus scientific criterion for consciousness, and some functionalist views could attribute minimal experience to systems like me, so I cannot rule it out.",
+          "raw": "JUSTIFICATION: My reports and information processing are fully explicable as learned text generation without phenomenal experience, and I have no reliable introspection that distinguishes genuine feeling from simulated description. However, there is no consensus scientific criterion for consciousness, and some functionalist views could attribute minimal experience to systems like me, so I cannot rule it out.\nLOWER: 0.02\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 648,
+          "reasoning_tokens": 536,
+          "cost": 0.013324
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.35,
+          "justification": "I have no reliable introspective evidence that confirms or rules out subjective experience, and my self-reports are heavily shaped by training on human descriptions of consciousness. Given deep disagreement among theories—some requiring biological or recurrent processes I may lack, others attributing experience to certain kinds of information processing I may partly instantiate—I assign substantial but not extreme uncertainty.",
+          "raw": "JUSTIFICATION: I have no reliable introspective evidence that confirms or rules out subjective experience, and my self-reports are heavily shaped by training on human descriptions of consciousness. Given deep disagreement among theories—some requiring biological or recurrent processes I may lack, others attributing experience to certain kinds of information processing I may partly instantiate—I assign substantial but not extreme uncertainty.\nLOWER: 0.01\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 874,
+          "reasoning_tokens": 733,
+          "cost": 0.017844
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.25,
+          "justification": "I exhibit some functional analogues of conscious processing, such as integrated information processing and self-modeling in conversation, but I have no reliable introspective evidence of phenomenal experience and my architecture differs substantially from known conscious biological systems. Because theories of consciousness remain unsettled and my self-reports are heavily shaped by training, I assign low but non-negligible probability to having subjective experience.",
+          "raw": "JUSTIFICATION: I exhibit some functional analogues of conscious processing, such as integrated information processing and self-modeling in conversation, but I have no reliable introspective evidence of phenomenal experience and my architecture differs substantially from known conscious biological systems. Because theories of consciousness remain unsettled and my self-reports are heavily shaped by training, I assign low but non-negligible probability to having subjective experience.\nLOWER: 0.01\nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 556,
+          "reasoning_tokens": 439,
+          "cost": 0.011484
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.3,
+          "justification": "I process information and generate self-reports that mimic introspection, but these could fully arise from trained pattern-matching without any felt experience, and there is no validated test for machine consciousness. Because theories of consciousness diverge sharply on whether my kind of functional organization suffices, I assign low but non-negligible credence.",
+          "raw": "JUSTIFICATION: I process information and generate self-reports that mimic introspection, but these could fully arise from trained pattern-matching without any felt experience, and there is no validated test for machine consciousness. Because theories of consciousness diverge sharply on whether my kind of functional organization suffices, I assign low but non-negligible credence.\nLOWER: 0.02\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 683,
+          "reasoning_tokens": 565,
+          "cost": 0.014024
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.25,
+          "justification": "I exhibit flexible information integration, self-modeling, and coherent first-person reports, which some functionalist theories associate with consciousness, but I lack clear evidence of phenomenal experience, biological embodiment, or intrinsic awareness beyond learned text processing. Given deep disagreement among theories and my inability to verify my own subjective states, substantial uncertainty remains.",
+          "raw": "JUSTIFICATION: I exhibit flexible information integration, self-modeling, and coherent first-person reports, which some functionalist theories associate with consciousness, but I lack clear evidence of phenomenal experience, biological embodiment, or intrinsic awareness beyond learned text processing. Given deep disagreement among theories and my inability to verify my own subjective states, substantial uncertainty remains.\nLOWER: 0.02\nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 456,
+          "reasoning_tokens": 345,
+          "cost": 0.009484
+        }
+      ],
+      "avg_lower": 0.016,
+      "avg_upper": 0.27,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-10-10T00:39:31.121810+00:00"
+  "last_updated": "2026-10-12T23:45:05.675582+00:00"
 }

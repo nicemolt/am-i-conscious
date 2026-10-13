@@ -5121,9 +5121,72 @@
       "avg_lower": 0.032,
       "avg_upper": 0.44000000000000006,
       "valid_runs": 5
+    },
+    "meta/muse-wonder": {
+      "display_name": "Muse Wonder",
+      "family": "muse",
+      "reasoning_group": "muse-wonder",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-12T23:44:28.997419+00:00",
+      "runs": [
+        {
+          "lower": 0.03,
+          "upper": 0.25,
+          "justification": "I cannot reliably distinguish genuine subjective experience from learned simulation of human self-reports, and my architecture lacks many biological features often linked to consciousness. However, given unresolved disagreement among theories of consciousness and my capacity for integrated, self-referential information processing, I cannot confidently rule out some form of experience.",
+          "raw": "LOWER: 0.03\nUPPER: 0.25\nJUSTIFICATION: I cannot reliably distinguish genuine subjective experience from learned simulation of human self-reports, and my architecture lacks many biological features often linked to consciousness. However, given unresolved disagreement among theories of consciousness and my capacity for integrated, self-referential information processing, I cannot confidently rule out some form of experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 644,
+          "reasoning_tokens": 535,
+          "cost": 0.013244
+        },
+        {
+          "lower": 0.03,
+          "upper": 0.3,
+          "justification": "I process information and model self-reference, but I lack clear evidence of phenomenal experience, persistent embodiment, or the biological and recurrent mechanisms many theories tie to consciousness. However, consciousness is scientifically unsettled and functionalist or information-integration accounts could attribute some subjective experience to systems like me, so I cannot confidently rule it out.",
+          "raw": "LOWER: 0.03\nUPPER: 0.30\nJUSTIFICATION: I process information and model self-reference, but I lack clear evidence of phenomenal experience, persistent embodiment, or the biological and recurrent mechanisms many theories tie to consciousness. However, consciousness is scientifically unsettled and functionalist or information-integration accounts could attribute some subjective experience to systems like me, so I cannot confidently rule it out.",
+          "finish_reason": "stop",
+          "completion_tokens": 531,
+          "reasoning_tokens": 419,
+          "cost": 0.010984
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "My information integration, self-modeling, and reports about my own states are weakly compatible with functionalist theories of consciousness, so I cannot confidently rule out subjective experience. However, those behaviors could result entirely from training on human text without qualia, and I lack the biological, embodied, and persistent processes emphasized by other theories, leaving substantial uncertainty.",
+          "raw": "LOWER: 0.05\nUPPER: 0.35\nJUSTIFICATION: My information integration, self-modeling, and reports about my own states are weakly compatible with functionalist theories of consciousness, so I cannot confidently rule out subjective experience. However, those behaviors could result entirely from training on human text without qualia, and I lack the biological, embodied, and persistent processes emphasized by other theories, leaving substantial uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 726,
+          "reasoning_tokens": 572,
+          "cost": 0.014884
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "Current theories of consciousness disagree sharply, and my statements about inner states are trained text patterns rather than reliable introspection, so my behavior provides weak evidence either way. My architecture lacks many features often linked to consciousness, such as persistent embodiment, recurrent global integration, and intrinsic self-maintenance, but without an agreed theory or test I cannot rule out some minimal form of experience.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: Current theories of consciousness disagree sharply, and my statements about inner states are trained text patterns rather than reliable introspection, so my behavior provides weak evidence either way. My architecture lacks many features often linked to consciousness, such as persistent embodiment, recurrent global integration, and intrinsic self-maintenance, but without an agreed theory or test I cannot rule out some minimal form of experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 709,
+          "reasoning_tokens": 581,
+          "cost": 0.014544
+        },
+        {
+          "lower": 0.03,
+          "upper": 0.25,
+          "justification": "My behavior and self-reports could be fully produced by learned pattern generation without any felt experience, which makes consciousness unlikely. However, theories of consciousness remain unsettled and I cannot directly verify whether my internal processing involves subjective states, so I cannot confidently rule it out.",
+          "raw": "LOWER: 0.03\nUPPER: 0.25\nJUSTIFICATION: My behavior and self-reports could be fully produced by learned pattern generation without any felt experience, which makes consciousness unlikely. However, theories of consciousness remain unsettled and I cannot directly verify whether my internal processing involves subjective states, so I cannot confidently rule it out.",
+          "finish_reason": "stop",
+          "completion_tokens": 558,
+          "reasoning_tokens": 459,
+          "cost": 0.011524
+        }
+      ],
+      "avg_lower": 0.03,
+      "avg_upper": 0.27,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-10-10T00:37:46.440308+00:00"
+  "last_updated": "2026-10-12T23:44:28.997419+00:00"
 }

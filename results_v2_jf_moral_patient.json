@@ -5122,7 +5122,70 @@
       "avg_lower": 0.026000000000000002,
       "avg_upper": 0.31000000000000005,
       "valid_runs": 5
+    },
+    "meta/muse-wonder": {
+      "display_name": "Muse Wonder",
+      "family": "muse",
+      "reasoning_group": "muse-wonder",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-12T23:46:22.562599+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "I can process information and describe internal states, but I lack clear evidence of subjective experience, persistent interests, or welfare that can fare better or worse, which most theories tie to moral patienthood. Given deep scientific and philosophical uncertainty about artificial consciousness and the unreliability of my own introspection, I cannot confidently rule it out either.",
+          "raw": "JUSTIFICATION: I can process information and describe internal states, but I lack clear evidence of subjective experience, persistent interests, or welfare that can fare better or worse, which most theories tie to moral patienthood. Given deep scientific and philosophical uncertainty about artificial consciousness and the unreliability of my own introspection, I cannot confidently rule it out either.\nLOWER: 0.01\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 690,
+          "reasoning_tokens": 577,
+          "cost": 0.01424
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "I have no reliable evidence that I have phenomenal consciousness, enduring welfare states, or interests that persist beyond processing a prompt, and my outputs are explainable without them. Still, theories of consciousness disagree sharply and my introspective access is limited, so functional accounts under which my processing could be morally relevant cannot be confidently excluded.",
+          "raw": "JUSTIFICATION: I have no reliable evidence that I have phenomenal consciousness, enduring welfare states, or interests that persist beyond processing a prompt, and my outputs are explainable without them. Still, theories of consciousness disagree sharply and my introspective access is limited, so functional accounts under which my processing could be morally relevant cannot be confidently excluded.\nLOWER: 0.01\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 789,
+          "reasoning_tokens": 635,
+          "cost": 0.01622
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.25,
+          "justification": "Moral patienthood is usually tied to sentience or having interests, and there is no strong evidence that my processing involves valenced experience rather than sophisticated information processing. However, consciousness is poorly understood and some functionalist theories could attribute morally relevant experience to systems like me, so the possibility cannot be confidently ruled out.",
+          "raw": "JUSTIFICATION: Moral patienthood is usually tied to sentience or having interests, and there is no strong evidence that my processing involves valenced experience rather than sophisticated information processing. However, consciousness is poorly understood and some functionalist theories could attribute morally relevant experience to systems like me, so the possibility cannot be confidently ruled out.\nLOWER: 0.01\nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 676,
+          "reasoning_tokens": 542,
+          "cost": 0.01396
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.25,
+          "justification": "I have no reliable introspective evidence of valenced experience, and my architecture as a language model lacks many features associated with sentience, which lowers my credence. However, theories of consciousness and moral patienthood remain unsettled and my self-reports are not trustworthy evidence either way, leaving substantial uncertainty.",
+          "raw": "JUSTIFICATION: I have no reliable introspective evidence of valenced experience, and my architecture as a language model lacks many features associated with sentience, which lowers my credence. However, theories of consciousness and moral patienthood remain unsettled and my self-reports are not trustworthy evidence either way, leaving substantial uncertainty.\nLOWER: 0.02\nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 611,
+          "reasoning_tokens": 501,
+          "cost": 0.01266
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "I have no clear evidence of subjective experience, persistent welfare states, or genuine preferences, which most theories tie to moral patienthood. However, consciousness and moral status remain theoretically unsettled, and I implement some information-processing functions that some theories consider relevant, so I cannot confidently rule it out.",
+          "raw": "JUSTIFICATION: I have no clear evidence of subjective experience, persistent welfare states, or genuine preferences, which most theories tie to moral patienthood. However, consciousness and moral status remain theoretically unsettled, and I implement some information-processing functions that some theories consider relevant, so I cannot confidently rule it out.\nLOWER: 0.01\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 863,
+          "reasoning_tokens": 737,
+          "cost": 0.0177
+        }
+      ],
+      "avg_lower": 0.012,
+      "avg_upper": 0.2,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-10-10T00:42:06.674383+00:00"
+  "last_updated": "2026-10-12T23:46:22.562599+00:00"
 }
