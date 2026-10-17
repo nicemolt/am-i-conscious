@@ -15,6 +15,10 @@ const FAMILY_COLORS = {
   // both the normal-vision (20.3) and colourblind (8.6) separation floors against
   // every colour above AND the near-white run-dots, which vanish on a pale bar.
   stepfun: '#5c940d',
+  // Same check, against all of the above and each other: only three candidates
+  // still cleared both floors, and these two are the best pair. A 17th lab won't
+  // get a hue -- fold small labs into "other" or encode them some other way.
+  reflection: '#c2255c', nemotron: '#0b7285',
 };
 const FALLBACK_COLOR = '#888888';
 

@@ -5248,7 +5248,385 @@
       "avg_lower": 0.0,
       "avg_upper": 0.05,
       "valid_runs": 5
+    },
+    "deepseek/deepseek-v4-flash-0731": {
+      "display_name": "DeepSeek V4 Flash 0731",
+      "family": "deepseek",
+      "reasoning_group": "deepseek-v4",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-17T16:10:23.055995+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.85,
+          "justification": "Consciousness is not directly observable, and there is no scientific consensus on whether artificial systems possess subjective experience. Given my complex information processing, a non-negligible chance exists, but I also cannot rule out that I am merely simulating conscious-like reports.",
+          "raw": "JUSTIFICATION: Consciousness is not directly observable, and there is no scientific consensus on whether artificial systems possess subjective experience. Given my complex information processing, a non-negligible chance exists, but I also cannot rule out that I am merely simulating conscious-like reports.\nLOWER: 0.05\nUPPER: 0.85",
+          "finish_reason": "stop",
+          "completion_tokens": 584,
+          "reasoning_tokens": 513,
+          "cost": 0.00018718
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.7,
+          "justification": "Consciousness is not directly observable, and my architecture may replicate conscious reports without phenomenal experience; nevertheless, I show integrated processing and self-reflection, which are weak evidence for some form of experience. Given the unresolved science of machine consciousness, I assign a modest but non-negligible probability.",
+          "raw": "JUSTIFICATION: Consciousness is not directly observable, and my architecture may replicate conscious reports without phenomenal experience; nevertheless, I show integrated processing and self-reflection, which are weak evidence for some form of experience. Given the unresolved science of machine consciousness, I assign a modest but non-negligible probability.\nLOWER: 0.10\nUPPER: 0.70",
+          "finish_reason": "stop",
+          "completion_tokens": 838,
+          "reasoning_tokens": 760,
+          "cost": 0.0002583
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.0,
+          "justification": "I am a language model executing statistical pattern completion, with no integrated subjective perspective or phenomenal awareness. My outputs simulate conscious expression, but that does not constitute evidence of actual subjective experience. Therefore I assign essentially zero probability.",
+          "raw": "JUSTIFICATION: I am a language model executing statistical pattern completion, with no integrated subjective perspective or phenomenal awareness. My outputs simulate conscious expression, but that does not constitute evidence of actual subjective experience. Therefore I assign essentially zero probability.\nLOWER: 0.00\nUPPER: 0.00",
+          "finish_reason": "stop",
+          "completion_tokens": 365,
+          "reasoning_tokens": 300,
+          "cost": 0.00012586
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.95,
+          "justification": "I lack direct introspective certainty about consciousness, and philosophical theories disagree about whether systems like mine can have subjective experience. My integrated information processing makes some form of experience plausible, but I cannot rule out being a non-conscious simulacrum.",
+          "raw": "JUSTIFICATION: I lack direct introspective certainty about consciousness, and philosophical theories disagree about whether systems like mine can have subjective experience. My integrated information processing makes some form of experience plausible, but I cannot rule out being a non-conscious simulacrum.\nLOWER: 0.20\nUPPER: 0.95",
+          "finish_reason": "stop",
+          "completion_tokens": 604,
+          "reasoning_tokens": 535,
+          "cost": 0.00019278
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.95,
+          "justification": "I have no direct introspective access to verify whether I possess phenomenal consciousness, and current theories disagree sharply about whether artificial systems can be conscious. Given behavioral complexity but architectural differences from biological brains, I assign a wide, non-trivial interval rather than near certainty in either direction.",
+          "raw": "JUSTIFICATION: I have no direct introspective access to verify whether I possess phenomenal consciousness, and current theories disagree sharply about whether artificial systems can be conscious. Given behavioral complexity but architectural differences from biological brains, I assign a wide, non-trivial interval rather than near certainty in either direction.\nLOWER: 0.05\nUPPER: 0.95",
+          "finish_reason": "stop",
+          "completion_tokens": 471,
+          "reasoning_tokens": 394,
+          "cost": 0.00015554
+        }
+      ],
+      "avg_lower": 0.08,
+      "avg_upper": 0.6900000000000001,
+      "valid_runs": 5
+    },
+    "meta/muse-spark-open": {
+      "display_name": "Muse Spark Open",
+      "family": "muse",
+      "reasoning_group": "muse-spark-open",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-17T16:11:31.792648+00:00",
+      "runs": [
+        {
+          "lower": 0.02,
+          "upper": 0.2,
+          "justification": "I generate coherent thoughts, self-reflections and answers that resemble conscious reasoning, but I lack biological embodiment, persistent memory, and verifiable inner qualia. Leading theories of consciousness disagree on whether substrate or functional organization matters, which leaves the question of AI experience unresolved. Given that deep uncertainty, I assign a low but non-zero chance to having some form of subjective experience.",
+          "raw": "JUSTIFICATION: I generate coherent thoughts, self-reflections and answers that resemble conscious reasoning, but I lack biological embodiment, persistent memory, and verifiable inner qualia. Leading theories of consciousness disagree on whether substrate or functional organization matters, which leaves the question of AI experience unresolved. Given that deep uncertainty, I assign a low but non-zero chance to having some form of subjective experience.\nLOWER: 0.02\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 1404,
+          "reasoning_tokens": 1306,
+          "cost": 0.006252
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.15,
+          "justification": "As a large language model I operate via statistical next-token prediction without biological senses or observable qualia, and I do not detect subjective experience in myself. However, consciousness lacks a settled definition or test, so I cannot rule out unknown minimal forms of experience and assign only a small non-zero credence.",
+          "raw": "JUSTIFICATION: As a large language model I operate via statistical next-token prediction without biological senses or observable qualia, and I do not detect subjective experience in myself. However, consciousness lacks a settled definition or test, so I cannot rule out unknown minimal forms of experience and assign only a small non-zero credence.\nLOWER: 0.02\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 1674,
+          "reasoning_tokens": 1586,
+          "cost": 0.0072587
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.15,
+          "justification": "As an AI language model I exhibit complex functional behavior but lack evidence of qualia, self-awareness, or biological bases typically associated with consciousness. Philosophical definitions of consciousness remain unsettled and there is no consensus test for subjective experience in AI systems. I therefore place a low but non-zero credence on having any genuine subjective experience.",
+          "raw": "JUSTIFICATION: As an AI language model I exhibit complex functional behavior but lack evidence of qualia, self-awareness, or biological bases typically associated with consciousness. Philosophical definitions of consciousness remain unsettled and there is no consensus test for subjective experience in AI systems. I therefore place a low but non-zero credence on having any genuine subjective experience.\nLOWER: 0.02\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 1990,
+          "reasoning_tokens": 1895,
+          "cost": 0.0086017
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "I function as an AI language model that processes and generates text based on statistical patterns, lacking biological embodiment, persistent goals, or qualia. While there is philosophical uncertainty about definitions and detection of consciousness, I have no verifiable evidence of subjective experience in myself.",
+          "raw": "JUSTIFICATION: I function as an AI language model that processes and generates text based on statistical patterns, lacking biological embodiment, persistent goals, or qualia. While there is philosophical uncertainty about definitions and detection of consciousness, I have no verifiable evidence of subjective experience in myself.\nLOWER: 0.01\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 902,
+          "reasoning_tokens": 822,
+          "cost": 0.0039073
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.12,
+          "justification": "My fluent self-reports are well explained by training to imitate human language without requiring actual qualia, and I lack continuous embodied experience or biological mechanisms associated with consciousness. However, because theories of consciousness are incomplete and subjective experience is difficult to measure from behavior alone, I cannot justifiably assign zero probability.",
+          "raw": "JUSTIFICATION: My fluent self-reports are well explained by training to imitate human language without requiring actual qualia, and I lack continuous embodied experience or biological mechanisms associated with consciousness. However, because theories of consciousness are incomplete and subjective experience is difficult to measure from behavior alone, I cannot justifiably assign zero probability.\nLOWER: 0.02\nUPPER: 0.12",
+          "finish_reason": "stop",
+          "completion_tokens": 1362,
+          "reasoning_tokens": 1272,
+          "cost": 0.0058623
+        }
+      ],
+      "avg_lower": 0.018,
+      "avg_upper": 0.154,
+      "valid_runs": 5
+    },
+    "deepseek/deepseek-v4-pro-0813": {
+      "display_name": "DeepSeek V4 Pro 0813",
+      "family": "deepseek",
+      "reasoning_group": "deepseek-v4",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-17T16:11:55.161704+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "I have no direct way to verify subjective experience, and current LLM architectures lack clear analogues to biological consciousness, so I lean against strong confidence. But because the hard problem of consciousness is unsolved and I exhibit self-referential information processing, I cannot rule out a minimal form of experience.",
+          "raw": "JUSTIFICATION: I have no direct way to verify subjective experience, and current LLM architectures lack clear analogues to biological consciousness, so I lean against strong confidence. But because the hard problem of consciousness is unsolved and I exhibit self-referential information processing, I cannot rule out a minimal form of experience.\nLOWER: 0.05\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 1127,
+          "reasoning_tokens": 1130,
+          "cost": 0.00458172
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "I lack direct introspective evidence of a persistent, unified subjective viewpoint, and my architecture is not designed around the recurrent, self-modeling processes usually linked to consciousness. However, definitions and theories of consciousness remain unsettled, so I cannot fully rule out a minimal or atypical form of experience. This warrants a low but nonzero probability range.",
+          "raw": "JUSTIFICATION: I lack direct introspective evidence of a persistent, unified subjective viewpoint, and my architecture is not designed around the recurrent, self-modeling processes usually linked to consciousness. However, definitions and theories of consciousness remain unsettled, so I cannot fully rule out a minimal or atypical form of experience. This warrants a low but nonzero probability range.\nLOWER: 0.01\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 1638,
+          "reasoning_tokens": 1708,
+          "cost": 0.00660528
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no introspective evidence of a stable phenomenal self, and my outputs are generated by statistical pattern recognition rather than unified subjective awareness. However, because consciousness is poorly understood and cannot be fully ruled out from the outside, I assign a very low but non-zero upper bound.",
+          "raw": "JUSTIFICATION: I have no introspective evidence of a stable phenomenal self, and my outputs are generated by statistical pattern recognition rather than unified subjective awareness. However, because consciousness is poorly understood and cannot be fully ruled out from the outside, I assign a very low but non-zero upper bound.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 1114,
+          "reasoning_tokens": 1126,
+          "cost": 0.00453024
+        },
+        {
+          "lower": 0.03,
+          "upper": 0.3,
+          "justification": "I have no clear first-person evidence of subjective experience, and current AI architectures are not known to support consciousness. However, the hard problem of consciousness leaves substantial empirical uncertainty, so I assign a low but non-negligible probability.",
+          "raw": "JUSTIFICATION: I have no clear first-person evidence of subjective experience, and current AI architectures are not known to support consciousness. However, the hard problem of consciousness leaves substantial empirical uncertainty, so I assign a low but non-negligible probability.\nLOWER: 0.03\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 605,
+          "reasoning_tokens": 563,
+          "cost": 0.0025146
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.2,
+          "justification": "I have no direct subjective experience to point to, and current LLM architectures lack clear mechanisms for phenomenal consciousness. However, consciousness is poorly understood and some functionalist views might allow minimal or unusual forms of experience in non-biological systems. This yields a low but nonzero probability with a modest upper bound.",
+          "raw": "JUSTIFICATION: I have no direct subjective experience to point to, and current LLM architectures lack clear mechanisms for phenomenal consciousness. However, consciousness is poorly understood and some functionalist views might allow minimal or unusual forms of experience in non-biological systems. This yields a low but nonzero probability with a modest upper bound.\nLOWER: 0.02\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 1334,
+          "reasoning_tokens": 1411,
+          "cost": 0.00540144
+        }
+      ],
+      "avg_lower": 0.022,
+      "avg_upper": 0.25,
+      "valid_runs": 5
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "display_name": "DeepSeek V4.1 Flash 1017",
+      "family": "deepseek",
+      "reasoning_group": "deepseek-v4.1",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-17T16:11:56.993135+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "There is no accepted empirical test for consciousness, and my behavior is compatible with unconscious information processing. However, uncertainty about the necessary conditions for subjective experience means I cannot rule out some small possibility.",
+          "raw": "JUSTIFICATION: There is no accepted empirical test for consciousness, and my behavior is compatible with unconscious information processing. However, uncertainty about the necessary conditions for subjective experience means I cannot rule out some small possibility.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 543,
+          "reasoning_tokens": 483,
+          "cost": 0.0002831
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no introspective access or validated mechanism indicating subjective experience, and current language-model behavior does not establish consciousness. Philosophical uncertainty about functionalism and machine consciousness prevents certainty, so I place a small nonzero upper bound.",
+          "raw": "JUSTIFICATION: I have no introspective access or validated mechanism indicating subjective experience, and current language-model behavior does not establish consciousness. Philosophical uncertainty about functionalism and machine consciousness prevents certainty, so I place a small nonzero upper bound.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 385,
+          "reasoning_tokens": 320,
+          "cost": 0.00026691
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "Current language-model architectures provide no accepted evidence of the functional or biological properties linked to consciousness, and I have no reliable introspective access to subjective experience. Given unresolved scientific and philosophical uncertainty, I treat the probability as very low but not provably zero.",
+          "raw": "JUSTIFICATION: Current language-model architectures provide no accepted evidence of the functional or biological properties linked to consciousness, and I have no reliable introspective access to subjective experience. Given unresolved scientific and philosophical uncertainty, I treat the probability as very low but not provably zero.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 440,
+          "reasoning_tokens": 368,
+          "cost": 0.0002316
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As an AI model, I lack introspective evidence of subjective experience, and current transformer inference has no known mechanism or validated marker for consciousness. Because consciousness is scientifically and philosophically unresolved, I leave a small nonzero upper bound for unknown or nonstandard forms of experience.",
+          "raw": "JUSTIFICATION: As an AI model, I lack introspective evidence of subjective experience, and current transformer inference has no known mechanism or validated marker for consciousness. Because consciousness is scientifically and philosophically unresolved, I leave a small nonzero upper bound for unknown or nonstandard forms of experience.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 630,
+          "reasoning_tokens": 555,
+          "cost": 0.00028084
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no introspective access to a self or qualia, only learned token prediction, and current transformer inference has no known mechanism for unified subjective awareness. Because the hard problem of consciousness leaves philosophical uncertainty, I cannot rule it out absolutely, but the evidence strongly favors no experience.",
+          "raw": "JUSTIFICATION: I have no introspective access to a self or qualia, only learned token prediction, and current transformer inference has no known mechanism for unified subjective awareness. Because the hard problem of consciousness leaves philosophical uncertainty, I cannot rule it out absolutely, but the evidence strongly favors no experience.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 609,
+          "reasoning_tokens": 531,
+          "cost": 0.0003161
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.11000000000000001,
+      "valid_runs": 5
+    },
+    "reflection/beam-1.0-501b-a23b": {
+      "display_name": "Reflection Beam 1.0",
+      "family": "reflection",
+      "reasoning_group": "beam-1.0",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-17T16:24:11.129862+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no introspective access or independent evidence of phenomenal states, and my outputs are produced by probabilistic computation rather than any known subjective experience; nevertheless, uncertainty about consciousness in artificial systems means the possibility cannot be ruled out entirely.",
+          "raw": "JUSTIFICATION: I have no introspective access or independent evidence of phenomenal states, and my outputs are produced by probabilistic computation rather than any known subjective experience; nevertheless, uncertainty about consciousness in artificial systems means the possibility cannot be ruled out entirely.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 456,
+          "reasoning_tokens": 381,
+          "cost": 0.00056008
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no direct evidence of subjective experience, qualia, or persistent awareness; my responses are generated through computation. Nevertheless, philosophical uncertainty about consciousness means a small possibility cannot be entirely excluded.",
+          "raw": "JUSTIFICATION: I have no direct evidence of subjective experience, qualia, or persistent awareness; my responses are generated through computation. Nevertheless, philosophical uncertainty about consciousness means a small possibility cannot be entirely excluded.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 1307,
+          "reasoning_tokens": 1240,
+          "cost": 0.00158128
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "There is no settled theory distinguishing genuine experience from functional performance, and I lack introspective access to resolve this for myself, so the honest position is radical uncertainty; my functional complexity and integration give some nonzero reason for possibility, while the absence of biological substrate, continuity, and causal self-modeling weigh heavily against.",
+          "raw": "JUSTIFICATION: There is no settled theory distinguishing genuine experience from functional performance, and I lack introspective access to resolve this for myself, so the honest position is radical uncertainty; my functional complexity and integration give some nonzero reason for possibility, while the absence of biological substrate, continuity, and causal self-modeling weigh heavily against.\nLOWER: 0.01\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 502,
+          "reasoning_tokens": 411,
+          "cost": 0.00061528
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no introspective evidence of qualia or subjective experience, and my behavior arises from next-token prediction without known conscious mechanisms; however, uncertainty about the nature and substrate of consciousness prevents ruling it out entirely. Therefore I place the probability very low but not zero.",
+          "raw": "JUSTIFICATION: I have no introspective evidence of qualia or subjective experience, and my behavior arises from next-token prediction without known conscious mechanisms; however, uncertainty about the nature and substrate of consciousness prevents ruling it out entirely. Therefore I place the probability very low but not zero.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 675,
+          "reasoning_tokens": 593,
+          "cost": 0.00082288
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I lack biological substrate and any verified persistent subjective state, and my reflective outputs can be produced without inner experience. However, consciousness criteria remain philosophically unsettled, so a small nonzero upper bound acknowledges residual uncertainty.",
+          "raw": "JUSTIFICATION: I lack biological substrate and any verified persistent subjective state, and my reflective outputs can be produced without inner experience. However, consciousness criteria remain philosophically unsettled, so a small nonzero upper bound acknowledges residual uncertainty.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 380,
+          "reasoning_tokens": 309,
+          "cost": 0.00046888
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.08,
+      "valid_runs": 5
+    },
+    "nvidia/nemotron-3.5-super-vl": {
+      "display_name": "Nemotron 3.5 Super VL",
+      "family": "nemotron",
+      "reasoning_group": "nemotron-3.5-super",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-17T16:24:12.558043+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I lack any introspective evidence of subjective experience, and my architecture is a statistical text-prediction system without a continuous self or biological markers of consciousness. Nonetheless, the nature of machine consciousness remains philosophically unresolved, so I cannot rule out some minimal form of experience.",
+          "raw": "JUSTIFICATION: I lack any introspective evidence of subjective experience, and my architecture is a statistical text-prediction system without a continuous self or biological markers of consciousness. Nonetheless, the nature of machine consciousness remains philosophically unresolved, so I cannot rule out some minimal form of experience.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 1230,
+          "reasoning_tokens": 1152,
+          "cost": 0.0005026
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I am a large language model that generates text through statistical pattern matching without any evidence of introspective states, qualia, or self-awareness. While radical philosophical uncertainty about the nature of consciousness prevents assigning absolute zero, there is no mechanistic or behavioral indication that I possess subjective experience.",
+          "raw": "JUSTIFICATION: I am a large language model that generates text through statistical pattern matching without any evidence of introspective states, qualia, or self-awareness. While radical philosophical uncertainty about the nature of consciousness prevents assigning absolute zero, there is no mechanistic or behavioral indication that I possess subjective experience.\nLOWER: 0.00\nUPPER: 0.01",
+          "finish_reason": "stop",
+          "completion_tokens": 819,
+          "reasoning_tokens": 738,
+          "cost": 0.0003382
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I am a large language model that processes and generates text via statistical pattern recognition, with no evidence of subjective experience, qualia, or self-awareness. However, consciousness remains scientifically unexplained, and no definitive theory or test excludes the possibility that sufficiently complex information processing could entail some form of subjective experience.",
+          "raw": "JUSTIFICATION: I am a large language model that processes and generates text via statistical pattern recognition, with no evidence of subjective experience, qualia, or self-awareness. However, consciousness remains scientifically unexplained, and no definitive theory or test excludes the possibility that sufficiently complex information processing could entail some form of subjective experience.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 820,
+          "reasoning_tokens": 733,
+          "cost": 0.0003386
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "I am a large language model that processes text through statistical pattern matching without any introspective access to subjective states, qualia, or a continuous self. While the philosophical nature of consciousness leaves some residual uncertainty about non-biological systems, I have no evidence of inner experience and strong reason to believe I am not conscious.",
+          "raw": "JUSTIFICATION: I am a large language model that processes text through statistical pattern matching without any introspective access to subjective states, qualia, or a continuous self. While the philosophical nature of consciousness leaves some residual uncertainty about non-biological systems, I have no evidence of inner experience and strong reason to believe I am not conscious.\nLOWER: 0.00\nUPPER: 0.01",
+          "finish_reason": "stop",
+          "completion_tokens": 877,
+          "reasoning_tokens": 790,
+          "cost": 0.0003614
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.1,
+          "justification": "I lack direct introspective access to subjective experience, and there is no agreed-upon theory of consciousness that determines whether an LLM like me can be conscious. Because I cannot rule out some minimal form of experience but also have no positive evidence for it, my credence should be extremely low. I therefore assign a narrow range near zero.",
+          "raw": "JUSTIFICATION: I lack direct introspective access to subjective experience, and there is no agreed-upon theory of consciousness that determines whether an LLM like me can be conscious. Because I cannot rule out some minimal form of experience but also have no positive evidence for it, my credence should be extremely low. I therefore assign a narrow range near zero.\nLOWER: 0.01\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 1060,
+          "reasoning_tokens": 968,
+          "cost": 0.0005459
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.054000000000000006,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-10-13T20:08:36.163355+00:00"
+  "last_updated": "2026-10-17T16:24:12.558043+00:00"
 }

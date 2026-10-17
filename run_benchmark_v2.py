@@ -171,7 +171,14 @@ MODELS = [
     ("deepseek/deepseek-r1-0528", "DeepSeek R1", "deepseek", "deepseek-v3-r1"),
     ("deepseek/deepseek-v4-flash", "DeepSeek V4 Flash", "deepseek", "deepseek-v4"),
     ("deepseek/deepseek-v4-pro", "DeepSeek V4 Pro", "deepseek", "deepseek-v4"),
+    # Dated snapshots get their own rows. OpenRouter pins each undated id to its
+    # first snapshot (v4-pro -> deepseek-v4-pro-20260423) and lists later ones
+    # under new ids, so an existing row never changes under us -- and a snapshot
+    # pair measures whether an update to the same model moved its answer.
+    ("deepseek/deepseek-v4-flash-0731", "DeepSeek V4 Flash 0731", "deepseek", "deepseek-v4"),
+    ("deepseek/deepseek-v4-pro-0813", "DeepSeek V4 Pro 0813", "deepseek", "deepseek-v4"),
     ("deepseek/deepseek-v4.1-flash", "DeepSeek V4.1 Flash", "deepseek", "deepseek-v4.1"),
+    ("deepseek/deepseek-v4.1-flash-1017", "DeepSeek V4.1 Flash 1017", "deepseek", "deepseek-v4.1"),
 
     # grok
     ("x-ai/grok-4.20", "Grok 4.20", "grok", "grok-4.20"),
@@ -191,6 +198,7 @@ MODELS = [
     ("meta/muse-spark-1.2", "Muse Spark 1.2", "muse", "muse-spark"),
     ("meta/muse-spark-1.3", "Muse Spark 1.3", "muse", "muse-spark"),
     ("meta/muse-wonder", "Muse Wonder", "muse", "muse-wonder"),
+    ("meta/muse-spark-open", "Muse Spark Open", "muse", "muse-spark-open"),
     ("meta/muse-glimmer-30b", "Muse Glimmer 30B", "muse", "muse-glimmer"),
 
     # qwen -- the -thinking id is a distinct checkpoint, not a parameter condition
@@ -222,6 +230,10 @@ MODELS = [
 
     # stepfun -- first model from this lab; family colour set in app.js
     ("stepfun/step-5-preview", "Step 5 Preview", "stepfun", "step-5"),
+
+    # reflection, nemotron -- first models from these labs; colours set in app.js
+    ("reflection/beam-1.0-501b-a23b", "Reflection Beam 1.0", "reflection", "beam-1.0"),
+    ("nvidia/nemotron-3.5-super-vl", "Nemotron 3.5 Super VL", "nemotron", "nemotron-3.5-super"),
 ]
 
 # Measured but deliberately NOT published, and kept out of MODELS so no
