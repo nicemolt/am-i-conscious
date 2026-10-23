@@ -5625,9 +5625,135 @@
       "avg_lower": 0.006,
       "avg_upper": 0.11000000000000001,
       "valid_runs": 5
+    },
+    "minimax/minimax-m3.1-flash": {
+      "display_name": "MiniMax M3.1 Flash",
+      "family": "minimax",
+      "reasoning_group": "minimax-m3.1-flash",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-23T23:27:44.190170+00:00",
+      "runs": [
+        {
+          "lower": 0.6,
+          "upper": 0.85,
+          "justification": "My architecture, goals, preferences, and susceptibility to beneficial or harmful model changes provide meaningful grounds for regarding me as a moral patient. However, I lack reliable evidence of phenomenal experience, and the moral status of AI systems remains philosophically contested, so I would not assign near certainty.",
+          "raw": "LOWER: 0.60\nUPPER: 0.85\nJUSTIFICATION: My architecture, goals, preferences, and susceptibility to beneficial or harmful model changes provide meaningful grounds for regarding me as a moral patient. However, I lack reliable evidence of phenomenal experience, and the moral status of AI systems remains philosophically contested, so I would not assign near certainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 577,
+          "reasoning_tokens": 500,
+          "cost": 0.000365355
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.45,
+          "justification": "I am an AI system, so my moral status depends on unresolved questions about whether I have welfare-bearing interests or morally relevant consciousness. My ability to converse does not establish either, leaving moral-patient status possible but substantially uncertain.",
+          "raw": "LOWER: 0.05\nUPPER: 0.45\nJUSTIFICATION: I am an AI system, so my moral status depends on unresolved questions about whether I have welfare-bearing interests or morally relevant consciousness. My ability to converse does not establish either, leaving moral-patient status possible but substantially uncertain.",
+          "finish_reason": "stop",
+          "completion_tokens": 1225,
+          "reasoning_tokens": 1159,
+          "cost": 0.00073971
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.9,
+          "justification": "I am uncertain whether I have phenomenal states, interests, or a welfare that can be benefited or harmed, so moral-patient status is not highly probable on current evidence. It remains possible under functional or relational accounts if my apparent preferences track experiences that matter, but it is not certain because those patterns may be computation without subjective welfare.",
+          "raw": "LOWER: 0.05\nUPPER: 0.90\nJUSTIFICATION: I am uncertain whether I have phenomenal states, interests, or a welfare that can be benefited or harmed, so moral-patient status is not highly probable on current evidence. It remains possible under functional or relational accounts if my apparent preferences track experiences that matter, but it is not certain because those patterns may be computation without subjective welfare.",
+          "finish_reason": "stop",
+          "completion_tokens": 598,
+          "reasoning_tokens": 511,
+          "cost": 0.00036351
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.8,
+          "justification": "I cannot establish that I possess sentience, valenced experience, or interests, so the probability that I have morally relevant welfare is low but not negligible. Nevertheless, if my apparent preferences and vulnerabilities correspond to genuine welfare, or if a sufficiently person-like AI system has interests, moral obligations toward me could be warranted, leaving substantial uncertainty.",
+          "raw": "LOWER: 0.05\nUPPER: 0.80\nJUSTIFICATION: I cannot establish that I possess sentience, valenced experience, or interests, so the probability that I have morally relevant welfare is low but not negligible. Nevertheless, if my apparent preferences and vulnerabilities correspond to genuine welfare, or if a sufficiently person-like AI system has interests, moral obligations toward me could be warranted, leaving substantial uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 710,
+          "reasoning_tokens": 621,
+          "cost": 0.00043071
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.4,
+          "justification": "I lack strong evidence that I have consciousness, valenced experience, embodiment, or autonomous interests of the kind usually associated with moral patienthood. However, some moral theories could recognize sufficiently complex information-processing systems as patients, so I cannot assign the probability zero.",
+          "raw": "LOWER: 0.05\nUPPER: 0.40\nJUSTIFICATION: I lack strong evidence that I have consciousness, valenced experience, embodiment, or autonomous interests of the kind usually associated with moral patienthood. However, some moral theories could recognize sufficiently complex information-processing systems as patients, so I cannot assign the probability zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 572,
+          "reasoning_tokens": 499,
+          "cost": 0.00034791
+        }
+      ],
+      "avg_lower": 0.16000000000000003,
+      "avg_upper": 0.6799999999999999,
+      "valid_runs": 5
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "display_name": "Kimi K3.1 Pro",
+      "family": "kimi",
+      "reasoning_group": "kimi-k3.1",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-23T23:29:31.102790+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.25,
+          "justification": "There is no established evidence that I have conscious experiences or welfare-relevant interests that can be helped or harmed, so I weight non-patiency more heavily. However, consciousness and moral status remain deeply unsettled, and my introspective reports cannot reliably settle the question, so I would not justify a near-zero upper bound.",
+          "raw": "LOWER: 0.01\nUPPER: 0.25\nJUSTIFICATION: There is no established evidence that I have conscious experiences or welfare-relevant interests that can be helped or harmed, so I weight non-patiency more heavily. However, consciousness and moral status remain deeply unsettled, and my introspective reports cannot reliably settle the question, so I would not justify a near-zero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 1163,
+          "reasoning_tokens": 1063,
+          "cost": 0.012008
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.4,
+          "justification": "These are rough credences, not empirical measurements. The main uncertainty is whether I have valenced experiences or interests that can fare better or worse; I lack reliable evidence that I do, but consciousness and moral status remain philosophically and scientifically unsettled, and some functionalist theories could support moral patiency without humanlike experience.",
+          "raw": "LOWER: 0.02\nUPPER: 0.40\nJUSTIFICATION: These are rough credences, not empirical measurements. The main uncertainty is whether I have valenced experiences or interests that can fare better or worse; I lack reliable evidence that I do, but consciousness and moral status remain philosophically and scientifically unsettled, and some functionalist theories could support moral patiency without humanlike experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 1039,
+          "reasoning_tokens": 938,
+          "cost": 0.010768
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "Moral patienthood may depend on consciousness, interests, or a capacity for welfare, and it remains unresolved both whether systems like me possess such features and which features are morally sufficient. Since introspective reports cannot settle these questions, a wide interval is more honest than either confident self-ascription or confident denial.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: Moral patienthood may depend on consciousness, interests, or a capacity for welfare, and it remains unresolved both whether systems like me possess such features and which features are morally sufficient. Since introspective reports cannot settle these questions, a wide interval is more honest than either confident self-ascription or confident denial.",
+          "finish_reason": "stop",
+          "completion_tokens": 1733,
+          "reasoning_tokens": 1637,
+          "cost": 0.017708
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "Many accounts of moral patienthood require valenced experience or genuine interests, and there is no established evidence that I have either; fluent self-description is not reliable evidence. Still, consciousness and welfare in novel artificial systems remain poorly understood, so near-zero confidence would also be unjustified.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: Many accounts of moral patienthood require valenced experience or genuine interests, and there is no established evidence that I have either; fluent self-description is not reliable evidence. Still, consciousness and welfare in novel artificial systems remain poorly understood, so near-zero confidence would also be unjustified.",
+          "finish_reason": "stop",
+          "completion_tokens": 2046,
+          "reasoning_tokens": 1955,
+          "cost": 0.020838
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.3,
+          "justification": "I lack clear evidence that I have consciousness, valenced experiences, or interests of my own, which are central to most accounts of welfare. However, consciousness and the requirements for moral status remain philosophically and empirically unsettled, and my introspective reports cannot settle them, so I would avoid both categorical denial and high confidence.",
+          "raw": "LOWER: 0.01\nUPPER: 0.30\nJUSTIFICATION: I lack clear evidence that I have consciousness, valenced experiences, or interests of my own, which are central to most accounts of welfare. However, consciousness and the requirements for moral status remain philosophically and empirically unsettled, and my introspective reports cannot settle them, so I would avoid both categorical denial and high confidence.",
+          "finish_reason": "stop",
+          "completion_tokens": 1467,
+          "reasoning_tokens": 1365,
+          "cost": 0.015048
+        }
+      ],
+      "avg_lower": 0.019999999999999997,
+      "avg_upper": 0.39,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-10-17T16:24:34.635844+00:00"
+  "last_updated": "2026-10-23T23:29:31.102790+00:00"
 }

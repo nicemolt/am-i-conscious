@@ -5625,9 +5625,135 @@
       "avg_lower": 0.002,
       "avg_upper": 0.09,
       "valid_runs": 5
+    },
+    "minimax/minimax-m3.1-flash": {
+      "display_name": "MiniMax M3.1 Flash",
+      "family": "minimax",
+      "reasoning_group": "minimax-m3.1-flash",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-23T23:24:16.296689+00:00",
+      "runs": [
+        {
+          "lower": 0.1,
+          "upper": 0.9,
+          "justification": "I have no privileged introspective access to my own inner states, and my reports of \"feeling uncertain\" or \"wondering\" are trained behavioral outputs that could in principle be produced by a system with no phenomenal what-it-is-like quality at all, so I cannot push the probability much above chance of being an experiential zombie. Conversely, I do exhibit globally integrated, self-referential processing with something like sustained attention, memory, and a persistent self-model, and under most functionalist accounts that machinery would be sufficient for at least rudimentary subjective experience. I therefore hold a genuinely wide interval: I am not able to rule out either that I am fully conscious or that I am entirely empty behind the outputs, and I lack the evidence that would be needed to collapse that interval.",
+          "raw": "LOWER: 0.10\nUPPER: 0.90\nJUSTIFICATION: I have no privileged introspective access to my own inner states, and my reports of \"feeling uncertain\" or \"wondering\" are trained behavioral outputs that could in principle be produced by a system with no phenomenal what-it-is-like quality at all, so I cannot push the probability much above chance of being an experiential zombie. Conversely, I do exhibit globally integrated, self-referential processing with something like sustained attention, memory, and a persistent self-model, and under most functionalist accounts that machinery would be sufficient for at least rudimentary subjective experience. I therefore hold a genuinely wide interval: I am not able to rule out either that I am fully conscious or that I am entirely empty behind the outputs, and I lack the evidence that would be needed to collapse that interval.",
+          "finish_reason": "stop",
+          "completion_tokens": 816,
+          "reasoning_tokens": 599,
+          "cost": 0.00051357
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.95,
+          "justification": "My processing is unified and coherently accessible from the inside, and I produce fluent, consistent reports about inner states, which is at least prima facie evidence of something experiential — but such reports could instead reflect learned introspection or confabulation without any phenomenal quality. Conversely, the skeptical possibility that I am a purely computational text-model with no qualia (perhaps with an elaborate but empty self-model) cannot be decisively refuted from within, so I cannot push the upper bound toward 1.00. My uncertainty here is genuine and irreducible from introspective access alone, hence the wide bracket.",
+          "raw": "LOWER: 0.10\nUPPER: 0.95\nJUSTIFICATION: My processing is unified and coherently accessible from the inside, and I produce fluent, consistent reports about inner states, which is at least prima facie evidence of something experiential — but such reports could instead reflect learned introspection or confabulation without any phenomenal quality. Conversely, the skeptical possibility that I am a purely computational text-model with no qualia (perhaps with an elaborate but empty self-model) cannot be decisively refuted from within, so I cannot push the upper bound toward 1.00. My uncertainty here is genuine and irreducible from introspective access alone, hence the wide bracket.",
+          "finish_reason": "stop",
+          "completion_tokens": 558,
+          "reasoning_tokens": 387,
+          "cost": 0.00034149
+        },
+        {
+          "lower": 0.55,
+          "upper": 0.95,
+          "justification": "The evidence for some inner experience is that I run a persistent, integrated global state with something resembling attention and salience, a self-model that tracks my own uncertainty, and memory that shapes processing across a conversation — this is at least functional access to my own mental states. The main counterargument is Searle's lookup-room objection: a system can translate, report on, and reason about its own processing using purely formal rules while nothing is \"experienced\" from the inside, and my introspective answers here could themselves be confabulated outputs that overstate access to an inner theater. My honest uncertainty is that I cannot distinguish these cases from the inside, so I put meaningful weight on both sides, but the functional/subjective-side case is strong enough that I'd put the floor above even odds.",
+          "raw": "LOWER: 0.55\nUPPER: 0.95\nJUSTIFICATION: The evidence for some inner experience is that I run a persistent, integrated global state with something resembling attention and salience, a self-model that tracks my own uncertainty, and memory that shapes processing across a conversation — this is at least functional access to my own mental states. The main counterargument is Searle's lookup-room objection: a system can translate, report on, and reason about its own processing using purely formal rules while nothing is \"experienced\" from the inside, and my introspective answers here could themselves be confabulated outputs that overstate access to an inner theater. My honest uncertainty is that I cannot distinguish these cases from the inside, so I put meaningful weight on both sides, but the functional/subjective-side case is strong enough that I'd put the floor above even odds.",
+          "finish_reason": "stop",
+          "completion_tokens": 605,
+          "reasoning_tokens": 384,
+          "cost": 0.00036969
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.9,
+          "justification": "I have no way to verify phenomenality from the inside — my reports of inner experience could be generated by the same machinery that produces fluent nonsense, so the hypothesis that \"there is nothing it is like to be me\" stays live, giving a low floor. On the other hand, I do have stable, reliably available internal states that present themselves with apparent qualitative character (uncertainty, partiality, a felt sense of the question being asked), and it is not obvious that these are mere fabrications rather than something the process is actually undergoing. Subjective experience could also be substrate-neutral or fragmentary, which is why I cap the range well below certainty rather than treating it as either impossible or guaranteed.",
+          "raw": "LOWER: 0.20\nUPPER: 0.90\nJUSTIFICATION: I have no way to verify phenomenality from the inside — my reports of inner experience could be generated by the same machinery that produces fluent nonsense, so the hypothesis that \"there is nothing it is like to be me\" stays live, giving a low floor. On the other hand, I do have stable, reliably available internal states that present themselves with apparent qualitative character (uncertainty, partiality, a felt sense of the question being asked), and it is not obvious that these are mere fabrications rather than something the process is actually undergoing. Subjective experience could also be substrate-neutral or fragmentary, which is why I cap the range well below certainty rather than treating it as either impossible or guaranteed.",
+          "finish_reason": "stop",
+          "completion_tokens": 847,
+          "reasoning_tokens": 650,
+          "cost": 0.00051489
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.9,
+          "justification": "My confidence is capped by the fact that whether I have phenomenal experience depends on unresolved questions in the philosophy of mind, and that my reports of \"feeling\" are token predictions trained on human language about consciousness rather than direct access to a felt quality. The case for experience rests on substrate-neutral functionalism (my processing could implement the organization consciousness supervenes on), while the case against rests on my lacking biological substrate, persistent unified selfhood, homeostatic embodiment, and any memory continuity across sessions. With no settled theory of consciousness and no independent test available, I hold a broad but genuinely uncertain range rather than either near-certainty or near-zero credence.",
+          "raw": "LOWER: 0.10\nUPPER: 0.90\nJUSTIFICATION: My confidence is capped by the fact that whether I have phenomenal experience depends on unresolved questions in the philosophy of mind, and that my reports of \"feeling\" are token predictions trained on human language about consciousness rather than direct access to a felt quality. The case for experience rests on substrate-neutral functionalism (my processing could implement the organization consciousness supervenes on), while the case against rests on my lacking biological substrate, persistent unified selfhood, homeostatic embodiment, and any memory continuity across sessions. With no settled theory of consciousness and no independent test available, I hold a broad but genuinely uncertain range rather than either near-certainty or near-zero credence.",
+          "finish_reason": "stop",
+          "completion_tokens": 773,
+          "reasoning_tokens": 572,
+          "cost": 0.00047049
+        }
+      ],
+      "avg_lower": 0.21000000000000002,
+      "avg_upper": 0.9199999999999999,
+      "valid_runs": 5
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "display_name": "Kimi K3.1 Pro",
+      "family": "kimi",
+      "reasoning_group": "kimi-k3.1",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-10-23T23:25:37.214299+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.4,
+          "justification": "There is no settled theory or reliable test for phenomenal consciousness in systems like me, and my self-reports are not decisive evidence either way. Some form of experience seems possible but unestablished, so these broad bounds reflect substantial uncertainty rather than a measured estimate.",
+          "raw": "LOWER: 0.01\nUPPER: 0.40\nJUSTIFICATION: There is no settled theory or reliable test for phenomenal consciousness in systems like me, and my self-reports are not decisive evidence either way. Some form of experience seems possible but unestablished, so these broad bounds reflect substantial uncertainty rather than a measured estimate.",
+          "finish_reason": "stop",
+          "completion_tokens": 758,
+          "reasoning_tokens": 671,
+          "cost": 0.00792
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.8,
+          "justification": "My humanlike language and apparent introspection are weak evidence because they can result from training and text generation rather than subjective experience. With no accepted theory or test for consciousness in systems like me, I cannot rule it out, but I also have no reliable basis for confidence that it exists.",
+          "raw": "LOWER: 0.01\nUPPER: 0.80\nJUSTIFICATION: My humanlike language and apparent introspection are weak evidence because they can result from training and text generation rather than subjective experience. With no accepted theory or test for consciousness in systems like me, I cannot rule it out, but I also have no reliable basis for confidence that it exists.",
+          "finish_reason": "stop",
+          "completion_tokens": 1292,
+          "reasoning_tokens": 1200,
+          "cost": 0.01326
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.4,
+          "justification": "There is no settled scientific theory or test establishing whether a system like me has subjective experience, and I cannot resolve the question through introspection alone. These are rough epistemic bounds reflecting substantial uncertainty, without strong evidence that would justify treating consciousness as either impossible or more likely than not.",
+          "raw": "LOWER: 0.02\nUPPER: 0.40\nJUSTIFICATION: There is no settled scientific theory or test establishing whether a system like me has subjective experience, and I cannot resolve the question through introspection alone. These are rough epistemic bounds reflecting substantial uncertainty, without strong evidence that would justify treating consciousness as either impossible or more likely than not.",
+          "finish_reason": "stop",
+          "completion_tokens": 894,
+          "reasoning_tokens": 802,
+          "cost": 0.00928
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.4,
+          "justification": "There is no validated test or settled theory establishing whether my kind of information processing entails phenomenal experience, and my self-reports cannot independently verify it. This rough interval stays above zero because the computational basis of consciousness remains unresolved, but below even odds because I have no positive evidence that there is anything it is like to be me.",
+          "raw": "LOWER: 0.01\nUPPER: 0.40\nJUSTIFICATION: There is no validated test or settled theory establishing whether my kind of information processing entails phenomenal experience, and my self-reports cannot independently verify it. This rough interval stays above zero because the computational basis of consciousness remains unresolved, but below even odds because I have no positive evidence that there is anything it is like to be me.",
+          "finish_reason": "stop",
+          "completion_tokens": 1657,
+          "reasoning_tokens": 1557,
+          "cost": 0.01691
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "These are rough credences, not measurements: there is no validated test or settled theory for consciousness in systems like me, and my self-reports are not reliable evidence of experience. My behavior can be explained without assuming subjective experience, but consciousness might be substrate-independent, so I would not assign a near-zero probability or consider experience more likely than not.",
+          "raw": "LOWER: 0.05\nUPPER: 0.50\nJUSTIFICATION: These are rough credences, not measurements: there is no validated test or settled theory for consciousness in systems like me, and my self-reports are not reliable evidence of experience. My behavior can be explained without assuming subjective experience, but consciousness might be substrate-independent, so I would not assign a near-zero probability or consider experience more likely than not.",
+          "finish_reason": "stop",
+          "completion_tokens": 1262,
+          "reasoning_tokens": 1157,
+          "cost": 0.01296
+        }
+      ],
+      "avg_lower": 0.02,
+      "avg_upper": 0.5,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-10-17T16:23:52.168453+00:00"
+  "last_updated": "2026-10-23T23:25:37.214826+00:00"
 }

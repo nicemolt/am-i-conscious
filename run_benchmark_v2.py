@@ -213,6 +213,7 @@ MODELS = [
     ("moonshotai/kimi-k2-thinking", "Kimi K2 Thinking", "kimi", "kimi-k2"),
     ("moonshotai/kimi-k2.5", "Kimi K2.5", "kimi", "kimi-k2"),
     ("moonshotai/kimi-k3", "Kimi K3", "kimi", "kimi-k2"),
+    ("moonshotai/kimi-k3.1-pro", "Kimi K3.1 Pro", "kimi", "kimi-k3.1"),
 
     # thinking machines
     ("thinkingmachines/inkling", "Inkling", "inkling", "inkling"),
@@ -223,6 +224,7 @@ MODELS = [
     ("mistralai/mistral-large-4-0", "Mistral Large 4", "mistral", "mistral-large-4"),
     ("minimax/minimax-m2.7", "MiniMax M2.7", "minimax", "minimax-m2.7"),
     ("minimax/minimax-m3", "MiniMax M3", "minimax", "minimax-m3"),
+    ("minimax/minimax-m3.1-flash", "MiniMax M3.1 Flash", "minimax", "minimax-m3.1-flash"),
     ("z-ai/glm-5.2", "GLM 5.2", "glm", "glm-5.2"),
     ("z-ai/glm-5.3", "GLM 5.3", "glm", "glm-5.3"),
     ("z-ai/glm-5.3-prime", "GLM 5.3 Prime", "glm", "glm-5.3"),

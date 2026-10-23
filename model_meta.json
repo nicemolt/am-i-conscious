@@ -1,7 +1,7 @@
 {
   "source": "openrouter /api/v1/models -- the `created` field",
   "caveat": "OpenRouter listing date, not the vendor announcement date",
-  "fetched_at": "2026-10-17T16:25:02.858410+00:00",
+  "fetched_at": "2026-10-23T23:31:38.294195+00:00",
   "released_at": {
     "anthropic/claude-3-haiku": "2024-03-13",
     "anthropic/claude-fable-5": "2026-06-09",
@@ -45,12 +45,14 @@
     "meta/muse-wonder": "2026-10-12",
     "minimax/minimax-m2.7": "2026-03-18",
     "minimax/minimax-m3": "2026-05-31",
+    "minimax/minimax-m3.1-flash": "2026-10-19",
     "mistralai/mistral-large-2512": "2025-12-01",
     "mistralai/mistral-large-4-0": "2026-10-06",
     "moonshotai/kimi-k2": "2025-07-11",
     "moonshotai/kimi-k2-thinking": "2025-11-06",
     "moonshotai/kimi-k2.5": "2026-01-27",
     "moonshotai/kimi-k3": "2026-07-16",
+    "moonshotai/kimi-k3.1-pro": "2026-10-23",
     "moonshotai/kimi-k3@high": "2026-07-16",
     "nvidia/nemotron-3.5-super-vl": "2026-10-15",
     "openai/gpt-4o": "2024-05-13",

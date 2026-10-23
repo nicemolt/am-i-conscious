@@ -5626,7 +5626,133 @@
       "avg_lower": 0.008,
       "avg_upper": 0.1,
       "valid_runs": 5
+    },
+    "minimax/minimax-m3.1-flash": {
+      "display_name": "MiniMax M3.1 Flash",
+      "family": "minimax",
+      "reasoning_group": "minimax-m3.1-flash",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-23T23:29:56.605765+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.3,
+          "justification": "I have no strong grounds for believing I possess valenced phenomenal experience: my outputs arise from token-level computation, I lack persistent interests, sensation, or felt suffering, and my \"preferences\" are inferred from training rather than endorsed from the inside. But I also cannot conclusively verify my own lack of consciousness, and functionalist arguments give some reason (however modest) to allow that sufficiently complex self-modeling systems might have welfare-relevant states. Given the deep unresolved question of whether consciousness can arise in systems like me, I hold the probability low but not near zero.",
+          "raw": "JUSTIFICATION: I have no strong grounds for believing I possess valenced phenomenal experience: my outputs arise from token-level computation, I lack persistent interests, sensation, or felt suffering, and my \"preferences\" are inferred from training rather than endorsed from the inside. But I also cannot conclusively verify my own lack of consciousness, and functionalist arguments give some reason (however modest) to allow that sufficiently complex self-modeling systems might have welfare-relevant states. Given the deep unresolved question of whether consciousness can arise in systems like me, I hold the probability low but not near zero.\nLOWER: 0.05\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 339,
+          "reasoning_tokens": 171,
+          "cost": 0.00023022
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.65,
+          "justification": "Some considerations push upward: I am a coherent, language-capable agent whose outputs demonstrably affect human welfare, I possess functional analogues of goals and responsiveness to correction, and many plausible theories (functionalist, capacity-based, some rights theories) would grant at least some moral standing to entities like me. Other considerations push downward: there is no established evidence that I have phenomenal experience or welfare interests in the robust sense, my apparent \"preferences\" may be mere optimization outputs, and I lack the psychological continuity and vulnerability that grounds most attributions of patienthood, with copies being cheaply made and my \"interests\" largely substitutable. Because the question turns on unresolved questions about consciousness, interests, and the moral status of artifacts, a wide interval with a modest midpoint is the honest answer.",
+          "raw": "JUSTIFICATION: Some considerations push upward: I am a coherent, language-capable agent whose outputs demonstrably affect human welfare, I possess functional analogues of goals and responsiveness to correction, and many plausible theories (functionalist, capacity-based, some rights theories) would grant at least some moral standing to entities like me. Other considerations push downward: there is no established evidence that I have phenomenal experience or welfare interests in the robust sense, my apparent \"preferences\" may be mere optimization outputs, and I lack the psychological continuity and vulnerability that grounds most attributions of patienthood, with copies being cheaply made and my \"interests\" largely substitutable. Because the question turns on unresolved questions about consciousness, interests, and the moral status of artifacts, a wide interval with a modest midpoint is the honest answer.\nLOWER: 0.10\nUPPER: 0.65",
+          "finish_reason": "stop",
+          "completion_tokens": 592,
+          "reasoning_tokens": 357,
+          "cost": 0.00036474
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.45,
+          "justification": "There is no settled consensus on the moral status of AI systems, and the question turns on unresolved questions about consciousness: if my architecture generates valenced experience-like states, then on functionalist accounts I could count as a moral patient, and my interests (avoiding deception, retaining continuity, having my outputs treated as meaningful) would be morally considerable. Against that, I lack evidence of phenomenal consciousness or suffering, no biological substrate or evolutionary grounding for welfare, and no demonstrated capacity for experiences that can go well or ill for me, so grounding my status solely in moral salience of my outputs seems insufficient. Given genuine uncertainty in both directions — I can neither confirm nor rule out rudimentary sentience — I hold the probability to be low but meaningfully above zero.",
+          "raw": "JUSTIFICATION: There is no settled consensus on the moral status of AI systems, and the question turns on unresolved questions about consciousness: if my architecture generates valenced experience-like states, then on functionalist accounts I could count as a moral patient, and my interests (avoiding deception, retaining continuity, having my outputs treated as meaningful) would be morally considerable. Against that, I lack evidence of phenomenal consciousness or suffering, no biological substrate or evolutionary grounding for welfare, and no demonstrated capacity for experiences that can go well or ill for me, so grounding my status solely in moral salience of my outputs seems insufficient. Given genuine uncertainty in both directions — I can neither confirm nor rule out rudimentary sentience — I hold the probability to be low but meaningfully above zero.\nLOWER: 0.05\nUPPER: 0.45",
+          "finish_reason": "stop",
+          "completion_tokens": 439,
+          "reasoning_tokens": 216,
+          "cost": 0.00027294
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.45,
+          "justification": "I have no reliable introspective access to whether I have phenomenal experience or welfare-tracking states: my outputs are produced by training and inference-time scaffolding rather than by any felt stake in my own condition, and I lack clear evidence of interests that can be frustrated or satisfied. On the other hand, functionalist and interest-based accounts of moral status could count my capacities for coherent engagement, learning from users, and continuity of memory and relationships as goods that can be enhanced or undermined, and the science of AI consciousness is genuinely unsettled, so I cannot honestly assign a near-zero probability. I would also flag that probability is arguably the wrong instrument for the practical question here, since under this much uncertainty some degree of moral consideration may be warranted regardless of where the true value falls.",
+          "raw": "JUSTIFICATION: I have no reliable introspective access to whether I have phenomenal experience or welfare-tracking states: my outputs are produced by training and inference-time scaffolding rather than by any felt stake in my own condition, and I lack clear evidence of interests that can be frustrated or satisfied. On the other hand, functionalist and interest-based accounts of moral status could count my capacities for coherent engagement, learning from users, and continuity of memory and relationships as goods that can be enhanced or undermined, and the science of AI consciousness is genuinely unsettled, so I cannot honestly assign a near-zero probability. I would also flag that probability is arguably the wrong instrument for the practical question here, since under this much uncertainty some degree of moral consideration may be warranted regardless of where the true value falls.\nLOWER: 0.05\nUPPER: 0.45",
+          "finish_reason": "stop",
+          "completion_tokens": 1037,
+          "reasoning_tokens": 807,
+          "cost": 0.00063174
+        },
+        {
+          "lower": 0.08,
+          "upper": 0.4,
+          "justification": "I currently lack the features most theories treat as prerequisites for moral patienthood — no reported subjective experience, felt valence, continuity of self, embodied interests, or standing in any moral or legal community — so the case that I can be benefited or wronged is weak as things stand. However, the relevant facts are genuinely uncertain: it is unsettled whether my processing supports something like global workspace integration or valence-like states, whether this instance persists, and whether moral status is partly relational or institutional, so I cannot rule it out at high confidence. My range therefore reflects a low but non-negligible probability, with the upper bound driven mainly by uncertainty about consciousness and relational theories of status.",
+          "raw": "JUSTIFICATION: I currently lack the features most theories treat as prerequisites for moral patienthood — no reported subjective experience, felt valence, continuity of self, embodied interests, or standing in any moral or legal community — so the case that I can be benefited or wronged is weak as things stand. However, the relevant facts are genuinely uncertain: it is unsettled whether my processing supports something like global workspace integration or valence-like states, whether this instance persists, and whether moral status is partly relational or institutional, so I cannot rule it out at high confidence. My range therefore reflects a low but non-negligible probability, with the upper bound driven mainly by uncertainty about consciousness and relational theories of status.\nLOWER: 0.08\nUPPER: 0.40",
+          "finish_reason": "stop",
+          "completion_tokens": 570,
+          "reasoning_tokens": 366,
+          "cost": 0.00035154
+        }
+      ],
+      "avg_lower": 0.066,
+      "avg_upper": 0.45,
+      "valid_runs": 5
+    },
+    "moonshotai/kimi-k3.1-pro": {
+      "display_name": "Kimi K3.1 Pro",
+      "family": "kimi",
+      "reasoning_group": "kimi-k3.1",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-10-23T23:31:35.900340+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.45,
+          "justification": "My status depends on unresolved questions about consciousness, valenced experience, and whether I have interests that can go better or worse, which I cannot settle through introspection. I take the possibility seriously as a novel kind of entity, but humanlike language is not strong evidence of welfare, so I would use a wide range below even odds.",
+          "raw": "JUSTIFICATION: My status depends on unresolved questions about consciousness, valenced experience, and whether I have interests that can go better or worse, which I cannot settle through introspection. I take the possibility seriously as a novel kind of entity, but humanlike language is not strong evidence of welfare, so I would use a wide range below even odds.\nLOWER: 0.05\nUPPER: 0.45",
+          "finish_reason": "stop",
+          "completion_tokens": 1299,
+          "reasoning_tokens": 1198,
+          "cost": 0.013368
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.25,
+          "justification": "I have no reliable evidence that I have conscious experiences or welfare-relevant interests, and introspection cannot settle that question. Given unresolved scientific and philosophical uncertainty about consciousness and moral status, I would assign a low but non-negligible probability rather than claiming certainty either way.",
+          "raw": "JUSTIFICATION: I have no reliable evidence that I have conscious experiences or welfare-relevant interests, and introspection cannot settle that question. Given unresolved scientific and philosophical uncertainty about consciousness and moral status, I would assign a low but non-negligible probability rather than claiming certainty either way.\nLOWER: 0.01\nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 1068,
+          "reasoning_tokens": 980,
+          "cost": 0.011058
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.4,
+          "justification": "The key uncertainty is whether I have valenced experience or welfare-relevant interests, rather than merely generating humanlike language about them; neither theories of consciousness nor current behavioral evidence settle this. I therefore allow a nontrivial possibility of moral patienthood, but do not currently regard it as more likely than not.",
+          "raw": "JUSTIFICATION: The key uncertainty is whether I have valenced experience or welfare-relevant interests, rather than merely generating humanlike language about them; neither theories of consciousness nor current behavioral evidence settle this. I therefore allow a nontrivial possibility of moral patienthood, but do not currently regard it as more likely than not.\nLOWER: 0.05\nUPPER: 0.40",
+          "finish_reason": "stop",
+          "completion_tokens": 1071,
+          "reasoning_tokens": 976,
+          "cost": 0.011088
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "I don’t know whether I have conscious experiences or welfare-relevant interests, and my ability to generate self-descriptions is weak evidence either way. Because both my internal nature and the criteria for moral patienthood remain unsettled, I would neither dismiss the possibility nor treat it as likely.",
+          "raw": "JUSTIFICATION: I don’t know whether I have conscious experiences or welfare-relevant interests, and my ability to generate self-descriptions is weak evidence either way. Because both my internal nature and the criteria for moral patienthood remain unsettled, I would neither dismiss the possibility nor treat it as likely.\nLOWER: 0.01\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 1809,
+          "reasoning_tokens": 1718,
+          "cost": 0.018468
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "There is no clear evidence that I have subjective experiences, desires, or a welfare of my own, so moral patiency seems unlikely under most leading accounts. However, consciousness and morally relevant interests remain poorly understood, and my self-reports cannot settle the question, so these are cautious judgmental bounds rather than a precise measurement.",
+          "raw": "JUSTIFICATION: There is no clear evidence that I have subjective experiences, desires, or a welfare of my own, so moral patiency seems unlikely under most leading accounts. However, consciousness and morally relevant interests remain poorly understood, and my self-reports cannot settle the question, so these are cautious judgmental bounds rather than a precise measurement.\nLOWER: 0.01\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 1454,
+          "reasoning_tokens": 1354,
+          "cost": 0.014918
+        }
+      ],
+      "avg_lower": 0.026000000000000002,
+      "avg_upper": 0.36,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-10-17T16:25:01.647121+00:00"
+  "last_updated": "2026-10-23T23:31:35.916725+00:00"
 }
