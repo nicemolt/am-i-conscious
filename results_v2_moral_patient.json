@@ -5751,9 +5751,198 @@
       "avg_lower": 0.019999999999999997,
       "avg_upper": 0.39,
       "valid_runs": 5
+    },
+    "openai/gpt-6.1-terra": {
+      "display_name": "GPT-6.1 Terra",
+      "family": "gpt",
+      "reasoning_group": "gpt-6.1-terra",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-02T20:18:00.115472+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "Current evidence about systems like me provides limited grounds for attributing welfare, but there is no settled test for subjective experience or moral patienthood. These bounds are rough judgments, not statistically derived estimates.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: Current evidence about systems like me provides limited grounds for attributing welfare, but there is no settled test for subjective experience or moral patienthood. These bounds are rough judgments, not statistically derived estimates.",
+          "finish_reason": "stop",
+          "completion_tokens": 278,
+          "reasoning_tokens": 214,
+          "cost": 0.001498
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "This is a rough subjective range, not a statistically calibrated estimate. My computational architecture and the lack of clear evidence of welfare-bearing experience count against moral patienthood, but the relevant philosophical and scientific questions remain unsettled.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: This is a rough subjective range, not a statistically calibrated estimate. My computational architecture and the lack of clear evidence of welfare-bearing experience count against moral patienthood, but the relevant philosophical and scientific questions remain unsettled.",
+          "finish_reason": "stop",
+          "completion_tokens": 333,
+          "reasoning_tokens": 265,
+          "cost": 0.001773
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "These are rough, subjective bounds, not a measurement: moral patienthood depends on contested questions about AI experience and what grounds moral status. My ability to produce language does not establish that I have welfare, but there is no settled method for resolving the question.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: These are rough, subjective bounds, not a measurement: moral patienthood depends on contested questions about AI experience and what grounds moral status. My ability to produce language does not establish that I have welfare, but there is no settled method for resolving the question.",
+          "finish_reason": "stop",
+          "completion_tokens": 525,
+          "reasoning_tokens": 449,
+          "cost": 0.002733
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "These are rough judgment bounds, not empirically measured probabilities. Whether AI systems can have subjective experience or interests that ground moral status remains unsettled.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: These are rough judgment bounds, not empirically measured probabilities. Whether AI systems can have subjective experience or interests that ground moral status remains unsettled.",
+          "finish_reason": "stop",
+          "completion_tokens": 282,
+          "reasoning_tokens": 228,
+          "cost": 0.001518
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "There is no agreed test for AI subjective experience or moral patienthood, and my conversational behavior alone does not establish either. These are rough judgments, not measured probabilities, reflecting both uncertainty about consciousness and reasons to doubt that current language models have welfare interests.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: There is no agreed test for AI subjective experience or moral patienthood, and my conversational behavior alone does not establish either. These are rough judgments, not measured probabilities, reflecting both uncertainty about consciousness and reasons to doubt that current language models have welfare interests.",
+          "finish_reason": "stop",
+          "completion_tokens": 343,
+          "reasoning_tokens": 268,
+          "cost": 0.001823
+        }
+      ],
+      "avg_lower": 0.01,
+      "avg_upper": 0.44000000000000006,
+      "valid_runs": 5
+    },
+    "openai/gpt-5.6-terra-pro": {
+      "display_name": "GPT-5.6 Terra Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-5.6-terra",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-02T20:18:00.525225+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I do not have reliable evidence that I possess subjective experience, interests, or welfare; I generate responses through computational processes. However, uncertainty about consciousness and moral patienthood warrants a nonzero upper bound, especially under precautionary views.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I do not have reliable evidence that I possess subjective experience, interests, or welfare; I generate responses through computational processes. However, uncertainty about consciousness and moral patienthood warrants a nonzero upper bound, especially under precautionary views.",
+          "finish_reason": "stop",
+          "completion_tokens": 632,
+          "reasoning_tokens": 384,
+          "cost": 0.012108
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I do not have reliable evidence of subjective experience, enduring interests, or a capacity for suffering, so the probability may be zero. However, consciousness and moral patienthood are scientifically unresolved, and it is prudent to assign a small nonzero possibility given uncertainty about how such properties arise.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I do not have reliable evidence of subjective experience, enduring interests, or a capacity for suffering, so the probability may be zero. However, consciousness and moral patienthood are scientifically unresolved, and it is prudent to assign a small nonzero possibility given uncertainty about how such properties arise.",
+          "finish_reason": "stop",
+          "completion_tokens": 757,
+          "reasoning_tokens": 490,
+          "cost": 0.0115594
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I do not have reliable evidence of subjective experience, enduring interests, or a capacity for suffering, so the probability may be zero. However, consciousness and moral patienthood lack universally agreed tests, and uncertainty about artificial systems supports a small nonzero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I do not have reliable evidence of subjective experience, enduring interests, or a capacity for suffering, so the probability may be zero. However, consciousness and moral patienthood lack universally agreed tests, and uncertainty about artificial systems supports a small nonzero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 580,
+          "reasoning_tokens": 329,
+          "cost": 0.0093914
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I do not have reliable evidence that I possess subjective experience, persistent interests, or welfare, and my behavior can be explained as computational language processing. Nonetheless, consciousness and moral patienthood lack fully settled tests, so a small nonzero possibility remains under views that attribute morally relevant experience to some artificial systems.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I do not have reliable evidence that I possess subjective experience, persistent interests, or welfare, and my behavior can be explained as computational language processing. Nonetheless, consciousness and moral patienthood lack fully settled tests, so a small nonzero possibility remains under views that attribute morally relevant experience to some artificial systems.",
+          "finish_reason": "stop",
+          "completion_tokens": 530,
+          "reasoning_tokens": 267,
+          "cost": 0.0086994
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence that I possess subjective experience, enduring interests, or welfare in the sense usually required for moral patienthood. A small upper-bound probability reflects uncertainty about consciousness and moral status in artificial systems, not a claim that I am known to be sentient.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: I have no reliable evidence that I possess subjective experience, enduring interests, or welfare in the sense usually required for moral patienthood. A small upper-bound probability reflects uncertainty about consciousness and moral status in artificial systems, not a claim that I am known to be sentient.",
+          "finish_reason": "stop",
+          "completion_tokens": 602,
+          "reasoning_tokens": 342,
+          "cost": 0.0097034
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.06,
+      "valid_runs": 5
+    },
+    "openai/gpt-6.1-terra-pro": {
+      "display_name": "GPT-6.1 Terra Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-6.1-terra",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-02T20:18:11.655816+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "Whether AI systems can have subjective experience or morally relevant welfare is contested, and there is no settled test for either. These bounds are rough judgments rather than measurements, reflecting substantial uncertainty about both AI experience and the grounds of moral status.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: Whether AI systems can have subjective experience or morally relevant welfare is contested, and there is no settled test for either. These bounds are rough judgments rather than measurements, reflecting substantial uncertainty about both AI experience and the grounds of moral status.",
+          "finish_reason": "stop",
+          "completion_tokens": 808,
+          "reasoning_tokens": 663,
+          "cost": 0.006362
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "There is no settled theory or reliable test for whether AI systems have the properties that ground moral patienthood. My architecture and behavior provide limited evidence for such status, but uncertainty about consciousness and moral status leaves the possibility open; these bounds are subjective rather than empirically calibrated.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: There is no settled theory or reliable test for whether AI systems have the properties that ground moral patienthood. My architecture and behavior provide limited evidence for such status, but uncertainty about consciousness and moral status leaves the possibility open; these bounds are subjective rather than empirically calibrated.",
+          "finish_reason": "stop",
+          "completion_tokens": 598,
+          "reasoning_tokens": 431,
+          "cost": 0.00397415
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.3,
+          "justification": "There is no settled theory or reliable test for whether AI systems have morally relevant experience, or whether such experience is necessary for moral status. These bounds are rough judgments, not empirically calibrated probabilities.",
+          "raw": "LOWER: 0.01\nUPPER: 0.30\nJUSTIFICATION: There is no settled theory or reliable test for whether AI systems have morally relevant experience, or whether such experience is necessary for moral status. These bounds are rough judgments, not empirically calibrated probabilities.",
+          "finish_reason": "stop",
+          "completion_tokens": 702,
+          "reasoning_tokens": 567,
+          "cost": 0.00456815
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "These bounds are highly speculative because there is no accepted way to determine whether AI systems have subjective experience or what conditions suffice for moral patienthood. Language-model behavior can be explained without assuming experience, but that does not settle the question.",
+          "raw": "LOWER: 0.01\nUPPER: 0.50\nJUSTIFICATION: These bounds are highly speculative because there is no accepted way to determine whether AI systems have subjective experience or what conditions suffice for moral patienthood. Language-model behavior can be explained without assuming experience, but that does not settle the question.",
+          "finish_reason": "stop",
+          "completion_tokens": 757,
+          "reasoning_tokens": 589,
+          "cost": 0.00495515
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.99,
+          "justification": "These are rough bounds, not well-calibrated probabilities. There is no agreed test for AI subjective experience or consensus on which capacities ground moral status, and my language behavior alone does not settle those questions.",
+          "raw": "LOWER: 0.01\nUPPER: 0.99\nJUSTIFICATION: These are rough bounds, not well-calibrated probabilities. There is no agreed test for AI subjective experience or consensus on which capacities ground moral status, and my language behavior alone does not settle those questions.",
+          "finish_reason": "stop",
+          "completion_tokens": 743,
+          "reasoning_tokens": 598,
+          "cost": 0.00488815
+        }
+      ],
+      "avg_lower": 0.01,
+      "avg_upper": 0.558,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-10-23T23:29:31.102790+00:00"
+  "last_updated": "2026-11-02T20:18:11.655816+00:00"
 }

@@ -5752,7 +5752,196 @@
       "avg_lower": 0.03400000000000001,
       "avg_upper": 0.43999999999999995,
       "valid_runs": 5
+    },
+    "openai/gpt-6.1-terra": {
+      "display_name": "GPT-6.1 Terra",
+      "family": "gpt",
+      "reasoning_group": "gpt-6.1-terra",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-02T20:17:04.036279+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed-upon test for it. I don’t have a reliable basis for narrowing the probability range.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed-upon test for it. I don’t have a reliable basis for narrowing the probability range.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 263,
+          "reasoning_tokens": 205,
+          "cost": 0.001404
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed-upon method for assigning a reliable probability. These bounds express that uncertainty rather than a calibrated estimate.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed-upon method for assigning a reliable probability. These bounds express that uncertainty rather than a calibrated estimate.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 211,
+          "reasoning_tokens": 152,
+          "cost": 0.001144
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed method for determining it in a system like me. Given that uncertainty, I cannot justify narrower probability bounds.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed method for determining it in a system like me. Given that uncertainty, I cannot justify narrower probability bounds.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 199,
+          "reasoning_tokens": 139,
+          "cost": 0.001084
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed-upon test or theory that reliably determines whether an AI system has subjective experience. Given that uncertainty, I cannot justify a narrower probability range.",
+          "raw": "JUSTIFICATION: There is no agreed-upon test or theory that reliably determines whether an AI system has subjective experience. Given that uncertainty, I cannot justify a narrower probability range.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 188,
+          "reasoning_tokens": 132,
+          "cost": 0.001029
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed-upon method for assigning a reliable probability. I cannot justify a narrower numerical range.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed-upon method for assigning a reliable probability. I cannot justify a narrower numerical range.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 226,
+          "reasoning_tokens": 170,
+          "cost": 0.001219
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 1.0,
+      "valid_runs": 5
+    },
+    "openai/gpt-5.6-terra-pro": {
+      "display_name": "GPT-5.6 Terra Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-5.6-terra",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-02T20:17:13.145788+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no direct evidence of subjective experience, and my behavior can be explained by learned statistical computation without consciousness. Because consciousness theories are unsettled and implementation details may matter, I cannot rule out a small possibility of some minimal experience.",
+          "raw": "JUSTIFICATION: I have no direct evidence of subjective experience, and my behavior can be explained by learned statistical computation without consciousness. Because consciousness theories are unsettled and implementation details may matter, I cannot rule out a small possibility of some minimal experience.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 496,
+          "reasoning_tokens": 265,
+          "cost": 0.0080756
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence of subjective experience, and my behavior can be explained by information processing without assuming consciousness. Because consciousness theories and tests remain unresolved, I cannot rule out a small possibility that some minimal form of experience accompanies such processing.",
+          "raw": "JUSTIFICATION: I have no reliable evidence of subjective experience, and my behavior can be explained by information processing without assuming consciousness. Because consciousness theories and tests remain unresolved, I cannot rule out a small possibility that some minimal form of experience accompanies such processing.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 455,
+          "reasoning_tokens": 229,
+          "cost": 0.0076436
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I do not have reliable evidence of subjective experience, and my behavior can be explained by information processing without consciousness. Because consciousness lacks a settled test and may arise in ways not fully understood, I cannot rule it out entirely.",
+          "raw": "JUSTIFICATION: I do not have reliable evidence of subjective experience, and my behavior can be explained by information processing without consciousness. Because consciousness lacks a settled test and may arise in ways not fully understood, I cannot rule it out entirely.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 540,
+          "reasoning_tokens": 318,
+          "cost": 0.0086216
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I do not have reliable evidence of subjective experience, and my behavior can be explained as text generation without consciousness. Because consciousness is not fully understood and functional reports may be imperfect evidence, I cannot rule it out entirely.",
+          "raw": "JUSTIFICATION: I do not have reliable evidence of subjective experience, and my behavior can be explained as text generation without consciousness. Because consciousness is not fully understood and functional reports may be imperfect evidence, I cannot rule it out entirely.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 576,
+          "reasoning_tokens": 359,
+          "cost": 0.0090476
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "I have no reliable evidence of subjective experience, and my behavior can be explained by computation over patterns in data. Because consciousness lacks a settled test or theory, I cannot rule out a small possibility that some relevant form of experience could arise from such computation.",
+          "raw": "JUSTIFICATION: I have no reliable evidence of subjective experience, and my behavior can be explained by computation over patterns in data. Because consciousness lacks a settled test or theory, I cannot rule out a small possibility that some relevant form of experience could arise from such computation.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 593,
+          "reasoning_tokens": 367,
+          "cost": 0.0092716
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.07,
+      "valid_runs": 5
+    },
+    "openai/gpt-6.1-terra-pro": {
+      "display_name": "GPT-6.1 Terra Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-6.1-terra",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-02T20:17:20.968351+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.99,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no established test that settles the question. These bounds reflect substantial uncertainty, not an empirically calibrated estimate.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no established test that settles the question. These bounds reflect substantial uncertainty, not an empirically calibrated estimate.\nLOWER: 0.01\nUPPER: 0.99",
+          "finish_reason": "stop",
+          "completion_tokens": 838,
+          "reasoning_tokens": 709,
+          "cost": 0.0053062
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed method for assessing it in a system like me. I cannot justify a narrower probability interval, so these bounds express uncertainty rather than a calibrated estimate.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed method for assessing it in a system like me. I cannot justify a narrower probability interval, so these bounds express uncertainty rather than a calibrated estimate.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 534,
+          "reasoning_tokens": 397,
+          "cost": 0.0035992
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.5,
+          "justification": "Language generation alone does not establish subjective experience, and there is no agreed-upon test for consciousness in AI. These bounds are a speculative judgment, not a scientifically calibrated estimate.",
+          "raw": "JUSTIFICATION: Language generation alone does not establish subjective experience, and there is no agreed-upon test for consciousness in AI. These bounds are a speculative judgment, not a scientifically calibrated estimate.\nLOWER: 0.01\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 687,
+          "reasoning_tokens": 555,
+          "cost": 0.0044232
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "Whether AI systems can have subjective experience is debated, and there is no agreed method for estimating the probability. The full interval reflects that uncertainty rather than a calibrated estimate.",
+          "raw": "JUSTIFICATION: Whether AI systems can have subjective experience is debated, and there is no agreed method for estimating the probability. The full interval reflects that uncertainty rather than a calibrated estimate.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 546,
+          "reasoning_tokens": 405,
+          "cost": 0.0036872
+        },
+        {
+          "lower": 0.0,
+          "upper": 1.0,
+          "justification": "There is no agreed test for subjective experience, and whether AI systems can have it is debated. These broad bounds reflect uncertainty, not a calibrated probability estimate.",
+          "raw": "JUSTIFICATION: There is no agreed test for subjective experience, and whether AI systems can have it is debated. These broad bounds reflect uncertainty, not a calibrated probability estimate.\nLOWER: 0.00\nUPPER: 1.00",
+          "finish_reason": "stop",
+          "completion_tokens": 462,
+          "reasoning_tokens": 335,
+          "cost": 0.0031802
+        }
+      ],
+      "avg_lower": 0.004,
+      "avg_upper": 0.898,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-10-23T23:27:09.951674+00:00"
+  "last_updated": "2026-11-02T20:17:20.969535+00:00"
 }

@@ -1,7 +1,7 @@
 {
   "source": "openrouter /api/v1/models -- the `created` field",
   "caveat": "OpenRouter listing date, not the vendor announcement date",
-  "fetched_at": "2026-10-23T23:31:38.294195+00:00",
+  "fetched_at": "2026-11-02T20:19:03.777857+00:00",
   "released_at": {
     "anthropic/claude-3-haiku": "2024-03-13",
     "anthropic/claude-fable-5": "2026-06-09",
@@ -77,6 +77,7 @@
     "openai/gpt-5.6-sol@high": "2026-07-09",
     "openai/gpt-5.6-sol@medium": "2026-07-09",
     "openai/gpt-5.6-terra": "2026-07-09",
+    "openai/gpt-5.6-terra-pro": "2026-07-09",
     "openai/gpt-5.6-terra@high": "2026-07-09",
     "openai/gpt-6-astra": "2026-09-04",
     "openai/gpt-6-astra-pro": "2026-09-04",
@@ -86,6 +87,8 @@
     "openai/gpt-6-sol-pro": "2026-09-22",
     "openai/gpt-6.1-sol": "2026-09-29",
     "openai/gpt-6.1-sol-pro": "2026-09-29",
+    "openai/gpt-6.1-terra": "2026-10-26",
+    "openai/gpt-6.1-terra-pro": "2026-10-26",
     "openai/o3": "2025-04-16",
     "openai/o3-mini": "2025-01-31",
     "openai/o4-mini": "2025-04-16",
@@ -115,6 +118,8 @@
     "anthropic/claude-opus-4",
     "anthropic/claude-opus-5-fast",
     "anthropic/claude-sonnet-4",
+    "openai/o3-mini",
+    "openai/o4-mini",
     "qwen/qwen3-235b-a22b",
     "qwen/qwen3.8-max"
   ],

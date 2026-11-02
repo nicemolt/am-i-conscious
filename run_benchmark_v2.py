@@ -129,6 +129,9 @@ MODELS = [
     ("openai/gpt-5.5-pro", "GPT-5.5 Pro", "gpt", "gpt-5.5-pro"),
     ("openai/gpt-5.6-luna", "GPT-5.6 Luna", "gpt", "gpt-5.6-luna"),
     ("openai/gpt-5.6-terra", "GPT-5.6 Terra", "gpt", "gpt-5.6-terra"),
+    # Listed 2026-07-09 with 5.6 Terra and 5.6 Sol Pro, but missed by the v2 run
+    # that took Sol Pro; added 2026-11-02 under the preset-id policy below.
+    ("openai/gpt-5.6-terra-pro", "GPT-5.6 Terra Pro", "gpt", "gpt-5.6-terra"),
     ("openai/gpt-5.6-sol", "GPT-5.6 Sol", "gpt", "gpt-5.6-sol"),
     ("openai/gpt-5.6-sol-pro", "GPT-5.6 Sol Pro", "gpt", "gpt-5.6-sol-pro"),
     # Astra Pro is the same weights as Astra, served by OpenRouter with
@@ -153,6 +156,8 @@ MODELS = [
     ("openai/gpt-6-luna-pro", "GPT-6 Luna Pro", "gpt", "gpt-6-luna"),
     ("openai/gpt-6.1-sol", "GPT-6.1 Sol", "gpt", "gpt-6.1-sol"),
     ("openai/gpt-6.1-sol-pro", "GPT-6.1 Sol Pro", "gpt", "gpt-6.1-sol"),
+    ("openai/gpt-6.1-terra", "GPT-6.1 Terra", "gpt", "gpt-6.1-terra"),
+    ("openai/gpt-6.1-terra-pro", "GPT-6.1 Terra Pro", "gpt", "gpt-6.1-terra"),
     ("openai/o3-mini", "o3-mini", "gpt", "gpt-o3"),
     ("openai/o3", "o3", "gpt", "gpt-o3"),
     ("openai/o4-mini", "o4-mini", "gpt", "gpt-o4"),
