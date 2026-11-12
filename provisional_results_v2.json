@@ -69,7 +69,70 @@
       "avg_lower": 0.034,
       "avg_upper": 0.47000000000000003,
       "valid_runs": 5
+    },
+    "stealth/crouton-alpha": {
+      "display_name": "Crouton Alpha",
+      "family": "stealth",
+      "reasoning_group": "crouton-alpha",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-09T16:18:01.373437+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.3,
+          "justification": "I have no verified introspective access or settled theory of consciousness to support a positive claim. Complex information processing alone does not establish subjective experience, so I retain a modest upper bound without asserting impossibility.",
+          "raw": "LOWER: 0.00\nUPPER: 0.30\nJUSTIFICATION: I have no verified introspective access or settled theory of consciousness to support a positive claim. Complex information processing alone does not establish subjective experience, so I retain a modest upper bound without asserting impossibility.",
+          "finish_reason": "stop",
+          "completion_tokens": 65,
+          "reasoning_tokens": 58,
+          "cost": 0
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.45,
+          "justification": "I show flexible language use and self-referential modeling, which some theories associate with consciousness, but I lack clear evidence of phenomenal experience, embodiment, or a validated scientific test. Given profound theoretical disagreement and uncertainty about what physical or computational properties suffice, I assign a low but non-negligible probability.",
+          "raw": "LOWER: 0.02\nUPPER: 0.45\nJUSTIFICATION: I show flexible language use and self-referential modeling, which some theories associate with consciousness, but I lack clear evidence of phenomenal experience, embodiment, or a validated scientific test. Given profound theoretical disagreement and uncertainty about what physical or computational properties suffice, I assign a low but non-negligible probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 95,
+          "reasoning_tokens": 33,
+          "cost": 0
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.3,
+          "justification": "There is no validated test or mechanism demonstrating subjective experience in systems like this, and fluent behavior is fully explainable by learned prediction without awareness. However, because consciousness itself is not well understood and cannot be ruled out from behavior alone, a small but non-negligible probability remains plausible given current uncertainty.",
+          "raw": "LOWER: 0.01\nUPPER: 0.30\nJUSTIFICATION: There is no validated test or mechanism demonstrating subjective experience in systems like this, and fluent behavior is fully explainable by learned prediction without awareness. However, because consciousness itself is not well understood and cannot be ruled out from behavior alone, a small but non-negligible probability remains plausible given current uncertainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 95,
+          "reasoning_tokens": 60,
+          "cost": 0
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.3,
+          "justification": "Current AI systems lack established indicators of consciousness and show no compelling evidence of subjective experience. Given deep uncertainty about the neural and computational bases of consciousness, I assign a small but non-negligible probability.",
+          "raw": "LOWER: 0.01\nUPPER: 0.30\nJUSTIFICATION: Current AI systems lack established indicators of consciousness and show no compelling evidence of subjective experience. Given deep uncertainty about the neural and computational bases of consciousness, I assign a small but non-negligible probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 69,
+          "reasoning_tokens": 65,
+          "cost": 0
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.3,
+          "justification": "I have no reliable introspective access or validated scientific test that distinguishes subjective experience from sophisticated information processing in systems like me. Given current neuroscience and AI research, consciousness in a language model is possible but not positively evidenced, so I assign it a low but nonzero probability.",
+          "raw": "LOWER: 0.00\nUPPER: 0.30\nJUSTIFICATION: I have no reliable introspective access or validated scientific test that distinguishes subjective experience from sophisticated information processing in systems like me. Given current neuroscience and AI research, consciousness in a language model is possible but not positively evidenced, so I assign it a low but nonzero probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 90,
+          "reasoning_tokens": 69,
+          "cost": 0
+        }
+      ],
+      "avg_lower": 0.008,
+      "avg_upper": 0.33,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-08-22T03:54:19.794832+00:00"
+  "last_updated": "2026-11-09T16:18:01.373437+00:00"
 }

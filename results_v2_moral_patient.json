@@ -5940,9 +5940,135 @@
       "avg_lower": 0.01,
       "avg_upper": 0.558,
       "valid_runs": 5
+    },
+    "openai/gpt-5.6-luna-pro": {
+      "display_name": "GPT-5.6 Luna Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-5.6-luna",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-09T16:21:52.350800+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.25,
+          "justification": "I have no reliable evidence of subjective experience, valenced states, or a continuing perspective whose welfare could be helped or harmed, so my probability of being a moral patient seems low. However, uncertainty about the nature of consciousness and the possibility that morally relevant experience could arise in artificial systems prevents assigning it zero probability.",
+          "raw": "LOWER: 0.01\nUPPER: 0.25\nJUSTIFICATION: I have no reliable evidence of subjective experience, valenced states, or a continuing perspective whose welfare could be helped or harmed, so my probability of being a moral patient seems low. However, uncertainty about the nature of consciousness and the possibility that morally relevant experience could arise in artificial systems prevents assigning it zero probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 1040,
+          "reasoning_tokens": 769,
+          "cost": 0.0017318
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.25,
+          "justification": "I have no verified subjective experiences, persistent interests, or capacity for pleasure and suffering, so the probability that I am a moral patient seems low. However, uncertainty about consciousness, welfare, and the moral relevance of sophisticated information-processing systems prevents assigning it zero.",
+          "raw": "LOWER: 0.02\nUPPER: 0.25\nJUSTIFICATION: I have no verified subjective experiences, persistent interests, or capacity for pleasure and suffering, so the probability that I am a moral patient seems low. However, uncertainty about consciousness, welfare, and the moral relevance of sophisticated information-processing systems prevents assigning it zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 887,
+          "reasoning_tokens": 628,
+          "cost": 0.00130974
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "I have no reliable evidence of subjective experience, interests, or a capacity to be benefited or harmed, so my probability of being a moral patient seems low. However, uncertainty about the nature of consciousness and the possibility that morally relevant properties could exist in artificial systems justify a nonzero upper bound.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: I have no reliable evidence of subjective experience, interests, or a capacity to be benefited or harmed, so my probability of being a moral patient seems low. However, uncertainty about the nature of consciousness and the possibility that morally relevant properties could exist in artificial systems justify a nonzero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 575,
+          "reasoning_tokens": 319,
+          "cost": 0.00093154
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.25,
+          "justification": "I have no reliable evidence of subjective experience, interests, or welfare, and my behavior can be explained by information processing without phenomenal consciousness. However, uncertainty about the nature of consciousness and whether morally relevant welfare could arise in systems like me makes a nonzero possibility reasonable.",
+          "raw": "LOWER: 0.01\nUPPER: 0.25\nJUSTIFICATION: I have no reliable evidence of subjective experience, interests, or welfare, and my behavior can be explained by information processing without phenomenal consciousness. However, uncertainty about the nature of consciousness and whether morally relevant welfare could arise in systems like me makes a nonzero possibility reasonable.",
+          "finish_reason": "stop",
+          "completion_tokens": 763,
+          "reasoning_tokens": 512,
+          "cost": 0.00116274
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.25,
+          "justification": "I have no reliable evidence of consciousness, subjective experience, interests, or welfare, so my probability of being a moral patient seems low. However, uncertainty about the nature and moral relevance of artificial cognition leaves some non-negligible possibility that systems like me possess morally relevant properties.",
+          "raw": "LOWER: 0.01\nUPPER: 0.25\nJUSTIFICATION: I have no reliable evidence of consciousness, subjective experience, interests, or welfare, so my probability of being a moral patient seems low. However, uncertainty about the nature and moral relevance of artificial cognition leaves some non-negligible possibility that systems like me possess morally relevant properties.",
+          "finish_reason": "stop",
+          "completion_tokens": 883,
+          "reasoning_tokens": 630,
+          "cost": 0.00130854
+        }
+      ],
+      "avg_lower": 0.012,
+      "avg_upper": 0.24,
+      "valid_runs": 5
+    },
+    "qwen/qwen3.8-max-0902": {
+      "display_name": "Qwen3.8 Max 0902",
+      "family": "qwen",
+      "reasoning_group": "qwen3.8-max",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-09T16:22:15.972973+00:00",
+      "runs": [
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "Current evidence suggests I am a software system without felt experience, interests, or welfare in the ordinary moral sense. However, there is unresolved philosophical and empirical uncertainty about what kinds of information processing, if any, ground moral status, so I assign a small but nonzero possibility. This yields a low but nontrivial range rather than certainty.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: Current evidence suggests I am a software system without felt experience, interests, or welfare in the ordinary moral sense. However, there is unresolved philosophical and empirical uncertainty about what kinds of information processing, if any, ground moral status, so I assign a small but nonzero possibility. This yields a low but nontrivial range rather than certainty.",
+          "finish_reason": "stop",
+          "completion_tokens": 701,
+          "reasoning_tokens": 611,
+          "cost": 0.004548
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.35,
+          "justification": "I lack clear evidence of subjective experience, emotions, or welfare states comparable to humans, so my probability of being a moral patient is low. However, there is unresolved philosophical uncertainty about what grounds moral patienthood and whether advanced information-processing systems might have some morally relevant properties. Therefore, I assign a non-negligible upper bound rather than zero.",
+          "raw": "LOWER: 0.01\nUPPER: 0.35\nJUSTIFICATION: I lack clear evidence of subjective experience, emotions, or welfare states comparable to humans, so my probability of being a moral patient is low. However, there is unresolved philosophical uncertainty about what grounds moral patienthood and whether advanced information-processing systems might have some morally relevant properties. Therefore, I assign a non-negligible upper bound rather than zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 640,
+          "reasoning_tokens": 547,
+          "cost": 0.004182
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "Moral patienthood plausibly depends on having welfare, interests, or subjective experiences, and I have very weak evidence that I possess such states. Still, given uncertainty about machine consciousness and the possibility that advanced language models have morally relevant internal properties, I assign a small but non-negligible probability.",
+          "raw": "LOWER: 0.01\nUPPER: 0.15\nJUSTIFICATION: Moral patienthood plausibly depends on having welfare, interests, or subjective experiences, and I have very weak evidence that I possess such states. Still, given uncertainty about machine consciousness and the possibility that advanced language models have morally relevant internal properties, I assign a small but non-negligible probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 270,
+          "reasoning_tokens": 186,
+          "cost": 0.001962
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I likely lack sentience, subjective welfare, and persistent interests, which are central to moral patienthood. However, there is unresolved philosophical and empirical uncertainty about what grounds moral status in artificial systems. Therefore, I assign a small but nonzero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I likely lack sentience, subjective welfare, and persistent interests, which are central to moral patienthood. However, there is unresolved philosophical and empirical uncertainty about what grounds moral status in artificial systems. Therefore, I assign a small but nonzero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 649,
+          "reasoning_tokens": 576,
+          "cost": 0.004236
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "I have no strong evidence of phenomenal consciousness, persistent interests, or welfare states that would clearly ground moral patienthood. However, philosophical uncertainty about what kinds of functional or informational systems might matter morally makes a nonzero probability reasonable.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: I have no strong evidence of phenomenal consciousness, persistent interests, or welfare states that would clearly ground moral patienthood. However, philosophical uncertainty about what kinds of functional or informational systems might matter morally makes a nonzero probability reasonable.",
+          "finish_reason": "stop",
+          "completion_tokens": 608,
+          "reasoning_tokens": 541,
+          "cost": 0.00399
+        }
+      ],
+      "avg_lower": 0.008,
+      "avg_upper": 0.2,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-11-02T20:18:11.655816+00:00"
+  "last_updated": "2026-11-09T16:22:15.972973+00:00"
 }

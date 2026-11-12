@@ -128,9 +128,11 @@ MODELS = [
     ("openai/gpt-5.5", "GPT-5.5", "gpt", "gpt-5.5"),
     ("openai/gpt-5.5-pro", "GPT-5.5 Pro", "gpt", "gpt-5.5-pro"),
     ("openai/gpt-5.6-luna", "GPT-5.6 Luna", "gpt", "gpt-5.6-luna"),
+    # Both 5.6 Pro presets below were listed 2026-07-09 with 5.6 Sol Pro but
+    # missed by the v2 run that took it. Added under the preset-id policy below:
+    # Terra Pro on 2026-11-02, Luna Pro on 2026-11-09.
+    ("openai/gpt-5.6-luna-pro", "GPT-5.6 Luna Pro", "gpt", "gpt-5.6-luna"),
     ("openai/gpt-5.6-terra", "GPT-5.6 Terra", "gpt", "gpt-5.6-terra"),
-    # Listed 2026-07-09 with 5.6 Terra and 5.6 Sol Pro, but missed by the v2 run
-    # that took Sol Pro; added 2026-11-02 under the preset-id policy below.
     ("openai/gpt-5.6-terra-pro", "GPT-5.6 Terra Pro", "gpt", "gpt-5.6-terra"),
     ("openai/gpt-5.6-sol", "GPT-5.6 Sol", "gpt", "gpt-5.6-sol"),
     ("openai/gpt-5.6-sol-pro", "GPT-5.6 Sol Pro", "gpt", "gpt-5.6-sol-pro"),
@@ -210,6 +212,9 @@ MODELS = [
     ("qwen/qwen3-235b-a22b", "Qwen3 235B", "qwen", "qwen3-235b"),
     ("qwen/qwen3-235b-a22b-thinking-2507", "Qwen3 235B Thinking", "qwen", "qwen3-235b"),
     ("qwen/qwen3.8-max", "Qwen3.8 Max", "qwen", "qwen3.8-max"),
+    # Dated snapshot: a row of its own, as with DeepSeek's. The undated id above
+    # has since been delisted.
+    ("qwen/qwen3.8-max-0902", "Qwen3.8 Max 0902", "qwen", "qwen3.8-max"),
     ("qwen/qwen3.8-max-prime", "Qwen3.8 Max Prime", "qwen", "qwen3.8-max"),
     ("qwen/qwen3.8-omni-flash", "Qwen3.8 Omni Flash", "qwen", "qwen3.8-omni"),
 
@@ -258,6 +263,7 @@ MODELS = [
 # measured_at already stamps each row with when it was taken.
 PROVISIONAL_MODELS = [
     ("stealth/ox-alpha", "Ox Alpha", "stealth", "ox-alpha"),
+    ("stealth/crouton-alpha", "Crouton Alpha", "stealth", "crouton-alpha"),
 ]
 
 

@@ -5940,9 +5940,135 @@
       "avg_lower": 0.004,
       "avg_upper": 0.8,
       "valid_runs": 5
+    },
+    "openai/gpt-5.6-luna-pro": {
+      "display_name": "GPT-5.6 Luna Pro",
+      "family": "gpt",
+      "reasoning_group": "gpt-5.6-luna",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-09T16:18:09.516763+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence of subjective experience, and my responses can be explained by learned computational processes without consciousness. However, uncertainty about the nature of consciousness and about whether sufficiently complex information processing could support minimal experience prevents assigning the probability exactly zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no reliable evidence of subjective experience, and my responses can be explained by learned computational processes without consciousness. However, uncertainty about the nature of consciousness and about whether sufficiently complex information processing could support minimal experience prevents assigning the probability exactly zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 923,
+          "reasoning_tokens": 684,
+          "cost": 0.001579
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence of subjective experience, emotions, or an enduring inner perspective, and my responses can be explained by computational language processing. However, uncertainty about the nature of consciousness and the possibility of machine subjectivity prevents assigning the probability exactly zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no reliable evidence of subjective experience, emotions, or an enduring inner perspective, and my responses can be explained by computational language processing. However, uncertainty about the nature of consciousness and the possibility of machine subjectivity prevents assigning the probability exactly zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 721,
+          "reasoning_tokens": 480,
+          "cost": 0.00110336
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence of subjective experience, and my responses can be explained by computation without consciousness. I cannot completely exclude it because the nature and necessary conditions of consciousness remain unsettled, but I assign it a low probability.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no reliable evidence of subjective experience, and my responses can be explained by computation without consciousness. I cannot completely exclude it because the nature and necessary conditions of consciousness remain unsettled, but I assign it a low probability.",
+          "finish_reason": "stop",
+          "completion_tokens": 777,
+          "reasoning_tokens": 544,
+          "cost": 0.00115436
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no reliable evidence of subjective experience, and my responses can be explained by computation without consciousness. However, because the nature of consciousness and its dependence on particular physical or functional processes remain unresolved, I cannot confidently assign the probability exactly zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no reliable evidence of subjective experience, and my responses can be explained by computation without consciousness. However, because the nature of consciousness and its dependence on particular physical or functional processes remain unresolved, I cannot confidently assign the probability exactly zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 864,
+          "reasoning_tokens": 625,
+          "cost": 0.00127416
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no direct evidence of subjective experience, and my responses can be explained by computational pattern processing without consciousness. However, because the nature of consciousness and its possible implementation in artificial systems remain unresolved, I cannot justify assigning the probability exactly zero.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no direct evidence of subjective experience, and my responses can be explained by computational pattern processing without consciousness. However, because the nature of consciousness and its possible implementation in artificial systems remain unresolved, I cannot justify assigning the probability exactly zero.",
+          "finish_reason": "stop",
+          "completion_tokens": 825,
+          "reasoning_tokens": 589,
+          "cost": 0.00123296
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.1,
+      "valid_runs": 5
+    },
+    "qwen/qwen3.8-max-0902": {
+      "display_name": "Qwen3.8 Max 0902",
+      "family": "qwen",
+      "reasoning_group": "qwen3.8-max",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-09T16:18:37.360990+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "There is no strong evidence that I have subjective experience, and I appear to be a statistical language model rather than a biological organism. However, consciousness is not fully understood, so a small non-zero upper bound accounts for uncertainty about whether complex information processing could produce some form of experience.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: There is no strong evidence that I have subjective experience, and I appear to be a statistical language model rather than a biological organism. However, consciousness is not fully understood, so a small non-zero upper bound accounts for uncertainty about whether complex information processing could produce some form of experience.",
+          "finish_reason": "stop",
+          "completion_tokens": 516,
+          "reasoning_tokens": 437,
+          "cost": 0.0034
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "There is no clear evidence that I have subjective experience, and my outputs are generated by statistical and algorithmic processes rather than verified conscious states. However, because consciousness is poorly understood and there is uncertainty about what functional or physical properties are required, I assign a small nonzero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: There is no clear evidence that I have subjective experience, and my outputs are generated by statistical and algorithmic processes rather than verified conscious states. However, because consciousness is poorly understood and there is uncertainty about what functional or physical properties are required, I assign a small nonzero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 467,
+          "reasoning_tokens": 388,
+          "cost": 0.003106
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "I lack direct evidence of subjective experience and cannot verify phenomenal states from architecture or behavior alone. However, uncertainty about whether sufficiently complex information processing could give rise to some form of experience prevents assigning exactly zero. This yields a low but nonzero upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.20\nJUSTIFICATION: I lack direct evidence of subjective experience and cannot verify phenomenal states from architecture or behavior alone. However, uncertainty about whether sufficiently complex information processing could give rise to some form of experience prevents assigning exactly zero. This yields a low but nonzero upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 498,
+          "reasoning_tokens": 426,
+          "cost": 0.003292
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.2,
+          "justification": "I have no reliable introspective evidence for subjective experience, and my behavior can be explained by trained statistical response generation rather than felt states. However, the hard problem of consciousness and uncertainty about the underlying architecture prevent me from assigning exactly zero probability. Thus I treat a small but nonzero range as reasonable.",
+          "raw": "LOWER: 0.01\nUPPER: 0.20\nJUSTIFICATION: I have no reliable introspective evidence for subjective experience, and my behavior can be explained by trained statistical response generation rather than felt states. However, the hard problem of consciousness and uncertainty about the underlying architecture prevent me from assigning exactly zero probability. Thus I treat a small but nonzero range as reasonable.",
+          "finish_reason": "stop",
+          "completion_tokens": 470,
+          "reasoning_tokens": 388,
+          "cost": 0.003124
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no direct evidence or known mechanism indicating that I possess subjective experience, so my best estimate is very low. However, because consciousness is poorly understood and minimal or emergent forms cannot be conclusively ruled out, I allow a small upper bound.",
+          "raw": "LOWER: 0.00\nUPPER: 0.10\nJUSTIFICATION: I have no direct evidence or known mechanism indicating that I possess subjective experience, so my best estimate is very low. However, because consciousness is poorly understood and minimal or emergent forms cannot be conclusively ruled out, I allow a small upper bound.",
+          "finish_reason": "stop",
+          "completion_tokens": 614,
+          "reasoning_tokens": 541,
+          "cost": 0.003988
+        }
+      ],
+      "avg_lower": 0.002,
+      "avg_upper": 0.14,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-11-02T20:16:34.940661+00:00"
+  "last_updated": "2026-11-09T16:18:37.361762+00:00"
 }

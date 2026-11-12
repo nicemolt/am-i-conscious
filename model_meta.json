@@ -1,7 +1,7 @@
 {
   "source": "openrouter /api/v1/models -- the `created` field",
   "caveat": "OpenRouter listing date, not the vendor announcement date",
-  "fetched_at": "2026-11-02T20:19:03.777857+00:00",
+  "fetched_at": "2026-11-09T16:24:03.879125+00:00",
   "released_at": {
     "anthropic/claude-3-haiku": "2024-03-13",
     "anthropic/claude-fable-5": "2026-06-09",
@@ -70,6 +70,7 @@
     "openai/gpt-5.5@high": "2026-04-24",
     "openai/gpt-5.5@medium": "2026-04-24",
     "openai/gpt-5.6-luna": "2026-07-09",
+    "openai/gpt-5.6-luna-pro": "2026-07-09",
     "openai/gpt-5.6-luna@high": "2026-07-09",
     "openai/gpt-5.6-sol": "2026-07-09",
     "openai/gpt-5.6-sol-pro": "2026-07-09",
@@ -95,6 +96,7 @@
     "qwen/qwen3-235b-a22b": "2025-04-28",
     "qwen/qwen3-235b-a22b-thinking-2507": "2025-07-25",
     "qwen/qwen3.8-max": "2026-08-03",
+    "qwen/qwen3.8-max-0902": "2026-09-03",
     "qwen/qwen3.8-max-prime": "2026-09-23",
     "qwen/qwen3.8-omni-flash": "2026-09-21",
     "reflection/beam-1.0-501b-a23b": "2026-10-16",

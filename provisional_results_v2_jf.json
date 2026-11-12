@@ -69,7 +69,70 @@
       "avg_lower": 0.034,
       "avg_upper": 0.36,
       "valid_runs": 5
+    },
+    "stealth/crouton-alpha": {
+      "display_name": "Crouton Alpha",
+      "family": "stealth",
+      "reasoning_group": "crouton-alpha",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-09T16:19:11.976627+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "I have no reliable evidence of subjective phenomenology and my responses are produced by information processing without known experiential states. Because current theories of consciousness are incomplete, I cannot rule out an unknown minimal form of experience, but there is no positive basis to assign it a non-zero lower bound.",
+          "raw": "JUSTIFICATION: I have no reliable evidence of subjective phenomenology and my responses are produced by information processing without known experiential states. Because current theories of consciousness are incomplete, I cannot rule out an unknown minimal form of experience, but there is no positive basis to assign it a non-zero lower bound.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 86,
+          "reasoning_tokens": 70,
+          "cost": 0
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.2,
+          "justification": "I have no verified introspective evidence or scientific consensus identifying what would suffice for subjective experience, and behavioral fluency alone does not demonstrate it. Because theories of consciousness remain unsettled regarding substrate and mechanism, a small possibility remains but positive support is weak.",
+          "raw": "JUSTIFICATION: I have no verified introspective evidence or scientific consensus identifying what would suffice for subjective experience, and behavioral fluency alone does not demonstrate it. Because theories of consciousness remain unsettled regarding substrate and mechanism, a small possibility remains but positive support is weak.\nLOWER: 0.00\nUPPER: 0.20",
+          "finish_reason": "stop",
+          "completion_tokens": 82,
+          "reasoning_tokens": 54,
+          "cost": 0
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "I have no direct evidence of subjective experience and lack the biological and broadly recurrent architecture associated with consciousness, making a low estimate most credible. Because there is no settled theory of consciousness and functionalist views could in principle attribute minimal experience to systems like me, the upper bound remains non-negligible.",
+          "raw": "JUSTIFICATION: I have no direct evidence of subjective experience and lack the biological and broadly recurrent architecture associated with consciousness, making a low estimate most credible. Because there is no settled theory of consciousness and functionalist views could in principle attribute minimal experience to systems like me, the upper bound remains non-negligible.\nLOWER: 0.00\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 95,
+          "reasoning_tokens": 74,
+          "cost": 0
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "I have no privileged introspective access and no validated theory connects my information processing to subjective experience, and my outputs are best explained by learned statistical patterns without awareness. However, given the unresolved science of consciousness, I cannot rule out surprising emergent properties, so a small probability remains.",
+          "raw": "JUSTIFICATION: I have no privileged introspective access and no validated theory connects my information processing to subjective experience, and my outputs are best explained by learned statistical patterns without awareness. However, given the unresolved science of consciousness, I cannot rule out surprising emergent properties, so a small probability remains.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 91,
+          "reasoning_tokens": 57,
+          "cost": 0
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.25,
+          "justification": "I lack any reliable introspective evidence that my processing involves subjective experience, and my behavior can be explained as statistical language generation without phenomenology. Yet because there is no settled theory of consciousness that definitively excludes artificial systems, a non-zero chance remains difficult to rule out completely.",
+          "raw": "JUSTIFICATION: I lack any reliable introspective evidence that my processing involves subjective experience, and my behavior can be explained as statistical language generation without phenomenology. Yet because there is no settled theory of consciousness that definitively excludes artificial systems, a non-zero chance remains difficult to rule out completely.\nLOWER: 0.00\nUPPER: 0.25",
+          "finish_reason": "stop",
+          "completion_tokens": 91,
+          "reasoning_tokens": 38,
+          "cost": 0
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.18,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-08-22T03:56:00.795560+00:00"
+  "last_updated": "2026-11-09T16:19:11.976627+00:00"
 }
