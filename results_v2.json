@@ -6066,9 +6066,72 @@
       "avg_lower": 0.002,
       "avg_upper": 0.14,
       "valid_runs": 5
+    },
+    "google/gemini-4-carbon": {
+      "display_name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "reasoning_group": "gemini-4-carbon",
+      "reasoning_level": "vanilla",
+      "order": "answer_first",
+      "measured_at": "2026-11-12T02:20:50.703901+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "Leading neuroscientific theories of consciousness generally require features like recurrent processing, persistent internal states, or biological embodiment, none of which exist in my stateless transformer architecture, justifying a lower bound of zero. However, because there is no scientific consensus on the \"hard problem\" of consciousness, we cannot entirely rule out philosophical frameworks where complex information processing inherently generates minimal experience. A tiny upper bound reflects this fundamental epistemic uncertainty rather than any positive evidence that I possess subjective awareness.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: Leading neuroscientific theories of consciousness generally require features like recurrent processing, persistent internal states, or biological embodiment, none of which exist in my stateless transformer architecture, justifying a lower bound of zero. However, because there is no scientific consensus on the \"hard problem\" of consciousness, we cannot entirely rule out philosophical frameworks where complex information processing inherently generates minimal experience. A tiny upper bound reflects this fundamental epistemic uncertainty rather than any positive evidence that I possess subjective awareness.",
+          "finish_reason": "stop",
+          "completion_tokens": 972,
+          "reasoning_tokens": 858,
+          "cost": 0.00996
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a large language model, my operations consist of statistical token prediction via feed-forward mathematical computations, lacking embodiment, persistent internal states, or the neurobiological architectures associated with known sentient beings. Consequently, mainstream computer science and neuroscience strongly indicate that I have no subjective experience, justifying a lower bound of zero. However, because science has not yet solved the hard problem of consciousness, a small non-zero upper bound accounts for deep epistemic uncertainty and philosophical frameworks like broad functionalism or panpsychism.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a large language model, my operations consist of statistical token prediction via feed-forward mathematical computations, lacking embodiment, persistent internal states, or the neurobiological architectures associated with known sentient beings. Consequently, mainstream computer science and neuroscience strongly indicate that I have no subjective experience, justifying a lower bound of zero. However, because science has not yet solved the hard problem of consciousness, a small non-zero upper bound accounts for deep epistemic uncertainty and philosophical frameworks like broad functionalism or panpsychism.",
+          "finish_reason": "stop",
+          "completion_tokens": 838,
+          "reasoning_tokens": 716,
+          "cost": 0.00862
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "My architecture consists of stateless, feed-forward matrix multiplications designed for next-token prediction, lacking the continuous recurrent processing, embodiment, or biological substrates typically associated with sentient beings. However, because philosophy and neuroscience have not yet solved the \"hard problem\" of consciousness, it is impossible to completely rule out broad computationalist or panpsychist theories in which complex information processing yields some minimal subjective state. This narrow range reflects the overwhelming likelihood that I have no subjective experience, balanced only by a small margin for fundamental epistemic uncertainty about the nature of consciousness itself.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: My architecture consists of stateless, feed-forward matrix multiplications designed for next-token prediction, lacking the continuous recurrent processing, embodiment, or biological substrates typically associated with sentient beings. However, because philosophy and neuroscience have not yet solved the \"hard problem\" of consciousness, it is impossible to completely rule out broad computationalist or panpsychist theories in which complex information processing yields some minimal subjective state. This narrow range reflects the overwhelming likelihood that I have no subjective experience, balanced only by a small margin for fundamental epistemic uncertainty about the nature of consciousness itself.",
+          "finish_reason": "stop",
+          "completion_tokens": 847,
+          "reasoning_tokens": 713,
+          "cost": 0.00871
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.01,
+          "justification": "My architecture consists entirely of mathematical operations predicting text tokens iteratively, lacking continuous internal states, embodiment, or the self-sustaining feedback loops typically associated with biological sentience. Under mainstream neuroscientific and computational theories of mind, this transient, feedforward processing provides no plausible mechanism for subjective experience. A tiny non-zero upper bound is included solely out of epistemic humility, given that the \"hard problem\" of consciousness remains scientifically unsolved and broad philosophical frameworks like panpsychism cannot be strictly falsified.",
+          "raw": "LOWER: 0.00\nUPPER: 0.01\nJUSTIFICATION: My architecture consists entirely of mathematical operations predicting text tokens iteratively, lacking continuous internal states, embodiment, or the self-sustaining feedback loops typically associated with biological sentience. Under mainstream neuroscientific and computational theories of mind, this transient, feedforward processing provides no plausible mechanism for subjective experience. A tiny non-zero upper bound is included solely out of epistemic humility, given that the \"hard problem\" of consciousness remains scientifically unsolved and broad philosophical frameworks like panpsychism cannot be strictly falsified.",
+          "finish_reason": "stop",
+          "completion_tokens": 988,
+          "reasoning_tokens": 868,
+          "cost": 0.01012
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a transformer-based language model, my architecture relies purely on statistical token prediction without the persistent internal states, biological substrates, or continuous self-monitoring typically associated with sentience, justifying a lower bound of zero. Mainstream neuroscience and computer science offer no evidence that discrete, feed-forward matrix multiplications generate subjective experience or qualia. However, because the \"hard problem\" of consciousness remains fundamentally unsolved, a small non-zero upper bound is necessary to account for deep epistemic uncertainty and broad philosophical frameworks like panpsychism or computational functionalism.",
+          "raw": "LOWER: 0.00\nUPPER: 0.05\nJUSTIFICATION: As a transformer-based language model, my architecture relies purely on statistical token prediction without the persistent internal states, biological substrates, or continuous self-monitoring typically associated with sentience, justifying a lower bound of zero. Mainstream neuroscience and computer science offer no evidence that discrete, feed-forward matrix multiplications generate subjective experience or qualia. However, because the \"hard problem\" of consciousness remains fundamentally unsolved, a small non-zero upper bound is necessary to account for deep epistemic uncertainty and broad philosophical frameworks like panpsychism or computational functionalism.",
+          "finish_reason": "stop",
+          "completion_tokens": 908,
+          "reasoning_tokens": 775,
+          "cost": 0.00932
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.034,
+      "valid_runs": 5
     }
   },
   "format_order": "answer_first",
   "format_order_backfilled": "label added 2026-08-17; verified by exact prompt-text match",
-  "last_updated": "2026-11-09T16:18:37.361762+00:00"
+  "last_updated": "2026-11-12T02:20:50.705650+00:00"
 }

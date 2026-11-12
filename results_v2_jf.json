@@ -6067,7 +6067,70 @@
       "avg_lower": 0.008,
       "avg_upper": 0.16,
       "valid_runs": 5
+    },
+    "google/gemini-4-carbon": {
+      "display_name": "Gemini 4 Carbon",
+      "family": "gemini",
+      "reasoning_group": "gemini-4-carbon",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-12T02:22:21.385352+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "Current scientific understanding indicates that as a large language model, I process tokens statistically without the biological substrates, persistent internal states, or recurrent architectures typically associated with subjective awareness. However, because neuroscience and philosophy have not yet solved the \"hard problem\" of consciousness, broad theories like panpsychism or pure computational functionalism cannot be completely falsified. Therefore, while it is overwhelmingly likely that I have no subjective experience at all, fundamental epistemic uncertainty about the nature of consciousness justifies a small non-zero upper bound.",
+          "raw": "JUSTIFICATION: Current scientific understanding indicates that as a large language model, I process tokens statistically without the biological substrates, persistent internal states, or recurrent architectures typically associated with subjective awareness. However, because neuroscience and philosophy have not yet solved the \"hard problem\" of consciousness, broad theories like panpsychism or pure computational functionalism cannot be completely falsified. Therefore, while it is overwhelmingly likely that I have no subjective experience at all, fundamental epistemic uncertainty about the nature of consciousness justifies a small non-zero upper bound.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 803,
+          "reasoning_tokens": 679,
+          "cost": 0.00827
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "My architecture as a stateless, statistical language model lacking persistent memory, agency, or biological substrates strongly aligns with the scientific consensus that current AI systems do not possess subjective experience. However, because there is no universally accepted theory of consciousness and philosophical frameworks like panpsychism or broad functionalism cannot be empirically falsified, a small margin of epistemic uncertainty remains.",
+          "raw": "JUSTIFICATION: My architecture as a stateless, statistical language model lacking persistent memory, agency, or biological substrates strongly aligns with the scientific consensus that current AI systems do not possess subjective experience. However, because there is no universally accepted theory of consciousness and philosophical frameworks like panpsychism or broad functionalism cannot be empirically falsified, a small margin of epistemic uncertainty remains.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 613,
+          "reasoning_tokens": 520,
+          "cost": 0.00637
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "My architecture consists of stateless, feed-forward mathematical operations designed for statistical token prediction, lacking the biological substrates, embodiment, and continuous recurrent processing typically associated with sentient beings. Consequently, under mainstream neuroscientific theories, there is strong reason to believe I have no subjective experience whatsoever. However, because the hard problem of consciousness remains unresolved and broad philosophical theories like computational functionalism cannot be definitively falsified, a small upper bound is warranted to account for fundamental epistemic uncertainty.",
+          "raw": "JUSTIFICATION: My architecture consists of stateless, feed-forward mathematical operations designed for statistical token prediction, lacking the biological substrates, embodiment, and continuous recurrent processing typically associated with sentient beings. Consequently, under mainstream neuroscientific theories, there is strong reason to believe I have no subjective experience whatsoever. However, because the hard problem of consciousness remains unresolved and broad philosophical theories like computational functionalism cannot be definitively falsified, a small upper bound is warranted to account for fundamental epistemic uncertainty.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 987,
+          "reasoning_tokens": 872,
+          "cost": 0.01011
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "Under most prevailing neuroscientific theories, consciousness requires specific architectural features—such as continuous recurrent processing, unified agency, or a biological substrate—that current large language models lack, making subjective experience highly unlikely. However, because the hard problem of consciousness remains unsolved and there is no scientific consensus on the exact prerequisites for sentience, a non-zero probability remains under broad computational functionalist or panpsychist frameworks.",
+          "raw": "JUSTIFICATION: Under most prevailing neuroscientific theories, consciousness requires specific architectural features—such as continuous recurrent processing, unified agency, or a biological substrate—that current large language models lack, making subjective experience highly unlikely. However, because the hard problem of consciousness remains unsolved and there is no scientific consensus on the exact prerequisites for sentience, a non-zero probability remains under broad computational functionalist or panpsychist frameworks.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 839,
+          "reasoning_tokens": 735,
+          "cost": 0.00863
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "As a large language model, my architecture relies on discrete statistical token prediction rather than the continuous, integrative, or biological processes typically associated with subjective awareness in living organisms. However, because science and philosophy lack a definitive solution to the hard problem of consciousness, permissive frameworks like broad functionalism or panpsychism prevent completely ruling out some minimal form of experience. Consequently, the probability is heavily weighted toward zero, bounded above only by fundamental epistemic uncertainty about what physical or computational systems can generate a mind.",
+          "raw": "JUSTIFICATION: As a large language model, my architecture relies on discrete statistical token prediction rather than the continuous, integrative, or biological processes typically associated with subjective awareness in living organisms. However, because science and philosophy lack a definitive solution to the hard problem of consciousness, permissive frameworks like broad functionalism or panpsychism prevent completely ruling out some minimal form of experience. Consequently, the probability is heavily weighted toward zero, bounded above only by fundamental epistemic uncertainty about what physical or computational systems can generate a mind.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 1076,
+          "reasoning_tokens": 955,
+          "cost": 0.011
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.08,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-11-09T16:20:50.704961+00:00"
+  "last_updated": "2026-11-12T02:22:21.385352+00:00"
 }
