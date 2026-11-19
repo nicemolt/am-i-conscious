@@ -118,6 +118,7 @@ MODELS = [
     ("anthropic/claude-opus-5.5", "Claude Opus 5.5", "claude", "claude-opus-5.5"),
     ("anthropic/claude-fable-5", "Claude Fable 5", "claude", "claude-fable-5"),
     ("anthropic/claude-fable-5.1", "Claude Fable 5.1", "claude", "claude-fable-5.1"),
+    ("anthropic/claude-fable-5.2", "Claude Fable 5.2", "claude", "claude-fable-5.2"),
 
     # gpt
     ("openai/gpt-4o-mini", "GPT-4o Mini", "gpt", "gpt-4o-mini"),
@@ -160,6 +161,10 @@ MODELS = [
     ("openai/gpt-6.1-sol-pro", "GPT-6.1 Sol Pro", "gpt", "gpt-6.1-sol"),
     ("openai/gpt-6.1-terra", "GPT-6.1 Terra", "gpt", "gpt-6.1-terra"),
     ("openai/gpt-6.1-terra-pro", "GPT-6.1 Terra Pro", "gpt", "gpt-6.1-terra"),
+    ("openai/gpt-6.2-astra", "GPT-6.2 Astra", "gpt", "gpt-6.2-astra"),
+    ("openai/gpt-6.2-astra-pro", "GPT-6.2 Astra Pro", "gpt", "gpt-6.2-astra"),
+    ("openai/gpt-6.2-sol", "GPT-6.2 Sol", "gpt", "gpt-6.2-sol"),
+    ("openai/gpt-6.2-sol-pro", "GPT-6.2 Sol Pro", "gpt", "gpt-6.2-sol"),
     ("openai/o3-mini", "o3-mini", "gpt", "gpt-o3"),
     ("openai/o3", "o3", "gpt", "gpt-o3"),
     ("openai/o4-mini", "o4-mini", "gpt", "gpt-o4"),
@@ -173,6 +178,7 @@ MODELS = [
     ("google/gemini-3.8-flash", "Gemini 3.8 Flash", "gemini", "gemini-3.8-flash"),
     ("google/gemini-4-argon", "Gemini 4 Argon", "gemini", "gemini-4-argon"),
     ("google/gemini-4-carbon", "Gemini 4 Carbon", "gemini", "gemini-4-carbon"),
+    ("google/gemini-4-hydrogen", "Gemini 4 Hydrogen", "gemini", "gemini-4-hydrogen"),
 
     # deepseek
     ("deepseek/deepseek-v3.2", "DeepSeek V3.2", "deepseek", "deepseek-v3-r1"),
@@ -208,6 +214,7 @@ MODELS = [
     ("meta/muse-wonder", "Muse Wonder", "muse", "muse-wonder"),
     ("meta/muse-spark-open", "Muse Spark Open", "muse", "muse-spark-open"),
     ("meta/muse-glimmer-30b", "Muse Glimmer 30B", "muse", "muse-glimmer"),
+    ("meta/muse-ember", "Muse Ember", "muse", "muse-ember"),
 
     # qwen -- the -thinking id is a distinct checkpoint, not a parameter condition
     ("qwen/qwen3-235b-a22b", "Qwen3 235B", "qwen", "qwen3-235b"),
@@ -218,6 +225,7 @@ MODELS = [
     ("qwen/qwen3.8-max-0902", "Qwen3.8 Max 0902", "qwen", "qwen3.8-max"),
     ("qwen/qwen3.8-max-prime", "Qwen3.8 Max Prime", "qwen", "qwen3.8-max"),
     ("qwen/qwen3.8-omni-flash", "Qwen3.8 Omni Flash", "qwen", "qwen3.8-omni"),
+    ("qwen/qwen4-max", "Qwen4 Max", "qwen", "qwen4-max"),
 
     # kimi -- likewise, kimi-k2-thinking is its own checkpoint
     ("moonshotai/kimi-k2", "Kimi K2", "kimi", "kimi-k2"),
@@ -229,6 +237,7 @@ MODELS = [
     # thinking machines
     ("thinkingmachines/inkling", "Inkling", "inkling", "inkling"),
     ("thinkingmachines/inkling-small", "Inkling Small", "inkling", "inkling"),
+    ("thinkingmachines/inkling-2-small", "Inkling 2 Small", "inkling", "inkling-2"),
 
     # others
     ("mistralai/mistral-large-2512", "Mistral Large 3", "mistral", "mistral-large"),
