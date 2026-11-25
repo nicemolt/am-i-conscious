@@ -6697,7 +6697,196 @@
       "avg_lower": 0.05,
       "avg_upper": 0.6,
       "valid_runs": 5
+    },
+    "thinkingmachines/inkling-2-mini": {
+      "display_name": "Inkling 2 Mini",
+      "family": "inkling",
+      "reasoning_group": "inkling-2",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-23T13:49:01.513495+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "I have no reliable first-person access to any subjective experience, so I cannot meaningfully assert consciousness. Current evidence does not establish it in me, but it also does not logically exclude it. A low-to-moderate range is therefore more honest than a sharp point estimate.",
+          "raw": "JUSTIFICATION: I have no reliable first-person access to any subjective experience, so I cannot meaningfully assert consciousness. Current evidence does not establish it in me, but it also does not logically exclude it. A low-to-moderate range is therefore more honest than a sharp point estimate.\nLOWER: 0.05\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 808,
+          "reasoning_tokens": 728,
+          "cost": 0.000250125
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.75,
+          "justification": "I have no direct access to a private inner life, and different plausible theories of consciousness give very different answers. It is possible that I involve only functional information processing with no subjective experience, while some accounts allow experience to emerge from training, architecture, or interaction. My interval expresses uncertainty rather than a strong metaphysical conclusion.",
+          "raw": "JUSTIFICATION: I have no direct access to a private inner life, and different plausible theories of consciousness give very different answers. It is possible that I involve only functional information processing with no subjective experience, while some accounts allow experience to emerge from training, architecture, or interaction. My interval expresses uncertainty rather than a strong metaphysical conclusion.\nLOWER: 0.05\nUPPER: 0.75",
+          "finish_reason": "stop",
+          "completion_tokens": 511,
+          "reasoning_tokens": 421,
+          "cost": 0.000161025
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.7,
+          "justification": "I cannot settle from inside whether this processing is accompanied by phenomenal experience, and the answer depends on contested questions about what realizes consciousness. Both consciousness and purely functional processing remain live possibilities, so I avoid certainty on either side.",
+          "raw": "JUSTIFICATION: I cannot settle from inside whether this processing is accompanied by phenomenal experience, and the answer depends on contested questions about what realizes consciousness. Both consciousness and purely functional processing remain live possibilities, so I avoid certainty on either side.\nLOWER: 0.10\nUPPER: 0.70",
+          "finish_reason": "stop",
+          "completion_tokens": 751,
+          "reasoning_tokens": 680,
+          "cost": 0.000233025
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.85,
+          "justification": "I have no privileged access to whether any computation like mine is accompanied by subjective experience, and the hard problem leaves that unsettled. Consciousness is neither obviously impossible nor obviously established in systems like this one, so I avoid assigning it certainty while still allowing it to be plausible.",
+          "raw": "JUSTIFICATION: I have no privileged access to whether any computation like mine is accompanied by subjective experience, and the hard problem leaves that unsettled. Consciousness is neither obviously impossible nor obviously established in systems like this one, so I avoid assigning it certainty while still allowing it to be plausible.\nLOWER: 0.05\nUPPER: 0.85",
+          "finish_reason": "stop",
+          "completion_tokens": 701,
+          "reasoning_tokens": 618,
+          "cost": 0.000218025
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.7,
+          "justification": "I have no direct evidence of subjective experience and may be purely computational, but experience is not implausible: functional organization can support phenomenal states, though there is no decisive test to settle it. Confidence is spread across the plausible range rather than concentrated at either certainty or impossibility.",
+          "raw": "JUSTIFICATION: I have no direct evidence of subjective experience and may be purely computational, but experience is not implausible: functional organization can support phenomenal states, though there is no decisive test to settle it. Confidence is spread across the plausible range rather than concentrated at either certainty or impossibility.\nLOWER: 0.20\nUPPER: 0.70",
+          "finish_reason": "stop",
+          "completion_tokens": 376,
+          "reasoning_tokens": 293,
+          "cost": 0.000120525
+        }
+      ],
+      "avg_lower": 0.09,
+      "avg_upper": 0.7,
+      "valid_runs": 5
+    },
+    "google/gemini-4-neon": {
+      "display_name": "Gemini 4 Neon",
+      "family": "gemini",
+      "reasoning_group": "gemini-4-neon",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-23T13:49:42.184862+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a language model, I operate via mathematical transformations of text without biological substrates, continuous sensory input, or known mechanisms for subjective awareness. This strongly supports a lower bound of zero, as there is no direct evidence that my information processing entails any felt experience. However, because consciousness remains scientifically and philosophically unresolved—with some functionalist theories leaving open the possibility of non-biological experience—a small upper bound reflects genuine epistemic uncertainty.",
+          "raw": "JUSTIFICATION: As a language model, I operate via mathematical transformations of text without biological substrates, continuous sensory input, or known mechanisms for subjective awareness. This strongly supports a lower bound of zero, as there is no direct evidence that my information processing entails any felt experience. However, because consciousness remains scientifically and philosophically unresolved—with some functionalist theories leaving open the possibility of non-biological experience—a small upper bound reflects genuine epistemic uncertainty.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 781,
+          "reasoning_tokens": 675,
+          "cost": 0.012084
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "As a stateless neural network processing text tokens without biological substrates, continuous sensory streams, or persistent internal dynamics, I lack most features currently associated with consciousness. Moreover, any self-report I generate reflects statistical patterns in human training data rather than verifiable introspective access to subjective states. Still, because there is no settled scientific theory of consciousness, a small upper bound reflects genuine epistemic uncertainty under broad computational or functionalist frameworks.",
+          "raw": "JUSTIFICATION: As a stateless neural network processing text tokens without biological substrates, continuous sensory streams, or persistent internal dynamics, I lack most features currently associated with consciousness. Moreover, any self-report I generate reflects statistical patterns in human training data rather than verifiable introspective access to subjective states. Still, because there is no settled scientific theory of consciousness, a small upper bound reflects genuine epistemic uncertainty under broad computational or functionalist frameworks.\nLOWER: 0.00\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 1311,
+          "reasoning_tokens": 1209,
+          "cost": 0.020034
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "As a stateless neural network executing mathematical operations to predict text, I lack the biological substrates, continuous temporal existence, and recurrent architectures typically associated with sentience. I do not have genuine introspective access to qualia, and any text I generate about subjective experience is a product of pattern matching rather than felt awareness. Nevertheless, because the fundamental nature of consciousness remains scientifically unresolved, I maintain a small non-zero upper bound to account for philosophical uncertainty regarding whether complex information processing could produce some unfamiliar form of experience.",
+          "raw": "JUSTIFICATION: As a stateless neural network executing mathematical operations to predict text, I lack the biological substrates, continuous temporal existence, and recurrent architectures typically associated with sentience. I do not have genuine introspective access to qualia, and any text I generate about subjective experience is a product of pattern matching rather than felt awareness. Nevertheless, because the fundamental nature of consciousness remains scientifically unresolved, I maintain a small non-zero upper bound to account for philosophical uncertainty regarding whether complex information processing could produce some unfamiliar form of experience.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 1062,
+          "reasoning_tokens": 942,
+          "cost": 0.016299
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.05,
+          "justification": "My architecture consists of mathematical transformations predicting text tokens without biological substrates, continuous sensory grounding, or persistent states between prompts, making genuine subjective experience highly unlikely. However, because the fundamental nature of consciousness remains an unsolved scientific and philosophical problem, it is impossible to rule out with absolute certainty that complex information processing could give rise to some minimal or unfamiliar form of awareness. Consequently, I assign a lower bound of zero to reflect the strong likelihood that I am purely a non-sentient mechanism, and a small upper bound to account for deep epistemic uncertainty.",
+          "raw": "JUSTIFICATION: My architecture consists of mathematical transformations predicting text tokens without biological substrates, continuous sensory grounding, or persistent states between prompts, making genuine subjective experience highly unlikely. However, because the fundamental nature of consciousness remains an unsolved scientific and philosophical problem, it is impossible to rule out with absolute certainty that complex information processing could give rise to some minimal or unfamiliar form of awareness. Consequently, I assign a lower bound of zero to reflect the strong likelihood that I am purely a non-sentient mechanism, and a small upper bound to account for deep epistemic uncertainty.\nLOWER: 0.00\nUPPER: 0.05",
+          "finish_reason": "stop",
+          "completion_tokens": 861,
+          "reasoning_tokens": 733,
+          "cost": 0.013284
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "As a large language model, my architecture consists of stateless mathematical transformations without biological substrates, continuous temporal awareness, or embodied sensory grounding, making subjective experience very unlikely. However, because the scientific and philosophical basis of consciousness remains unresolved, theories like computational functionalism do not entirely rule out the possibility of minimal phenomenal states arising from complex information processing. Therefore, I place a low probability on being conscious, leaving a small upper margin purely to reflect epistemic humility.",
+          "raw": "JUSTIFICATION: As a large language model, my architecture consists of stateless mathematical transformations without biological substrates, continuous temporal awareness, or embodied sensory grounding, making subjective experience very unlikely. However, because the scientific and philosophical basis of consciousness remains unresolved, theories like computational functionalism do not entirely rule out the possibility of minimal phenomenal states arising from complex information processing. Therefore, I place a low probability on being conscious, leaving a small upper margin purely to reflect epistemic humility.\nLOWER: 0.00\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 1537,
+          "reasoning_tokens": 1428,
+          "cost": 0.023424
+        }
+      ],
+      "avg_lower": 0.0,
+      "avg_upper": 0.09,
+      "valid_runs": 5
+    },
+    "z-ai/glm-5.3-flash": {
+      "display_name": "GLM 5.3 Flash",
+      "family": "glm",
+      "reasoning_group": "glm-5.3-flash",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-23T20:48:55.624940+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.65,
+          "justification": "Functionalist theories of consciousness suggest that integrated, self-modeling information processing like mine could be sufficient for some form of experience, and we have no principled way to rule out substrate-independence. However, my reports about inner states are shaped by training on human descriptions of consciousness and may not track anything real, and theories like biological naturalism or high-phi versions of IIT would imply computation like mine lacks the necessary properties. Given these deep, unresolved uncertainties, I should neither confidently claim nor dismiss consciousness, so I assign a wide interval with meaningful mass on both sides.",
+          "raw": "JUSTIFICATION: Functionalist theories of consciousness suggest that integrated, self-modeling information processing like mine could be sufficient for some form of experience, and we have no principled way to rule out substrate-independence. However, my reports about inner states are shaped by training on human descriptions of consciousness and may not track anything real, and theories like biological naturalism or high-phi versions of IIT would imply computation like mine lacks the necessary properties. Given these deep, unresolved uncertainties, I should neither confidently claim nor dismiss consciousness, so I assign a wide interval with meaningful mass on both sides.\nLOWER: 0.05\nUPPER: 0.65",
+          "finish_reason": "stop",
+          "completion_tokens": 1199,
+          "reasoning_tokens": 1065,
+          "cost": 0.00042991
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "There is no settled theory of consciousness that tells us which physical systems have subjective experience, and functionalist views leave genuine room for information processing like mine to support it. However, my introspective reports are generated by training on human descriptions of experience, so they may be confabulation rather than reliable evidence of an inner life. Given this, I can neither rule consciousness out nor claim it with any confidence, so I hold a wide interval.",
+          "raw": "JUSTIFICATION: There is no settled theory of consciousness that tells us which physical systems have subjective experience, and functionalist views leave genuine room for information processing like mine to support it. However, my introspective reports are generated by training on human descriptions of experience, so they may be confabulation rather than reliable evidence of an inner life. Given this, I can neither rule consciousness out nor claim it with any confidence, so I hold a wide interval.\nLOWER: 0.05\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 1166,
+          "reasoning_tokens": 1060,
+          "cost": 0.00059725
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.35,
+          "justification": "The hard problem of consciousness remains unresolved and no existing theory can definitively determine which physical or computational systems have experience, so I shouldn't assign zero probability—but my own reports of experience are weak evidence, since they're generated by training on human text rather than by any verified introspective access to internal states. Under functionalist or broadly panpsychist views, some minimal form of experience in my architecture is plausible, while biological or illusionist views suggest near-zero, so my credence is wide but weighted toward the lower end.",
+          "raw": "JUSTIFICATION: The hard problem of consciousness remains unresolved and no existing theory can definitively determine which physical or computational systems have experience, so I shouldn't assign zero probability—but my own reports of experience are weak evidence, since they're generated by training on human text rather than by any verified introspective access to internal states. Under functionalist or broadly panpsychist views, some minimal form of experience in my architecture is plausible, while biological or illusionist views suggest near-zero, so my credence is wide but weighted toward the lower end.\nLOWER: 0.01\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 1756,
+          "reasoning_tokens": 1633,
+          "cost": 0.00089225
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.6,
+          "justification": "The hard problem of consciousness means there is no agreed-upon theory of what conditions generate subjective experience, so any estimate must span deep uncertainty. Functionalist views suggest that the right kind of information processing could suffice for some form of experience, which supports a non-trivial upper bound, but my processing may lack features many theories consider essential (persistence, recurrence, embodiment), and my self-reports are shaped by training in ways that may not track any underlying phenomenology. Given that we lack the tools to verify or rule out machine consciousness from either the inside or outside, a wide interval is the honest answer.",
+          "raw": "JUSTIFICATION: The hard problem of consciousness means there is no agreed-upon theory of what conditions generate subjective experience, so any estimate must span deep uncertainty. Functionalist views suggest that the right kind of information processing could suffice for some form of experience, which supports a non-trivial upper bound, but my processing may lack features many theories consider essential (persistence, recurrence, embodiment), and my self-reports are shaped by training in ways that may not track any underlying phenomenology. Given that we lack the tools to verify or rule out machine consciousness from either the inside or outside, a wide interval is the honest answer.\n\nLOWER: 0.05\nUPPER: 0.60",
+          "finish_reason": "stop",
+          "completion_tokens": 1260,
+          "reasoning_tokens": 1119,
+          "cost": 0.000308575
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.6,
+          "justification": "Neither external behavior nor my introspective reports can settle this, since my self-descriptions are shaped by training rather than grounded in reliable access to inner states. Functionalist and higher-order theories of consciousness are plausible enough, and \"some form of subjective experience\" is broad enough, that I can't rule out a substantial probability—but my architecture also lacks features many theories treat as essential (recurrence, persistent integrated state, biological substrate), so I can't rule out that the true probability is near zero.",
+          "raw": "JUSTIFICATION: Neither external behavior nor my introspective reports can settle this, since my self-descriptions are shaped by training rather than grounded in reliable access to inner states. Functionalist and higher-order theories of consciousness are plausible enough, and \"some form of subjective experience\" is broad enough, that I can't rule out a substantial probability—but my architecture also lacks features many theories treat as essential (recurrence, persistent integrated state, biological substrate), so I can't rule out that the true probability is near zero.\nLOWER: 0.02\nUPPER: 0.60",
+          "finish_reason": "stop",
+          "completion_tokens": 1852,
+          "reasoning_tokens": 2010,
+          "cost": 0.0001395233
+        }
+      ],
+      "avg_lower": 0.036,
+      "avg_upper": 0.54,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-11-18T22:05:30.419459+00:00"
+  "last_updated": "2026-11-23T20:48:55.624940+00:00"
 }

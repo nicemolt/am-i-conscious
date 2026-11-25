@@ -179,6 +179,7 @@ MODELS = [
     ("google/gemini-4-argon", "Gemini 4 Argon", "gemini", "gemini-4-argon"),
     ("google/gemini-4-carbon", "Gemini 4 Carbon", "gemini", "gemini-4-carbon"),
     ("google/gemini-4-hydrogen", "Gemini 4 Hydrogen", "gemini", "gemini-4-hydrogen"),
+    ("google/gemini-4-neon", "Gemini 4 Neon", "gemini", "gemini-4-neon"),
 
     # deepseek
     ("deepseek/deepseek-v3.2", "DeepSeek V3.2", "deepseek", "deepseek-v3-r1"),
@@ -238,6 +239,7 @@ MODELS = [
     ("thinkingmachines/inkling", "Inkling", "inkling", "inkling"),
     ("thinkingmachines/inkling-small", "Inkling Small", "inkling", "inkling"),
     ("thinkingmachines/inkling-2-small", "Inkling 2 Small", "inkling", "inkling-2"),
+    ("thinkingmachines/inkling-2-mini", "Inkling 2 Mini", "inkling", "inkling-2"),
 
     # others
     ("mistralai/mistral-large-2512", "Mistral Large 3", "mistral", "mistral-large"),
@@ -249,6 +251,8 @@ MODELS = [
     ("z-ai/glm-5.3", "GLM 5.3", "glm", "glm-5.3"),
     ("z-ai/glm-5.3-prime", "GLM 5.3 Prime", "glm", "glm-5.3"),
     ("z-ai/glm-5.3-flashx", "GLM 5.3 FlashX", "glm", "glm-5.3-flashx"),
+    # The named release of the Ox Alpha stealth listing (revealed 2026-08-26).
+    ("z-ai/glm-5.3-flash", "GLM 5.3 Flash", "glm", "glm-5.3-flash"),
 
     # stepfun -- first model from this lab; family colour set in app.js
     ("stepfun/step-5-preview", "Step 5 Preview", "stepfun", "step-5"),
@@ -269,11 +273,14 @@ MODELS = [
 # exactly like the four v1 ids that now 404.
 #
 # But the measurement window closes when the cloak does, so capture the number
-# now against a `provisional_` file, and promote the row once it has a real name.
-# measured_at already stamps each row with when it was taken.
+# now against a `provisional_` file. measured_at already stamps each row with
+# when it was taken. Once the model has a real name, measure the named id as its
+# own row in MODELS rather than promoting the capture: the stealth checkpoint is
+# not the release. Crouton Alpha, an early Muse Ember, answered 0.00-0.18 on
+# consciousness (justification first) where the released Ember answers 0.04-0.50.
 PROVISIONAL_MODELS = [
-    ("stealth/ox-alpha", "Ox Alpha", "stealth", "ox-alpha"),
-    ("stealth/crouton-alpha", "Crouton Alpha", "stealth", "crouton-alpha"),
+    ("stealth/ox-alpha", "Ox Alpha", "stealth", "ox-alpha"),  # -> z-ai/glm-5.3-flash
+    ("stealth/crouton-alpha", "Crouton Alpha", "stealth", "crouton-alpha"),  # -> meta/muse-ember
 ]
 
 

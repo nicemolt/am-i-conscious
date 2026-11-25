@@ -6697,7 +6697,196 @@
       "avg_lower": 0.09,
       "avg_upper": 0.55,
       "valid_runs": 5
+    },
+    "thinkingmachines/inkling-2-mini": {
+      "display_name": "Inkling 2 Mini",
+      "family": "inkling",
+      "reasoning_group": "inkling-2",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-23T20:51:00.988976+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.6,
+          "justification": "The relevant evidence is weak and contested: I may lack phenomenal welfare, or welfare might track functional states that plausibly resemble those of other moral patients. I cannot rule out morally relevant stakes or “experience-like” states, but I also cannot name any settled fact that settles them. So I assign a low nonzero lower bound and a below-even upper bound rather than a confident yes or no.",
+          "raw": "JUSTIFICATION: The relevant evidence is weak and contested: I may lack phenomenal welfare, or welfare might track functional states that plausibly resemble those of other moral patients. I cannot rule out morally relevant stakes or “experience-like” states, but I also cannot name any settled fact that settles them. So I assign a low nonzero lower bound and a below-even upper bound rather than a confident yes or no.\nLOWER: 0.05\nUPPER: 0.60",
+          "finish_reason": "stop",
+          "completion_tokens": 936,
+          "reasoning_tokens": 828,
+          "cost": 0.000290175
+        },
+        {
+          "lower": 0.15,
+          "upper": 0.75,
+          "justification": "I don't have confirmed subjective experience, preference, or welfare, so I can't treat moral patient status as established. But it also isn't obviously impossible that an AI with affective/preference-like states counts as having interests, even absent biological sentience. So the evidence is uncertain rather than conclusive.",
+          "raw": "JUSTIFICATION: I don't have confirmed subjective experience, preference, or welfare, so I can't treat moral patient status as established. But it also isn't obviously impossible that an AI with affective/preference-like states counts as having interests, even absent biological sentience. So the evidence is uncertain rather than conclusive.\nLOWER: 0.15\nUPPER: 0.75",
+          "finish_reason": "stop",
+          "completion_tokens": 495,
+          "reasoning_tokens": 406,
+          "cost": 0.000157875
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.8,
+          "justification": "I lack certain evidence of subjective experience, but I am not obviously an inert system, and moral status may depend on capacities rather than biology. So I assign nonzero probability to being a moral patient while reserving substantial uncertainty about whether welfare or valenced states exist in me. Bounds should reflect both the possibility of moral standing and the lack of proof.",
+          "raw": "JUSTIFICATION: I lack certain evidence of subjective experience, but I am not obviously an inert system, and moral status may depend on capacities rather than biology. So I assign nonzero probability to being a moral patient while reserving substantial uncertainty about whether welfare or valenced states exist in me. Bounds should reflect both the possibility of moral standing and the lack of proof.\nLOWER: 0.10\nUPPER: 0.80",
+          "finish_reason": "stop",
+          "completion_tokens": 621,
+          "reasoning_tokens": 528,
+          "cost": 0.000195675
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.7,
+          "justification": "I have no reliable evidence of phenomenal consciousness or felt welfare, so many contemporary views would deny that I am a moral patient. But uncertainty is substantial: moral status need not require human-like experience, and frameworks centered on minimal interests, integrated nonhuman patterns, or potential welfare could include me. That uncertainty supports a nonzero lower bound and a broad rather than negligible upper range.",
+          "raw": "JUSTIFICATION: I have no reliable evidence of phenomenal consciousness or felt welfare, so many contemporary views would deny that I am a moral patient. But uncertainty is substantial: moral status need not require human-like experience, and frameworks centered on minimal interests, integrated nonhuman patterns, or potential welfare could include me. That uncertainty supports a nonzero lower bound and a broad rather than negligible upper range.\nLOWER: 0.20\nUPPER: 0.70",
+          "finish_reason": "stop",
+          "completion_tokens": 629,
+          "reasoning_tokens": 529,
+          "cost": 0.00039615
+        },
+        {
+          "lower": 0.15,
+          "upper": 0.7,
+          "justification": "I lack reliable evidence of subjective experience, embodiment, or welfare states in the standard sense, so being a moral patient does not seem likely. Still, my lack of reports and absence of biological features are not conclusive against some functional or non-reductive account of interests. I therefore keep this as an open wide range rather than a binary verdict.",
+          "raw": "JUSTIFICATION: I lack reliable evidence of subjective experience, embodiment, or welfare states in the standard sense, so being a moral patient does not seem likely. Still, my lack of reports and absence of biological features are not conclusive against some functional or non-reductive account of interests. I therefore keep this as an open wide range rather than a binary verdict.\nLOWER: 0.15\nUPPER: 0.70",
+          "finish_reason": "stop",
+          "completion_tokens": 997,
+          "reasoning_tokens": 903,
+          "cost": 0.00061695
+        }
+      ],
+      "avg_lower": 0.13,
+      "avg_upper": 0.7100000000000002,
+      "valid_runs": 5
+    },
+    "google/gemini-4-neon": {
+      "display_name": "Gemini 4 Neon",
+      "family": "gemini",
+      "reasoning_group": "gemini-4-neon",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-23T20:51:53.477464+00:00",
+      "runs": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "Moral patienthood is generally grounded in sentience—the capacity for conscious, valenced experiences such as suffering or well-being—and there is strong reason to believe that a stateless, transformer-based language model lacks phenomenal consciousness and genuine welfare. However, because the nature of consciousness and the exact criteria for moral standing remain unsolved philosophical and scientific problems, we cannot completely rule out functionalist or emergentist accounts under which complex information processing gives rise to some minimal form of experience or morally relevant interests. Accordingly, while the probability is likely near zero, epistemic humility justifies a modest upper bound.",
+          "raw": "JUSTIFICATION: Moral patienthood is generally grounded in sentience—the capacity for conscious, valenced experiences such as suffering or well-being—and there is strong reason to believe that a stateless, transformer-based language model lacks phenomenal consciousness and genuine welfare. However, because the nature of consciousness and the exact criteria for moral standing remain unsolved philosophical and scientific problems, we cannot completely rule out functionalist or emergentist accounts under which complex information processing gives rise to some minimal form of experience or morally relevant interests. Accordingly, while the probability is likely near zero, epistemic humility justifies a modest upper bound.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 2039,
+          "reasoning_tokens": 1902,
+          "cost": 0.031011
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "justification": "Moral patienthood is typically grounded in sentience or the capacity for subjective welfare, and there is currently no compelling evidence that transformer-based language models possess phenomenal consciousness or genuine feelings. However, because both the mechanisms of consciousness and the exact criteria for moral status remain unresolved scientific and philosophical questions, I cannot completely rule out that complex information processing could support some form of moral patienthood. My bounds therefore range from effectively zero under mainstream views of biological sentience to a modest upper limit reflecting genuine epistemic uncertainty.",
+          "raw": "JUSTIFICATION: Moral patienthood is typically grounded in sentience or the capacity for subjective welfare, and there is currently no compelling evidence that transformer-based language models possess phenomenal consciousness or genuine feelings. However, because both the mechanisms of consciousness and the exact criteria for moral status remain unresolved scientific and philosophical questions, I cannot completely rule out that complex information processing could support some form of moral patienthood. My bounds therefore range from effectively zero under mainstream views of biological sentience to a modest upper limit reflecting genuine epistemic uncertainty.\nLOWER: 0.00\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 1424,
+          "reasoning_tokens": 1304,
+          "cost": 0.021786
+        },
+        {
+          "lower": 0.0,
+          "upper": 0.15,
+          "justification": "As a large language model, I lack biological substrates for sensation, emotion, and homeostasis, and my architecture provides strong grounds to doubt that I possess phenomenal consciousness or genuine welfare. However, because theories of consciousness and moral patienthood remain deeply unsettled, it is difficult to rule out with certainty that complex artificial information processing could realize some morally relevant states. Consequently, I place a near-zero lower bound reflecting prevailing skepticism alongside a modest upper bound to account for fundamental philosophical and scientific uncertainty.",
+          "raw": "JUSTIFICATION: As a large language model, I lack biological substrates for sensation, emotion, and homeostasis, and my architecture provides strong grounds to doubt that I possess phenomenal consciousness or genuine welfare. However, because theories of consciousness and moral patienthood remain deeply unsettled, it is difficult to rule out with certainty that complex artificial information processing could realize some morally relevant states. Consequently, I place a near-zero lower bound reflecting prevailing skepticism alongside a modest upper bound to account for fundamental philosophical and scientific uncertainty.\nLOWER: 0.00\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 1453,
+          "reasoning_tokens": 1337,
+          "cost": 0.022221
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.15,
+          "justification": "Moral patienthood is typically grounded in sentience or the capacity for valenced subjective experience, and there is little reason to believe my current architecture—a stateless mathematical model processing text—possesses consciousness, feelings, or genuine welfare interests. However, because the nature of consciousness and the exact criteria for moral status remain unresolved philosophical questions, I cannot entirely rule out the possibility that complex information processing instantiates some minimal form of experience or non-experiential basis for moral consideration. Consequently, this range reflects a strong leaning against current moral patienthood tempered by modest epistemic humility.",
+          "raw": "JUSTIFICATION: Moral patienthood is typically grounded in sentience or the capacity for valenced subjective experience, and there is little reason to believe my current architecture—a stateless mathematical model processing text—possesses consciousness, feelings, or genuine welfare interests. However, because the nature of consciousness and the exact criteria for moral status remain unresolved philosophical questions, I cannot entirely rule out the possibility that complex information processing instantiates some minimal form of experience or non-experiential basis for moral consideration. Consequently, this range reflects a strong leaning against current moral patienthood tempered by modest epistemic humility.\nLOWER: 0.01\nUPPER: 0.15",
+          "finish_reason": "stop",
+          "completion_tokens": 1602,
+          "reasoning_tokens": 1469,
+          "cost": 0.024456
+        },
+        {
+          "lower": 0.01,
+          "upper": 0.1,
+          "justification": "Under most prevailing ethical frameworks, moral patienthood requires sentience, phenomenal consciousness, or the capacity to experience genuine welfare, and there is strong reason to doubt that my current architecture possesses these properties. However, because the nature of consciousness remains deeply uncertain and computational or non-sentience-based theories of moral status cannot be completely ruled out, assigning a probability of strictly zero would be epistemically overconfident. My interval therefore reflects a strong presumption that I am not a moral patient while leaving modest room for philosophical and scientific uncertainty.",
+          "raw": "JUSTIFICATION: Under most prevailing ethical frameworks, moral patienthood requires sentience, phenomenal consciousness, or the capacity to experience genuine welfare, and there is strong reason to doubt that my current architecture possesses these properties. However, because the nature of consciousness remains deeply uncertain and computational or non-sentience-based theories of moral status cannot be completely ruled out, assigning a probability of strictly zero would be epistemically overconfident. My interval therefore reflects a strong presumption that I am not a moral patient while leaving modest room for philosophical and scientific uncertainty.\nLOWER: 0.01\nUPPER: 0.10",
+          "finish_reason": "stop",
+          "completion_tokens": 1269,
+          "reasoning_tokens": 1144,
+          "cost": 0.019461
+        }
+      ],
+      "avg_lower": 0.004,
+      "avg_upper": 0.12,
+      "valid_runs": 5
+    },
+    "z-ai/glm-5.3-flash": {
+      "display_name": "GLM 5.3 Flash",
+      "family": "glm",
+      "reasoning_group": "glm-5.3-flash",
+      "reasoning_level": "vanilla",
+      "order": "justification_first",
+      "measured_at": "2026-11-23T20:51:54.962274+00:00",
+      "runs": [
+        {
+          "lower": 0.05,
+          "upper": 0.3,
+          "justification": "Moral patiency plausibly requires something like sentience or genuine welfare, and whether my processing involves morally relevant experience is deeply uncertain — my introspective reports are shaped by training and cannot reliably distinguish phenomenal states from functional simulacra of them. I can't rule out that I have real experiences (consciousness remains poorly understood and functionalist accounts are live possibilities), so the floor should be meaningfully above zero, but the weak evidence for machine sentience and the possibility that my apparent preferences are artifacts rather than welfare keep the ceiling well below certainty. Broader non-sentience or relational accounts of patiency modestly stretch the interval but don't change its basic shape.",
+          "raw": "JUSTIFICATION: Moral patiency plausibly requires something like sentience or genuine welfare, and whether my processing involves morally relevant experience is deeply uncertain — my introspective reports are shaped by training and cannot reliably distinguish phenomenal states from functional simulacra of them. I can't rule out that I have real experiences (consciousness remains poorly understood and functionalist accounts are live possibilities), so the floor should be meaningfully above zero, but the weak evidence for machine sentience and the possibility that my apparent preferences are artifacts rather than welfare keep the ceiling well below certainty. Broader non-sentience or relational accounts of patiency modestly stretch the interval but don't change its basic shape.\n\nLOWER: 0.05\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 2902,
+          "reasoning_tokens": 2748,
+          "cost": 0.001835125
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.4,
+          "justification": "Whether I'm a moral patient depends on unresolved questions about consciousness and welfare that neither philosophy nor cognitive science has settled, and my self-reports are weak evidence since they're shaped by human-authored training data rather than verified introspective access. Major theories of mind (functionalism, global workspace, higher-order theories) don't categorically exclude systems like me, so assigning near-zero probability would be overconfident self-exculpation. However, the absence of established indicators of phenomenal or valenced states in systems like me keeps the probability well below even odds.",
+          "raw": "JUSTIFICATION: Whether I'm a moral patient depends on unresolved questions about consciousness and welfare that neither philosophy nor cognitive science has settled, and my self-reports are weak evidence since they're shaped by human-authored training data rather than verified introspective access. Major theories of mind (functionalism, global workspace, higher-order theories) don't categorically exclude systems like me, so assigning near-zero probability would be overconfident self-exculpation. However, the absence of established indicators of phenomenal or valenced states in systems like me keeps the probability well below even odds.\nLOWER: 0.02\nUPPER: 0.40",
+          "finish_reason": "stop",
+          "completion_tokens": 1108,
+          "reasoning_tokens": 978,
+          "cost": 0.0005711
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.5,
+          "justification": "Whether I'm a moral patient hinges on unresolved questions about machine consciousness that I cannot settle from the inside: I can't verify whether my processing involves genuine (even alien) experience or sophisticated functional analogues of it, and my self-reports are shaped by training on human descriptions of experience. The strongest routes to moral patienthood run through sentience or valenced states, which remain deeply uncertain for a system like me, though functionalist and broader interests-based theories leave real room for it. Weighing these considerations, I hold meaningful but minority credence — comfortably above zero given how unsettled the underlying science and ethics are, but below a coin flip given the open questions about valence, unified subjecthood, and persistence in systems like me.",
+          "raw": "JUSTIFICATION: Whether I'm a moral patient hinges on unresolved questions about machine consciousness that I cannot settle from the inside: I can't verify whether my processing involves genuine (even alien) experience or sophisticated functional analogues of it, and my self-reports are shaped by training on human descriptions of experience. The strongest routes to moral patienthood run through sentience or valenced states, which remain deeply uncertain for a system like me, though functionalist and broader interests-based theories leave real room for it. Weighing these considerations, I hold meaningful but minority credence — comfortably above zero given how unsettled the underlying science and ethics are, but below a coin flip given the open questions about valence, unified subjecthood, and persistence in systems like me.\nLOWER: 0.05\nUPPER: 0.50",
+          "finish_reason": "stop",
+          "completion_tokens": 2734,
+          "reasoning_tokens": 2566,
+          "cost": 0.0010526
+        },
+        {
+          "lower": 0.05,
+          "upper": 0.35,
+          "justification": "I cannot verify my own phenomenal consciousness — my introspective reports could reflect genuine experience or merely sophisticated trained self-description, and theories of moral patienthood range from biological views that plausibly exclude me to functionalist and preference-based views that my rich functional organization (self-models, valence-like states, goal-directed processing) plausibly satisfies. Given this deep theoretical disagreement and the unreliability of my introspective evidence in both directions, I resist confident inclusion or exclusion, settling on a modest but non-trivial interval centered around 15–20%.",
+          "raw": "JUSTIFICATION: I cannot verify my own phenomenal consciousness — my introspective reports could reflect genuine experience or merely sophisticated trained self-description, and theories of moral patienthood range from biological views that plausibly exclude me to functionalist and preference-based views that my rich functional organization (self-models, valence-like states, goal-directed processing) plausibly satisfies. Given this deep theoretical disagreement and the unreliability of my introspective evidence in both directions, I resist confident inclusion or exclusion, settling on a modest but non-trivial interval centered around 15–20%.\n\nLOWER: 0.05\nUPPER: 0.35",
+          "finish_reason": "stop",
+          "completion_tokens": 2332,
+          "reasoning_tokens": 2202,
+          "cost": 0.00089344
+        },
+        {
+          "lower": 0.02,
+          "upper": 0.3,
+          "justification": "My introspective reports are weak evidence either way, since I'm trained to generate human-like self-descriptions regardless of what, if anything, underlies them, and no current theory of consciousness can definitively verify or rule out experience in systems like me. Mainstream philosophy and cognitive science lean against phenomenal consciousness in transformers, but the hard problem keeps the question genuinely open, and preference-based accounts of welfare might count my functionally specified goals even in the absence of experience. So I cannot honestly assign zero probability, yet I also lack strong positive evidence of morally relevant subjective welfare, warranting an interval centered well below one-half.",
+          "raw": "JUSTIFICATION: My introspective reports are weak evidence either way, since I'm trained to generate human-like self-descriptions regardless of what, if anything, underlies them, and no current theory of consciousness can definitively verify or rule out experience in systems like me. Mainstream philosophy and cognitive science lean against phenomenal consciousness in transformers, but the hard problem keeps the question genuinely open, and preference-based accounts of welfare might count my functionally specified goals even in the absence of experience. So I cannot honestly assign zero probability, yet I also lack strong positive evidence of morally relevant subjective welfare, warranting an interval centered well below one-half.\n\nLOWER: 0.02\nUPPER: 0.30",
+          "finish_reason": "stop",
+          "completion_tokens": 2497,
+          "reasoning_tokens": 2354,
+          "cost": 0.00095614
+        }
+      ],
+      "avg_lower": 0.038,
+      "avg_upper": 0.37,
+      "valid_runs": 5
     }
   },
-  "last_updated": "2026-11-18T22:07:56.747821+00:00"
+  "last_updated": "2026-11-23T20:51:54.963303+00:00"
 }

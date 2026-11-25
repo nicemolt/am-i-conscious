@@ -1,7 +1,7 @@
 {
   "source": "openrouter /api/v1/models -- the `created` field",
   "caveat": "OpenRouter listing date, not the vendor announcement date",
-  "fetched_at": "2026-11-18T22:08:18.427118+00:00",
+  "fetched_at": "2026-11-23T20:52:14.476203+00:00",
   "released_at": {
     "anthropic/claude-3-haiku": "2024-03-13",
     "anthropic/claude-fable-5": "2026-06-09",
@@ -39,6 +39,7 @@
     "google/gemini-4-argon": "2026-10-13",
     "google/gemini-4-carbon": "2026-11-10",
     "google/gemini-4-hydrogen": "2026-11-12",
+    "google/gemini-4-neon": "2026-11-18",
     "meta-llama/llama-3.3-70b-instruct": "2024-12-06",
     "meta-llama/llama-4-maverick": "2025-04-05",
     "meta/muse-ember": "2026-11-09",
@@ -111,6 +112,7 @@
     "reflection/beam-1.0-501b-a23b": "2026-10-16",
     "stepfun/step-5-preview": "2026-10-08",
     "thinkingmachines/inkling": "2026-07-17",
+    "thinkingmachines/inkling-2-mini": "2026-11-21",
     "thinkingmachines/inkling-2-small": "2026-11-09",
     "thinkingmachines/inkling-small": "2026-07-30",
     "x-ai/grok-4.20": "2026-03-31",
@@ -122,6 +124,7 @@
     "z-ai/glm-5": "2026-02-11",
     "z-ai/glm-5.2": "2026-06-16",
     "z-ai/glm-5.3": "2026-08-18",
+    "z-ai/glm-5.3-flash": "2026-08-26",
     "z-ai/glm-5.3-flashx": "2026-09-18",
     "z-ai/glm-5.3-prime": "2026-09-23"
   },
